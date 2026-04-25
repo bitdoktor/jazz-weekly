@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boston Jazz & Blues: April 24, 2026 - May 8, 2026</title>
+    <meta property="og:title" content="Boston Jazz & Blues Weekly">
+    <meta property="og:description" content="April 24 - May 8, 2026 — 30 shows across Greater Boston">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0d1117;
+            --bg-card: #161b22;
+            --bg-card-hover: #1c2128;
+            --accent-gold: #d4a853;
+            --accent-gold-dim: #a68532;
+            --accent-blue: #58a6ff;
+            --accent-green: #3fb950;
+            --accent-purple: #8b5cf6;
+            --accent-warn: #f85149;
+            --text-primary: #f0f6fc;
+            --text-secondary: #c9d1d9;
+            --text-muted: #8b949e;
+            --border-subtle: #30363d;
+            --shadow-gold: rgba(212, 168, 83, 0.15);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg-dark); color: var(--text-primary); min-height: 100vh; line-height: 1.6; }
+        .container { max-width: 960px; margin: 0 auto; padding: 2rem; }
+        :focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 3px; border-radius: 4px; }
+        @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
+        header { text-align: center; padding: 3rem 0 2rem; margin-bottom: 2rem; position: relative; }
+        header::after { content: ""; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 120px; height: 2px; background: linear-gradient(90deg, transparent, var(--accent-gold), transparent); }
+        h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 2.75rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem; letter-spacing: 0.02em; }
+        h1 span { color: var(--accent-gold); }
+        .subtitle { color: var(--text-muted); font-size: 1.1rem; font-weight: 400; }
+
+        .source-footnote { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem; font-style: italic; }
+
+        .filter-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; padding: 0.75rem 1rem; background: var(--bg-card); border-radius: 10px; border: 1px solid var(--border-subtle); }
+        .filter-chip { padding: 0.35rem 0.8rem; border-radius: 16px; background: var(--bg-dark); border: 1px solid var(--border-subtle); color: var(--text-secondary); font-size: 0.8rem; cursor: pointer; transition: border-color 0.15s ease, color 0.15s ease; font-family: inherit; }
+        .filter-chip:hover { border-color: var(--accent-gold-dim); color: var(--text-primary); }
+        .filter-chip.active { background: var(--accent-gold); color: var(--bg-dark); border-color: var(--accent-gold); font-weight: 600; }
+        .filter-search { flex: 1; min-width: 160px; padding: 0.4rem 0.75rem; background: var(--bg-dark); border: 1px solid var(--border-subtle); border-radius: 6px; color: var(--text-primary); font-size: 0.9rem; font-family: inherit; }
+        .filter-search::placeholder { color: var(--text-muted); }
+        .filter-search:focus { border-color: var(--accent-gold-dim); }
+        .filter-toggle { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-muted); font-size: 0.8rem; cursor: pointer; }
+
+        .calendar-nav { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin: 1rem 0 2rem; padding: 1rem; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border-subtle); }
+        .calendar-nav a { display: flex; flex-direction: column; align-items: center; padding: 0.5rem 0.75rem; text-decoration: none; border-radius: 8px; transition: all 0.2s ease; min-width: 60px; border: 1px solid transparent; }
+        .calendar-nav a:hover { background: var(--bg-card-hover); border-color: var(--accent-gold-dim); }
+        .calendar-nav .cal-day { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; }
+        .calendar-nav .cal-date { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: var(--accent-gold); }
+        .calendar-nav a.is-today { background: var(--accent-gold); border-color: var(--accent-gold); }
+        .calendar-nav a.is-today .cal-day, .calendar-nav a.is-today .cal-date { color: var(--bg-dark); }
+        .calendar-nav a.is-weekend { border-color: var(--accent-gold-dim); }
+
+        .setlist-bar { display: inline-flex; gap: 2px; margin-left: 1rem; vertical-align: middle; }
+        .setlist-bar span { width: 12px; height: 6px; border-radius: 1px; background: var(--bg-card); border: 1px solid var(--border-subtle); }
+        .setlist-bar span.seg-active { background: var(--accent-gold); border-color: var(--accent-gold); }
+
+        .top-pick { background: linear-gradient(135deg, #1a1510 0%, #261d14 100%); border: 2px solid var(--accent-gold); border-radius: 16px; padding: 1.5rem; margin-bottom: 1.5rem; position: relative; overflow: hidden; }
+        .top-pick::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent-gold), #ffd700, var(--accent-gold)); }
+        .top-pick-badge { display: inline-block; background: var(--accent-gold); color: var(--bg-dark); padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
+        .top-pick-credential { display: block; font-size: 0.75rem; font-weight: 600; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.35rem; }
+        .top-pick-title { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .top-pick-meta { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0.75rem; }
+        .top-pick-why { color: var(--accent-gold); font-style: italic; font-size: 0.95rem; }
+
+        .highlights { background: linear-gradient(135deg, var(--bg-card) 0%, #1a1f26 100%); border: 1px solid var(--border-subtle); border-radius: 16px; padding: 1.5rem; margin-bottom: 2.5rem; }
+        .highlights-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--accent-gold); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; }
+        .highlights-header::before { content: "★"; }
+        .highlights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+        .highlight-card { background: var(--bg-dark); border-radius: 12px; padding: 1rem; border: 1px solid var(--border-subtle); transition: border-color 0.2s ease; text-decoration: none; color: inherit; display: block; }
+        .highlight-card:hover { border-color: var(--accent-gold-dim); }
+        .highlight-artist { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+        .highlight-meta { font-size: 0.85rem; color: var(--text-muted); }
+
+        .rising-stars { background: linear-gradient(135deg, #0d1517 0%, #111a1f 100%); border: 1px solid #1e4d3d; border-radius: 16px; padding: 1.5rem; margin-bottom: 3rem; }
+        .rising-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--accent-green); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; }
+        .rising-header::before { content: "\2197"; }
+        .rising-card { background: var(--bg-dark); border-radius: 12px; padding: 1rem; border: 1px solid var(--border-subtle); text-decoration: none; color: inherit; display: block; }
+        .rising-card:hover { border-color: var(--accent-green); }
+        .rising-card .highlight-artist { color: var(--accent-green); }
+
+        .dropins { background: linear-gradient(135deg, #15111a 0%, #1b1624 100%); border: 1px solid #3b2c54; border-radius: 16px; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; font-size: 0.9rem; color: var(--text-secondary); }
+        .dropins h2 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--accent-purple); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+        .dropins p.tagline { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem; font-style: italic; }
+        .dropins ul { list-style: none; padding-left: 0; }
+        .dropins li { padding: 0.5rem 0; border-bottom: 1px dashed var(--border-subtle); }
+        .dropins li:last-child { border-bottom: none; }
+        .dropins a { color: var(--accent-blue); text-decoration: none; }
+        .dropins a:hover { text-decoration: underline; }
+        .dropins .venue-name { color: var(--accent-purple); font-weight: 600; }
+
+        .date-section { margin-bottom: 2.5rem; scroll-margin-top: 1rem; }
+        .date-section.is-today > .date-header { background: rgba(212, 168, 83, 0.06); border-radius: 6px 6px 0 0; padding: 0.5rem 0.75rem; margin-left: -0.75rem; margin-right: -0.75rem; }
+        .date-header { display: flex; align-items: baseline; gap: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-subtle); margin-bottom: 1.25rem; flex-wrap: wrap; }
+        .date-day { font-family: 'Playfair Display', Georgia, serif; font-size: 1.5rem; font-weight: 600; color: var(--text-primary); }
+        .date-full { font-size: 0.95rem; color: var(--text-muted); }
+        .date-badge { display: inline-block; padding: 2px 8px; border-radius: 10px; background: var(--accent-gold); color: var(--bg-dark); font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+        .date-badge.weekend { background: var(--accent-gold-dim); color: #fff; }
+
+        .event-card { background: var(--bg-card); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; border: 1px solid var(--border-subtle); transition: all 0.2s ease; display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; }
+        .event-card:hover { background: var(--bg-card-hover); border-color: var(--accent-gold-dim); box-shadow: 0 4px 24px var(--shadow-gold); }
+        .event-card.is-past { opacity: 0.55; }
+        .event-content { min-width: 0; }
+        .event-credential { display: block; font-size: 0.7rem; font-weight: 600; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem; }
+        .event-header { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+        .artist-name { font-family: 'Playfair Display', Georgia, serif; font-size: 1.35rem; font-weight: 600; color: var(--text-primary); line-height: 1.3; }
+        .genre-tag { background: var(--accent-gold); color: var(--bg-dark); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; }
+        .genre-tag.blues { background: #6d4c41; color: #fff; }
+        .genre-tag.latin { background: #7c3aed; color: #fff; }
+        .genre-tag.fusion { background: #c0392b; color: #fff; }
+        .genre-tag.contemporary { background: #2980b9; color: #fff; }
+        .event-venue-time { display: flex; gap: 0.75rem; align-items: center; font-size: 0.9rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
+        .venue { color: var(--text-secondary); font-weight: 600; }
+        .venue-city { color: var(--text-muted); font-weight: 400; }
+        .time { color: var(--text-muted); }
+
+        .t-pill { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em; color: #fff; }
+        .t-pill.red    { background: #DA291C; }
+        .t-pill.orange { background: #ED8B00; }
+        .t-pill.green  { background: #00843D; }
+        .t-pill.blue   { background: #003DA5; }
+        .t-pill.silver { background: #7C878E; }
+        .t-pill.commuter-rockport { background: #80276C; }
+
+        .event-description { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.65; margin-bottom: 0.5rem; }
+        .notability { color: var(--accent-gold); font-size: 0.85rem; font-style: italic; }
+
+        .event-actions { margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+        .action-chip { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.45rem 0.85rem; background: transparent; border: 1px solid var(--border-subtle); color: var(--text-secondary); text-decoration: none; border-radius: 6px; font-size: 0.8rem; font-weight: 600; transition: all 0.15s ease; cursor: pointer; font-family: inherit; min-height: 36px; }
+        .action-chip:hover { border-color: var(--text-primary); color: var(--text-primary); }
+        .action-chip.ticket { border-color: var(--accent-gold); color: var(--accent-gold); }
+        .action-chip.ticket:hover { background: var(--accent-gold); color: var(--bg-dark); }
+        .action-chip.cal { border-color: var(--accent-purple); color: var(--accent-purple); }
+        .action-chip.cal:hover { background: var(--accent-purple); color: #fff; }
+        .action-chip.map { border-color: var(--accent-blue); color: var(--accent-blue); }
+        .action-chip.map:hover { background: var(--accent-blue); color: var(--bg-dark); }
+        .action-chip.copy:hover { border-color: var(--accent-green); color: var(--accent-green); }
+        .action-chip.copy.copied { border-color: var(--accent-green); color: var(--accent-green); }
+        .action-chip.vidsearch { border-color: var(--border-subtle); color: var(--text-muted); font-size: 0.75rem; padding: 0.35rem 0.7rem; }
+
+        .event-media { flex-shrink: 0; }
+        .video-preview { position: relative; width: 200px; border-radius: 8px; overflow: hidden; }
+        .video-preview a { display: block; }
+        .video-preview img { display: block; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; transition: transform 0.2s ease; }
+        .video-preview:hover img { transform: scale(1.05); }
+        .play-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 48px; height: 48px; background: rgba(212, 168, 83, 0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease; }
+        .video-preview:hover .play-overlay { transform: translate(-50%, -50%) scale(1.1); }
+        .play-overlay::after { content: ""; border-style: solid; border-width: 8px 0 8px 14px; border-color: transparent transparent transparent var(--bg-dark); margin-left: 3px; }
+        .video-title { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem; line-height: 1.3; }
+        .video-cache-hint { font-size: 0.65rem; color: var(--accent-green); margin-top: 0.15rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        .video-search { width: 200px; background: var(--bg-dark); border-radius: 8px; padding: 1rem; border: 1px dashed var(--border-subtle); text-align: center; }
+        .video-search-label { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+        .search-links { display: flex; flex-direction: column; gap: 0.5rem; }
+        .search-link { display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; padding: 0.4rem 0.75rem; background: var(--bg-card); border: 1px solid var(--border-subtle); color: var(--text-secondary); text-decoration: none; border-radius: 4px; font-size: 0.75rem; transition: all 0.2s ease; }
+        .search-link:hover { background: var(--bg-card-hover); color: var(--accent-blue); border-color: var(--accent-blue); }
+        .search-link.youtube:hover { color: #ff0000; border-color: #ff0000; }
+        .search-link.google:hover { color: #4285f4; border-color: #4285f4; }
+
+        footer { text-align: center; padding: 2.5rem 0; color: var(--text-muted); border-top: 1px solid var(--border-subtle); margin-top: 2rem; }
+        .footer-generated { font-size: 0.85rem; margin-bottom: 1rem; }
+        .sources { font-size: 0.8rem; }
+        .sources a { color: var(--accent-blue); text-decoration: none; transition: color 0.2s ease; }
+        .sources a:hover { color: var(--accent-gold); text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+            h1 { font-size: 2rem; }
+            .event-card { grid-template-columns: 1fr; }
+            .event-media { order: -1; }
+            .video-preview, .video-search { width: 100%; max-width: 320px; }
+            .action-chip { min-height: 44px; padding: 0.6rem 1rem; }
+            .calendar-nav { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; justify-content: flex-start; padding: 0.75rem 1rem; gap: 0.35rem; scroll-snap-type: x mandatory; }
+            .calendar-nav a { flex-shrink: 0; scroll-snap-align: start; min-width: 52px; padding: 0.4rem 0.5rem; }
+            .calendar-nav .cal-date { font-size: 1rem; }
+        }
+        @media (max-width: 480px) { .highlights-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Boston <span>Jazz</span> &amp; <span>Blues</span></h1>
+            <p class="subtitle">April 24, 2026 - May 8, 2026</p>
+        </header>
+
+        <div class="filter-toolbar" role="toolbar" aria-label="Filter events">
+            <button class="filter-chip active" data-genre="all" aria-pressed="true">All</button>
+            <button class="filter-chip" data-genre="jazz" aria-pressed="false">Jazz</button>
+            <button class="filter-chip" data-genre="blues" aria-pressed="false">Blues</button>
+            <button class="filter-chip" data-genre="fusion" aria-pressed="false">Fusion</button>
+            <button class="filter-chip" data-genre="latin" aria-pressed="false">Latin</button>
+            <button class="filter-chip" data-genre="big band" aria-pressed="false">Big Band</button>
+            <button class="filter-chip" data-genre="soul" aria-pressed="false">Soul/R&amp;B</button>
+            <input class="filter-search" id="search-input" type="search" placeholder="Search artist or venue…" aria-label="Search artist or venue">
+            <label class="filter-toggle"><input type="checkbox" id="hide-past"> Hide past</label>
+        </div>
+
+        <nav class="calendar-nav" aria-label="Jump to date">
+            <a href="#apr-24" data-date="2026-04-24"><span class="cal-day">Fri</span><span class="cal-date">24</span></a>
+            <a href="#apr-25" data-date="2026-04-25"><span class="cal-day">Sat</span><span class="cal-date">25</span></a>
+            <a href="#apr-26" data-date="2026-04-26"><span class="cal-day">Sun</span><span class="cal-date">26</span></a>
+            <a href="#apr-28" data-date="2026-04-28"><span class="cal-day">Tue</span><span class="cal-date">28</span></a>
+            <a href="#apr-29" data-date="2026-04-29"><span class="cal-day">Wed</span><span class="cal-date">29</span></a>
+            <a href="#apr-30" data-date="2026-04-30"><span class="cal-day">Thu</span><span class="cal-date">30</span></a>
+            <a href="#may-1" data-date="2026-05-01"><span class="cal-day">Fri</span><span class="cal-date">1</span></a>
+            <a href="#may-2" data-date="2026-05-02"><span class="cal-day">Sat</span><span class="cal-date">2</span></a>
+            <a href="#may-3" data-date="2026-05-03"><span class="cal-day">Sun</span><span class="cal-date">3</span></a>
+            <a href="#may-6" data-date="2026-05-06"><span class="cal-day">Wed</span><span class="cal-date">6</span></a>
+            <a href="#may-7" data-date="2026-05-07"><span class="cal-day">Thu</span><span class="cal-date">7</span></a>
+            <a href="#may-8" data-date="2026-05-08"><span class="cal-day">Fri</span><span class="cal-date">8</span></a>
+            <a href="#dropins"><span class="cal-day">Drop</span><span class="cal-date">In</span></a>
+        </nav>
+
+        <section class="top-pick">
+            <span class="top-pick-badge">If You Only Go To One Show</span>
+            <span class="top-pick-credential">★ NEA Jazz Master · 3× Grammy winner · 26-pt notability max</span>
+            <div class="top-pick-title">Dee Dee Bridgewater &amp; Bill Charlap</div>
+            <div class="top-pick-meta">Friday, April 24 &bull; 7:30 PM &amp; 9:30 PM &bull; Regattabar, Cambridge <span class="t-pill red">T Red · Harvard · 5 min</span></div>
+            <div class="top-pick-why">An NEA Jazz Master and three-time Grammy winner meets one of the most refined pianists in jazz. Their 2025 album <em>Elemental</em> earned a Grammy nomination — this rare intimate-room duo is the season's highlight.</div>
+        </section>
+
+        <section class="highlights">
+            <div class="highlights-header">Don't Miss These Artists</div>
+            <div class="highlights-grid">
+                <a class="highlight-card" href="#e-2026-05-07-mike-stern-band">
+                    <div class="highlight-artist">Mike Stern Band</div>
+                    <div class="highlight-meta">May 7-8 &bull; Regattabar &bull; Miles Davis alum, 6× Grammy nominee</div>
+                </a>
+                <a class="highlight-card" href="#e-2026-04-25-makaya-mccraven">
+                    <div class="highlight-artist">Makaya McCraven</div>
+                    <div class="highlight-meta">Apr 25 &bull; Jimmy's &bull; DownBeat Rising Star; Nonesuch artist</div>
+                </a>
+                <a class="highlight-card" href="#e-2026-04-30-fabulous-thunderbirds">
+                    <div class="highlight-artist">The Fabulous Thunderbirds</div>
+                    <div class="highlight-meta">Apr 30 &bull; Center for Arts in Natick &bull; 2× Grammy-nominated blues legends</div>
+                </a>
+                <a class="highlight-card" href="#e-2026-04-25-hot-sardines">
+                    <div class="highlight-artist">The Hot Sardines</div>
+                    <div class="highlight-meta">Apr 25 &bull; Berklee Performance Center &bull; Hot jazz revival ensemble</div>
+                </a>
+            </div>
+        </section>
+
+        <section class="rising-stars">
+            <div class="rising-header">Rising Stars &amp; Fresh Voices</div>
+            <div class="highlights-grid">
+                <a class="rising-card" href="#e-2026-04-26-takuya-kuroda">
+                    <div class="highlight-artist">Takuya Kuroda</div>
+                    <div class="highlight-meta">Apr 26 &bull; Jimmy's &bull; Blue Note trumpeter, soul-jazz fusion</div>
+                </a>
+                <a class="rising-card" href="#e-2026-05-01-vanessa-collier">
+                    <div class="highlight-artist">Vanessa Collier</div>
+                    <div class="highlight-meta">May 1 &bull; Jimmy's &bull; 4× Blues Music Award winner</div>
+                </a>
+                <a class="rising-card" href="#e-2026-05-08-eric-darius">
+                    <div class="highlight-artist">Eric Darius</div>
+                    <div class="highlight-meta">May 8 &bull; Scullers &bull; #1 Billboard contemporary jazz</div>
+                </a>
+                <a class="rising-card" href="#e-2026-05-03-dan-wilson-organ-trio">
+                    <div class="highlight-artist">Dan Wilson Organ Trio</div>
+                    <div class="highlight-meta">May 3 &bull; Jimmy's &bull; Christian McBride protégé, Grammy-nominated</div>
+                </a>
+            </div>
+        </section>
+
+        <section class="dropins" id="dropins">
+            <h2>Drop-in Venues</h2>
+            <p class="tagline">These venues host live music nightly but publish no advance lineup — check their sites directly or just walk in.</p>
+            <ul>
+                <li><span class="venue-name">Wally's Cafe Jazz Club</span> · 427 Massachusetts Ave, South End · Since 1947 · Sets at 5, 7, 9 PM. Recurring residencies: Talli Kimani Quintet (Wed 7–9 PM), Gabriel Maia (Thu 7–9 PM), Ben Kassner (Sat). <span class="t-pill orange">T Orange · Mass Ave · 2 min</span> <a href="https://www.google.com/maps/dir/?api=1&destination=427+Massachusetts+Ave+Boston+MA+02118" target="_blank" rel="noopener">Maps →</a> · <a href="https://wallyscafe.com/live-music-schedule/" target="_blank" rel="noopener">wallyscafe.com</a></li>
+                <li><span class="venue-name">The Beehive</span> · 541 Tremont St, South End · Nightly jazz, soul, blues &amp; funk. Mon–Wed 7:30 PM; Thu–Sat 6:30 PM; Sun 7:30 PM (Blues of Sunday with Bruce Bears &amp; Friends). Live brunch Sat &amp; Sun 10 AM–2 PM. <span class="t-pill orange">T Orange · Back Bay · 10 min</span> <a href="https://www.google.com/maps/dir/?api=1&destination=541+Tremont+St+Boston+MA+02116" target="_blank" rel="noopener">Maps →</a> · <a href="https://www.beehiveboston.com/calendar" target="_blank" rel="noopener">beehiveboston.com</a></li>
+                <li><span class="venue-name">Rockport Music</span> · Shalin Liu Performance Center, Rockport · <em>No jazz/blues shows in this window</em> (Leo Kottke 4/24 cancelled; rest of window is folk, classical &amp; film). Next jazz dates: May 22 Billy Childs Trio, May 24 John Pizzarelli, May 29 Zaccai Curtis. <span class="t-pill commuter-rockport">Commuter · Rockport · 5 min</span> <a href="https://www.google.com/maps/dir/?api=1&destination=37+Main+St+Rockport+MA+01966" target="_blank" rel="noopener">Maps →</a></li>
+            </ul>
+        </section>
+
+        <!-- ============ APRIL 24 ============ -->
+        <section class="date-section" id="apr-24" data-date="2026-04-24">
+            <div class="date-header">
+                <span class="date-day">Friday</span>
+                <span class="date-full">April 24, 2026</span>
+                <span class="setlist-bar" title="5 events"><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span></span></span>
+            </div>
+
+            <article class="event-card" id="e-2026-04-24-dee-dee-bridgewater" data-date="2026-04-24" data-genre="jazz" data-search="dee dee bridgewater bill charlap regattabar cambridge" data-title="Dee Dee Bridgewater + Bill Charlap at Regattabar" data-start="20260424T193000" data-end="20260424T213000" data-location="1 Bennett St, Cambridge, MA 02138" data-details="An NEA Jazz Master and 3x Grammy winner meets virtuoso pianist Bill Charlap. Tickets: https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814" data-tz="America/New_York">
+                <div class="event-content">
+                    <span class="event-credential">★ NEA Jazz Master · 3× Grammy winner</span>
+                    <div class="event-header">
+                        <h3 class="artist-name">Dee Dee Bridgewater + Bill Charlap</h3>
+                        <span class="genre-tag">Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Regattabar <span class="venue-city">· Cambridge</span></span>
+                        <span class="t-pill red">T Red · Harvard · 5 min</span>
+                        <span class="time">7:30 PM &amp; 9:30 PM</span>
+                    </div>
+                    <p class="event-description">A summit meeting between the three-time Grammy-winning vocalist and her longtime collaborator, virtuoso pianist Bill Charlap. The duo's 2025 Mack Avenue album <em>Elemental</em> received a Grammy nomination.</p>
+                    <p class="notability">Tony Award winner (Bridgewater) &middot; Grammy-winning pianist (Charlap)</p>
+                    <div class="event-actions">
+                        <a href="https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=1+Bennett+St+Cambridge+MA+02138&travelmode=transit" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                    </div>
+                </div>
+                <div class="event-media">
+                    <div class="video-preview">
+                        <a href="https://www.youtube.com/watch?v=3XrOA-fTNIs" target="_blank" rel="noopener">
+                            <img src="https://img.youtube.com/vi/3XrOA-fTNIs/hqdefault.jpg" alt="Dee Dee Bridgewater & Bill Charlap performance">
+                            <span class="play-overlay" role="img" aria-label="Play video"></span>
+                        </a>
+                        <p class="video-title">"I'm Beginning to See the Light" — Intl Jazz Day 2023</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-04-24-berklee-grand-gathering" data-date="2026-04-24" data-genre="jazz" data-search="berklee institute jazz gender justice grand gathering" data-title="Berklee: The Grand Gathering" data-start="20260424T200000" data-end="20260424T220000" data-location="136 Massachusetts Ave, Boston, MA 02115" data-details="Eleven Berklee ensembles showcase modern, mainstream, free, and electronic jazz. https://www.etix.com/ticket/p/86817705/" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">Berklee Institute of Jazz &amp; Gender Justice: The Grand Gathering</h3>
+                        <span class="genre-tag">Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Berklee Performance Center <span class="venue-city">· Boston</span></span>
+                        <span class="t-pill green">T Green · Hynes · 3 min</span>
+                        <span class="time">8:00 PM</span>
+                    </div>
+                    <p class="event-description">Eleven Berklee ensembles spanning modern, mainstream, free, and electronic jazz showcase the Institute's 2026 cohort of women instrumentalists, vocalists, and composers.</p>
+                    <p class="notability">Berklee's annual flagship gender-equity jazz showcase</p>
+                    <div class="event-actions">
+                        <a href="https://www.etix.com/ticket/p/86817705/" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=136+Massachusetts+Ave+Boston+MA+02115&travelmode=transit" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=Berklee+Institute+Jazz+Gender+Justice+Grand+Gathering" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-04-24-davy-knowles" data-date="2026-04-24" data-genre="blues" data-search="davy knowles blues guitarist natick" data-title="Davy Knowles at Natick" data-start="20260424T200000" data-end="20260424T220000" data-location="The Center for Arts in Natick, 14 Summer St, Natick, MA 01760" data-details="Isle of Man blues guitarist; toured with Joe Satriani; produced by Peter Frampton. https://natickarts.org" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">Davy Knowles</h3>
+                        <span class="genre-tag blues">Blues</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">The Center for Arts in Natick <span class="venue-city">· Natick</span></span>
+                        <span class="time">8:00 PM</span>
+                    </div>
+                    <p class="event-description">Isle of Man–born blues guitarist whose searing slide work and traditional vocal phrasing have drawn comparisons to a young Eric Clapton.</p>
+                    <p class="notability">Toured with Joe Satriani; produced by Peter Frampton</p>
+                    <div class="event-actions">
+                        <a href="https://natickarts.org" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=14+Summer+St+Natick+MA+01760&travelmode=driving" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=Davy+Knowles+blues+live" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-04-24-brian-de-lorenzo" data-date="2026-04-24" data-genre="jazz" data-search="brian de lorenzo toast of the town album release vocalist" data-title="Brian De Lorenzo: Toast of the Town Vol. 2" data-start="20260424T193000" data-end="20260424T213000" data-location="Club Cafe, 209 Columbus Ave, Boston, MA 02116" data-details="Album release for sophomore standards LP. https://clubcafe.com" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">Brian De Lorenzo: "Toast of the Town, Vol. 2" Album Release</h3>
+                        <span class="genre-tag">Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Club Cafe <span class="venue-city">· Boston</span></span>
+                        <span class="t-pill green">T Green · Arlington · 5 min</span>
+                        <span class="time">7:30 PM</span>
+                    </div>
+                    <p class="event-description">Boston-based vocalist celebrates the release of his sophomore standards album with a band of local jazz veterans.</p>
+                    <p class="notability">Boston cabaret &amp; jazz vocalist, multi-decade local presence</p>
+                    <div class="event-actions">
+                        <a href="https://clubcafe.com" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=209+Columbus+Ave+Boston+MA+02116&travelmode=transit" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=Brian+De+Lorenzo+jazz+vocalist" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-04-24-organically-good-trio" data-date="2026-04-24" data-genre="jazz" data-search="organically good trio lizard lounge cambridge" data-title="Organically Good Trio at Lizard Lounge" data-start="20260424T210000" data-end="20260424T233000" data-location="Lizard Lounge, 1667 Massachusetts Ave, Cambridge, MA 02138" data-details="Boston-area jazz trio. https://www.lizardloungeclub.com" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">Organically Good Trio</h3>
+                        <span class="genre-tag">Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Lizard Lounge <span class="venue-city">· Cambridge</span></span>
+                        <span class="t-pill red">T Red · Porter · 8 min</span>
+                        <span class="time">9:00 PM</span>
+                    </div>
+                    <p class="event-description">Boston-area trio drawing on jazz standards and groove-rooted improvisation in the Lizard's intimate basement room.</p>
+                    <p class="notability">Long-running local residency</p>
+                    <div class="event-actions">
+                        <a href="https://www.lizardloungeclub.com" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=1667+Massachusetts+Ave+Cambridge+MA+02138&travelmode=transit" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=Organically+Good+Trio+jazz" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============ APRIL 25 ============ -->
+        <section class="date-section" id="apr-25" data-date="2026-04-25">
+            <div class="date-header">
+                <span class="date-day">Saturday</span>
+                <span class="date-full">April 25, 2026</span>
+                <span class="date-badge weekend">Weekend</span>
+                <span class="setlist-bar" title="6 events"><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span></span>
+            </div>
+
+            <article class="event-card" id="e-2026-04-25-makaya-mccraven" data-date="2026-04-25" data-genre="contemporary jazz" data-search="makaya mccraven drummer nonesuch jimmy's portsmouth" data-title="Makaya McCraven at Jimmy's" data-start="20260425T193000" data-end="20260425T213000" data-location="135 Congress St, Portsmouth, NH 03801" data-details="DownBeat Critics Poll Rising Star; Nonesuch artist. https://jimmysoncongress.com" data-tz="America/New_York">
+                <div class="event-content">
+                    <span class="event-credential">DownBeat Rising Star · Nonesuch / International Anthem</span>
+                    <div class="event-header">
+                        <h3 class="artist-name">Makaya McCraven</h3>
+                        <span class="genre-tag contemporary">Contemporary Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Jimmy's Jazz &amp; Blues Club <span class="venue-city">· Portsmouth NH</span></span>
+                        <span class="time">7:30 PM</span>
+                    </div>
+                    <p class="event-description">Paris-born, Massachusetts-raised drummer-producer reshaping modern jazz through his cut-and-paste "beat science" approach. His 2022 album <em>In These Times</em> for International Anthem was hailed by NPR and The Guardian as one of the year's defining records.</p>
+                    <div class="event-actions">
+                        <a href="https://jimmysoncongress.com" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=135+Congress+St+Portsmouth+NH+03801&travelmode=driving" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                    </div>
+                </div>
+                <div class="event-media">
+                    <div class="video-preview">
+                        <a href="https://www.youtube.com/watch?v=FntJkwMrE1E" target="_blank" rel="noopener">
+                            <img src="https://img.youtube.com/vi/FntJkwMrE1E/hqdefault.jpg" alt="Makaya McCraven - Atlantic Black Live">
+                            <span class="play-overlay" role="img" aria-label="Play video"></span>
+                        </a>
+                        <p class="video-title">Atlantic Black (Live · 2020)</p>
+                        <p class="video-cache-hint">★ curated pick</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-04-25-hot-sardines" data-date="2026-04-25" data-genre="jazz" data-search="hot sardines elizabeth bougerol berklee hot jazz" data-title="The Hot Sardines at Berklee" data-start="20260425T200000" data-end="20260425T220000" data-location="136 Massachusetts Ave, Boston, MA 02115" data-details="NY nine-piece hot-jazz ensemble. https://www.etix.com/ticket/p/43195663/" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">The Hot Sardines</h3>
+                        <span class="genre-tag">Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Berklee Performance Center <span class="venue-city">· Boston</span></span>
+                        <span class="t-pill green">T Green · Hynes · 3 min</span>
+                        <span class="time">8:00 PM</span>
+                    </div>
+                    <p class="event-description">New York's nine-piece "hot jazz" sensation led by bilingual French-American vocalist Elizabeth Bougerol and pianist Evan Palazzo. Polished arrangements of 1920s and 30s standards delivered with washboard, growling brass, and a generous dose of irreverence.</p>
+                    <p class="notability">Forbes "must-see" act &middot; 2024 album <em>C'est La Vie</em></p>
+                    <div class="event-actions">
+                        <a href="https://www.etix.com/ticket/p/43195663/" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=136+Massachusetts+Ave+Boston+MA+02115&travelmode=transit" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                    </div>
+                </div>
+                <div class="event-media">
+                    <div class="video-preview">
+                        <a href="https://www.youtube.com/watch?v=mh5f6L6mYGo" target="_blank" rel="noopener">
+                            <img src="https://img.youtube.com/vi/mh5f6L6mYGo/hqdefault.jpg" alt="The Hot Sardines live performance">
+                            <span class="play-overlay" role="img" aria-label="Play video"></span>
+                        </a>
+                        <p class="video-title">Best Served Live — Extended Highlights (2025)</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-04-25-suede" data-date="2026-04-25" data-genre="jazz" data-search="suede vocalist scullers jazz cabaret" data-title="Suede at Scullers" data-start="20260425T190000" data-end="20260425T210000" data-location="400 Soldiers Field Rd, Boston, MA 02134" data-details="Cabaret-jazz vocalist. https://scullersjazz.com/upcoming-events/" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">Suede</h3>
+                        <span class="genre-tag">Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Scullers Jazz Club <span class="venue-city">· Boston</span></span>
+                        <span class="t-pill green">T Green · Babcock · 15 min</span>
+                        <span class="time">7:00 PM</span>
+                    </div>
+                    <p class="event-description">Veteran cabaret-jazz vocalist returns to Scullers with her warm contralto interpretations of standards and classic American songbook material.</p>
+                    <p class="notability">Long-running Boston/Provincetown jazz club favorite</p>
+                    <div class="event-actions">
+                        <a href="https://scullersjazz.com/upcoming-events/" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=400+Soldiers+Field+Rd+Boston+MA+02134&travelmode=transit" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=Suede+jazz+vocalist+cabaret" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-04-25-jim-caruso" data-date="2026-04-25" data-genre="jazz" data-search="jim caruso cast party billy stritch regattabar" data-title="Jim Caruso's Cast Party at Regattabar" data-start="20260425T190000" data-end="20260425T210000" data-location="1 Bennett St, Cambridge, MA 02138" data-details="Birdland open-mic-for-stars touring edition. https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">Jim Caruso's Cast Party with Billy Stritch</h3>
+                        <span class="genre-tag">Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Regattabar <span class="venue-city">· Cambridge</span></span>
+                        <span class="t-pill red">T Red · Harvard · 5 min</span>
+                        <span class="time">7:00 PM</span>
+                    </div>
+                    <p class="event-description">A traveling edition of the famous Birdland "open mic for stars" — host Jim Caruso and pianist Billy Stritch drop into Cambridge for an evening of guest singers, standards, and surprise drop-ins.</p>
+                    <p class="notability">Birdland NYC weekly tradition since 2003</p>
+                    <div class="event-actions">
+                        <a href="https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=1+Bennett+St+Cambridge+MA+02138&travelmode=transit" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=Jim+Caruso+Cast+Party+Billy+Stritch" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-04-25-herb-pomeroy" data-date="2026-04-25" data-genre="jazz big band" data-search="herb pomeroy memorial jazz unity mit thomas tull" data-title="Herb Pomeroy Memorial — Jazz Unity@MIT" data-start="20260425T200000" data-end="20260425T220000" data-location="Thomas Tull Concert Hall, MIT, 50 Vassar St, Cambridge, MA 02139" data-details="Annual MIT tribute to Herb Pomeroy. https://music.mit.edu" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">18th Annual Herb Pomeroy Memorial — Jazz Unity@MIT</h3>
+                        <span class="genre-tag">Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Thomas Tull Concert Hall, MIT <span class="venue-city">· Cambridge</span></span>
+                        <span class="t-pill red">T Red · Kendall · 8 min</span>
+                        <span class="time">8:00 PM</span>
+                    </div>
+                    <p class="event-description">Annual tribute to legendary Boston bandleader and Berklee professor Herb Pomeroy (1930–2007), featuring MIT's flagship Festival Jazz Ensemble in repertoire from Pomeroy's celebrated big band books.</p>
+                    <p class="notability">Honoring Boston jazz legend &amp; Berklee/MIT educator Herb Pomeroy</p>
+                    <div class="event-actions">
+                        <a href="https://music.mit.edu" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=50+Vassar+St+Cambridge+MA+02139&travelmode=transit" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=Herb+Pomeroy+Memorial+MIT+Jazz" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-04-25-blues-express" data-date="2026-04-25" data-genre="blues" data-search="blues express fallout shelter norwood" data-title="Blues Express Live at Fallout Shelter" data-start="20260425T190000" data-end="20260425T210000" data-location="The Fallout Shelter, 1 Norwood Park S, Norwood, MA 02062" data-details="Regional blues outfit. https://thefalloutshelter.com" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">Blues Express Live</h3>
+                        <span class="genre-tag blues">Blues</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">The Fallout Shelter <span class="venue-city">· Norwood</span></span>
+                        <span class="time">7:00 PM</span>
+                    </div>
+                    <p class="event-description">A New England–based blues outfit playing a tight set of electric blues classics and originals in Norwood's intimate listening room.</p>
+                    <p class="notability">Regional blues circuit regulars</p>
+                    <div class="event-actions">
+                        <a href="https://thefalloutshelter.com" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=1+Norwood+Park+S+Norwood+MA+02062&travelmode=driving" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=Blues+Express+band+New+England+live" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============ APRIL 26 ============ -->
+        <section class="date-section" id="apr-26" data-date="2026-04-26">
+            <div class="date-header">
+                <span class="date-day">Sunday</span>
+                <span class="date-full">April 26, 2026</span>
+                <span class="date-badge weekend">Weekend</span>
+                <span class="setlist-bar" title="3 events"><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span></span><span></span><span></span></span>
+            </div>
+
+            <article class="event-card" id="e-2026-04-26-takuya-kuroda" data-date="2026-04-26" data-genre="contemporary jazz soul" data-search="takuya kuroda blue note trumpeter jimmys portsmouth" data-title="Takuya Kuroda at Jimmy's" data-start="20260426T193000" data-end="20260426T213000" data-location="135 Congress St, Portsmouth, NH 03801" data-details="Blue Note trumpeter, soul-jazz fusion. https://jimmysoncongress.com" data-tz="America/New_York">
+                <div class="event-content">
+                    <span class="event-credential">Blue Note recording artist · 8 albums as leader</span>
+                    <div class="event-header">
+                        <h3 class="artist-name">Takuya Kuroda</h3>
+                        <span class="genre-tag contemporary">Soul-Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Jimmy's Jazz &amp; Blues Club <span class="venue-city">· Portsmouth NH</span></span>
+                        <span class="time">7:30 PM</span>
+                    </div>
+                    <p class="event-description">Kobe-born, Brooklyn-based trumpeter who became the first Japanese artist signed to Blue Note Records. Kuroda fuses post-bop chops with hip-hop and neo-soul textures — a longtime collaborator of vocalist José James.</p>
+                    <div class="event-actions">
+                        <a href="https://jimmysoncongress.com" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=135+Congress+St+Portsmouth+NH+03801&travelmode=driving" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                    </div>
+                </div>
+                <div class="event-media">
+                    <div class="video-preview">
+                        <a href="https://www.youtube.com/watch?v=4HfTgBVKbpQ" target="_blank" rel="noopener">
+                            <img src="https://img.youtube.com/vi/4HfTgBVKbpQ/hqdefault.jpg" alt="Takuya Kuroda Live at Jazz Dock Prague">
+                            <span class="play-overlay" role="img" aria-label="Play video"></span>
+                        </a>
+                        <p class="video-title">Live at Jazz Dock, Prague</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-04-26-louise-grasmere" data-date="2026-04-26" data-genre="jazz" data-search="louise grasmere two crows regent theatre arlington" data-title="Louise Grasmere Two Crows CD Release" data-start="20260426T150000" data-end="20260426T170000" data-location="Regent Theatre, 7 Medford St, Arlington, MA 02474" data-details="CD release for sophomore album. https://www.regenttheatre.com" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">Louise Grasmere: "Two Crows" CD Release</h3>
+                        <span class="genre-tag">Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Regent Theatre <span class="venue-city">· Arlington</span></span>
+                        <span class="time">3:00 PM</span>
+                    </div>
+                    <p class="event-description">Boston-area vocalist-composer celebrates the release of her sophomore album <em>Two Crows</em> — a collection of original songs threading jazz, folk, and contemporary chamber sensibilities.</p>
+                    <p class="notability">Local vocalist; sophomore album release</p>
+                    <div class="event-actions">
+                        <a href="https://www.regenttheatre.com" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=7+Medford+St+Arlington+MA+02474&travelmode=transit" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=Louise+Grasmere+Two+Crows+jazz" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-04-26-david-haas-group" data-date="2026-04-26" data-genre="jazz" data-search="david haas group coalition of the willing lilypad cambridge" data-title="The David Haas Group at Lilypad" data-start="20260426T190000" data-end="20260426T210000" data-location="The Lilypad, 1353 Cambridge St, Cambridge, MA 02139" data-details="Boston bassist David Haas ensemble. https://www.lilypadinman.com" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">The David Haas Group: A Coalition of the Willing</h3>
+                        <span class="genre-tag">Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">The Lilypad <span class="venue-city">· Cambridge</span></span>
+                        <span class="t-pill green">T Green · Lechmere · 15 min</span>
+                        <span class="time">7:00 PM</span>
+                    </div>
+                    <p class="event-description">Boston bassist David Haas convenes an adventurous ensemble for a set of original compositions at Inman Square's beloved listening room.</p>
+                    <p class="notability">Boston creative-music scene</p>
+                    <div class="event-actions">
+                        <a href="https://www.lilypadinman.com" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=1353+Cambridge+St+Cambridge+MA+02139&travelmode=transit" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=David+Haas+Group+jazz+Boston" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============ APRIL 28 ============ -->
+        <section class="date-section" id="apr-28" data-date="2026-04-28">
+            <div class="date-header">
+                <span class="date-day">Tuesday</span>
+                <span class="date-full">April 28, 2026</span>
+                <span class="setlist-bar" title="1 event"><span class="seg-active"></span><span></span><span></span><span></span><span></span><span></span></span>
+            </div>
+
+            <article class="event-card" id="e-2026-04-28-unh-jazz" data-date="2026-04-28" data-genre="jazz" data-search="unh jazz combos jimmys portsmouth" data-title="UNH Jazz Combos Showcase at Jimmy's" data-start="20260428T180000" data-end="20260428T200000" data-location="135 Congress St, Portsmouth, NH 03801" data-details="University of NH jazz combos. https://jimmysoncongress.com" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">UNH Jazz Combos Showcase</h3>
+                        <span class="genre-tag">Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Jimmy's Jazz &amp; Blues Club <span class="venue-city">· Portsmouth NH</span></span>
+                        <span class="time">6:00 PM</span>
+                    </div>
+                    <p class="event-description">University of New Hampshire jazz combos take Jimmy's main stage — a sampler of the Seacoast's collegiate jazz program in action.</p>
+                    <p class="notability">Collegiate jazz showcase; free/low-cost entry</p>
+                    <div class="event-actions">
+                        <a href="https://jimmysoncongress.com" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=135+Congress+St+Portsmouth+NH+03801&travelmode=driving" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=UNH+Jazz+Combos+University+New+Hampshire" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============ APRIL 29 ============ -->
+        <section class="date-section" id="apr-29" data-date="2026-04-29">
+            <div class="date-header">
+                <span class="date-day">Wednesday</span>
+                <span class="date-full">April 29, 2026</span>
+                <span class="setlist-bar" title="1 event"><span class="seg-active"></span><span></span><span></span><span></span><span></span><span></span></span>
+            </div>
+
+            <article class="event-card" id="e-2026-04-29-kaki-king" data-date="2026-04-29" data-genre="jazz" data-search="kaki king guitar virtuoso jimmys portsmouth" data-title="Kaki King at Jimmy's" data-start="20260429T193000" data-end="20260429T213000" data-location="135 Congress St, Portsmouth, NH 03801" data-details="Guitar virtuoso; Rolling Stone 'New Guitar God'. https://jimmysoncongress.com" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">Kaki King</h3>
+                        <span class="genre-tag">Jazz-Adjacent</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Jimmy's Jazz &amp; Blues Club <span class="venue-city">· Portsmouth NH</span></span>
+                        <span class="time">7:30 PM</span>
+                    </div>
+                    <p class="event-description">Brooklyn-based guitar virtuoso dubbed "a genre unto herself" by Rolling Stone, whose percussive, tapping-driven style has earned her collaborations with Dave Grohl, The Mountain Goats, and film composer Dario Marianelli.</p>
+                    <p class="notability">Rolling Stone "New Guitar God" &middot; Golden Globe-nominated score collaborator</p>
+                    <div class="event-actions">
+                        <a href="https://jimmysoncongress.com" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=135+Congress+St+Portsmouth+NH+03801&travelmode=driving" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=Kaki+King+guitar+live" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============ APRIL 30 — International Jazz Day ============ -->
+        <section class="date-section" id="apr-30" data-date="2026-04-30">
+            <div class="date-header">
+                <span class="date-day">Thursday</span>
+                <span class="date-full">April 30, 2026 — International Jazz Day</span>
+                <span class="setlist-bar" title="4 events"><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span></span><span></span></span>
+            </div>
+
+            <article class="event-card" id="e-2026-04-30-fabulous-thunderbirds" data-date="2026-04-30" data-genre="blues" data-search="fabulous thunderbirds kim wilson blues natick" data-title="The Fabulous Thunderbirds at Natick" data-start="20260430T200000" data-end="20260430T220000" data-location="The Center for Arts in Natick, 14 Summer St, Natick, MA 01760" data-details="2024 Grammy-nominated blues legends. https://natickarts.org" data-tz="America/New_York">
+                <div class="event-content">
+                    <span class="event-credential">2× 2024 Grammy nominees · 50 years of blues royalty</span>
+                    <div class="event-header">
+                        <h3 class="artist-name">The Fabulous Thunderbirds</h3>
+                        <span class="genre-tag blues">Blues</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">The Center for Arts in Natick <span class="venue-city">· Natick</span></span>
+                        <span class="time">8:00 PM</span>
+                    </div>
+                    <p class="event-description">The legendary Austin blues band led by harmonica master Kim Wilson — co-founded with Jimmie Vaughan in 1974 and behind the platinum hit "Tuff Enuff." Their 2024 album <em>Struck Down</em> earned two Grammy nominations including Best Traditional Blues Album.</p>
+                    <div class="event-actions">
+                        <a href="https://natickarts.org" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=14+Summer+St+Natick+MA+01760&travelmode=driving" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                    </div>
+                </div>
+                <div class="event-media">
+                    <div class="video-preview">
+                        <a href="https://www.youtube.com/watch?v=bGBWSceUsT4" target="_blank" rel="noopener">
+                            <img src="https://img.youtube.com/vi/bGBWSceUsT4/hqdefault.jpg" alt="Fabulous Thunderbirds Kim Wilson harmonica jam">
+                            <span class="play-overlay" role="img" aria-label="Play video"></span>
+                        </a>
+                        <p class="video-title">Kim Wilson harmonica jam — The Siren (2022)</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-04-30-godwin-louis" data-date="2026-04-30" data-genre="jazz latin" data-search="godwin louis jonathan suazo international jazz day union church" data-title="Godwin Louis + Jonathan Suazo at Union Church" data-start="20260430T183000" data-end="20260430T203000" data-location="Union Church, Boston MA" data-details="UNESCO International Jazz Day Boston event. https://jazzboston.org" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">Godwin Louis / Jonathan Suazo (International Jazz Day)</h3>
+                        <span class="genre-tag latin">Latin Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Union Church <span class="venue-city">· Boston</span></span>
+                        <span class="time">6:30 PM</span>
+                    </div>
+                    <p class="event-description">UNESCO International Jazz Day celebration featuring Haitian-American saxophonist Godwin Louis (Berklee alum, Monk Competition finalist) and Puerto Rican multi-instrumentalist Jonathan Suazo, exploring the African diaspora's imprint on the music.</p>
+                    <p class="notability">UNESCO International Jazz Day official Boston event</p>
+                    <div class="event-actions">
+                        <a href="https://jazzboston.org/jazz-calendar?international-jazz-day-celebration-feat-godwin-louis-jonathan-suazo&event_id=420980&fid=1" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=Godwin+Louis+saxophone+jazz+live" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-04-30-nina-ott" data-date="2026-04-30" data-genre="jazz" data-search="nina ott hum feldman geospatial long live roxbury" data-title="Nina Ott &amp; HUM at Long Live Roxbury" data-start="20260430T180000" data-end="20260430T200000" data-location="Long Live Roxbury, Boston MA" data-details="International Jazz Day with Hammond B-3 organist Nina Ott. https://jazzboston.org" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">International Jazz Day with Nina Ott &amp; HUM</h3>
+                        <span class="genre-tag">Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Long Live Roxbury <span class="venue-city">· Boston</span></span>
+                        <span class="time">6:00 PM</span>
+                    </div>
+                    <p class="event-description">Roxbury-rooted celebration with Hammond B-3 organist Nina Ott and her HUM ensemble, presented by Feldman Geospatial.</p>
+                    <p class="notability">Roxbury community jazz series</p>
+                    <div class="event-actions">
+                        <a href="https://jazzboston.org/jazz-calendar?feldman-geospatial-presents-international-jazz-day-with-nina-ott-hum&event_id=421422&fid=1" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=Nina+Ott+organ+jazz+Boston" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-04-30-crushville" data-date="2026-04-30" data-genre="soul" data-search="crushville stevie wonder earth wind fire jimmys dance party" data-title="Crushville: Stevie Wonder vs Earth Wind & Fire at Jimmy's" data-start="20260430T193000" data-end="20260430T213000" data-location="135 Congress St, Portsmouth, NH 03801" data-details="Dance-party tribute. https://jimmysoncongress.com" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">Crushville: Stevie Wonder vs Earth, Wind &amp; Fire</h3>
+                        <span class="genre-tag">Soul / R&amp;B</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Jimmy's Jazz &amp; Blues Club <span class="venue-city">· Portsmouth NH</span></span>
+                        <span class="time">7:30 PM</span>
+                    </div>
+                    <p class="event-description">A returning Crushville dance party pitting two legendary catalogues against each other — full live band, horn section, and a packed dance floor.</p>
+                    <p class="notability">Recurring dance-party tribute series</p>
+                    <div class="event-actions">
+                        <a href="https://jimmysoncongress.com" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=135+Congress+St+Portsmouth+NH+03801&travelmode=driving" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=Crushville+Stevie+Wonder+Earth+Wind+Fire+tribute" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============ MAY 1 ============ -->
+        <section class="date-section" id="may-1" data-date="2026-05-01">
+            <div class="date-header">
+                <span class="date-day">Friday</span>
+                <span class="date-full">May 1, 2026</span>
+                <span class="setlist-bar" title="5 events"><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span></span></span>
+            </div>
+
+            <article class="event-card" id="e-2026-05-01-vanessa-collier" data-date="2026-05-01" data-genre="blues" data-search="vanessa collier blues music award saxophone jimmys" data-title="Vanessa Collier at Jimmy's" data-start="20260501T193000" data-end="20260501T213000" data-location="135 Congress St, Portsmouth, NH 03801" data-details="4x Blues Music Award winner. https://jimmysoncongress.com" data-tz="America/New_York">
+                <div class="event-content">
+                    <span class="event-credential">4× Blues Music Award winner</span>
+                    <div class="event-header">
+                        <h3 class="artist-name">Vanessa Collier</h3>
+                        <span class="genre-tag blues">Blues</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Jimmy's Jazz &amp; Blues Club <span class="venue-city">· Portsmouth NH</span></span>
+                        <span class="time">7:30 PM</span>
+                    </div>
+                    <p class="event-description">Berklee-trained saxophonist, vocalist, and songwriter who graduated into Joe Louis Walker's band before going solo. Her playing fuses blues, funk, and soul with an alto's bite and a vocalist's grit.</p>
+                    <div class="event-actions">
+                        <a href="https://jimmysoncongress.com" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=135+Congress+St+Portsmouth+NH+03801&travelmode=driving" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                    </div>
+                </div>
+                <div class="event-media">
+                    <div class="video-preview">
+                        <a href="https://www.youtube.com/watch?v=iip0P2KodvU" target="_blank" rel="noopener">
+                            <img src="https://img.youtube.com/vi/iip0P2KodvU/hqdefault.jpg" alt="Vanessa Collier with Joe Bonamassa">
+                            <span class="play-overlay" role="img" aria-label="Play video"></span>
+                        </a>
+                        <p class="video-title">Live with Joe Bonamassa (2023)</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-05-01-judy-wexler" data-date="2026-05-01" data-genre="jazz" data-search="judy wexler jazz vocalist scullers" data-title="Judy Wexler at Scullers" data-start="20260501T190000" data-end="20260501T210000" data-location="400 Soldiers Field Rd, Boston, MA 02134" data-details="LA jazz vocalist. https://scullersjazz.com/upcoming-events/" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">Vocalist Judy Wexler</h3>
+                        <span class="genre-tag">Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Scullers Jazz Club <span class="venue-city">· Boston</span></span>
+                        <span class="t-pill green">T Green · Babcock · 15 min</span>
+                        <span class="time">7:00 PM</span>
+                    </div>
+                    <p class="event-description">L.A.-based jazz vocalist whose understated phrasing and impeccable taste have earned consistent JazzWeek and DownBeat praise. Wexler's sets favor lesser-known songbook gems and contemporary jazz repertoire.</p>
+                    <p class="notability">Six acclaimed albums &middot; "intimate, intelligent" — JazzTimes</p>
+                    <div class="event-actions">
+                        <a href="https://scullersjazz.com/upcoming-events/" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=400+Soldiers+Field+Rd+Boston+MA+02134&travelmode=transit" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=Judy+Wexler+jazz+vocalist+live" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-05-01-hellbender" data-date="2026-05-01" data-genre="jazz" data-search="hellbender jazz boston regattabar" data-title="Hellbender at Regattabar" data-start="20260501T193000" data-end="20260501T213000" data-location="1 Bennett St, Cambridge, MA 02138" data-details="Boston modern-jazz combo. https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">Hellbender</h3>
+                        <span class="genre-tag">Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Regattabar <span class="venue-city">· Cambridge</span></span>
+                        <span class="t-pill red">T Red · Harvard · 5 min</span>
+                        <span class="time">7:30 PM</span>
+                    </div>
+                    <p class="event-description">Adventurous Boston jazz combo bringing original modern compositions to the Charles Hotel's flagship listening room.</p>
+                    <p class="notability">Boston modern-jazz scene</p>
+                    <div class="event-actions">
+                        <a href="https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=1+Bennett+St+Cambridge+MA+02138&travelmode=transit" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=Hellbender+jazz+band+Boston" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-05-01-misty-blues" data-date="2026-05-01" data-genre="blues" data-search="misty blues bees deluxe bull run shirley" data-title="Misty Blues & Bees Deluxe at Bull Run" data-start="20260501T180000" data-end="20260501T220000" data-location="Bull Run Restaurant, 215 Great Rd, Shirley, MA 01464" data-details="Two New England blues outfits. https://www.bullrunrestaurant.com" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">Misty Blues &amp; Bees Deluxe</h3>
+                        <span class="genre-tag blues">Blues</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Bull Run Restaurant <span class="venue-city">· Shirley</span></span>
+                        <span class="time">6:00 PM</span>
+                    </div>
+                    <p class="event-description">Two of New England's most respected working blues outfits share the bill: Berkshires-based Misty Blues, fronted by powerhouse vocalist Gina Coleman, and Boston's blues-rock veterans Bees Deluxe.</p>
+                    <p class="notability">Regional blues circuit favorites</p>
+                    <div class="event-actions">
+                        <a href="https://www.bullrunrestaurant.com" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=215+Great+Rd+Shirley+MA+01464&travelmode=driving" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=Misty+Blues+Gina+Coleman+blues+live" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-05-01-johnny-hoy" data-date="2026-05-01" data-genre="blues" data-search="johnny hoy bluefish marthas vineyard fallout shelter norwood" data-title="Johnny Hoy and The Bluefish at Fallout Shelter" data-start="20260501T190000" data-end="20260501T210000" data-location="The Fallout Shelter, 1 Norwood Park S, Norwood, MA 02062" data-details="Martha's Vineyard harmonica bandleader. https://thefalloutshelter.com" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">Johnny Hoy and The Bluefish Live</h3>
+                        <span class="genre-tag blues">Blues</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">The Fallout Shelter <span class="venue-city">· Norwood</span></span>
+                        <span class="time">7:00 PM</span>
+                    </div>
+                    <p class="event-description">Martha's Vineyard–based harmonica bandleader Johnny Hoy leads his long-running Bluefish through electric blues and R&amp;B.</p>
+                    <p class="notability">25+ year Cape &amp; Islands blues institution</p>
+                    <div class="event-actions">
+                        <a href="https://thefalloutshelter.com" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=1+Norwood+Park+S+Norwood+MA+02062&travelmode=driving" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=Johnny+Hoy+Bluefish+blues+live" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============ MAY 2 ============ -->
+        <section class="date-section" id="may-2" data-date="2026-05-02">
+            <div class="date-header">
+                <span class="date-day">Saturday</span>
+                <span class="date-full">May 2, 2026</span>
+                <span class="date-badge weekend">Weekend</span>
+                <span class="setlist-bar" title="3 events"><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span></span><span></span><span></span></span>
+            </div>
+
+            <article class="event-card" id="e-2026-05-02-bt-alc" data-date="2026-05-02" data-genre="big band jazz" data-search="bt alc big band boston regattabar" data-title="BT ALC Big Band at Regattabar" data-start="20260502T190000" data-end="20260502T210000" data-location="1 Bennett St, Cambridge, MA 02138" data-details="Boston 17-piece modern big band. https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">BT ALC Big Band</h3>
+                        <span class="genre-tag">Big Band Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Regattabar <span class="venue-city">· Cambridge</span></span>
+                        <span class="t-pill red">T Red · Harvard · 5 min</span>
+                        <span class="time">7:00 PM</span>
+                    </div>
+                    <p class="event-description">Boston's high-energy 17-piece big band led by trombonist Brian Thomas and trumpeter Alex Lee-Clark, folding hip-hop, soul, and Latin grooves into a swinging modern big band tradition.</p>
+                    <p class="notability">Boston's premier modern big band; festival regulars</p>
+                    <div class="event-actions">
+                        <a href="https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=1+Bennett+St+Cambridge+MA+02138&travelmode=transit" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=BT+ALC+Big+Band+Boston+jazz" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-05-02-little-miss-boom" data-date="2026-05-02" data-genre="blues soul" data-search="little miss boom blues soul scullers" data-title="Little Miss and the Boom at Scullers" data-start="20260502T190000" data-end="20260502T210000" data-location="400 Soldiers Field Rd, Boston, MA 02134" data-details="Boston blues-soul. https://scullersjazz.com/upcoming-events/" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">Little Miss and the Boom</h3>
+                        <span class="genre-tag blues">Blues / Soul</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Scullers Jazz Club <span class="venue-city">· Boston</span></span>
+                        <span class="t-pill green">T Green · Babcock · 15 min</span>
+                        <span class="time">7:00 PM</span>
+                    </div>
+                    <p class="event-description">A Boston-area blues-soul outfit known for tight ensemble work and engaging frontwoman vocals — a rare appearance at Scullers' upscale listening room.</p>
+                    <p class="notability">Regional blues-soul ensemble</p>
+                    <div class="event-actions">
+                        <a href="https://scullersjazz.com/upcoming-events/" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=400+Soldiers+Field+Rd+Boston+MA+02134&travelmode=transit" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=Little+Miss+and+the+Boom+blues" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-05-02-glitter-boys" data-date="2026-05-02" data-genre="soul funk" data-search="glitter boys funk disco jimmys" data-title="The Glitter Boys at Jimmy's" data-start="20260502T193000" data-end="20260502T213000" data-location="135 Congress St, Portsmouth, NH 03801" data-details="NH party-funk. https://jimmysoncongress.com" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">The Glitter Boys</h3>
+                        <span class="genre-tag">Funk / Soul</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Jimmy's Jazz &amp; Blues Club <span class="venue-city">· Portsmouth NH</span></span>
+                        <span class="time">7:30 PM</span>
+                    </div>
+                    <p class="event-description">High-energy New England party-funk ensemble kicking off Jimmy's month of May with disco, funk, and soul classics.</p>
+                    <p class="notability">New England party-funk ensemble</p>
+                    <div class="event-actions">
+                        <a href="https://jimmysoncongress.com" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=135+Congress+St+Portsmouth+NH+03801&travelmode=driving" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=The+Glitter+Boys+funk+disco+band" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============ MAY 3 ============ -->
+        <section class="date-section" id="may-3" data-date="2026-05-03">
+            <div class="date-header">
+                <span class="date-day">Sunday</span>
+                <span class="date-full">May 3, 2026</span>
+                <span class="date-badge weekend">Weekend</span>
+                <span class="setlist-bar" title="1 event"><span class="seg-active"></span><span></span><span></span><span></span><span></span><span></span></span>
+            </div>
+
+            <article class="event-card" id="e-2026-05-03-dan-wilson-organ-trio" data-date="2026-05-03" data-genre="jazz" data-search="dan wilson organ trio jazz guitar christian mcbride jimmys" data-title="Dan Wilson Organ Trio at Jimmy's" data-start="20260503T193000" data-end="20260503T213000" data-location="135 Congress St, Portsmouth, NH 03801" data-details="McBride protege, Grammy-nominated. https://jimmysoncongress.com" data-tz="America/New_York">
+                <div class="event-content">
+                    <span class="event-credential">Grammy-nominated · Christian McBride protégé</span>
+                    <div class="event-header">
+                        <h3 class="artist-name">Dan Wilson Organ Trio</h3>
+                        <span class="genre-tag">Organ Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Jimmy's Jazz &amp; Blues Club <span class="venue-city">· Portsmouth NH</span></span>
+                        <span class="time">7:30 PM</span>
+                    </div>
+                    <p class="event-description">Akron-born jazz guitarist whose Wes Montgomery-rooted style earned him longtime gigs with Joey DeFrancesco and Christian McBride — McBride himself produced Wilson's debut <em>Vessels of Wood and Earth</em> on his Brother Mister label.</p>
+                    <div class="event-actions">
+                        <a href="https://jimmysoncongress.com" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=135+Congress+St+Portsmouth+NH+03801&travelmode=driving" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                    </div>
+                </div>
+                <div class="event-media">
+                    <div class="video-preview">
+                        <a href="https://www.youtube.com/watch?v=B5f70hRI9uA" target="_blank" rel="noopener">
+                            <img src="https://img.youtube.com/vi/B5f70hRI9uA/hqdefault.jpg" alt="Dan Wilson plays Cotton Tail">
+                            <span class="play-overlay" role="img" aria-label="Play video"></span>
+                        </a>
+                        <p class="video-title">"Cotton Tail" — Wes Montgomery Jazz Guitar Competition</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============ MAY 6 ============ -->
+        <section class="date-section" id="may-6" data-date="2026-05-06">
+            <div class="date-header">
+                <span class="date-day">Wednesday</span>
+                <span class="date-full">May 6, 2026</span>
+                <span class="setlist-bar" title="2 events"><span class="seg-active"></span><span class="seg-active"></span><span></span><span></span><span></span><span></span></span>
+            </div>
+
+            <article class="event-card" id="e-2026-05-06-jumaane-smith" data-date="2026-05-06" data-genre="jazz" data-search="jumaane smith trumpet vocalist buble jimmys" data-title="Jumaane Smith at Jimmy's" data-start="20260506T193000" data-end="20260506T213000" data-location="135 Congress St, Portsmouth, NH 03801" data-details="5x Grammy-winning sideman (Buble). https://jimmysoncongress.com" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">Jumaane Smith</h3>
+                        <span class="genre-tag">Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Jimmy's Jazz &amp; Blues Club <span class="venue-city">· Portsmouth NH</span></span>
+                        <span class="time">7:30 PM</span>
+                    </div>
+                    <p class="event-description">Trumpeter and vocalist who has performed on five Grammy-winning records, including longtime work with Michael Bublé. His own dates lean into swinging vocal jazz with a brassy, virtuosic frontline.</p>
+                    <p class="notability">5× Grammy-winning sideman &middot; Michael Bublé band</p>
+                    <div class="event-actions">
+                        <a href="https://jimmysoncongress.com" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=135+Congress+St+Portsmouth+NH+03801&travelmode=driving" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=Jumaane+Smith+trumpet+jazz+vocalist" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-05-06-earfull" data-date="2026-05-06" data-genre="jazz" data-search="earfull jazz new music boston regattabar" data-title="Earfull at Regattabar" data-start="20260506T193000" data-end="20260506T213000" data-location="1 Bennett St, Cambridge, MA 02138" data-details="Monthly Boston new-music series. https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814" data-tz="America/New_York">
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="artist-name">Earfull at the Regattabar</h3>
+                        <span class="genre-tag">Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Regattabar <span class="venue-city">· Cambridge</span></span>
+                        <span class="t-pill red">T Red · Harvard · 5 min</span>
+                        <span class="time">7:30 PM</span>
+                    </div>
+                    <p class="event-description">A monthly Boston-based new-music series presenting adventurous original compositions from local jazz and creative-music players.</p>
+                    <p class="notability">Boston creative-music series</p>
+                    <div class="event-actions">
+                        <a href="https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=1+Bennett+St+Cambridge+MA+02138&travelmode=transit" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                        <a href="https://www.youtube.com/results?search_query=Earfull+jazz+series+Boston" class="action-chip vidsearch" target="_blank" rel="noopener">▶ Search videos</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============ MAY 7 ============ -->
+        <section class="date-section" id="may-7" data-date="2026-05-07">
+            <div class="date-header">
+                <span class="date-day">Thursday</span>
+                <span class="date-full">May 7, 2026</span>
+                <span class="setlist-bar" title="1 event"><span class="seg-active"></span><span></span><span></span><span></span><span></span><span></span></span>
+            </div>
+
+            <article class="event-card" id="e-2026-05-07-mike-stern-band" data-date="2026-05-07" data-genre="fusion jazz" data-search="mike stern band dennis chambers miles davis fusion regattabar" data-title="Mike Stern Band at Regattabar" data-start="20260507T190000" data-end="20260507T210000" data-location="1 Bennett St, Cambridge, MA 02138" data-details="Miles Davis alum; 6x Grammy nominee. https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814" data-tz="America/New_York">
+                <div class="event-content">
+                    <span class="event-credential">Miles Davis Band alum · 6× Grammy nominee</span>
+                    <div class="event-header">
+                        <h3 class="artist-name">Mike Stern Band feat. Dennis Chambers, Gary Grainger, Bob Franceschini, Leni Stern</h3>
+                        <span class="genre-tag fusion">Fusion</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Regattabar <span class="venue-city">· Cambridge</span></span>
+                        <span class="t-pill red">T Red · Harvard · 5 min</span>
+                        <span class="time">7:00 PM &amp; 9:00 PM</span>
+                    </div>
+                    <p class="event-description">Mike Stern — a key voice in Miles Davis's 1981 comeback band — returns to Cambridge with a heavyweight quintet: drummer Dennis Chambers (Funkadelic, Steely Dan), bassist Gary Grainger (John Scofield), saxophonist Bob Franceschini, and guitarist Leni Stern. Two shows of muscular electric jazz.</p>
+                    <div class="event-actions">
+                        <a href="https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=1+Bennett+St+Cambridge+MA+02138&travelmode=transit" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                    </div>
+                </div>
+                <div class="event-media">
+                    <div class="video-preview">
+                        <a href="https://www.youtube.com/watch?v=399rBhBIxIg" target="_blank" rel="noopener">
+                            <img src="https://img.youtube.com/vi/399rBhBIxIg/hqdefault.jpg" alt="Mike Stern Band live at Bird's Basement">
+                            <span class="play-overlay" role="img" aria-label="Play video"></span>
+                        </a>
+                        <p class="video-title">Live @ Bird's Basement w/ Dennis Chambers (2025)</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============ MAY 8 ============ -->
+        <section class="date-section" id="may-8" data-date="2026-05-08">
+            <div class="date-header">
+                <span class="date-day">Friday</span>
+                <span class="date-full">May 8, 2026</span>
+                <span class="setlist-bar" title="2 events"><span class="seg-active"></span><span class="seg-active"></span><span></span><span></span><span></span><span></span></span>
+            </div>
+
+            <article class="event-card" id="e-2026-05-08-mike-stern-band" data-date="2026-05-08" data-genre="fusion jazz" data-search="mike stern band dennis chambers miles davis fusion regattabar" data-title="Mike Stern Band at Regattabar" data-start="20260508T190000" data-end="20260508T210000" data-location="1 Bennett St, Cambridge, MA 02138" data-details="Miles Davis alum; 6x Grammy nominee, night 2. https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814" data-tz="America/New_York">
+                <div class="event-content">
+                    <span class="event-credential">Miles Davis Band alum · 6× Grammy nominee</span>
+                    <div class="event-header">
+                        <h3 class="artist-name">Mike Stern Band feat. Dennis Chambers, Gary Grainger, Bob Franceschini, Leni Stern</h3>
+                        <span class="genre-tag fusion">Fusion</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Regattabar <span class="venue-city">· Cambridge</span></span>
+                        <span class="t-pill red">T Red · Harvard · 5 min</span>
+                        <span class="time">7:00 PM &amp; 9:00 PM</span>
+                    </div>
+                    <p class="event-description">Second night of the Stern quintet residency. If Thursday sells out, Friday's late show is usually the easiest seat in the house.</p>
+                    <div class="event-actions">
+                        <a href="https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=1+Bennett+St+Cambridge+MA+02138&travelmode=transit" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                    </div>
+                </div>
+                <div class="event-media">
+                    <div class="video-preview">
+                        <a href="https://www.youtube.com/watch?v=399rBhBIxIg" target="_blank" rel="noopener">
+                            <img src="https://img.youtube.com/vi/399rBhBIxIg/hqdefault.jpg" alt="Mike Stern Band live at Bird's Basement">
+                            <span class="play-overlay" role="img" aria-label="Play video"></span>
+                        </a>
+                        <p class="video-title">Live @ Bird's Basement w/ Dennis Chambers (2025)</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card" id="e-2026-05-08-eric-darius" data-date="2026-05-08" data-genre="contemporary jazz smooth" data-search="eric darius smooth jazz saxophone billboard scullers" data-title="Eric Darius at Scullers" data-start="20260508T190000" data-end="20260508T210000" data-location="400 Soldiers Field Rd, Boston, MA 02134" data-details="5x #1 Billboard contemporary jazz. https://scullersjazz.com/upcoming-events/" data-tz="America/New_York">
+                <div class="event-content">
+                    <span class="event-credential">5× #1 Billboard Contemporary Jazz singles</span>
+                    <div class="event-header">
+                        <h3 class="artist-name">Eric Darius</h3>
+                        <span class="genre-tag contemporary">Smooth Jazz</span>
+                    </div>
+                    <div class="event-venue-time">
+                        <span class="venue">Scullers Jazz Club <span class="venue-city">· Boston</span></span>
+                        <span class="t-pill green">T Green · Babcock · 15 min</span>
+                        <span class="time">7:00 PM &amp; 9:00 PM</span>
+                    </div>
+                    <p class="event-description">Tampa-raised saxophonist who's been a Billboard contemporary-jazz fixture since his late teens. Known for high-jumping showmanship and crowd-energy sets, Darius has notched five #1 hits and seventeen Top 10s on the Contemporary Jazz Chart.</p>
+                    <div class="event-actions">
+                        <a href="https://scullersjazz.com/upcoming-events/" class="action-chip ticket" target="_blank" rel="noopener">Get Tickets</a>
+                        <a href="#" class="action-chip cal" data-cal="gcal" target="_blank" rel="noopener">+ Google Cal</a>
+                        <a href="#" class="action-chip cal" data-cal="ics">.ics</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=400+Soldiers+Field+Rd+Boston+MA+02134&travelmode=transit" class="action-chip map" target="_blank" rel="noopener">Directions</a>
+                        <button class="action-chip copy" data-copy-link>Copy link</button>
+                    </div>
+                </div>
+                <div class="event-media">
+                    <div class="video-preview">
+                        <a href="https://www.youtube.com/watch?v=frrcPcjmrp8" target="_blank" rel="noopener">
+                            <img src="https://img.youtube.com/vi/frrcPcjmrp8/hqdefault.jpg" alt="Eric Darius live at Pizza Express Soho">
+                            <span class="play-overlay" role="img" aria-label="Play video"></span>
+                        </a>
+                        <p class="video-title">Live 4K — London Soho (2024)</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <footer>
+            <p class="footer-generated">Generated April 24, 2026 via Jazz Weekly · 30 events</p>
+            <div class="sources">
+                Sources:
+                <a href="https://jazzboston.org/jazz-calendar/">Jazz Boston</a> ·
+                <a href="https://www.berklee.edu/BPC">Berklee</a> ·
+                <a href="https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814">Regattabar</a> ·
+                <a href="https://scullersjazz.com">Scullers</a> ·
+                <a href="https://jimmysoncongress.com">Jimmy's</a> ·
+                <a href="https://www.beehiveboston.com">The Beehive</a> ·
+                <a href="https://tickets.rockportmusic.org/events">Rockport</a> ·
+                <a href="https://wallyscafe.com">Wally's</a>
+            </div>
+            <p class="source-footnote">* All About Jazz unavailable this run (HTTP 403 after 1 retry); coverage may be slightly lighter than usual. See manifest for full source status.</p>
+        </footer>
+    </div>
+<script>
+// jazz-weekly — client-side behavior (vanilla JS, zero deps)
+(function () {
+  'use strict';
+
+  function markTemporal() {
+    var today = new Date();
+    var todayStr = today.toISOString().slice(0, 10);
+    var weekendSet = {};
+    for (var i = 0; i < 7; i++) {
+      var d = new Date(today);
+      d.setDate(today.getDate() + i);
+      var dd = d.getDay();
+      if (dd === 5 || dd === 6 || dd === 0) {
+        weekendSet[d.toISOString().slice(0, 10)] = true;
+      }
+    }
+    document.querySelectorAll('[data-date]').forEach(function (el) {
+      var iso = el.getAttribute('data-date');
+      if (!iso) return;
+      if (iso === todayStr) el.classList.add('is-today');
+      else if (iso < todayStr) el.classList.add('is-past');
+      else if (weekendSet[iso]) el.classList.add('is-weekend');
+    });
+  }
+
+  function initFilters() {
+    var chips = document.querySelectorAll('.filter-chip');
+    var search = document.getElementById('search-input');
+    var hidePast = document.getElementById('hide-past');
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.event-card'));
+    var dateSections = Array.prototype.slice.call(document.querySelectorAll('.date-section'));
+    var calNav = document.querySelectorAll('.calendar-nav a');
+    var activeGenre = 'all';
+    function norm(s) { return (s || '').toString().toLowerCase(); }
+    function apply() {
+      var q = search ? norm(search.value.trim()) : '';
+      var hidingPast = hidePast && hidePast.checked;
+      var visibleDates = {};
+      cards.forEach(function (card) {
+        var genre = norm(card.getAttribute('data-genre'));
+        var blob = norm(card.getAttribute('data-search') || card.textContent);
+        var iso = card.getAttribute('data-date') || '';
+        var past = card.classList.contains('is-past');
+        var gm = activeGenre === 'all' || genre.indexOf(activeGenre) !== -1;
+        var qm = !q || blob.indexOf(q) !== -1;
+        var pm = !hidingPast || !past;
+        var show = gm && qm && pm;
+        card.style.display = show ? '' : 'none';
+        if (show) visibleDates[iso] = true;
+      });
+      dateSections.forEach(function (sec) {
+        var iso = sec.getAttribute('data-date') || '';
+        sec.style.display = iso in visibleDates ? '' : 'none';
+      });
+      calNav.forEach(function (a) {
+        var iso = (a.getAttribute('href') || '').replace('#', '');
+        var sec = document.getElementById(iso);
+        if (!sec || iso === 'dropins') return;
+        a.style.display = sec.style.display === 'none' ? 'none' : '';
+      });
+    }
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        activeGenre = chip.getAttribute('data-genre') || 'all';
+        chips.forEach(function (c) { c.classList.toggle('active', c === chip); c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'); });
+        apply();
+      });
+    });
+    if (search) search.addEventListener('input', apply);
+    if (hidePast) hidePast.addEventListener('change', apply);
+  }
+
+  function buildGCalUrl(c) {
+    return 'https://calendar.google.com/calendar/render?action=TEMPLATE' +
+      '&text=' + encodeURIComponent(c.title) +
+      '&dates=' + encodeURIComponent(c.start + '/' + c.end) +
+      '&details=' + encodeURIComponent(c.details) +
+      '&location=' + encodeURIComponent(c.location) +
+      '&ctz=' + encodeURIComponent(c.tz);
+  }
+  function icsEscape(s) { return (s || '').replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n'); }
+  function buildIcsUrl(c) {
+    var uid = 'jazz-weekly-' + c.slug + '@bitdoktor.github.io';
+    var dtstamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z/, 'Z');
+    var lines = [
+      'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//jazz-weekly//bitdoktor//EN','CALSCALE:GREGORIAN','METHOD:PUBLISH',
+      'BEGIN:VEVENT','UID:' + uid,'DTSTAMP:' + dtstamp,
+      'DTSTART;TZID=' + c.tz + ':' + c.start,
+      'DTEND;TZID=' + c.tz + ':' + c.end,
+      'SUMMARY:' + icsEscape(c.title),
+      'LOCATION:' + icsEscape(c.location),
+      'DESCRIPTION:' + icsEscape(c.details),
+      'END:VEVENT','END:VCALENDAR'
+    ];
+    return 'data:text/calendar;charset=utf-8,' + encodeURIComponent(lines.join('\r\n'));
+  }
+  function initCalendarButtons() {
+    document.querySelectorAll('[data-cal]').forEach(function (btn) {
+      var card = btn.closest('.event-card'); if (!card) return;
+      var p = {
+        title: card.getAttribute('data-title') || '',
+        start: card.getAttribute('data-start') || '',
+        end: card.getAttribute('data-end') || '',
+        location: card.getAttribute('data-location') || '',
+        details: card.getAttribute('data-details') || '',
+        tz: card.getAttribute('data-tz') || 'America/New_York',
+        slug: card.getAttribute('id') || 'event'
+      };
+      if (btn.getAttribute('data-cal') === 'gcal') btn.setAttribute('href', buildGCalUrl(p));
+      else if (btn.getAttribute('data-cal') === 'ics') { btn.setAttribute('href', buildIcsUrl(p)); btn.setAttribute('download', p.slug + '.ics'); }
+    });
+  }
+
+  function initCopyLink() {
+    document.querySelectorAll('[data-copy-link]').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var card = btn.closest('.event-card'); if (!card) return;
+        var url = location.origin + location.pathname + '#' + card.id;
+        var done = function () {
+          var orig = btn.textContent; btn.textContent = 'Copied!'; btn.classList.add('copied');
+          setTimeout(function () { btn.textContent = orig; btn.classList.remove('copied'); }, 1500);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done, function () { fallback(url); done(); });
+        } else { fallback(url); done(); }
+      });
+    });
+  }
+  function fallback(text) {
+    var t = document.createElement('textarea');
+    t.value = text; t.style.position = 'fixed'; t.style.opacity = '0';
+    document.body.appendChild(t); t.select();
+    try { document.execCommand('copy'); } catch (_e) {}
+    document.body.removeChild(t);
+  }
+
+  function initVideoFallback() {
+    document.querySelectorAll('.video-preview').forEach(function (preview) {
+      var img = preview.querySelector('img'); if (!img) return;
+      var replace = function () {
+        var an = preview.closest('.event-card') && preview.closest('.event-card').querySelector('.artist-name');
+        var q = encodeURIComponent(((an && an.textContent) || 'artist') + ' jazz live');
+        preview.outerHTML =
+          '<div class="video-search"><div class="video-search-label">Find videos</div><div class="search-links">' +
+          '<a href="https://www.youtube.com/results?search_query=' + q + '" target="_blank" class="search-link youtube">YouTube</a>' +
+          '<a href="https://www.google.com/search?q=' + q + '&tbm=vid" target="_blank" class="search-link google">Google</a>' +
+          '</div></div>';
+      };
+      img.addEventListener('error', replace);
+      img.addEventListener('load', function () { if (img.naturalWidth <= 120 && img.naturalHeight <= 90) replace(); });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    try { markTemporal(); } catch (e) { console.error('markTemporal', e); }
+    try { initFilters(); } catch (e) { console.error('initFilters', e); }
+    try { initCalendarButtons(); } catch (e) { console.error('initCalendarButtons', e); }
+    try { initCopyLink(); } catch (e) { console.error('initCopyLink', e); }
+    try { initVideoFallback(); } catch (e) { console.error('initVideoFallback', e); }
+  });
+})();
+</script>
+    <!-- jazz-weekly-run-manifest: {"run_date":"2026-04-24","window_end":"2026-05-08","generator_version":"1.2.0","stage":"stage1-quickwins","sources":{"jazzboston":{"status":"ok","http":200,"events":21,"scrape_method":"webfetch"},"allaboutjazz":{"status":"error","http":403,"events":0,"scrape_method":"webfetch","severity":"secondary","retries":1,"note":"403 after one retry; demoted to footer footnote"},"berklee":{"status":"ok","http":200,"events":2,"scrape_method":"webfetch"},"regattabar":{"status":"ok","http":200,"events":10,"scrape_method":"mcp-browser-fetch"},"scullers":{"status":"ok","http":200,"events":4,"scrape_method":"mcp-browser-fetch"},"beehive":{"status":"ok","http":200,"events":0,"content_type":"generic","scrape_method":"mcp-browser-fetch"},"jimmys":{"status":"ok","http":200,"events":12,"scrape_method":"mcp-browser-fetch"},"rockport":{"status":"ok","http":200,"events":0,"scrape_method":"mcp-browser-fetch"},"wallys":{"status":"ok","content_type":"generic","events":0,"scrape_method":"websearch"}},"total_events":30,"youtube":{"curated_hits":1,"search_hits":7,"no_results":13},"stage1_features":["calendar-buttons","ics-data-url","google-maps-directions","mbta-t-pills","per-event-anchors","copy-link","genre-filter","search-box","today-highlighting","hide-past-toggle","density-bars","notability-credential","deep-linked-highlights","tiered-source-warning","reduce-motion-respect","focus-visible-rings"]} -->
+</body>
+</html>

@@ -1,0 +1,371 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//jazz-weekly//bitdoktor//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Boston Jazz Weekly
+X-WR-TIMEZONE:America/New_York
+BEGIN:VEVENT
+UID:e-2026-04-24-dee-dee-bridgewater@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260424T193000
+DTEND;TZID=America/New_York:20260424T213000
+SUMMARY:Dee Dee Bridgewater + Bill Charlap at Regattabar
+LOCATION:1 Bennett St\, Cambridge\, MA 02138
+DESCRIPTION:An NEA Jazz Master and 3x Grammy winner meets virtuoso pianist 
+ Bill Charlap. Tickets: https://www.ticketweb.com/venue/regattabar-cambridg
+ e-ma/748814
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-04-24-berklee-grand-gathering@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260424T200000
+DTEND;TZID=America/New_York:20260424T220000
+SUMMARY:Berklee: The Grand Gathering
+LOCATION:136 Massachusetts Ave\, Boston\, MA 02115
+DESCRIPTION:Eleven Berklee ensembles showcase modern\, mainstream\, free\, 
+ and electronic jazz. https://www.etix.com/ticket/p/86817705/
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-04-24-davy-knowles@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260424T200000
+DTEND;TZID=America/New_York:20260424T220000
+SUMMARY:Davy Knowles at Natick
+LOCATION:The Center for Arts in Natick\, 14 Summer St\, Natick\, MA 01760
+DESCRIPTION:Isle of Man blues guitarist\; toured with Joe Satriani\; produc
+ ed by Peter Frampton. https://natickarts.org
+CATEGORIES:blues
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-04-24-brian-de-lorenzo@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260424T193000
+DTEND;TZID=America/New_York:20260424T213000
+SUMMARY:Brian De Lorenzo: Toast of the Town Vol. 2
+LOCATION:Club Cafe\, 209 Columbus Ave\, Boston\, MA 02116
+DESCRIPTION:Album release for sophomore standards LP. https://clubcafe.com
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-04-24-organically-good-trio@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260424T210000
+DTEND;TZID=America/New_York:20260424T233000
+SUMMARY:Organically Good Trio at Lizard Lounge
+LOCATION:Lizard Lounge\, 1667 Massachusetts Ave\, Cambridge\, MA 02138
+DESCRIPTION:Boston-area jazz trio. https://www.lizardloungeclub.com
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-04-25-makaya-mccraven@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260425T193000
+DTEND;TZID=America/New_York:20260425T213000
+SUMMARY:Makaya McCraven at Jimmy's
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:DownBeat Critics Poll Rising Star\; Nonesuch artist. https://ji
+ mmysoncongress.com
+CATEGORIES:contemporary jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-04-25-hot-sardines@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260425T200000
+DTEND;TZID=America/New_York:20260425T220000
+SUMMARY:The Hot Sardines at Berklee
+LOCATION:136 Massachusetts Ave\, Boston\, MA 02115
+DESCRIPTION:NY nine-piece hot-jazz ensemble. https://www.etix.com/ticket/p/
+ 43195663/
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-04-25-suede@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260425T190000
+DTEND;TZID=America/New_York:20260425T210000
+SUMMARY:Suede at Scullers
+LOCATION:400 Soldiers Field Rd\, Boston\, MA 02134
+DESCRIPTION:Cabaret-jazz vocalist. https://scullersjazz.com/upcoming-events
+ /
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-04-25-jim-caruso@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260425T190000
+DTEND;TZID=America/New_York:20260425T210000
+SUMMARY:Jim Caruso's Cast Party at Regattabar
+LOCATION:1 Bennett St\, Cambridge\, MA 02138
+DESCRIPTION:Birdland open-mic-for-stars touring edition. https://www.ticket
+ web.com/venue/regattabar-cambridge-ma/748814
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-04-25-herb-pomeroy@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260425T200000
+DTEND;TZID=America/New_York:20260425T220000
+SUMMARY:Herb Pomeroy Memorial — Jazz Unity@MIT
+LOCATION:Thomas Tull Concert Hall\, MIT\, 50 Vassar St\, Cambridge\, MA 021
+ 39
+DESCRIPTION:Annual MIT tribute to Herb Pomeroy. https://music.mit.edu
+CATEGORIES:jazz big band
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-04-25-blues-express@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260425T190000
+DTEND;TZID=America/New_York:20260425T210000
+SUMMARY:Blues Express Live at Fallout Shelter
+LOCATION:The Fallout Shelter\, 1 Norwood Park S\, Norwood\, MA 02062
+DESCRIPTION:Regional blues outfit. https://thefalloutshelter.com
+CATEGORIES:blues
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-04-26-takuya-kuroda@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260426T193000
+DTEND;TZID=America/New_York:20260426T213000
+SUMMARY:Takuya Kuroda at Jimmy's
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:Blue Note trumpeter\, soul-jazz fusion. https://jimmysoncongres
+ s.com
+CATEGORIES:contemporary jazz soul
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-04-26-louise-grasmere@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260426T150000
+DTEND;TZID=America/New_York:20260426T170000
+SUMMARY:Louise Grasmere Two Crows CD Release
+LOCATION:Regent Theatre\, 7 Medford St\, Arlington\, MA 02474
+DESCRIPTION:CD release for sophomore album. https://www.regenttheatre.com
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-04-26-david-haas-group@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260426T190000
+DTEND;TZID=America/New_York:20260426T210000
+SUMMARY:The David Haas Group at Lilypad
+LOCATION:The Lilypad\, 1353 Cambridge St\, Cambridge\, MA 02139
+DESCRIPTION:Boston bassist David Haas ensemble. https://www.lilypadinman.co
+ m
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-04-28-unh-jazz@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260428T180000
+DTEND;TZID=America/New_York:20260428T200000
+SUMMARY:UNH Jazz Combos Showcase at Jimmy's
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:University of NH jazz combos. https://jimmysoncongress.com
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-04-29-kaki-king@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260429T193000
+DTEND;TZID=America/New_York:20260429T213000
+SUMMARY:Kaki King at Jimmy's
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:Guitar virtuoso\; Rolling Stone 'New Guitar God'. https://jimmy
+ soncongress.com
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-04-30-fabulous-thunderbirds@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260430T200000
+DTEND;TZID=America/New_York:20260430T220000
+SUMMARY:The Fabulous Thunderbirds at Natick
+LOCATION:The Center for Arts in Natick\, 14 Summer St\, Natick\, MA 01760
+DESCRIPTION:2024 Grammy-nominated blues legends. https://natickarts.org
+CATEGORIES:blues
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-04-30-godwin-louis@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260430T183000
+DTEND;TZID=America/New_York:20260430T203000
+SUMMARY:Godwin Louis + Jonathan Suazo at Union Church
+LOCATION:Union Church\, Boston MA
+DESCRIPTION:UNESCO International Jazz Day Boston event. https://jazzboston.
+ org
+CATEGORIES:jazz latin
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-04-30-nina-ott@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260430T180000
+DTEND;TZID=America/New_York:20260430T200000
+SUMMARY:Nina Ott & HUM at Long Live Roxbury
+LOCATION:Long Live Roxbury\, Boston MA
+DESCRIPTION:International Jazz Day with Hammond B-3 organist Nina Ott. http
+ s://jazzboston.org
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-04-30-crushville@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260430T193000
+DTEND;TZID=America/New_York:20260430T213000
+SUMMARY:Crushville: Stevie Wonder vs Earth Wind & Fire at Jimmy's
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:Dance-party tribute. https://jimmysoncongress.com
+CATEGORIES:soul
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-05-01-vanessa-collier@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260501T193000
+DTEND;TZID=America/New_York:20260501T213000
+SUMMARY:Vanessa Collier at Jimmy's
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:4x Blues Music Award winner. https://jimmysoncongress.com
+CATEGORIES:blues
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-05-01-judy-wexler@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260501T190000
+DTEND;TZID=America/New_York:20260501T210000
+SUMMARY:Judy Wexler at Scullers
+LOCATION:400 Soldiers Field Rd\, Boston\, MA 02134
+DESCRIPTION:LA jazz vocalist. https://scullersjazz.com/upcoming-events/
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-05-01-hellbender@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260501T193000
+DTEND;TZID=America/New_York:20260501T213000
+SUMMARY:Hellbender at Regattabar
+LOCATION:1 Bennett St\, Cambridge\, MA 02138
+DESCRIPTION:Boston modern-jazz combo. https://www.ticketweb.com/venue/regat
+ tabar-cambridge-ma/748814
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-05-01-misty-blues@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260501T180000
+DTEND;TZID=America/New_York:20260501T220000
+SUMMARY:Misty Blues & Bees Deluxe at Bull Run
+LOCATION:Bull Run Restaurant\, 215 Great Rd\, Shirley\, MA 01464
+DESCRIPTION:Two New England blues outfits. https://www.bullrunrestaurant.co
+ m
+CATEGORIES:blues
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-05-01-johnny-hoy@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260501T190000
+DTEND;TZID=America/New_York:20260501T210000
+SUMMARY:Johnny Hoy and The Bluefish at Fallout Shelter
+LOCATION:The Fallout Shelter\, 1 Norwood Park S\, Norwood\, MA 02062
+DESCRIPTION:Martha's Vineyard harmonica bandleader. https://thefalloutshelt
+ er.com
+CATEGORIES:blues
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-05-02-bt-alc@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260502T190000
+DTEND;TZID=America/New_York:20260502T210000
+SUMMARY:BT ALC Big Band at Regattabar
+LOCATION:1 Bennett St\, Cambridge\, MA 02138
+DESCRIPTION:Boston 17-piece modern big band. https://www.ticketweb.com/venu
+ e/regattabar-cambridge-ma/748814
+CATEGORIES:big band jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-05-02-little-miss-boom@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260502T190000
+DTEND;TZID=America/New_York:20260502T210000
+SUMMARY:Little Miss and the Boom at Scullers
+LOCATION:400 Soldiers Field Rd\, Boston\, MA 02134
+DESCRIPTION:Boston blues-soul. https://scullersjazz.com/upcoming-events/
+CATEGORIES:blues soul
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-05-02-glitter-boys@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260502T193000
+DTEND;TZID=America/New_York:20260502T213000
+SUMMARY:The Glitter Boys at Jimmy's
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:NH party-funk. https://jimmysoncongress.com
+CATEGORIES:soul funk
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-05-03-dan-wilson-organ-trio@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260503T193000
+DTEND;TZID=America/New_York:20260503T213000
+SUMMARY:Dan Wilson Organ Trio at Jimmy's
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:McBride protege\, Grammy-nominated. https://jimmysoncongress.co
+ m
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-05-06-jumaane-smith@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260506T193000
+DTEND;TZID=America/New_York:20260506T213000
+SUMMARY:Jumaane Smith at Jimmy's
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:5x Grammy-winning sideman (Buble). https://jimmysoncongress.com
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-05-06-earfull@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260506T193000
+DTEND;TZID=America/New_York:20260506T213000
+SUMMARY:Earfull at Regattabar
+LOCATION:1 Bennett St\, Cambridge\, MA 02138
+DESCRIPTION:Monthly Boston new-music series. https://www.ticketweb.com/venu
+ e/regattabar-cambridge-ma/748814
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-05-07-mike-stern-band@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260507T190000
+DTEND;TZID=America/New_York:20260507T210000
+SUMMARY:Mike Stern Band at Regattabar
+LOCATION:1 Bennett St\, Cambridge\, MA 02138
+DESCRIPTION:Miles Davis alum\; 6x Grammy nominee. https://www.ticketweb.com
+ /venue/regattabar-cambridge-ma/748814
+CATEGORIES:fusion jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-05-08-mike-stern-band@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260508T190000
+DTEND;TZID=America/New_York:20260508T210000
+SUMMARY:Mike Stern Band at Regattabar
+LOCATION:1 Bennett St\, Cambridge\, MA 02138
+DESCRIPTION:Miles Davis alum\; 6x Grammy nominee\, night 2. https://www.tic
+ ketweb.com/venue/regattabar-cambridge-ma/748814
+CATEGORIES:fusion jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-05-08-eric-darius@bitdoktor.github.io
+DTSTAMP:20260425T030620Z
+DTSTART;TZID=America/New_York:20260508T190000
+DTEND;TZID=America/New_York:20260508T210000
+SUMMARY:Eric Darius at Scullers
+LOCATION:400 Soldiers Field Rd\, Boston\, MA 02134
+DESCRIPTION:5x #1 Billboard contemporary jazz. https://scullersjazz.com/upc
+ oming-events/
+CATEGORIES:contemporary jazz smooth
+END:VEVENT
+END:VCALENDAR

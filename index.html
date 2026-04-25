@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boston Jazz & Blues — Archive</title>
+    <meta property="og:title" content="Boston Jazz & Blues — Weekly Archive">
+    <meta property="og:description" content="Past editions of the Boston jazz/blues weekly digest.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0d1117;
+            --bg-card: #161b22;
+            --bg-card-hover: #1c2128;
+            --accent-gold: #d4a853;
+            --accent-gold-dim: #a68532;
+            --accent-blue: #58a6ff;
+            --text-primary: #f0f6fc;
+            --text-secondary: #c9d1d9;
+            --text-muted: #8b949e;
+            --border-subtle: #30363d;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg-dark); color: var(--text-primary); min-height: 100vh; line-height: 1.6; }
+        .container { max-width: 720px; margin: 0 auto; padding: 2rem; }
+        header { text-align: center; padding: 3rem 0 2rem; margin-bottom: 2rem; position: relative; }
+        header::after { content: ""; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 120px; height: 2px; background: linear-gradient(90deg, transparent, var(--accent-gold), transparent); }
+        h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 2.5rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem; }
+        h1 span { color: var(--accent-gold); }
+        .subtitle { color: var(--text-muted); font-size: 1rem; }
+        .cta { display: flex; gap: 0.75rem; justify-content: center; margin: 2rem 0; flex-wrap: wrap; }
+        .cta a { padding: 0.6rem 1.25rem; border: 1px solid var(--accent-gold); color: var(--accent-gold); text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 0.9rem; transition: all 0.15s ease; }
+        .cta a:hover { background: var(--accent-gold); color: var(--bg-dark); }
+        .cta a.secondary { border-color: var(--border-subtle); color: var(--text-secondary); }
+        .cta a.secondary:hover { border-color: var(--accent-blue); color: var(--accent-blue); background: transparent; }
+        section { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; color: var(--accent-gold); margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; }
+        .archive-list { list-style: none; padding: 0; }
+        .archive-list li { padding: 0.75rem 0; border-bottom: 1px dashed var(--border-subtle); display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+        .archive-list li:last-child { border-bottom: none; }
+        .archive-list a { color: var(--text-primary); text-decoration: none; font-size: 1rem; }
+        .archive-list a:hover { color: var(--accent-gold); }
+        .archive-meta { color: var(--text-muted); font-size: 0.85rem; font-family: 'Source Sans Pro', monospace; }
+        .latest-badge { display: inline-block; background: var(--accent-gold); color: var(--bg-dark); padding: 0.15rem 0.6rem; border-radius: 8px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-left: 0.5rem; }
+        footer { text-align: center; padding: 2rem 0; color: var(--text-muted); font-size: 0.8rem; border-top: 1px solid var(--border-subtle); margin-top: 2rem; }
+        footer a { color: var(--accent-blue); text-decoration: none; }
+        footer a:hover { color: var(--accent-gold); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Boston <span>Jazz</span> &amp; <span>Blues</span></h1>
+            <p class="subtitle">Weekly digest of upcoming jazz/blues in Greater Boston</p>
+        </header>
+
+        <div class="cta">
+            <a href="latest.html">Latest issue →</a>
+            <a href="feed.ics" class="secondary">Subscribe (.ics)</a>
+        </div>
+
+        <section>
+            <h2>Past Issues</h2>
+            <ul class="archive-list">
+                <li><a href="2026-04-24.html">Friday, April 24, 2026</a><span class="latest-badge">Latest</span><span class="archive-meta">122 KB · .ics → <a href="feed.ics">subscribe</a></span></li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>Auto-generated weekly by the <a href="https://github.com/bitdoktor">bitdoktor</a> jazz-weekly skill.</p>
+            <p>Source code (private): <code>bitdoktor/tools</code> · Last updated: 2026-04-25 03:06 UTC</p>
+        </footer>
+    </div>
+</body>
+</html>
