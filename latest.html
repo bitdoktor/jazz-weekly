@@ -4,6 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://i.ytimg.com https://img.youtube.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self'">
+    <script>
+    /* Theme bootstrap — runs synchronously before <body> renders to prevent
+       FOUC. Reads the saved theme from localStorage; "auto" or unset falls
+       back to the system color-scheme preference (vinyl for dark, paper for
+       light). When matchMedia is unavailable (very old browsers), default
+       to vinyl — matches the :root fallback further down in this file and
+       the catch-block below, so the no-JS / no-matchMedia / try-throws
+       paths all converge on the same default. Applied as the data-theme
+       attribute on <html>, which the CSS below selects against. Wrapped in
+       try so private browsing or file:// (where localStorage may throw)
+       still renders something sensible. */
+    (function () {
+        'use strict';
+        try {
+            var k = 'jazz-weekly:prefs.theme';
+            var v = null;
+            try { v = localStorage.getItem(k); } catch (_) {}
+            var theme;
+            if (v && v !== 'auto') {
+                theme = v;
+            } else if (window.matchMedia) {
+                theme = window.matchMedia('(prefers-color-scheme: dark)').matches
+                    ? 'vinyl' : 'paper';
+            } else {
+                theme = 'vinyl';
+            }
+            document.documentElement.setAttribute('data-theme', theme);
+        } catch (_) {
+            document.documentElement.setAttribute('data-theme', 'vinyl');
+        }
+    })();
+    </script>
     <title>Boston Jazz & Blues: April 26, 2026 - May 10, 2026</title>
     <meta property="og:title" content="Boston Jazz & Blues Weekly">
     <meta property="og:description" content="April 26, 2026 - May 10, 2026 — 37 shows across Greater Boston">
@@ -12,7 +44,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        :root {
+        /* Theme system. Three named themes ship; "auto" is resolved to vinyl
+           or paper at boot by the inline FOUC script in <head>, so the CSS
+           never sees data-theme="auto". The :root fallback equals vinyl so
+           the page still renders sensibly if JS is fully disabled. Variable
+           names like --bg-dark and --accent-gold are kept for backwards
+           compatibility with existing rules; their values are theme-defined.
+        */
+        :root,
+        [data-theme="vinyl"] {
             --bg-dark: #0d1117;
             --bg-card: #161b22;
             --bg-card-hover: #1c2128;
@@ -27,6 +67,109 @@
             --text-muted: #8b949e;
             --border-subtle: #30363d;
             --shadow-gold: rgba(212, 168, 83, 0.15);
+            /* Section backgrounds — accent-tinted gradients for the four
+               feature sections plus an inset bg for cards living inside
+               those sections. Theme-scoped so Paper doesn't show dark
+               tones bleeding through where dark gradients used to live. */
+            --top-pick-bg:   linear-gradient(135deg, #1a1510 0%, #261d14 100%);
+            --highlights-bg: linear-gradient(135deg, var(--bg-card) 0%, #1a1f26 100%);
+            --rising-bg:     linear-gradient(135deg, #0d1517 0%, #111a1f 100%);
+            --rising-border: #1e4d3d;
+            --dropins-bg:    linear-gradient(135deg, #15111a 0%, #1b1624 100%);
+            --dropins-border: #3b2c54;
+            --inset-card-bg: var(--bg-dark);
+            --source-warning-bg: rgba(248, 81, 73, 0.08);
+            --today-tint: rgba(212, 168, 83, 0.06);
+            --play-overlay-bg: rgba(212, 168, 83, 0.95);
+            color-scheme: dark;
+        }
+        [data-theme="bluenote"] {
+            --bg-dark: #0a1421;
+            --bg-card: #0f1c2e;
+            --bg-card-hover: #142339;
+            --accent-gold: #64b5f6;
+            --accent-gold-dim: #3a6e94;
+            --accent-blue: #ff8a65;
+            --accent-green: #4dd0a8;
+            --accent-purple: #b39ddb;
+            --accent-warn: #ff7043;
+            --text-primary: #eaf3ff;
+            --text-secondary: #b8c9dd;
+            --text-muted: #6e85a3;
+            --border-subtle: #1f3552;
+            --shadow-gold: rgba(100, 181, 246, 0.18);
+            --top-pick-bg:   linear-gradient(135deg, #14233a 0%, #1a2c4a 100%);
+            --highlights-bg: linear-gradient(135deg, var(--bg-card) 0%, #142339 100%);
+            --rising-bg:     linear-gradient(135deg, #0a1421 0%, #0f1c2e 100%);
+            --rising-border: #2d5d4d;
+            --dropins-bg:    linear-gradient(135deg, #14111a 0%, #1a1624 100%);
+            --dropins-border: #4a3b6b;
+            --inset-card-bg: var(--bg-dark);
+            --source-warning-bg: rgba(255, 112, 67, 0.10);
+            --today-tint: rgba(100, 181, 246, 0.08);
+            --play-overlay-bg: rgba(100, 181, 246, 0.95);
+            color-scheme: dark;
+        }
+        [data-theme="paper"] {
+            --bg-dark: #faf6ed;
+            --bg-card: #ffffff;
+            --bg-card-hover: #f5efde;
+            --accent-gold: #b8742a;
+            --accent-gold-dim: #8a541b;
+            --accent-blue: #1d3557;
+            --accent-green: #2d6a4f;
+            --accent-purple: #6a4c93;
+            --accent-warn: #c1422c;
+            --text-primary: #1a1410;
+            --text-secondary: #3d322a;
+            --text-muted: #7a6a5d;
+            --border-subtle: #e2d9c5;
+            --shadow-gold: rgba(184, 116, 42, 0.12);
+            --top-pick-bg:   linear-gradient(135deg, #fff8e8 0%, #fbeed0 100%);
+            --highlights-bg: linear-gradient(135deg, var(--bg-card) 0%, #f5efde 100%);
+            --rising-bg:     linear-gradient(135deg, #f1faf3 0%, #e6f4ea 100%);
+            --rising-border: #b9d6c0;
+            --dropins-bg:    linear-gradient(135deg, #f7f0ff 0%, #ede1fc 100%);
+            --dropins-border: #c8b9e2;
+            --inset-card-bg: var(--bg-card);
+            --source-warning-bg: rgba(193, 66, 44, 0.10);
+            --today-tint: rgba(184, 116, 42, 0.08);
+            --play-overlay-bg: rgba(184, 116, 42, 0.95);
+            color-scheme: light;
+        }
+        /* No-JS / no-data-theme path: respect system color scheme. The :root
+           fallback above equals vinyl, so dark-system users already get the
+           right default; this @media block flips no-JS light-system users
+           onto Paper. The cascade order means [data-theme="..."] (set by
+           the inline FOUC script) always wins when JS is enabled. */
+        @media (prefers-color-scheme: light) {
+            :root:not([data-theme]) {
+                --bg-dark: #faf6ed;
+                --bg-card: #ffffff;
+                --bg-card-hover: #f5efde;
+                --accent-gold: #b8742a;
+                --accent-gold-dim: #8a541b;
+                --accent-blue: #1d3557;
+                --accent-green: #2d6a4f;
+                --accent-purple: #6a4c93;
+                --accent-warn: #c1422c;
+                --text-primary: #1a1410;
+                --text-secondary: #3d322a;
+                --text-muted: #7a6a5d;
+                --border-subtle: #e2d9c5;
+                --shadow-gold: rgba(184, 116, 42, 0.12);
+                --top-pick-bg:   linear-gradient(135deg, #fff8e8 0%, #fbeed0 100%);
+                --highlights-bg: linear-gradient(135deg, #ffffff 0%, #f5efde 100%);
+                --rising-bg:     linear-gradient(135deg, #f1faf3 0%, #e6f4ea 100%);
+                --rising-border: #b9d6c0;
+                --dropins-bg:    linear-gradient(135deg, #f7f0ff 0%, #ede1fc 100%);
+                --dropins-border: #c8b9e2;
+                --inset-card-bg: #ffffff;
+                --source-warning-bg: rgba(193, 66, 44, 0.10);
+                --today-tint: rgba(184, 116, 42, 0.08);
+                --play-overlay-bg: rgba(184, 116, 42, 0.95);
+                color-scheme: light;
+            }
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -69,7 +212,7 @@
 
         /* --- Source warning (top) vs. source footnote (muted bottom) --- */
         .source-warning {
-            background: rgba(248, 81, 73, 0.08);
+            background: var(--source-warning-bg);
             border: 1px solid var(--accent-warn);
             border-radius: 10px;
             padding: 1rem 1.25rem;
@@ -110,6 +253,55 @@
         .filter-search:focus { border-color: var(--accent-gold-dim); }
         .filter-toggle { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-muted); font-size: 0.8rem; cursor: pointer; }
 
+        /* --- Theme picker (single-button + popover) --- */
+        .theme-picker { position: relative; margin-left: auto; }
+        .theme-toggle {
+            min-width: 36px; height: 36px; padding: 0 0.5rem;
+            border-radius: 6px; cursor: pointer;
+            background: var(--bg-dark); border: 1px solid var(--border-subtle);
+            color: var(--text-secondary); font: inherit; font-size: 1.05rem;
+            line-height: 1; display: inline-flex; align-items: center; justify-content: center;
+            transition: border-color 0.15s ease, color 0.15s ease;
+        }
+        .theme-toggle:hover { border-color: var(--accent-gold-dim); color: var(--text-primary); }
+        .theme-popover {
+            position: absolute; top: calc(100% + 0.5rem); right: 0;
+            background: var(--bg-card); border: 1px solid var(--border-subtle);
+            border-radius: 8px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+            padding: 0.4rem; min-width: 220px; z-index: 50;
+            display: flex; flex-direction: column; gap: 0.15rem;
+        }
+        .theme-popover[hidden] { display: none; }
+        .theme-option {
+            display: flex; align-items: center; gap: 0.65rem; width: 100%;
+            padding: 0.5rem 0.6rem; border-radius: 6px;
+            background: transparent; border: 1px solid transparent;
+            color: var(--text-secondary); font-family: inherit; font-size: 0.85rem;
+            cursor: pointer; text-align: left;
+            transition: background-color 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+        }
+        .theme-option:hover { background: var(--bg-card-hover); color: var(--text-primary); }
+        .theme-option[aria-checked="true"] {
+            background: var(--bg-card-hover); color: var(--text-primary);
+            border-color: var(--accent-gold-dim);
+        }
+        .theme-text { display: flex; flex-direction: column; flex: 1; line-height: 1.25; }
+        .theme-name { font-weight: 600; }
+        .theme-meta { color: var(--text-muted); font-size: 0.72rem; }
+        .theme-check { color: var(--accent-gold); font-weight: 700; opacity: 0; }
+        .theme-option[aria-checked="true"] .theme-check { opacity: 1; }
+        .theme-swatch {
+            width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0;
+            border: 2px solid; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25);
+        }
+        .swatch-vinyl    { background: #0d1117; border-color: #d4a853; }
+        .swatch-bluenote { background: #0a1421; border-color: #64b5f6; }
+        .swatch-paper    { background: #faf6ed; border-color: #b8742a; }
+        .swatch-auto     {
+            background: linear-gradient(135deg, #0d1117 0 50%, #faf6ed 50% 100%);
+            border-color: var(--text-muted);
+        }
+
         /* --- Calendar nav (horizontal timeline) --- */
         .calendar-nav {
             display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;
@@ -149,14 +341,14 @@
 
         /* --- Top pick --- */
         .top-pick {
-            background: linear-gradient(135deg, #1a1510 0%, #261d14 100%);
+            background: var(--top-pick-bg);
             border: 2px solid var(--accent-gold); border-radius: 16px;
             padding: 1.5rem; margin-bottom: 1.5rem;
             position: relative; overflow: hidden;
         }
         .top-pick::before {
             content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-            background: linear-gradient(90deg, var(--accent-gold), #ffd700, var(--accent-gold));
+            background: linear-gradient(90deg, var(--accent-gold-dim), var(--accent-gold), var(--accent-gold-dim));
         }
         .top-pick-badge {
             display: inline-block; background: var(--accent-gold); color: var(--bg-dark);
@@ -174,7 +366,7 @@
         .top-pick-why { color: var(--accent-gold); font-style: italic; font-size: 0.95rem; }
 
         .highlights {
-            background: linear-gradient(135deg, var(--bg-card) 0%, #1a1f26 100%);
+            background: var(--highlights-bg);
             border: 1px solid var(--border-subtle);
             border-radius: 16px; padding: 1.5rem; margin-bottom: 2.5rem;
         }
@@ -186,7 +378,7 @@
         .highlights-header::before { content: "★"; }
         .highlights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
         .highlight-card {
-            background: var(--bg-dark); border-radius: 12px;
+            background: var(--inset-card-bg); border-radius: 12px;
             padding: 1rem; border: 1px solid var(--border-subtle);
             transition: border-color 0.2s ease;
             text-decoration: none; color: inherit; display: block;
@@ -196,8 +388,8 @@
         .highlight-meta { font-size: 0.85rem; color: var(--text-muted); }
 
         .rising-stars {
-            background: linear-gradient(135deg, #0d1517 0%, #111a1f 100%);
-            border: 1px solid #1e4d3d; border-radius: 16px;
+            background: var(--rising-bg);
+            border: 1px solid var(--rising-border); border-radius: 16px;
             padding: 1.5rem; margin-bottom: 3rem;
         }
         .rising-header {
@@ -206,13 +398,13 @@
             font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;
         }
         .rising-header::before { content: "\2197"; }
-        .rising-card { background: var(--bg-dark); border-radius: 12px; padding: 1rem; border: 1px solid var(--border-subtle); text-decoration: none; color: inherit; display: block; }
+        .rising-card { background: var(--inset-card-bg); border-radius: 12px; padding: 1rem; border: 1px solid var(--border-subtle); text-decoration: none; color: inherit; display: block; }
         .rising-card:hover { border-color: var(--accent-green); }
         .rising-card .highlight-artist { color: var(--accent-green); }
 
         .dropins {
-            background: linear-gradient(135deg, #15111a 0%, #1b1624 100%);
-            border: 1px solid #3b2c54;
+            background: var(--dropins-bg);
+            border: 1px solid var(--dropins-border);
             border-radius: 16px;
             padding: 1.25rem 1.5rem;
             margin-bottom: 2.5rem;
@@ -236,7 +428,7 @@
         .dropins .venue-name { color: var(--accent-purple); font-weight: 600; }
 
         .date-section { margin-bottom: 2.5rem; scroll-margin-top: 1rem; }
-        .date-section.is-today > .date-header { background: rgba(212, 168, 83, 0.06); border-radius: 6px 6px 0 0; padding: 0.5rem 0.75rem 0.5rem; margin-left: -0.75rem; margin-right: -0.75rem; }
+        .date-section.is-today > .date-header { background: var(--today-tint); border-radius: 6px 6px 0 0; padding: 0.5rem 0.75rem 0.5rem; margin-left: -0.75rem; margin-right: -0.75rem; }
         .date-header {
             display: flex; align-items: baseline; gap: 1rem;
             padding-bottom: 0.75rem;
@@ -284,6 +476,13 @@
         .genre-tag.latin { background: #7c3aed; color: #fff; }
         .genre-tag.fusion { background: #c0392b; color: #fff; }
         .genre-tag.contemporary { background: #2980b9; color: #fff; }
+        /* Genre tags on Paper: dark-saturated chips look like heavy blots
+           on cream. Use light pastels with dark text instead so the
+           printed-program aesthetic stays clean. */
+        [data-theme="paper"] .genre-tag.blues        { background: #e8d5c8; color: #5a3526; }
+        [data-theme="paper"] .genre-tag.latin        { background: #e0d4f0; color: #3a2456; }
+        [data-theme="paper"] .genre-tag.fusion       { background: #f5cdc1; color: #6a2818; }
+        [data-theme="paper"] .genre-tag.contemporary { background: #cfe0ee; color: #1a3a56; }
         .event-venue-time { display: flex; gap: 0.75rem; align-items: center; font-size: 0.9rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
         .venue { color: var(--text-secondary); font-weight: 600; }
         .venue-city { color: var(--text-muted); font-weight: 400; }
@@ -342,7 +541,7 @@
             position: absolute; top: 50%; left: 50%;
             transform: translate(-50%, -50%);
             width: 48px; height: 48px;
-            background: rgba(212, 168, 83, 0.95); border-radius: 50%;
+            background: var(--play-overlay-bg); border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
             transition: transform 0.2s ease;
         }
@@ -425,6 +624,37 @@
             <button class="filter-chip" data-genre="soul" aria-pressed="false">Soul/R&amp;B</button>
             <input class="filter-search" id="search-input" type="search" placeholder="Search artist or venue…" aria-label="Search artist or venue">
             <label class="filter-toggle"><input type="checkbox" id="hide-past"> Hide past</label>
+            <div class="theme-picker">
+                <button type="button" class="theme-toggle" data-theme-toggle
+                        aria-haspopup="true" aria-expanded="false"
+                        aria-label="Choose theme" title="Theme">
+                    <span aria-hidden="true">🎨</span>
+                </button>
+                <div class="theme-popover" data-theme-popover hidden>
+                    <div role="radiogroup" aria-label="Theme">
+                        <button type="button" class="theme-option" data-theme-option="vinyl" role="radio" aria-checked="false" tabindex="-1">
+                            <span class="theme-swatch swatch-vinyl" aria-hidden="true"></span>
+                            <span class="theme-text"><span class="theme-name">Vinyl Lounge</span><span class="theme-meta">Dark · gold</span></span>
+                            <span class="theme-check" aria-hidden="true">✓</span>
+                        </button>
+                        <button type="button" class="theme-option" data-theme-option="bluenote" role="radio" aria-checked="false" tabindex="-1">
+                            <span class="theme-swatch swatch-bluenote" aria-hidden="true"></span>
+                            <span class="theme-text"><span class="theme-name">Blue Note</span><span class="theme-meta">Dark · blue</span></span>
+                            <span class="theme-check" aria-hidden="true">✓</span>
+                        </button>
+                        <button type="button" class="theme-option" data-theme-option="paper" role="radio" aria-checked="false" tabindex="-1">
+                            <span class="theme-swatch swatch-paper" aria-hidden="true"></span>
+                            <span class="theme-text"><span class="theme-name">Paper</span><span class="theme-meta">Light · amber</span></span>
+                            <span class="theme-check" aria-hidden="true">✓</span>
+                        </button>
+                        <button type="button" class="theme-option" data-theme-option="auto" role="radio" aria-checked="false" tabindex="-1">
+                            <span class="theme-swatch swatch-auto" aria-hidden="true"></span>
+                            <span class="theme-text"><span class="theme-name">Auto</span><span class="theme-meta">Match system</span></span>
+                            <span class="theme-check" aria-hidden="true">✓</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <nav class="calendar-nav" aria-label="Jump to date">
@@ -1610,7 +1840,7 @@
         </section>
 
         <footer>
-            <p class="footer-generated">Generated 2026-04-26 13:21 UTC via Jazz Weekly · 37 events</p>
+            <p class="footer-generated">Generated 2026-04-26 17:25 UTC via Jazz Weekly · 37 events</p>
             <div class="sources">
                 Sources: <a href="https://www.beehiveboston.com/calendar" target="_blank" rel="noopener">The Beehive</a> · <a href="https://www.berklee.edu/BPC" target="_blank" rel="noopener">Berklee Performance Center</a> · <a href="https://jazzboston.org/jazz-calendar/" target="_blank" rel="noopener">Jazz Boston Calendar</a> · <a href="https://jimmysoncongress.com/" target="_blank" rel="noopener">Jimmy&#x27;s Jazz &amp; Blues Club</a> · <a href="https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814" target="_blank" rel="noopener">Regattabar</a> · <a href="https://tickets.rockportmusic.org/events" target="_blank" rel="noopener">Rockport Music</a> · <a href="https://scullersjazz.com/upcoming-events/" target="_blank" rel="noopener">Scullers Jazz Club</a> · <a href="https://wallyscafe.com/live-music-schedule/" target="_blank" rel="noopener">Wally&#x27;s Cafe</a>
             </div>
@@ -1619,10 +1849,223 @@
     </div>
 <script>
 // jazz-weekly — client-side behavior (vanilla JS, zero deps)
-// Covers: today/weekend highlighting, genre filter chips, search, copy-link,
-// Google Calendar URL build, .ics data-URL download, video-thumb fallback.
+// Covers: theme picker + prefs storage, today/weekend highlighting, genre
+// filter chips, search, copy-link, Google Calendar URL build, .ics data-URL
+// download, video-thumb fallback.
 (function () {
   'use strict';
+
+  // ---------------------------------------------------------------------
+  // 0. Preferences storage (foundation for all client-side personalization).
+  //
+  //    Namespaced under 'jazz-weekly:prefs.' so future keys (favorites,
+  //    attended, distance-filter, multi-genre selection) plug in cleanly
+  //    and won't collide with other tools sharing localStorage on the
+  //    same origin (e.g., the GH Pages archive page).
+  //
+  //    Contract:
+  //      - All values are STRINGS (localStorage's native type). Callers
+  //        serialize non-string values themselves; future use cases that
+  //        store arrays/objects should add getJSON/setJSON helpers here.
+  //      - prefs.get(key, fallback) returns the stored string, or
+  //        `fallback` if the key is absent or storage threw. With no
+  //        fallback arg, returns null for absent keys.
+  //      - prefs.set(key, value) writes synchronously and invokes any
+  //        prefs.onChange(key, ...) listeners SYNCHRONOUSLY in the same
+  //        tab. The browser's 'storage' event fires only in OTHER tabs,
+  //        so cross-tab sync is automatic via the listener at IIFE init.
+  //      - prefs.onChange(key, fn) — fired on both same-tab and cross-tab
+  //        writes. Use this as the single source of truth: writers should
+  //        only call prefs.set; the listener does the apply work, so a
+  //        future non-idempotent listener (analytics, counter) won't
+  //        misfire.
+  //      - No unsubscribe today; listeners live for the page lifetime.
+  //
+  //    Caveats:
+  //      - storage events arriving between IIFE execution and listener
+  //        registration are silently dropped (no listener yet). Acceptable
+  //        for our use cases — consumers should also call prefs.get() at
+  //        registration time if they need to recover state.
+  //      - Wrapped in try because localStorage can throw in private-mode
+  //        Safari, when site data is blocked, or when opened from file://
+  //        in some browsers. All operations degrade to no-op + fallback.
+  // ---------------------------------------------------------------------
+  var prefs = (function () {
+    var NS = 'jazz-weekly:prefs.';
+    var listeners = {};
+    function notify(key, value) {
+      (listeners[key] || []).forEach(function (fn) {
+        try { fn(value); } catch (e) { console.error('prefs.onChange', key, e); }
+      });
+    }
+    window.addEventListener('storage', function (e) {
+      if (!e.key || e.key.indexOf(NS) !== 0) return;
+      notify(e.key.slice(NS.length), e.newValue);
+    });
+    return {
+      get: function (key, fallback) {
+        try {
+          var v = localStorage.getItem(NS + key);
+          return v === null ? (fallback === undefined ? null : fallback) : v;
+        } catch (e) { return fallback === undefined ? null : fallback; }
+      },
+      set: function (key, value) {
+        try { localStorage.setItem(NS + key, value); } catch (e) {}
+        notify(key, value);
+      },
+      remove: function (key) {
+        try { localStorage.removeItem(NS + key); } catch (e) {}
+        notify(key, null);
+      },
+      onChange: function (key, fn) {
+        if (!listeners[key]) listeners[key] = [];
+        listeners[key].push(fn);
+      },
+    };
+  })();
+
+  // ---------------------------------------------------------------------
+  // 0b. Theme picker. The inline FOUC script in <head> already applied the
+  //     correct data-theme attribute before first paint; this function
+  //     wires up the radiogroup popover UI, persists user picks via prefs,
+  //     and re-applies on system color-scheme changes when 'auto' is set.
+  //
+  //     Theme value 'auto' is stored in prefs but resolved to vinyl|paper
+  //     at apply time — CSS never sees data-theme="auto".
+  //
+  //     The picker is a WAI-ARIA radiogroup inside a popover. Roving
+  //     tabindex on the radios; arrow keys + Home/End move + select; the
+  //     onChange listener is the single source of truth for apply+sync
+  //     so click and keyboard activation only call prefs.set.
+  // ---------------------------------------------------------------------
+  var THEMES = ['vinyl', 'bluenote', 'paper', 'auto'];
+  function resolveTheme(name) {
+    if (name === 'auto') {
+      return (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ? 'vinyl' : 'paper';
+    }
+    return name;
+  }
+  function applyTheme(name) {
+    document.documentElement.setAttribute('data-theme', resolveTheme(name));
+  }
+  function initThemePicker() {
+    var btn = document.querySelector('[data-theme-toggle]');
+    var popover = document.querySelector('[data-theme-popover]');
+    if (!btn || !popover) return;
+    var radiogroup = popover.querySelector('[role="radiogroup"]') || popover;
+    var options = Array.prototype.slice.call(popover.querySelectorAll('[data-theme-option]'));
+    var current = prefs.get('theme', 'auto');
+    if (THEMES.indexOf(current) === -1) current = 'auto';
+
+    function syncSelection(name) {
+      options.forEach(function (opt) {
+        var matches = opt.getAttribute('data-theme-option') === name;
+        opt.setAttribute('aria-checked', matches ? 'true' : 'false');
+        opt.setAttribute('tabindex', matches ? '0' : '-1');
+      });
+    }
+    function openPopover() {
+      popover.removeAttribute('hidden');
+      btn.setAttribute('aria-expanded', 'true');
+      // Move focus into the radiogroup, to the currently-checked option
+      // (or the first one if nothing is checked yet — shouldn't happen
+      // post-syncSelection, but defensive).
+      var checked = options.filter(function (o) { return o.getAttribute('aria-checked') === 'true'; })[0];
+      var target = checked || options[0];
+      if (target) target.focus();
+    }
+    function closePopover(restoreFocus) {
+      popover.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
+      if (restoreFocus) btn.focus();
+    }
+    function selectOption(name) {
+      // Single source of truth: prefs.set fires the onChange listener
+      // (registered below) which calls applyTheme + syncSelection. Don't
+      // call them here — would double-fire on the originating tab.
+      if (THEMES.indexOf(name) === -1) return;
+      prefs.set('theme', name);
+    }
+
+    syncSelection(current);
+
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (popover.hasAttribute('hidden')) openPopover();
+      else closePopover(false);
+    });
+    popover.addEventListener('click', function (e) {
+      var opt = e.target.closest && e.target.closest('[data-theme-option]');
+      if (!opt) return;
+      selectOption(opt.getAttribute('data-theme-option'));
+      closePopover(true);
+    });
+    // Arrow keys + Home/End move + select within the radiogroup; Enter and
+    // Space also activate (though arrow already selected, this matches APG
+    // expectations for radio).
+    radiogroup.addEventListener('keydown', function (e) {
+      if (popover.hasAttribute('hidden')) return;
+      var idx = options.indexOf(document.activeElement);
+      if (idx === -1) return;
+      var next = -1;
+      switch (e.key) {
+        case 'ArrowDown':
+        case 'ArrowRight':
+          next = (idx + 1) % options.length;
+          break;
+        case 'ArrowUp':
+        case 'ArrowLeft':
+          next = (idx - 1 + options.length) % options.length;
+          break;
+        case 'Home':
+          next = 0;
+          break;
+        case 'End':
+          next = options.length - 1;
+          break;
+        case 'Enter':
+        case ' ':
+          e.preventDefault();
+          selectOption(options[idx].getAttribute('data-theme-option'));
+          closePopover(true);
+          return;
+        default:
+          return;
+      }
+      e.preventDefault();
+      selectOption(options[next].getAttribute('data-theme-option'));
+      options[next].focus();
+    });
+    document.addEventListener('click', function (e) {
+      if (popover.hasAttribute('hidden')) return;
+      if (!popover.contains(e.target) && !btn.contains(e.target)) closePopover(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !popover.hasAttribute('hidden')) {
+        closePopover(true);
+      }
+    });
+
+    // Re-apply when the OS toggles light/dark, but only in auto mode.
+    if (window.matchMedia) {
+      var mq = window.matchMedia('(prefers-color-scheme: dark)');
+      var mqListener = function () {
+        if (prefs.get('theme', 'auto') === 'auto') applyTheme('auto');
+      };
+      if (mq.addEventListener) mq.addEventListener('change', mqListener);
+      else if (mq.addListener) mq.addListener(mqListener);  // Safari < 14
+    }
+
+    // Single source of truth for apply + UI sync: prefs.onChange fires on
+    // both same-tab writes (synchronously after prefs.set) and cross-tab
+    // storage events. Keeps non-idempotent future listeners safe.
+    prefs.onChange('theme', function (newVal) {
+      var name = newVal && THEMES.indexOf(newVal) !== -1 ? newVal : 'auto';
+      applyTheme(name);
+      syncSelection(name);
+    });
+  }
 
   // ---------------------------------------------------------------------
   // 1. Temporal highlighting: mark today, this weekend, and past dates.
@@ -1986,6 +2429,7 @@
   // Boot
   // ---------------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', function () {
+    try { initThemePicker(); } catch (e) { console.error('initThemePicker', e); }
     try { markTemporal(); } catch (e) { console.error('markTemporal', e); }
     try { initFilters(); } catch (e) { console.error('initFilters', e); }
     try { initCalendarButtons(); } catch (e) { console.error('initCalendarButtons', e); }
@@ -1996,6 +2440,6 @@
 })();
 
 </script>
-    <script type="application/json" id="run-manifest">{"run_date": "2026-04-26", "duration_ms": 8, "total_events": 37, "sources": {"allaboutjazz": {"status": "error", "http_status": 403, "events": 0, "content_type": "no_results"}, "beehive": {"status": "ok", "http_status": 200, "events": 0, "content_type": "generic"}, "berklee": {"status": "ok", "http_status": 200, "events": 2, "content_type": "scheduled"}, "jazzboston": {"status": "ok", "http_status": 200, "events": 21, "content_type": "scheduled"}, "jimmys": {"status": "ok", "http_status": 200, "events": 11, "content_type": "scheduled"}, "regattabar": {"status": "ok", "http_status": 200, "events": 9, "content_type": "scheduled"}, "rockport": {"status": "ok", "http_status": 200, "events": 1, "content_type": "scheduled"}, "scullers": {"status": "ok", "http_status": 200, "events": 5, "content_type": "scheduled"}, "wallys": {"status": "ok", "http_status": null, "events": 0, "content_type": "generic"}}}</script>
+    <script type="application/json" id="run-manifest">{"run_date": "2026-04-26", "duration_ms": 7, "total_events": 37, "sources": {"allaboutjazz": {"status": "error", "http_status": 403, "events": 0, "content_type": "no_results"}, "beehive": {"status": "ok", "http_status": 200, "events": 0, "content_type": "generic"}, "berklee": {"status": "ok", "http_status": 200, "events": 2, "content_type": "scheduled"}, "jazzboston": {"status": "ok", "http_status": 200, "events": 21, "content_type": "scheduled"}, "jimmys": {"status": "ok", "http_status": 200, "events": 11, "content_type": "scheduled"}, "regattabar": {"status": "ok", "http_status": 200, "events": 9, "content_type": "scheduled"}, "rockport": {"status": "ok", "http_status": 200, "events": 1, "content_type": "scheduled"}, "scullers": {"status": "ok", "http_status": 200, "events": 5, "content_type": "scheduled"}, "wallys": {"status": "ok", "http_status": null, "events": 0, "content_type": "generic"}}}</script>
 </body>
 </html>
