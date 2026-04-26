@@ -566,6 +566,11 @@
             border-color: transparent transparent transparent var(--bg-dark);
             margin-left: 3px;
         }
+        /* Inline-playback iframe — replaces <a><img></a> on click. Same box
+           as the thumbnail so layout doesn't shift. */
+        .video-preview iframe {
+            display: block; width: 100%; aspect-ratio: 16/9; border: 0;
+        }
         .video-title { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem; line-height: 1.3; }
         .video-meta { font-size: 0.7rem; color: var(--accent-green); margin-top: 0.15rem; text-transform: uppercase; letter-spacing: 0.05em; }
         .video-cache-hint { font-size: 0.65rem; color: var(--accent-green); margin-top: 0.15rem; text-transform: uppercase; letter-spacing: 0.05em; }
@@ -861,7 +866,7 @@
                 </div>
                 <div class="event-media">
                     <div class="video-preview">
-                        <a href="https://www.youtube.com/watch?v=xti2DIcM4r8" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=xti2DIcM4r8" target="_blank" rel="noopener" data-yt-id="xti2DIcM4r8" aria-label="Play Takuya Kuroda video inline">
                             <img src="https://img.youtube.com/vi/xti2DIcM4r8/hqdefault.jpg" alt="Takuya Kuroda performance">
                             <span class="play-overlay" role="img" aria-label="Play video"></span>
                         </a>
@@ -999,7 +1004,7 @@
                 </div>
                 <div class="event-media">
                     <div class="video-preview">
-                        <a href="https://www.youtube.com/watch?v=C3-MWigcaxc" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=C3-MWigcaxc" target="_blank" rel="noopener" data-yt-id="C3-MWigcaxc" aria-label="Play International Jazz Day Celebration feat. Godwin Louis / Jonathan Suazo video inline">
                             <img src="https://img.youtube.com/vi/C3-MWigcaxc/hqdefault.jpg" alt="International Jazz Day Celebration feat. Godwin Louis / Jonathan Suazo performance">
                             <span class="play-overlay" role="img" aria-label="Play video"></span>
                         </a>
@@ -1054,7 +1059,7 @@
                 </div>
                 <div class="event-media">
                     <div class="video-preview">
-                        <a href="https://www.youtube.com/watch?v=X_MDhr0PVjo" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=X_MDhr0PVjo" target="_blank" rel="noopener" data-yt-id="X_MDhr0PVjo" aria-label="Play The Fabulous Thunderbirds video inline">
                             <img src="https://img.youtube.com/vi/X_MDhr0PVjo/hqdefault.jpg" alt="The Fabulous Thunderbirds performance">
                             <span class="play-overlay" role="img" aria-label="Play video"></span>
                         </a>
@@ -1139,7 +1144,7 @@
                 </div>
                 <div class="event-media">
                     <div class="video-preview">
-                        <a href="https://www.youtube.com/watch?v=TlBSMl5B59Y" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=TlBSMl5B59Y" target="_blank" rel="noopener" data-yt-id="TlBSMl5B59Y" aria-label="Play Johnny Hoy and The Bluefish Live video inline">
                             <img src="https://img.youtube.com/vi/TlBSMl5B59Y/hqdefault.jpg" alt="Johnny Hoy and The Bluefish Live performance">
                             <span class="play-overlay" role="img" aria-label="Play video"></span>
                         </a>
@@ -1171,7 +1176,7 @@
                 </div>
                 <div class="event-media">
                     <div class="video-preview">
-                        <a href="https://www.youtube.com/watch?v=hznIg4wVRSs" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=hznIg4wVRSs" target="_blank" rel="noopener" data-yt-id="hznIg4wVRSs" aria-label="Play Judy Wexler video inline">
                             <img src="https://img.youtube.com/vi/hznIg4wVRSs/hqdefault.jpg" alt="Judy Wexler performance">
                             <span class="play-overlay" role="img" aria-label="Play video"></span>
                         </a>
@@ -1228,7 +1233,7 @@
                 </div>
                 <div class="event-media">
                     <div class="video-preview">
-                        <a href="https://www.youtube.com/watch?v=mkmVveRENeY" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=mkmVveRENeY" target="_blank" rel="noopener" data-yt-id="mkmVveRENeY" aria-label="Play Vanessa Collier video inline">
                             <img src="https://img.youtube.com/vi/mkmVveRENeY/hqdefault.jpg" alt="Vanessa Collier performance">
                             <span class="play-overlay" role="img" aria-label="Play video"></span>
                         </a>
@@ -1267,7 +1272,7 @@
                 </div>
                 <div class="event-media">
                     <div class="video-preview">
-                        <a href="https://www.youtube.com/watch?v=tYpXZhvTErc" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=tYpXZhvTErc" target="_blank" rel="noopener" data-yt-id="tYpXZhvTErc" aria-label="Play Zahili Zamora &amp; Friends video inline">
                             <img src="https://img.youtube.com/vi/tYpXZhvTErc/hqdefault.jpg" alt="Zahili Zamora &amp; Friends performance">
                             <span class="play-overlay" role="img" aria-label="Play video"></span>
                         </a>
@@ -1370,7 +1375,7 @@
                 </div>
                 <div class="event-media">
                     <div class="video-preview">
-                        <a href="https://www.youtube.com/watch?v=Zqfmo0ZlyCw" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=Zqfmo0ZlyCw" target="_blank" rel="noopener" data-yt-id="Zqfmo0ZlyCw" aria-label="Play Chucho Valdes and His Royal Quartet video inline">
                             <img src="https://img.youtube.com/vi/Zqfmo0ZlyCw/hqdefault.jpg" alt="Chucho Valdes and His Royal Quartet performance">
                             <span class="play-overlay" role="img" aria-label="Play video"></span>
                         </a>
@@ -1409,7 +1414,7 @@
                 </div>
                 <div class="event-media">
                     <div class="video-preview">
-                        <a href="https://www.youtube.com/watch?v=B5f70hRI9uA" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=B5f70hRI9uA" target="_blank" rel="noopener" data-yt-id="B5f70hRI9uA" aria-label="Play Dan Wilson Organ Trio video inline">
                             <img src="https://img.youtube.com/vi/B5f70hRI9uA/hqdefault.jpg" alt="Dan Wilson Organ Trio performance">
                             <span class="play-overlay" role="img" aria-label="Play video"></span>
                         </a>
@@ -1472,7 +1477,7 @@
                 </div>
                 <div class="event-media">
                     <div class="video-preview">
-                        <a href="https://www.youtube.com/watch?v=V5Odn6wW4-0" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=V5Odn6wW4-0" target="_blank" rel="noopener" data-yt-id="V5Odn6wW4-0" aria-label="Play Jumaane Smith video inline">
                             <img src="https://img.youtube.com/vi/V5Odn6wW4-0/hqdefault.jpg" alt="Jumaane Smith performance">
                             <span class="play-overlay" role="img" aria-label="Play video"></span>
                         </a>
@@ -1512,7 +1517,7 @@
                 </div>
                 <div class="event-media">
                     <div class="video-preview">
-                        <a href="https://www.youtube.com/watch?v=VETN-4CKGOA" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=VETN-4CKGOA" target="_blank" rel="noopener" data-yt-id="VETN-4CKGOA" aria-label="Play Mike Stern Band Featuring: Dennis Chambers, Gary Grainger, Bob Franceschini, Leni Stern video inline">
                             <img src="https://img.youtube.com/vi/VETN-4CKGOA/hqdefault.jpg" alt="Mike Stern Band Featuring: Dennis Chambers, Gary Grainger, Bob Franceschini, Leni Stern performance">
                             <span class="play-overlay" role="img" aria-label="Play video"></span>
                         </a>
@@ -1544,7 +1549,7 @@
                 </div>
                 <div class="event-media">
                     <div class="video-preview">
-                        <a href="https://www.youtube.com/watch?v=H4oRwWrKCNs" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=H4oRwWrKCNs" target="_blank" rel="noopener" data-yt-id="H4oRwWrKCNs" aria-label="Play Madeleine Peyroux video inline">
                             <img src="https://img.youtube.com/vi/H4oRwWrKCNs/hqdefault.jpg" alt="Madeleine Peyroux performance">
                             <span class="play-overlay" role="img" aria-label="Play video"></span>
                         </a>
@@ -1577,7 +1582,7 @@
                 </div>
                 <div class="event-media">
                     <div class="video-preview">
-                        <a href="https://www.youtube.com/watch?v=VETN-4CKGOA" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=VETN-4CKGOA" target="_blank" rel="noopener" data-yt-id="VETN-4CKGOA" aria-label="Play Mike Stern Band Featuring: Dennis Chambers, Gary Grainger, Bob Franceschini, Leni Stern video inline">
                             <img src="https://img.youtube.com/vi/VETN-4CKGOA/hqdefault.jpg" alt="Mike Stern Band Featuring: Dennis Chambers, Gary Grainger, Bob Franceschini, Leni Stern performance">
                             <span class="play-overlay" role="img" aria-label="Play video"></span>
                         </a>
@@ -1617,7 +1622,7 @@
                 </div>
                 <div class="event-media">
                     <div class="video-preview">
-                        <a href="https://www.youtube.com/watch?v=teBakBbOOGc" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=teBakBbOOGc" target="_blank" rel="noopener" data-yt-id="teBakBbOOGc" aria-label="Play Eric Darius video inline">
                             <img src="https://img.youtube.com/vi/teBakBbOOGc/hqdefault.jpg" alt="Eric Darius performance">
                             <span class="play-overlay" role="img" aria-label="Play video"></span>
                         </a>
@@ -1650,7 +1655,7 @@
                 </div>
                 <div class="event-media">
                     <div class="video-preview">
-                        <a href="https://www.youtube.com/watch?v=VETN-4CKGOA" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=VETN-4CKGOA" target="_blank" rel="noopener" data-yt-id="VETN-4CKGOA" aria-label="Play Mike Stern Band Featuring: Dennis Chambers, Gary Grainger, Bob Franceschini, Leni Stern video inline">
                             <img src="https://img.youtube.com/vi/VETN-4CKGOA/hqdefault.jpg" alt="Mike Stern Band Featuring: Dennis Chambers, Gary Grainger, Bob Franceschini, Leni Stern performance">
                             <span class="play-overlay" role="img" aria-label="Play video"></span>
                         </a>
@@ -1682,7 +1687,7 @@
                 </div>
                 <div class="event-media">
                     <div class="video-preview">
-                        <a href="https://www.youtube.com/watch?v=H4oRwWrKCNs" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=H4oRwWrKCNs" target="_blank" rel="noopener" data-yt-id="H4oRwWrKCNs" aria-label="Play Madeleine Peyroux video inline">
                             <img src="https://img.youtube.com/vi/H4oRwWrKCNs/hqdefault.jpg" alt="Madeleine Peyroux performance">
                             <span class="play-overlay" role="img" aria-label="Play video"></span>
                         </a>
@@ -1739,7 +1744,7 @@
                 </div>
                 <div class="event-media">
                     <div class="video-preview">
-                        <a href="https://www.youtube.com/watch?v=teBakBbOOGc" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=teBakBbOOGc" target="_blank" rel="noopener" data-yt-id="teBakBbOOGc" aria-label="Play Eric Darius video inline">
                             <img src="https://img.youtube.com/vi/teBakBbOOGc/hqdefault.jpg" alt="Eric Darius performance">
                             <span class="play-overlay" role="img" aria-label="Play video"></span>
                         </a>
@@ -1772,7 +1777,7 @@
                 </div>
                 <div class="event-media">
                     <div class="video-preview">
-                        <a href="https://www.youtube.com/watch?v=VETN-4CKGOA" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=VETN-4CKGOA" target="_blank" rel="noopener" data-yt-id="VETN-4CKGOA" aria-label="Play Mike Stern Band Featuring: Dennis Chambers, Gary Grainger, Bob Franceschini, Leni Stern video inline">
                             <img src="https://img.youtube.com/vi/VETN-4CKGOA/hqdefault.jpg" alt="Mike Stern Band Featuring: Dennis Chambers, Gary Grainger, Bob Franceschini, Leni Stern performance">
                             <span class="play-overlay" role="img" aria-label="Play video"></span>
                         </a>
@@ -1812,7 +1817,7 @@
                 </div>
                 <div class="event-media">
                     <div class="video-preview">
-                        <a href="https://www.youtube.com/watch?v=AHdKsJFWeXM" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=AHdKsJFWeXM" target="_blank" rel="noopener" data-yt-id="AHdKsJFWeXM" aria-label="Play Gabrielle Cavassa video inline">
                             <img src="https://img.youtube.com/vi/AHdKsJFWeXM/hqdefault.jpg" alt="Gabrielle Cavassa performance">
                             <span class="play-overlay" role="img" aria-label="Play video"></span>
                         </a>
@@ -1844,7 +1849,7 @@
                 </div>
                 <div class="event-media">
                     <div class="video-preview">
-                        <a href="https://www.youtube.com/watch?v=tF7HBH2sieI" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=tF7HBH2sieI" target="_blank" rel="noopener" data-yt-id="tF7HBH2sieI" aria-label="Play Colin James, Matt Andersen, &amp; Terra Lightfoot video inline">
                             <img src="https://img.youtube.com/vi/tF7HBH2sieI/hqdefault.jpg" alt="Colin James, Matt Andersen, &amp; Terra Lightfoot performance">
                             <span class="play-overlay" role="img" aria-label="Play video"></span>
                         </a>
@@ -1856,7 +1861,7 @@
         </section>
 
         <footer>
-            <p class="footer-generated">Generated 2026-04-26 19:26 UTC via Jazz Weekly · 37 events</p>
+            <p class="footer-generated">Generated 2026-04-26 21:06 UTC via Jazz Weekly · 37 events</p>
             <div class="sources">
                 Sources: <a href="https://www.beehiveboston.com/calendar" target="_blank" rel="noopener">The Beehive</a> · <a href="https://www.berklee.edu/BPC" target="_blank" rel="noopener">Berklee Performance Center</a> · <a href="https://jazzboston.org/jazz-calendar/" target="_blank" rel="noopener">Jazz Boston Calendar</a> · <a href="https://jimmysoncongress.com/" target="_blank" rel="noopener">Jimmy&#x27;s Jazz &amp; Blues Club</a> · <a href="https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814" target="_blank" rel="noopener">Regattabar</a> · <a href="https://tickets.rockportmusic.org/events" target="_blank" rel="noopener">Rockport Music</a> · <a href="https://scullersjazz.com/upcoming-events/" target="_blank" rel="noopener">Scullers Jazz Club</a> · <a href="https://wallyscafe.com/live-music-schedule/" target="_blank" rel="noopener">Wally&#x27;s Cafe</a>
             </div>
@@ -2442,6 +2447,38 @@
   }
 
   // ---------------------------------------------------------------------
+  // 6. Inline YouTube playback — facade pattern. The server renders a cheap
+  //    thumbnail link; on plain left-click we swap it for a youtube-nocookie
+  //    iframe with autoplay. Modifier-clicks (ctrl/cmd/shift/alt) and
+  //    middle-clicks fall through to default link behavior, opening YouTube
+  //    in a new tab as before. nocookie host means no third-party cookies
+  //    fire until the user actually opts in by clicking play.
+  // ---------------------------------------------------------------------
+  function initVideoInlinePlay() {
+    // YouTube IDs are 11 chars from [A-Za-z0-9_-]. Whitelist the canonical
+    // form; on mismatch fall through to the link's default href so a malformed
+    // ID never produces a broken iframe.
+    var YT_ID_RE = /^[A-Za-z0-9_-]{11}$/;
+    document.addEventListener('click', function (e) {
+      if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+      var link = e.target.closest && e.target.closest('.video-preview a[data-yt-id]');
+      if (!link) return;
+      var id = link.getAttribute('data-yt-id');
+      if (!id || !YT_ID_RE.test(id)) return;
+      e.preventDefault();
+      var iframe = document.createElement('iframe');
+      iframe.className = 'video-iframe';
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + id +
+                   '?autoplay=1&rel=0&playsinline=1';
+      iframe.title = 'YouTube video';
+      iframe.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('frameborder', '0');
+      link.replaceWith(iframe);
+    });
+  }
+
+  // ---------------------------------------------------------------------
   // Boot
   // ---------------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', function () {
@@ -2451,11 +2488,12 @@
     try { initCalendarButtons(); } catch (e) { console.error('initCalendarButtons', e); }
     try { initCopyLink(); } catch (e) { console.error('initCopyLink', e); }
     try { initVideoFallback(); } catch (e) { console.error('initVideoFallback', e); }
+    try { initVideoInlinePlay(); } catch (e) { console.error('initVideoInlinePlay', e); }
   });
   window.addEventListener('beforeunload', revokeIcsBlobs);
 })();
 
 </script>
-    <script type="application/json" id="run-manifest">{"run_date": "2026-04-26", "duration_ms": 47, "total_events": 37, "sources": {"allaboutjazz": {"status": "error", "http_status": 403, "events": 0, "content_type": "no_results"}, "beehive": {"status": "ok", "http_status": 200, "events": 0, "content_type": "generic"}, "berklee": {"status": "ok", "http_status": 200, "events": 2, "content_type": "scheduled"}, "jazzboston": {"status": "ok", "http_status": 200, "events": 21, "content_type": "scheduled"}, "jimmys": {"status": "ok", "http_status": 200, "events": 11, "content_type": "scheduled"}, "regattabar": {"status": "ok", "http_status": 200, "events": 9, "content_type": "scheduled"}, "rockport": {"status": "ok", "http_status": 200, "events": 1, "content_type": "scheduled"}, "scullers": {"status": "ok", "http_status": 200, "events": 5, "content_type": "scheduled"}, "wallys": {"status": "ok", "http_status": null, "events": 0, "content_type": "generic"}}}</script>
+    <script type="application/json" id="run-manifest">{"run_date": "2026-04-26", "duration_ms": 10, "total_events": 37, "sources": {"allaboutjazz": {"status": "error", "http_status": 403, "events": 0, "content_type": "no_results"}, "beehive": {"status": "ok", "http_status": 200, "events": 0, "content_type": "generic"}, "berklee": {"status": "ok", "http_status": 200, "events": 2, "content_type": "scheduled"}, "jazzboston": {"status": "ok", "http_status": 200, "events": 21, "content_type": "scheduled"}, "jimmys": {"status": "ok", "http_status": 200, "events": 11, "content_type": "scheduled"}, "regattabar": {"status": "ok", "http_status": 200, "events": 9, "content_type": "scheduled"}, "rockport": {"status": "ok", "http_status": 200, "events": 1, "content_type": "scheduled"}, "scullers": {"status": "ok", "http_status": 200, "events": 5, "content_type": "scheduled"}, "wallys": {"status": "ok", "http_status": null, "events": 0, "content_type": "generic"}}}</script>
 </body>
 </html>
