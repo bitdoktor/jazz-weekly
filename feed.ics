@@ -7,7 +7,7 @@ X-WR-CALNAME:Boston Jazz Weekly
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
 UID:e-2026-09-01-tuba-skinny-1700-dfd9b284@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260901T210000Z
 DTEND:20260901T230000Z
 SUMMARY:Tuba Skinny at Rockport Music
@@ -22,7 +22,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-01-tuba-skinny-2000-25716083@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260902T000000Z
 DTEND:20260902T020000Z
 SUMMARY:Tuba Skinny at Rockport Music
@@ -37,7 +37,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-02-rebirth-brass-band-9a2803ca@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260902T220000Z
 DTEND:20260903T000000Z
 SUMMARY:Rebirth Brass Band at Jazz Boston Calendar
@@ -50,7 +50,7 @@ CATEGORIES:funk
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-02-jackie-greene-fff7fe8f@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260902T233000Z
 DTEND:20260903T013000Z
 SUMMARY:Jackie Greene at Jimmy's Jazz & Blues Club
@@ -64,7 +64,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-03-ron-ramsay-s-berkshire-music-salon-series-12f83d9e@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260903T213000Z
 DTEND:20260903T233000Z
 SUMMARY:Ron Ramsay's Berkshire Music Salon Series at Jazz Boston Calendar
@@ -79,7 +79,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-03-feldman-geospatial-presents-the-pat-loomis-band-37d9586c@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260903T220000Z
 DTEND:20260904T000000Z
 SUMMARY:Feldman Geospatial Presents The Pat Loomis Band at Jazz Boston Cale
@@ -95,7 +95,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-03-karl-densons-tiny-universe-9892a648@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260903T233000Z
 DTEND:20260904T013000Z
 SUMMARY:Karl Denson’s Tiny Universe at Jimmy's Jazz & Blues Club
@@ -105,11 +105,11 @@ DESCRIPTION:San Diego jazz-funk band led by saxophonist/flutist Karl Denson
  98. Released Dance Lesson #2 (2001) and Lunar Orbit (2007) on Blue Note Re
  cords. Tickets: https://jimmysoncongress.com/event/karl-densons-tiny-unive
  rse/
-CATEGORIES:funk
+CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-04-esperanza-spalding-0472d894@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260904T233000Z
 DTEND:20260905T013000Z
 SUMMARY:Esperanza Spalding at Jazz Boston Calendar
@@ -122,7 +122,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-04-gary-hoey-5d2b2a8e@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260904T233000Z
 DTEND:20260905T013000Z
 SUMMARY:Gary Hoey at Jimmy's Jazz & Blues Club
@@ -131,11 +131,11 @@ DESCRIPTION:Instrumental rock guitarist from Lowell\, MA\, best known for h
  is 1993 cover of "Hocus Pocus" (Animal Instinct\, Reprise/Warner Bros.) an
  d a run of holiday guitar albums\; also fronted Heavy Bones with drummer F
  rankie Banali. Tickets: https://jimmysoncongress.com/event/gary-hoey/
-CATEGORIES:blues
+CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-04-huntertones-7fd42a4d@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260904T233000Z
 DTEND:20260905T013000Z
 SUMMARY:Huntertones at Rockport Music
@@ -149,7 +149,7 @@ CATEGORIES:fusion
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-05-anat-cohen-quartet-7a72dc6b@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260905T233000Z
 DTEND:20260906T013000Z
 SUMMARY:Anat Cohen Quartet at Jimmy's Jazz & Blues Club
@@ -163,7 +163,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-05-esperanza-spalding-200ac25a@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260905T233000Z
 DTEND:20260906T013000Z
 SUMMARY:Esperanza Spalding at Jazz Boston Calendar
@@ -176,7 +176,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-06-esperanza-spalding-1e3e7997@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260906T233000Z
 DTEND:20260907T013000Z
 SUMMARY:Esperanza Spalding at Jazz Boston Calendar
@@ -189,7 +189,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-06-shades-of-blue-featuring-jon-butcher-diane-blue-b1d34e6f@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260906T233000Z
 DTEND:20260907T013000Z
 SUMMARY:Shades of Blue Featuring Jon Butcher & Diane Blue at Jimmy's Jazz &
@@ -202,11 +202,11 @@ DESCRIPTION:Blues revue pairing two Boston-scene veterans: Jon Butcher\, Gr
  harmonica player and first female member of Ronnie Earl & the Broadcasters
  . Tickets: https://jimmysoncongress.com/event/shades-of-blue-featuring-jon
  -butcher-diane-blue/
-CATEGORIES:blues
+CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-07-local-artist-series-micas-groove-train-c276c8bf@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260907T230000Z
 DTEND:20260908T010000Z
 SUMMARY:Local Artist Series: Mica’s Groove Train at Jimmy's Jazz & Blues 
@@ -216,11 +216,11 @@ DESCRIPTION:New Hampshire Seacoast neo-soul/funk band led by vocalist Yamic
  a "Mica" Peterson\, a regional fixture on the Seacoast and Greater Boston 
  club and festival circuit. Tickets: https://jimmysoncongress.com/event/loc
  al-artist-series-micas-groove-train/
-CATEGORIES:soul
+CATEGORIES:funk
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-09-dave-limina-s-wednesdave-blues-e5fcbb32@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260909T230000Z
 DTEND:20260910T010000Z
 SUMMARY:Dave Limina's Wednesdave Blues at Jazz Boston Calendar
@@ -234,7 +234,7 @@ CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-10-lawn-concert-nina-ott-trio-e1760457@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260910T220000Z
 DTEND:20260911T000000Z
 SUMMARY:Lawn Concert: Nina Ott Trio at Jazz Boston Calendar
@@ -248,7 +248,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-10-10-time-grammy-award-winner-arturo-sandoval-3005fae3@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260910T230000Z
 DTEND:20260911T010000Z
 SUMMARY:10-Time Grammy Award Winner Arturo Sandoval at Scullers Jazz Club
@@ -262,7 +262,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-10-duochrome-aa0804d2@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260910T230000Z
 DTEND:20260911T010000Z
 SUMMARY:Duochrome at Regattabar
@@ -275,7 +275,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-10-isaiah-sharkey-13b2422c@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260910T233000Z
 DTEND:20260911T013000Z
 SUMMARY:Isaiah Sharkey at Jimmy's Jazz & Blues Club
@@ -288,7 +288,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-11-10-time-grammy-award-winner-arturo-sandoval-b0273eb0@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260911T230000Z
 DTEND:20260912T010000Z
 SUMMARY:10-Time Grammy Award Winner Arturo Sandoval at Scullers Jazz Club
@@ -301,24 +301,22 @@ DESCRIPTION:Cuban-American jazz trumpeter\, pianist\, and composer\, a prot
 CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
-UID:e-2026-09-11-jim-caruso-s-cast-party-featuring-billy-stritch-3cafe382@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+UID:e-2026-09-11-jim-caruso-s-cast-party-featuring-billy-stritch-46c9876a@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20260901T043329Z
 DTSTART:20260911T230000Z
 DTEND:20260912T010000Z
-SUMMARY:Jim Caruso's Cast Party Featuring Billy Stritch at Jazz Boston Cale
- ndar
-LOCATION:Regattabar\, Cambridge
+SUMMARY:Jim Caruso's Cast Party Featuring Billy Stritch at Regattabar
+LOCATION:1 Bennett St\, Cambridge\, MA 02138
 DESCRIPTION:Weekly open-mic variety show at Birdland Jazz Club (NYC) since 
  2003\, hosted by Jim Caruso with pianist Billy Stritch (Liza Minnelli\, To
  ny Bennett) leading the house trio. Mixes Broadway stars\, cabaret regular
- s\, and surprise guests taking turns at the mic. Tickets: https://jazzbost
- on.org/jazz-calendar?jim-caruso-s-cast-party-featuring-billy-stritch&event
- _id=428334&fid=1
+ s\, and surprise guests taking turns at the mic. Tickets: https://www.tick
+ etweb.com/venue/regattabar-cambridge-ma/748814
 CATEGORIES:vocal jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-11-norman-brown-1900-70cde65c@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260911T230000Z
 DTEND:20260912T010000Z
 SUMMARY:Norman Brown at Jimmy's Jazz & Blues Club
@@ -331,7 +329,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-11-norman-brown-2130-a1ed2455@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260912T013000Z
 DTEND:20260912T033000Z
 SUMMARY:Norman Brown at Jimmy's Jazz & Blues Club
@@ -344,7 +342,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-12-makanda-project-summer-concert-31f4256a@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260912T170000Z
 DTEND:20260912T190000Z
 SUMMARY:The Makanda Project Summer Concert at Jazz Boston Calendar
@@ -358,7 +356,7 @@ CATEGORIES:big band
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-12-10-time-grammy-award-winner-arturo-sandoval-d06f0870@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260912T230000Z
 DTEND:20260913T010000Z
 SUMMARY:10-Time Grammy Award Winner Arturo Sandoval at Scullers Jazz Club
@@ -372,7 +370,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-12-chris-bergson-band-live-6d26ce23@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260912T230000Z
 DTEND:20260913T010000Z
 SUMMARY:Chris Bergson Band Live at Jazz Boston Calendar
@@ -387,7 +385,7 @@ CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-12-cyrille-aimee-b990f7b4@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260912T230000Z
 DTEND:20260913T010000Z
 SUMMARY:Cyrille Aimee at Regattabar
@@ -402,7 +400,7 @@ CATEGORIES:vocal jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-12-sateka-confluence-4a8488fa@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260912T230000Z
 DTEND:20260913T010000Z
 SUMMARY:Sateka/Confluence at Jazz Boston Calendar
@@ -418,7 +416,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-12-boston-modern-big-band-show-58a42270@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260913T000000Z
 DTEND:20260913T020000Z
 SUMMARY:Boston Modern Big Band Show at Jazz Boston Calendar
@@ -432,7 +430,7 @@ CATEGORIES:big band
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-13-jen-kearney-sam-newcomer-sam-bayer-2b0b6ef3@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260913T200000Z
 DTEND:20260913T220000Z
 SUMMARY:Jen Kearney\, Sam Newcomer\, Sam Bayer at Jazz Boston Calendar
@@ -446,7 +444,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-13-qarts-gallery-jazz-series-greg-loughman-trio-featuring-kenny-werner-mark-walker-dd1807e1@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260913T200000Z
 DTEND:20260913T220000Z
 SUMMARY:QArts Gallery Jazz Series - Greg Loughman Trio featuring Kenny Wern
@@ -462,7 +460,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-13-davy-knowles-d5bf7cc4@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260913T233000Z
 DTEND:20260914T013000Z
 SUMMARY:Davy Knowles at Jimmy's Jazz & Blues Club
@@ -471,11 +469,11 @@ DESCRIPTION:Manx blues-rock guitarist and singer who broke out in 2007 with
   Back Door Slam before launching a solo career\; two top-5 Billboard Blues
   Albums entries and national TV appearances (Jimmy Kimmel Live\, Good Morn
  ing America). Tickets: https://jimmysoncongress.com/event/davy-knowles/
-CATEGORIES:blues
+CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-09-14-local-artist-series-foreside-funk-f5c49043@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260901T041822Z
+DTSTAMP:20260901T043329Z
 DTSTART:20260914T230000Z
 DTEND:20260915T010000Z
 SUMMARY:Local Artist Series: Foreside Funk at Jimmy's Jazz & Blues Club
@@ -485,6 +483,6 @@ DESCRIPTION:Multigenerational 10-piece funk band from Kittery\, Maine\, fou
  k\, jazz-influenced R&B\, and New Orleans traditions\, drawing on Tower of
   Power\, Maceo Parker\, and Lettuce. Tickets: https://jimmysoncongress.com
  /event/local-artist-series-foreside-funk/
-CATEGORIES:funk
+CATEGORIES:jazz
 END:VEVENT
 END:VCALENDAR
