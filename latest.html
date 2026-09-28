@@ -40,6 +40,11 @@
     <meta property="og:title" content="Boston Jazz & Blues Weekly">
     <meta property="og:description" content="September 27, 2026 - October 11, 2026 — 44 shows across Greater Boston">
     <meta property="og:type" content="website">
+    <!-- P4 (D8): the page's own source of truth for its issue date — Copy
+         link / Share picks rebuild the dated URL from this rather than from
+         location.pathname, so a link copied on latest.html still resolves
+         after next week's publish overwrites it. -->
+    <meta name="jazz-weekly-issue" content="2026-09-27">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
@@ -261,6 +266,18 @@
         .filter-empty p { margin: 0 0 0.75rem; font-size: 0.95rem; }
         .filter-empty[hidden] { display: none; }
 
+        /* --- P4: picks (star toggle, share button, incoming-shared banner) --- */
+        .share-picks[hidden] { display: none; }
+        .picks-banner {
+            display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem;
+            margin-bottom: 1.5rem; padding: 0.85rem 1rem;
+            background: var(--bg-card); border: 1px solid var(--accent-gold-dim);
+            border-radius: 10px;
+        }
+        .picks-banner[hidden] { display: none; }
+        .picks-banner-text { margin: 0; color: var(--text-primary); font-size: 0.9rem; font-weight: 600; flex: 1 1 auto; min-width: 160px; }
+        .picks-banner-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
         /* --- Theme picker (single-button + popover) --- */
         .theme-picker { position: relative; margin-left: auto; }
         .theme-toggle {
@@ -469,6 +486,9 @@
             box-shadow: 0 4px 24px var(--shadow-gold);
         }
         .event-card.is-past { opacity: 0.55; }
+        /* P4: a card matched by an incoming #picks= link gets a gold outline
+           so "these are the shared picks" reads at a glance, in every theme. */
+        .event-card.is-shared-pick { border-color: var(--accent-gold); box-shadow: 0 0 0 1px var(--accent-gold); }
         .event-content { min-width: 0; }
         .event-credential {
             display: inline-block; font-size: 0.7rem; font-weight: 600;
@@ -487,6 +507,16 @@
             font-size: 0.85rem; color: var(--text-muted); margin: -0.15rem 0 0.5rem;
         }
         .event-header { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+        /* P4: per-card pick toggle (star/outline). A plain button, not an
+           action-chip, so it reads as a small persistent affordance next to
+           the title rather than one more item in the action row below. */
+        .pick-toggle {
+            flex: 0 0 auto; background: transparent; border: none; cursor: pointer;
+            font-size: 1.3rem; line-height: 1; padding: 0 0.15rem;
+            color: var(--text-muted); font-family: inherit;
+        }
+        .pick-toggle:hover { color: var(--accent-gold); }
+        .pick-toggle.is-picked { color: var(--accent-gold); }
         .artist-name { font-family: 'Playfair Display', Georgia, serif; font-size: 1.35rem; font-weight: 600; color: var(--text-primary); line-height: 1.3; }
         .genre-tag {
             background: var(--accent-gold); color: var(--bg-dark);
@@ -691,6 +721,7 @@
             <button type="button" class="filter-chip filter-inside-t" id="filter-inside-t" aria-pressed="false" title="Hide shows outside Boston, Cambridge, Somerville and Brookline">Inside the T</button>
             <input class="filter-search" id="search-input" type="search" placeholder="Search artist or venue…" aria-label="Search artist or venue">
             <label class="filter-toggle"><input type="checkbox" id="hide-past"> Hide past</label>
+            <button type="button" class="filter-chip share-picks" id="share-picks" hidden>Share picks (0)</button>
             <div class="theme-picker">
                 <button type="button" class="theme-toggle" data-theme-toggle
                         aria-haspopup="true" aria-expanded="false"
@@ -742,6 +773,16 @@
             <a href="#oct-11" data-date="2026-10-11"><span class="cal-day">Sun</span><span class="cal-date">11</span></a>
             <a href="#dropins"><span class="cal-day">Drop</span><span class="cal-date">In</span></a>
         </nav>
+
+        <div class="picks-banner" id="picks-banner" role="status" hidden>
+            <p class="picks-banner-text" id="picks-banner-text"></p>
+            <div class="picks-banner-actions">
+                <button type="button" class="filter-chip" id="picks-show-only">Show only these</button>
+                <button type="button" class="filter-chip" id="picks-add-all">Add all to calendar</button>
+                <button type="button" class="filter-chip" id="picks-keep">Keep as my picks</button>
+                <button type="button" class="filter-chip" id="picks-dismiss">Dismiss</button>
+            </div>
+        </div>
 
         <section class="top-pick">
             <span class="top-pick-badge">If You Only Go To One Show</span>
@@ -796,11 +837,12 @@
                 <span class="date-full">September 27, 2026</span>
                 <span class="setlist-bar" title="2 events"><span class="seg-active"></span><span class="seg-active"></span><span></span><span></span><span></span><span></span></span>
             </div>
-            <article class="event-card" id="e-2026-09-27-pat-metheny-side-eye-iii" data-uid="e-2026-09-27-pat-metheny-side-eye-iii-8d23cdfd@jazz-weekly.bitdoktor.github.io" data-date="2026-09-27" data-genre="jazz" data-search="pat metheny: side-eye iii+ pat metheny: side-eye iii+ chevalier theatre medford" data-title="Pat Metheny: Side-Eye III+ at Chevalier Theatre" data-start="20260927T190000" data-end="20260927T210000" data-location="Chevalier Theatre, Medford" data-region="outer" data-details="NEA Jazz Master and 20-time Grammy-winning jazz guitarist, one of the most influential and best-selling artists in jazz history. Appearing with his Side-Eye trio project, his ongoing showcase for younger musicians. Tickets: https://jazzboston.org/jazz-calendar?pat-metheny-side-eye-iii&amp;event_id=430145&amp;fid=1" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-09-27-pat-metheny-side-eye-iii" data-uid="e-2026-09-27-pat-metheny-side-eye-iii-8d23cdfd@jazz-weekly.bitdoktor.github.io" data-pick-id="8d23cdfd" data-date="2026-09-27" data-genre="jazz" data-search="pat metheny: side-eye iii+ pat metheny: side-eye iii+ chevalier theatre medford" data-title="Pat Metheny: Side-Eye III+ at Chevalier Theatre" data-start="20260927T190000" data-end="20260927T210000" data-location="Chevalier Theatre, Medford" data-region="outer" data-details="NEA Jazz Master and 20-time Grammy-winning jazz guitarist, one of the most influential and best-selling artists in jazz history. Appearing with his Side-Eye trio project, his ongoing showcase for younger musicians. Tickets: https://jazzboston.org/jazz-calendar?pat-metheny-side-eye-iii&amp;event_id=430145&amp;fid=1" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ NEA Jazz Master (2018) · 20x Grammy winner · DownBeat Hall of Fame (2013)</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="8d23cdfd" aria-pressed="false" aria-label="Pick Pat Metheny: Side-Eye III+" title="Pick this show">☆</button>
                         <h3 class="artist-name">Pat Metheny: Side-Eye III+</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -830,11 +872,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-09-27-eli-paperboy-reed" data-uid="e-2026-09-27-eli-paperboy-reed-0d23fd9d@jazz-weekly.bitdoktor.github.io" data-date="2026-09-27" data-genre="soul" data-search="eli paperboy reed eli paperboy reed jimmy&#x27;s jazz &amp; blues club portsmouth" data-title="Eli Paperboy Reed at Jimmy&#x27;s Jazz &amp; Blues Club" data-start="20260927T193000" data-end="20260927T213000" data-location="135 Congress St, Portsmouth, NH 03801" data-region="outer" data-details="Boston-born soul-blues revivalist blending gritty Southern funk with Chicago blues. Recorded for Capitol Records and Warner Bros. Records before a long run with Yep Roc Records. Tickets: https://jimmysoncongress.com/event/eli-paperboy-reed/" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-09-27-eli-paperboy-reed" data-uid="e-2026-09-27-eli-paperboy-reed-0d23fd9d@jazz-weekly.bitdoktor.github.io" data-pick-id="0d23fd9d" data-date="2026-09-27" data-genre="soul" data-search="eli paperboy reed eli paperboy reed jimmy&#x27;s jazz &amp; blues club portsmouth" data-title="Eli Paperboy Reed at Jimmy&#x27;s Jazz &amp; Blues Club" data-start="20260927T193000" data-end="20260927T213000" data-location="135 Congress St, Portsmouth, NH 03801" data-region="outer" data-details="Boston-born soul-blues revivalist blending gritty Southern funk with Chicago blues. Recorded for Capitol Records and Warner Bros. Records before a long run with Yep Roc Records. Tickets: https://jimmysoncongress.com/event/eli-paperboy-reed/" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Former Capitol/Warner Bros. recording artist; Boston soul-blues revivalist</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="0d23fd9d" aria-pressed="false" aria-label="Pick Eli Paperboy Reed" title="Pick this show">☆</button>
                         <h3 class="artist-name">Eli Paperboy Reed</h3>
                         <span class="genre-tag soul">Soul</span>
                     </div>
@@ -875,11 +918,12 @@
                 <span class="date-full">September 28, 2026</span>
                 <span class="setlist-bar" title="1 events"><span class="seg-active"></span><span></span><span></span><span></span><span></span><span></span></span>
             </div>
-            <article class="event-card" id="e-2026-09-28-local-artist-series-darrell-nulisch-band" data-uid="e-2026-09-28-local-artist-series-darrell-nulisch-band-7aac2d56@jazz-weekly.bitdoktor.github.io" data-date="2026-09-28" data-genre="blues" data-search="local artist series: darrell nulisch band darrell nulisch band local artist series jimmy&#x27;s jazz &amp; blues club portsmouth" data-title="Darrell Nulisch Band at Jimmy&#x27;s Jazz &amp; Blues Club" data-start="20260928T190000" data-end="20260928T210000" data-location="135 Congress St, Portsmouth, NH 03801" data-region="outer" data-details="Blues and soul singer/harmonica player Darrell Nulisch, a founding member of Anson Funderburgh&#x27;s Rockets and longtime Ronnie Earl &amp; the Broadcasters collaborator who later toured and recorded with James Cotton; a two-time Grammy nominee recording for Severn Records. Tickets: https://jimmysoncongress.com/event/local-artist-series-darrell-nulisch-band/" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-09-28-local-artist-series-darrell-nulisch-band" data-uid="e-2026-09-28-local-artist-series-darrell-nulisch-band-7aac2d56@jazz-weekly.bitdoktor.github.io" data-pick-id="7aac2d56" data-date="2026-09-28" data-genre="blues" data-search="local artist series: darrell nulisch band darrell nulisch band local artist series jimmy&#x27;s jazz &amp; blues club portsmouth" data-title="Darrell Nulisch Band at Jimmy&#x27;s Jazz &amp; Blues Club" data-start="20260928T190000" data-end="20260928T210000" data-location="135 Congress St, Portsmouth, NH 03801" data-region="outer" data-details="Blues and soul singer/harmonica player Darrell Nulisch, a founding member of Anson Funderburgh&#x27;s Rockets and longtime Ronnie Earl &amp; the Broadcasters collaborator who later toured and recorded with James Cotton; a two-time Grammy nominee recording for Severn Records. Tickets: https://jimmysoncongress.com/event/local-artist-series-darrell-nulisch-band/" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ 2x Grammy nominee · Severn Records artist · former James Cotton and Ronnie Earl bandmate</span>
                     <div class="event-series">Local Artist Series</div>
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="7aac2d56" aria-pressed="false" aria-label="Pick Darrell Nulisch Band" title="Pick this show">☆</button>
                         <h3 class="artist-name">Darrell Nulisch Band</h3>
                         <span class="genre-tag blues">Blues</span>
                     </div>
@@ -920,11 +964,12 @@
                 <span class="date-full">September 29, 2026</span>
                 <span class="setlist-bar" title="1 events"><span class="seg-active"></span><span></span><span></span><span></span><span></span><span></span></span>
             </div>
-            <article class="event-card" id="e-2026-09-29-jean-luc-ponty-legacy-concert" data-uid="e-2026-09-29-jean-luc-ponty-legacy-concert-374e00d4@jazz-weekly.bitdoktor.github.io" data-date="2026-09-29" data-genre="fusion" data-search="jean-luc ponty legacy concert jean-luc ponty legacy concert berklee performance center boston" data-title="Jean-Luc Ponty Legacy Concert at Berklee Performance Center" data-start="20260929T200000" data-end="20260929T220000" data-location="136 Massachusetts Ave, Boston, MA 02115" data-region="inner" data-details="Pioneering French jazz-violin virtuoso and jazz-fusion trailblazer (Frank Zappa and Mahavishnu Orchestra collaborator) with a 1980 Grammy nomination and a run of top-ten albums on Atlantic/Warner Bros. This Berklee Performance Center event is a legacy tribute marking his 84th birthday, performed by Berklee faculty, alumni, and students plus special guest violinist Mads Tolling, not a Ponty solo date. Tickets: https://www.etix.com/ticket/p/49498736/" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-09-29-jean-luc-ponty-legacy-concert" data-uid="e-2026-09-29-jean-luc-ponty-legacy-concert-374e00d4@jazz-weekly.bitdoktor.github.io" data-pick-id="374e00d4" data-date="2026-09-29" data-genre="fusion" data-search="jean-luc ponty legacy concert jean-luc ponty legacy concert berklee performance center boston" data-title="Jean-Luc Ponty Legacy Concert at Berklee Performance Center" data-start="20260929T200000" data-end="20260929T220000" data-location="136 Massachusetts Ave, Boston, MA 02115" data-region="inner" data-details="Pioneering French jazz-violin virtuoso and jazz-fusion trailblazer (Frank Zappa and Mahavishnu Orchestra collaborator) with a 1980 Grammy nomination and a run of top-ten albums on Atlantic/Warner Bros. This Berklee Performance Center event is a legacy tribute marking his 84th birthday, performed by Berklee faculty, alumni, and students plus special guest violinist Mads Tolling, not a Ponty solo date. Tickets: https://www.etix.com/ticket/p/49498736/" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Grammy nominee; pioneer of electric jazz violin; event is a Berklee 84th-birthday legacy tribute, not a Ponty solo performance</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="374e00d4" aria-pressed="false" aria-label="Pick Jean-Luc Ponty Legacy Concert" title="Pick this show">☆</button>
                         <h3 class="artist-name">Jean-Luc Ponty Legacy Concert</h3>
                         <span class="genre-tag fusion">Fusion</span>
                     </div>
@@ -966,11 +1011,12 @@
                 <span class="date-full">September 30, 2026</span>
                 <span class="setlist-bar" title="1 events"><span class="seg-active"></span><span></span><span></span><span></span><span></span><span></span></span>
             </div>
-            <article class="event-card" id="e-2026-09-30-monophonics-with-special-guest-taylor-williams" data-uid="e-2026-09-30-monophonics-with-special-guest-taylor-williams-bbb6880d@jazz-weekly.bitdoktor.github.io" data-date="2026-09-30" data-genre="jazz" data-search="monophonics with special guest taylor williams monophonics with special guest taylor williams jimmy&#x27;s jazz &amp; blues club portsmouth" data-title="Monophonics at Jimmy&#x27;s Jazz &amp; Blues Club" data-start="20260930T193000" data-end="20260930T213000" data-location="135 Congress St, Portsmouth, NH 03801" data-region="outer" data-details="San Francisco Bay Area psychedelic soul-funk sextet led by vocalist/keyboardist Kelly Finnigan, active since 2007. Recording artist for Colemine Records, home to fellow retro-soul acts Durand Jones &amp; The Indications and Delvon Lamarr Organ Trio. Tickets: https://jimmysoncongress.com/event/monophonics/" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-09-30-monophonics-with-special-guest-taylor-williams" data-uid="e-2026-09-30-monophonics-with-special-guest-taylor-williams-bbb6880d@jazz-weekly.bitdoktor.github.io" data-pick-id="bbb6880d" data-date="2026-09-30" data-genre="jazz" data-search="monophonics with special guest taylor williams monophonics with special guest taylor williams jimmy&#x27;s jazz &amp; blues club portsmouth" data-title="Monophonics at Jimmy&#x27;s Jazz &amp; Blues Club" data-start="20260930T193000" data-end="20260930T213000" data-location="135 Congress St, Portsmouth, NH 03801" data-region="outer" data-details="San Francisco Bay Area psychedelic soul-funk sextet led by vocalist/keyboardist Kelly Finnigan, active since 2007. Recording artist for Colemine Records, home to fellow retro-soul acts Durand Jones &amp; The Indications and Delvon Lamarr Organ Trio. Tickets: https://jimmysoncongress.com/event/monophonics/" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Colemine Records artist; psychedelic soul-funk band since 2007</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="bbb6880d" aria-pressed="false" aria-label="Pick Monophonics" title="Pick this show">☆</button>
                         <h3 class="artist-name">Monophonics</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -1011,11 +1057,12 @@
                 <span class="date-full">October 1, 2026</span>
                 <span class="setlist-bar" title="6 events"><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span></span>
             </div>
-            <article class="event-card" id="e-2026-10-01-feldman-geospatial-presents-claudio-ragazzi-triptico" data-uid="e-2026-10-01-feldman-geospatial-presents-claudio-ragazzi-triptico-b2ead38c@jazz-weekly.bitdoktor.github.io" data-date="2026-10-01" data-genre="jazz" data-search="feldman geospatial presents claudio ragazzi &amp; triptico claudio ragazzi &amp; triptico feldman geospatial presents long live roxbury boston" data-title="Claudio Ragazzi &amp; Triptico at Long Live Roxbury" data-start="20261001T180000" data-end="20261001T200000" data-location="Long Live Roxbury, Boston" data-region="inner" data-details="Argentine-born, Boston-based guitarist, composer, and Berklee College of Music faculty member. Grammy winner (Best Latin Jazz Album, &quot;Jazz Tango&quot;, with the Pablo Ziegler Trio) and Emmy-winning film composer who has performed with Yo-Yo Ma, Randy Brecker, and Joe Lovano at venues including Carnegie Hall and the Blue Note. Tickets: https://jazzboston.org/jazz-calendar?feldman-geospatial-presents-claudio-ragazzi-triptico&amp;event_id=430789&amp;fid=1" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-01-feldman-geospatial-presents-claudio-ragazzi-triptico" data-uid="e-2026-10-01-feldman-geospatial-presents-claudio-ragazzi-triptico-b2ead38c@jazz-weekly.bitdoktor.github.io" data-pick-id="b2ead38c" data-date="2026-10-01" data-genre="jazz" data-search="feldman geospatial presents claudio ragazzi &amp; triptico claudio ragazzi &amp; triptico feldman geospatial presents long live roxbury boston" data-title="Claudio Ragazzi &amp; Triptico at Long Live Roxbury" data-start="20261001T180000" data-end="20261001T200000" data-location="Long Live Roxbury, Boston" data-region="inner" data-details="Argentine-born, Boston-based guitarist, composer, and Berklee College of Music faculty member. Grammy winner (Best Latin Jazz Album, &quot;Jazz Tango&quot;, with the Pablo Ziegler Trio) and Emmy-winning film composer who has performed with Yo-Yo Ma, Randy Brecker, and Joe Lovano at venues including Carnegie Hall and the Blue Note. Tickets: https://jazzboston.org/jazz-calendar?feldman-geospatial-presents-claudio-ragazzi-triptico&amp;event_id=430789&amp;fid=1" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Grammy winner (Best Latin Jazz Album); Emmy-winning film composer</span>
                     <div class="event-series">Feldman Geospatial presents</div>
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="b2ead38c" aria-pressed="false" aria-label="Pick Claudio Ragazzi &amp; Triptico" title="Pick this show">☆</button>
                         <h3 class="artist-name">Claudio Ragazzi &amp; Triptico</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -1045,11 +1092,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-01-theo-croker" data-uid="e-2026-10-01-theo-croker-0de927a7@jazz-weekly.bitdoktor.github.io" data-date="2026-10-01" data-genre="jazz" data-search="theo croker theo croker regattabar cambridge" data-title="Theo Croker at Regattabar" data-start="20261001T190000" data-end="20261001T210000" data-location="1 Bennett St, Cambridge, MA 02138" data-region="inner" data-details="Grammy-nominated jazz trumpeter, composer, and producer (grandson of Doc Cheatham) whose genre-defying, Afrofuturist albums have featured Wyclef Jean, Gary Bartz, and Dee Dee Bridgewater. Released via Sony Masterworks/OKeh and DDB Records. Tickets: https://www.ticketweb.com/event/theo-croker-regattabar-tickets/14922773" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-01-theo-croker" data-uid="e-2026-10-01-theo-croker-0de927a7@jazz-weekly.bitdoktor.github.io" data-pick-id="0de927a7" data-date="2026-10-01" data-genre="jazz" data-search="theo croker theo croker regattabar cambridge" data-title="Theo Croker at Regattabar" data-start="20261001T190000" data-end="20261001T210000" data-location="1 Bennett St, Cambridge, MA 02138" data-region="inner" data-details="Grammy-nominated jazz trumpeter, composer, and producer (grandson of Doc Cheatham) whose genre-defying, Afrofuturist albums have featured Wyclef Jean, Gary Bartz, and Dee Dee Bridgewater. Released via Sony Masterworks/OKeh and DDB Records. Tickets: https://www.ticketweb.com/event/theo-croker-regattabar-tickets/14922773" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Grammy nominee; mentored by Dee Dee Bridgewater; Oberlin-trained</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="0de927a7" aria-pressed="false" aria-label="Pick Theo Croker" title="Pick this show">☆</button>
                         <h3 class="artist-name">Theo Croker</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -1080,11 +1128,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-01-anna-webber-s-shimmer-wince" data-uid="e-2026-10-01-anna-webber-s-shimmer-wince-ea61e3e2@jazz-weekly.bitdoktor.github.io" data-date="2026-10-01" data-genre="jazz" data-search="anna webber&#x27;s shimmer wince anna webber&#x27;s shimmer wince peabody hall at all saints church boston" data-title="Anna Webber&#x27;s Shimmer Wince at Peabody Hall at All Saints Church" data-start="20261001T193000" data-end="20261001T213000" data-location="Peabody Hall at All Saints Church, Boston" data-region="inner" data-details="Avant-garde jazz quintet led by saxophonist/flutist/composer Anna Webber, a 2018 Guggenheim Fellow whose recordings appear on Pi Recordings. Shimmer Wince features Adam O&#x27;Farrill, Mariel Roberts, and Elias Stemeseder. Tickets: https://jazzboston.org/jazz-calendar?anna-webber-s-shimmer-wince&amp;event_id=431309&amp;fid=1" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-01-anna-webber-s-shimmer-wince" data-uid="e-2026-10-01-anna-webber-s-shimmer-wince-ea61e3e2@jazz-weekly.bitdoktor.github.io" data-pick-id="ea61e3e2" data-date="2026-10-01" data-genre="jazz" data-search="anna webber&#x27;s shimmer wince anna webber&#x27;s shimmer wince peabody hall at all saints church boston" data-title="Anna Webber&#x27;s Shimmer Wince at Peabody Hall at All Saints Church" data-start="20261001T193000" data-end="20261001T213000" data-location="Peabody Hall at All Saints Church, Boston" data-region="inner" data-details="Avant-garde jazz quintet led by saxophonist/flutist/composer Anna Webber, a 2018 Guggenheim Fellow whose recordings appear on Pi Recordings. Shimmer Wince features Adam O&#x27;Farrill, Mariel Roberts, and Elias Stemeseder. Tickets: https://jazzboston.org/jazz-calendar?anna-webber-s-shimmer-wince&amp;event_id=431309&amp;fid=1" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Pi Recordings artist; 2018 Guggenheim Fellow</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="ea61e3e2" aria-pressed="false" aria-label="Pick Anna Webber&#x27;s Shimmer Wince" title="Pick this show">☆</button>
                         <h3 class="artist-name">Anna Webber&#x27;s Shimmer Wince</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -1114,11 +1163,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-01-james-montgomery-band" data-uid="e-2026-10-01-james-montgomery-band-554b09ed@jazz-weekly.bitdoktor.github.io" data-date="2026-10-01" data-genre="jazz" data-search="james montgomery band james montgomery band jimmy&#x27;s jazz &amp; blues club portsmouth" data-title="James Montgomery Band at Jimmy&#x27;s Jazz &amp; Blues Club" data-start="20261001T193000" data-end="20261001T213000" data-location="135 Congress St, Portsmouth, NH 03801" data-region="outer" data-details="Detroit-born, Boston-based blues harmonica player and bandleader who formed the James Montgomery Band in 1970 while at Boston University. Signed to Capricorn Records (&quot;First Time Out&quot;, 1973) and later Island Records (self-titled, 1976, produced by Allen Toussaint); has toured with the Blues Brothers, Johnny Winter, and Commander Cody. Tickets: https://jimmysoncongress.com/event/james-montgomery-band/" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-01-james-montgomery-band" data-uid="e-2026-10-01-james-montgomery-band-554b09ed@jazz-weekly.bitdoktor.github.io" data-pick-id="554b09ed" data-date="2026-10-01" data-genre="jazz" data-search="james montgomery band james montgomery band jimmy&#x27;s jazz &amp; blues club portsmouth" data-title="James Montgomery Band at Jimmy&#x27;s Jazz &amp; Blues Club" data-start="20261001T193000" data-end="20261001T213000" data-location="135 Congress St, Portsmouth, NH 03801" data-region="outer" data-details="Detroit-born, Boston-based blues harmonica player and bandleader who formed the James Montgomery Band in 1970 while at Boston University. Signed to Capricorn Records (&quot;First Time Out&quot;, 1973) and later Island Records (self-titled, 1976, produced by Allen Toussaint); has toured with the Blues Brothers, Johnny Winter, and Commander Cody. Tickets: https://jimmysoncongress.com/event/james-montgomery-band/" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Capricorn/Island recording artist; toured with the Blues Brothers and Johnny Winter</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="554b09ed" aria-pressed="false" aria-label="Pick James Montgomery Band" title="Pick this show">☆</button>
                         <h3 class="artist-name">James Montgomery Band</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -1148,11 +1198,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-01-mononeon-s-micro-southern-soul" data-uid="e-2026-10-01-mononeon-s-micro-southern-soul-95ec350f@jazz-weekly.bitdoktor.github.io" data-date="2026-10-01" data-genre="funk" data-search="mononeon&#x27;s micro-southern soul mononeon&#x27;s micro-southern soul berklee performance center boston" data-title="MonoNeon&#x27;s Micro-Southern Soul at Berklee Performance Center" data-start="20261001T193000" data-end="20261001T213000" data-location="136 Massachusetts Ave, Boston, MA 02115" data-region="inner" data-details="Memphis bassist, singer-songwriter, and former Prince collaborator known for his distinctive bent-note bass style. Won a Grammy in 2021 for his contribution to Nas&#x27;s &#x27;King&#x27;s Disease&#x27; and has since drawn additional Grammy nominations for work with Jacob Collier and Cory Henry. Tickets: https://www.etix.com/ticket/p/75817235/" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-01-mononeon-s-micro-southern-soul" data-uid="e-2026-10-01-mononeon-s-micro-southern-soul-95ec350f@jazz-weekly.bitdoktor.github.io" data-pick-id="95ec350f" data-date="2026-10-01" data-genre="funk" data-search="mononeon&#x27;s micro-southern soul mononeon&#x27;s micro-southern soul berklee performance center boston" data-title="MonoNeon&#x27;s Micro-Southern Soul at Berklee Performance Center" data-start="20261001T193000" data-end="20261001T213000" data-location="136 Massachusetts Ave, Boston, MA 02115" data-region="inner" data-details="Memphis bassist, singer-songwriter, and former Prince collaborator known for his distinctive bent-note bass style. Won a Grammy in 2021 for his contribution to Nas&#x27;s &#x27;King&#x27;s Disease&#x27; and has since drawn additional Grammy nominations for work with Jacob Collier and Cory Henry. Tickets: https://www.etix.com/ticket/p/75817235/" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Grammy winner (2021, Nas) · additional Grammy nominations · former Prince bassist</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="95ec350f" aria-pressed="false" aria-label="Pick MonoNeon&#x27;s Micro-Southern Soul" title="Pick this show">☆</button>
                         <h3 class="artist-name">MonoNeon&#x27;s Micro-Southern Soul</h3>
                         <span class="genre-tag soul">Soul/Funk</span>
                     </div>
@@ -1183,11 +1234,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-01-ruthie-foster" data-uid="e-2026-10-01-ruthie-foster-0d28a1aa@jazz-weekly.bitdoktor.github.io" data-date="2026-10-01" data-genre="blues" data-search="ruthie foster ruthie foster rockport music rockport" data-title="Ruthie Foster at Rockport Music" data-start="20261001T193000" data-end="20261001T213000" data-location="37 Main St, Rockport, MA 01966" data-region="outer" data-details="Texas-based blues, gospel, and soul singer-songwriter with a voice compared to Aretha Franklin and Ella Fitzgerald. Grammy winner and repeat Blues Music Award champion drawing on gospel, blues, folk, and jazz traditions. Tickets: https://tickets.rockportmusic.org/10921/10922" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-01-ruthie-foster" data-uid="e-2026-10-01-ruthie-foster-0d28a1aa@jazz-weekly.bitdoktor.github.io" data-pick-id="0d28a1aa" data-date="2026-10-01" data-genre="blues" data-search="ruthie foster ruthie foster rockport music rockport" data-title="Ruthie Foster at Rockport Music" data-start="20261001T193000" data-end="20261001T213000" data-location="37 Main St, Rockport, MA 01966" data-region="outer" data-details="Texas-based blues, gospel, and soul singer-songwriter with a voice compared to Aretha Franklin and Ella Fitzgerald. Grammy winner and repeat Blues Music Award champion drawing on gospel, blues, folk, and jazz traditions. Tickets: https://tickets.rockportmusic.org/10921/10922" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Grammy winner (2025) · 9x Blues Music Award winner</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="0d28a1aa" aria-pressed="false" aria-label="Pick Ruthie Foster" title="Pick this show">☆</button>
                         <h3 class="artist-name">Ruthie Foster</h3>
                         <span class="genre-tag blues">Blues</span>
                     </div>
@@ -1229,11 +1281,12 @@
                 <span class="date-full">October 2, 2026</span>
                 <span class="setlist-bar" title="4 events"><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span></span><span></span></span>
             </div>
-            <article class="event-card" id="e-2026-10-02-eli-paperboy-reed" data-uid="e-2026-10-02-eli-paperboy-reed-ebb72a6f@jazz-weekly.bitdoktor.github.io" data-date="2026-10-02" data-genre="soul" data-search="eli paperboy reed eli paperboy reed regattabar cambridge" data-title="Eli Paperboy Reed at Regattabar" data-start="20261002T190000" data-end="20261002T210000" data-location="1 Bennett St, Cambridge, MA 02138" data-region="inner" data-details="Boston-born soul-blues revivalist blending gritty Southern funk with Chicago blues. Recorded for Capitol Records and Warner Bros. Records before a long run with Yep Roc Records. Tickets: https://www.ticketweb.com/event/eli-paperboy-reed-regattabar-tickets/14215844" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-02-eli-paperboy-reed" data-uid="e-2026-10-02-eli-paperboy-reed-ebb72a6f@jazz-weekly.bitdoktor.github.io" data-pick-id="ebb72a6f" data-date="2026-10-02" data-genre="soul" data-search="eli paperboy reed eli paperboy reed regattabar cambridge" data-title="Eli Paperboy Reed at Regattabar" data-start="20261002T190000" data-end="20261002T210000" data-location="1 Bennett St, Cambridge, MA 02138" data-region="inner" data-details="Boston-born soul-blues revivalist blending gritty Southern funk with Chicago blues. Recorded for Capitol Records and Warner Bros. Records before a long run with Yep Roc Records. Tickets: https://www.ticketweb.com/event/eli-paperboy-reed-regattabar-tickets/14215844" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Former Capitol/Warner Bros. recording artist; Boston soul-blues revivalist</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="ebb72a6f" aria-pressed="false" aria-label="Pick Eli Paperboy Reed" title="Pick this show">☆</button>
                         <h3 class="artist-name">Eli Paperboy Reed</h3>
                         <span class="genre-tag soul">Soul</span>
                     </div>
@@ -1264,11 +1317,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-02-selwyn-birchwood-band-live" data-uid="e-2026-10-02-selwyn-birchwood-band-live-6c9398c3@jazz-weekly.bitdoktor.github.io" data-date="2026-10-02" data-genre="blues" data-search="selwyn birchwood band live selwyn birchwood band the fallout shelter norwood" data-title="Selwyn Birchwood Band at The Fallout Shelter" data-start="20261002T190000" data-end="20261002T210000" data-location="The Fallout Shelter, Norwood" data-region="outer" data-details="Tampa-based blues guitarist and vocalist signed to Alligator Records, known for his self-styled &quot;Electric Swamp Funkin&#x27; Blues&quot; mixing deep blues, psychedelic rock, funk, and Southern soul. His 2014 Alligator debut, Don&#x27;t Call No Ambulance, won the Blues Music Award for Best New Artist Debut. Tickets: https://jazzboston.org/jazz-calendar?selwyn-birchwood-band-live&amp;event_id=428666&amp;fid=1" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-02-selwyn-birchwood-band-live" data-uid="e-2026-10-02-selwyn-birchwood-band-live-6c9398c3@jazz-weekly.bitdoktor.github.io" data-pick-id="6c9398c3" data-date="2026-10-02" data-genre="blues" data-search="selwyn birchwood band live selwyn birchwood band the fallout shelter norwood" data-title="Selwyn Birchwood Band at The Fallout Shelter" data-start="20261002T190000" data-end="20261002T210000" data-location="The Fallout Shelter, Norwood" data-region="outer" data-details="Tampa-based blues guitarist and vocalist signed to Alligator Records, known for his self-styled &quot;Electric Swamp Funkin&#x27; Blues&quot; mixing deep blues, psychedelic rock, funk, and Southern soul. His 2014 Alligator debut, Don&#x27;t Call No Ambulance, won the Blues Music Award for Best New Artist Debut. Tickets: https://jazzboston.org/jazz-calendar?selwyn-birchwood-band-live&amp;event_id=428666&amp;fid=1" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Blues Music Award winner; Alligator Records recording artist</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="6c9398c3" aria-pressed="false" aria-label="Pick Selwyn Birchwood Band" title="Pick this show">☆</button>
                         <h3 class="artist-name">Selwyn Birchwood Band</h3>
                         <span class="genre-tag blues">Blues</span>
                     </div>
@@ -1298,11 +1352,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-02-yoko-miwa-trio-with-special-guest-mikayla-shirley" data-uid="e-2026-10-02-yoko-miwa-trio-with-special-guest-mikayla-shirley-ad4e480c@jazz-weekly.bitdoktor.github.io" data-date="2026-10-02" data-genre="jazz" data-search="yoko miwa trio with special guest, mikayla shirley yoko miwa trio with special guest, mikayla shirley scullers jazz club boston" data-title="Yoko Miwa Trio at Scullers Jazz Club" data-start="20261002T190000" data-end="20261002T210000" data-location="400 Soldiers Field Rd, Boston, MA 02134" data-region="inner" data-details="Boston-based, Kobe-born jazz pianist and Berklee faculty member leading her trio since the early 2000s, with albums on independent labels; named Boston Music Awards Jazz Artist of the Year in 2019. Tickets: https://www.ticketweb.com/event/yoko-miwa-trio-featuring-mikayla-scullers-jazz-club-tickets/14232084" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-02-yoko-miwa-trio-with-special-guest-mikayla-shirley" data-uid="e-2026-10-02-yoko-miwa-trio-with-special-guest-mikayla-shirley-ad4e480c@jazz-weekly.bitdoktor.github.io" data-pick-id="ad4e480c" data-date="2026-10-02" data-genre="jazz" data-search="yoko miwa trio with special guest, mikayla shirley yoko miwa trio with special guest, mikayla shirley scullers jazz club boston" data-title="Yoko Miwa Trio at Scullers Jazz Club" data-start="20261002T190000" data-end="20261002T210000" data-location="400 Soldiers Field Rd, Boston, MA 02134" data-region="inner" data-details="Boston-based, Kobe-born jazz pianist and Berklee faculty member leading her trio since the early 2000s, with albums on independent labels; named Boston Music Awards Jazz Artist of the Year in 2019. Tickets: https://www.ticketweb.com/event/yoko-miwa-trio-featuring-mikayla-scullers-jazz-club-tickets/14232084" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Boston Music Awards Jazz Artist of the Year (2019); Berklee faculty</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="ad4e480c" aria-pressed="false" aria-label="Pick Yoko Miwa Trio" title="Pick this show">☆</button>
                         <h3 class="artist-name">Yoko Miwa Trio</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -1333,11 +1388,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-02-ruthie-foster" data-uid="e-2026-10-02-ruthie-foster-1253a515@jazz-weekly.bitdoktor.github.io" data-date="2026-10-02" data-genre="blues" data-search="ruthie foster ruthie foster jimmy&#x27;s jazz &amp; blues club portsmouth" data-title="Ruthie Foster at Jimmy&#x27;s Jazz &amp; Blues Club" data-start="20261002T193000" data-end="20261002T213000" data-location="135 Congress St, Portsmouth, NH 03801" data-region="outer" data-details="Texas-based blues, gospel, and soul singer-songwriter with a voice compared to Aretha Franklin and Ella Fitzgerald. Grammy winner and repeat Blues Music Award champion drawing on gospel, blues, folk, and jazz traditions. Tickets: https://jimmysoncongress.com/event/ruthie-foster/" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-02-ruthie-foster" data-uid="e-2026-10-02-ruthie-foster-1253a515@jazz-weekly.bitdoktor.github.io" data-pick-id="1253a515" data-date="2026-10-02" data-genre="blues" data-search="ruthie foster ruthie foster jimmy&#x27;s jazz &amp; blues club portsmouth" data-title="Ruthie Foster at Jimmy&#x27;s Jazz &amp; Blues Club" data-start="20261002T193000" data-end="20261002T213000" data-location="135 Congress St, Portsmouth, NH 03801" data-region="outer" data-details="Texas-based blues, gospel, and soul singer-songwriter with a voice compared to Aretha Franklin and Ella Fitzgerald. Grammy winner and repeat Blues Music Award champion drawing on gospel, blues, folk, and jazz traditions. Tickets: https://jimmysoncongress.com/event/ruthie-foster/" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Grammy winner (2025) · 9x Blues Music Award winner</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="1253a515" aria-pressed="false" aria-label="Pick Ruthie Foster" title="Pick this show">☆</button>
                         <h3 class="artist-name">Ruthie Foster</h3>
                         <span class="genre-tag blues">Blues</span>
                     </div>
@@ -1378,11 +1434,12 @@
                 <span class="date-full">October 3, 2026</span>
                 <span class="setlist-bar" title="7 events"><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span></span>
             </div>
-            <article class="event-card" id="e-2026-10-03-jonathan-gramling-friends" data-uid="e-2026-10-03-jonathan-gramling-friends-7a6b41f0@jazz-weekly.bitdoktor.github.io" data-date="2026-10-03" data-genre="jazz" data-search="jonathan gramling &amp; friends jonathan gramling &amp; friends twelfth baptist church boston" data-title="Jonathan Gramling &amp; Friends at Twelfth Baptist Church" data-start="20261003T150000" data-end="20261003T170000" data-location="Twelfth Baptist Church, Boston" data-region="inner" data-details="Philadelphia-born, Boston-based soul/gospel/reggae vocalist; co-founder of the Afropolitan band Soulfège and a featured soloist with Mystic Chorale. Has collaborated with Grammy-winning dancehall artist Bounty Killer but holds no personal major-label or award credentials. Tickets: https://jazzboston.org/jazz-calendar?jonathan-gramling-friends&amp;event_id=427167&amp;fid=1" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-03-jonathan-gramling-friends" data-uid="e-2026-10-03-jonathan-gramling-friends-7a6b41f0@jazz-weekly.bitdoktor.github.io" data-pick-id="7a6b41f0" data-date="2026-10-03" data-genre="jazz" data-search="jonathan gramling &amp; friends jonathan gramling &amp; friends twelfth baptist church boston" data-title="Jonathan Gramling &amp; Friends at Twelfth Baptist Church" data-start="20261003T150000" data-end="20261003T170000" data-location="Twelfth Baptist Church, Boston" data-region="inner" data-details="Philadelphia-born, Boston-based soul/gospel/reggae vocalist; co-founder of the Afropolitan band Soulfège and a featured soloist with Mystic Chorale. Has collaborated with Grammy-winning dancehall artist Bounty Killer but holds no personal major-label or award credentials. Tickets: https://jazzboston.org/jazz-calendar?jonathan-gramling-friends&amp;event_id=427167&amp;fid=1" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Regional Boston soul/gospel vocalist; Soulfège co-founder, Mystic Chorale collaborator</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="7a6b41f0" aria-pressed="false" aria-label="Pick Jonathan Gramling &amp; Friends" title="Pick this show">☆</button>
                         <h3 class="artist-name">Jonathan Gramling &amp; Friends</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -1412,11 +1469,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-03-michael-mayo" data-uid="e-2026-10-03-michael-mayo-fad6936f@jazz-weekly.bitdoktor.github.io" data-date="2026-10-03" data-genre="vocal jazz" data-search="michael mayo michael mayo regattabar cambridge" data-title="Michael Mayo at Regattabar" data-start="20261003T190000" data-end="20261003T210000" data-location="1 Bennett St, Cambridge, MA 02138" data-region="inner" data-details="Los Angeles-born jazz vocalist and composer, New England Conservatory graduate and Thelonious Monk Institute alum, whose sophomore album &#x27;Fly&#x27; (2024) earned two 2026 Grammy nominations. Has toured with Herbie Hancock, Jacob Collier, and Josh Groban. Tickets: https://www.ticketweb.com/event/michael-mayo-regattabar-tickets/14171014" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-03-michael-mayo" data-uid="e-2026-10-03-michael-mayo-fad6936f@jazz-weekly.bitdoktor.github.io" data-pick-id="fad6936f" data-date="2026-10-03" data-genre="vocal jazz" data-search="michael mayo michael mayo regattabar cambridge" data-title="Michael Mayo at Regattabar" data-start="20261003T190000" data-end="20261003T210000" data-location="1 Bennett St, Cambridge, MA 02138" data-region="inner" data-details="Los Angeles-born jazz vocalist and composer, New England Conservatory graduate and Thelonious Monk Institute alum, whose sophomore album &#x27;Fly&#x27; (2024) earned two 2026 Grammy nominations. Has toured with Herbie Hancock, Jacob Collier, and Josh Groban. Tickets: https://www.ticketweb.com/event/michael-mayo-regattabar-tickets/14171014" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ 2026 Grammy nominee (Best Jazz Vocal Album) · Mack Avenue Records</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="fad6936f" aria-pressed="false" aria-label="Pick Michael Mayo" title="Pick this show">☆</button>
                         <h3 class="artist-name">Michael Mayo</h3>
                         <span class="genre-tag jazz">Jazz</span>
                     </div>
@@ -1447,11 +1505,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-03-peter-white-1900" data-uid="e-2026-10-03-peter-white-1900-7b635b19@jazz-weekly.bitdoktor.github.io" data-date="2026-10-03" data-genre="jazz" data-search="peter white peter white scullers jazz club boston" data-title="Peter White at Scullers Jazz Club" data-start="20261003T190000" data-end="20261003T210000" data-location="400 Soldiers Field Rd, Boston, MA 02134" data-region="inner" data-details="British-born smooth-jazz guitarist regarded as the genre&#x27;s gold-standard six-string voice, with a string of Top Ten Billboard Jazz Albums since the late 1990s. Began as a member of Al Stewart&#x27;s band before launching a prolific solo career. Tickets: https://www.ticketweb.com/search?q=PETER+WHITE+SCULLERS" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-03-peter-white-1900" data-uid="e-2026-10-03-peter-white-1900-7b635b19@jazz-weekly.bitdoktor.github.io" data-pick-id="7b635b19" data-date="2026-10-03" data-genre="jazz" data-search="peter white peter white scullers jazz club boston" data-title="Peter White at Scullers Jazz Club" data-start="20261003T190000" data-end="20261003T210000" data-location="400 Soldiers Field Rd, Boston, MA 02134" data-region="inner" data-details="British-born smooth-jazz guitarist regarded as the genre&#x27;s gold-standard six-string voice, with a string of Top Ten Billboard Jazz Albums since the late 1990s. Began as a member of Al Stewart&#x27;s band before launching a prolific solo career. Tickets: https://www.ticketweb.com/search?q=PETER+WHITE+SCULLERS" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Columbia recording artist; Best Guitarist, National Smooth Jazz Awards (4x, 2000-2003)</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="7b635b19" aria-pressed="false" aria-label="Pick Peter White" title="Pick this show">☆</button>
                         <h3 class="artist-name">Peter White</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -1482,11 +1541,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-03-makanda-project-featuring-ricky-ford" data-uid="e-2026-10-03-makanda-project-featuring-ricky-ford-db37062d@jazz-weekly.bitdoktor.github.io" data-date="2026-10-03" data-genre="big band" data-search="the makanda project featuring ricky ford the makanda project featuring ricky ford twelfth baptist church boston" data-title="The Makanda Project at Twelfth Baptist Church" data-start="20261003T190000" data-end="20261003T210000" data-location="Twelfth Baptist Church, Boston" data-region="inner" data-details="Boston-based 13-piece jazz ensemble, formed in 2005 by pianist John Kordalewski, dedicated to performing the roughly 350 unrecorded compositions of the late Boston jazz composer Makanda Ken McIntyre. Tickets: https://jazzboston.org/jazz-calendar?the-makanda-project-featuring-ricky-ford&amp;event_id=431484&amp;fid=1" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-03-makanda-project-featuring-ricky-ford" data-uid="e-2026-10-03-makanda-project-featuring-ricky-ford-db37062d@jazz-weekly.bitdoktor.github.io" data-pick-id="db37062d" data-date="2026-10-03" data-genre="big band" data-search="the makanda project featuring ricky ford the makanda project featuring ricky ford twelfth baptist church boston" data-title="The Makanda Project at Twelfth Baptist Church" data-start="20261003T190000" data-end="20261003T210000" data-location="Twelfth Baptist Church, Boston" data-region="inner" data-details="Boston-based 13-piece jazz ensemble, formed in 2005 by pianist John Kordalewski, dedicated to performing the roughly 350 unrecorded compositions of the late Boston jazz composer Makanda Ken McIntyre. Tickets: https://jazzboston.org/jazz-calendar?the-makanda-project-featuring-ricky-ford&amp;event_id=431484&amp;fid=1" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Boston large-ensemble project performing Makanda Ken McIntyre&#x27;s unrecorded works</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="db37062d" aria-pressed="false" aria-label="Pick The Makanda Project" title="Pick this show">☆</button>
                         <h3 class="artist-name">The Makanda Project</h3>
                         <span class="genre-tag jazz">Big Band</span>
                     </div>
@@ -1507,11 +1567,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-03-rangemasters-live" data-uid="e-2026-10-03-rangemasters-live-bc147b9f@jazz-weekly.bitdoktor.github.io" data-date="2026-10-03" data-genre="blues" data-search="the rangemasters live the rangemasters the fallout shelter norwood" data-title="The Rangemasters at The Fallout Shelter" data-start="20261003T190000" data-end="20261003T210000" data-location="The Fallout Shelter, Norwood" data-region="outer" data-details="Boston-area electric rhythm-and-blues quartet of veteran session and touring musicians (Cliff Goodwin, Mike Lynch, Jeremy Moses Curtis, Duncan Arsenault) known for raw, in-the-moment live shows with no backing tracks. Tickets: https://jazzboston.org/jazz-calendar?the-rangemasters-live&amp;event_id=428675&amp;fid=1" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-03-rangemasters-live" data-uid="e-2026-10-03-rangemasters-live-bc147b9f@jazz-weekly.bitdoktor.github.io" data-pick-id="bc147b9f" data-date="2026-10-03" data-genre="blues" data-search="the rangemasters live the rangemasters the fallout shelter norwood" data-title="The Rangemasters at The Fallout Shelter" data-start="20261003T190000" data-end="20261003T210000" data-location="The Fallout Shelter, Norwood" data-region="outer" data-details="Boston-area electric rhythm-and-blues quartet of veteran session and touring musicians (Cliff Goodwin, Mike Lynch, Jeremy Moses Curtis, Duncan Arsenault) known for raw, in-the-moment live shows with no backing tracks. Tickets: https://jazzboston.org/jazz-calendar?the-rangemasters-live&amp;event_id=428675&amp;fid=1" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Local/regional act; members carry decades of individual touring credits</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="bc147b9f" aria-pressed="false" aria-label="Pick The Rangemasters" title="Pick this show">☆</button>
                         <h3 class="artist-name">The Rangemasters</h3>
                         <span class="genre-tag blues">Blues</span>
                     </div>
@@ -1541,11 +1602,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-03-fat-city-band" data-uid="e-2026-10-03-fat-city-band-4bde0647@jazz-weekly.bitdoktor.github.io" data-date="2026-10-03" data-genre="funk" data-search="the fat city band the fat city band spire center for the performing arts plymouth" data-title="The Fat City Band at Spire Center for the Performing Arts" data-start="20261003T200000" data-end="20261003T220000" data-location="Spire Center for the Performing Arts, Plymouth" data-region="outer" data-details="Boston-based seven-piece jump blues, swing, and New Orleans-flavored soul/funk band founded by harmonica player Paul Redmond, active for nearly 50 years. Longtime Hatch Shell 4th of July fixture and former 23-year host of one of Boston&#x27;s premier New Year&#x27;s Eve celebrations; has shared stages with B.B. King and Ray Charles. Tickets: https://jazzboston.org/jazz-calendar?the-fat-city-band&amp;event_id=425244&amp;fid=1" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-03-fat-city-band" data-uid="e-2026-10-03-fat-city-band-4bde0647@jazz-weekly.bitdoktor.github.io" data-pick-id="4bde0647" data-date="2026-10-03" data-genre="funk" data-search="the fat city band the fat city band spire center for the performing arts plymouth" data-title="The Fat City Band at Spire Center for the Performing Arts" data-start="20261003T200000" data-end="20261003T220000" data-location="Spire Center for the Performing Arts, Plymouth" data-region="outer" data-details="Boston-based seven-piece jump blues, swing, and New Orleans-flavored soul/funk band founded by harmonica player Paul Redmond, active for nearly 50 years. Longtime Hatch Shell 4th of July fixture and former 23-year host of one of Boston&#x27;s premier New Year&#x27;s Eve celebrations; has shared stages with B.B. King and Ray Charles. Tickets: https://jazzboston.org/jazz-calendar?the-fat-city-band&amp;event_id=425244&amp;fid=1" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Boston institution; decades on the Hatch Shell and club circuit</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="4bde0647" aria-pressed="false" aria-label="Pick The Fat City Band" title="Pick this show">☆</button>
                         <h3 class="artist-name">The Fat City Band</h3>
                         <span class="genre-tag soul">Soul/Funk</span>
                     </div>
@@ -1575,11 +1637,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-03-peter-white-2100" data-uid="e-2026-10-03-peter-white-2100-48cb8fd7@jazz-weekly.bitdoktor.github.io" data-date="2026-10-03" data-genre="jazz" data-search="peter white peter white scullers jazz club boston" data-title="Peter White at Scullers Jazz Club" data-start="20261003T210000" data-end="20261003T230000" data-location="400 Soldiers Field Rd, Boston, MA 02134" data-region="inner" data-details="British-born smooth-jazz guitarist regarded as the genre&#x27;s gold-standard six-string voice, with a string of Top Ten Billboard Jazz Albums since the late 1990s. Began as a member of Al Stewart&#x27;s band before launching a prolific solo career. Tickets: https://www.ticketweb.com/search?q=PETER+WHITE+SCULLERS" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-03-peter-white-2100" data-uid="e-2026-10-03-peter-white-2100-48cb8fd7@jazz-weekly.bitdoktor.github.io" data-pick-id="48cb8fd7" data-date="2026-10-03" data-genre="jazz" data-search="peter white peter white scullers jazz club boston" data-title="Peter White at Scullers Jazz Club" data-start="20261003T210000" data-end="20261003T230000" data-location="400 Soldiers Field Rd, Boston, MA 02134" data-region="inner" data-details="British-born smooth-jazz guitarist regarded as the genre&#x27;s gold-standard six-string voice, with a string of Top Ten Billboard Jazz Albums since the late 1990s. Began as a member of Al Stewart&#x27;s band before launching a prolific solo career. Tickets: https://www.ticketweb.com/search?q=PETER+WHITE+SCULLERS" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Columbia recording artist; Best Guitarist, National Smooth Jazz Awards (4x, 2000-2003)</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="48cb8fd7" aria-pressed="false" aria-label="Pick Peter White" title="Pick this show">☆</button>
                         <h3 class="artist-name">Peter White</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -1621,11 +1684,12 @@
                 <span class="date-full">October 4, 2026</span>
                 <span class="setlist-bar" title="5 events"><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span></span></span>
             </div>
-            <article class="event-card" id="e-2026-10-04-jimmys-jazz-brunch-lenny-bradford-trio" data-uid="e-2026-10-04-jimmys-jazz-brunch-lenny-bradford-trio-185633dc@jazz-weekly.bitdoktor.github.io" data-date="2026-10-04" data-genre="jazz" data-search="jimmy’s jazz brunch: lenny bradford trio lenny bradford trio jimmy’s jazz brunch jimmy&#x27;s jazz &amp; blues club portsmouth" data-title="Lenny Bradford Trio at Jimmy&#x27;s Jazz &amp; Blues Club" data-start="20261004T100000" data-end="20261004T120000" data-location="135 Congress St, Portsmouth, NH 03801" data-region="outer" data-details="Boston-area soulful-swing/blues trio led by Berklee-trained bassist Lenny &quot;LB&quot; Bradford of Manchester, NH, whose members&#x27; sideman credits include Bo Diddley, Commander Cody, Joe Louis Walker, Edgar Winter, and James Montgomery. Holds a weekly residency at Boston&#x27;s Liberty Hotel and plays Jimmy&#x27;s Sunday jazz brunch. Tickets: https://jimmysoncongress.com/event/jimmys-jazz-brunch-lenny-bradford-trio/" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-04-jimmys-jazz-brunch-lenny-bradford-trio" data-uid="e-2026-10-04-jimmys-jazz-brunch-lenny-bradford-trio-185633dc@jazz-weekly.bitdoktor.github.io" data-pick-id="185633dc" data-date="2026-10-04" data-genre="jazz" data-search="jimmy’s jazz brunch: lenny bradford trio lenny bradford trio jimmy’s jazz brunch jimmy&#x27;s jazz &amp; blues club portsmouth" data-title="Lenny Bradford Trio at Jimmy&#x27;s Jazz &amp; Blues Club" data-start="20261004T100000" data-end="20261004T120000" data-location="135 Congress St, Portsmouth, NH 03801" data-region="outer" data-details="Boston-area soulful-swing/blues trio led by Berklee-trained bassist Lenny &quot;LB&quot; Bradford of Manchester, NH, whose members&#x27; sideman credits include Bo Diddley, Commander Cody, Joe Louis Walker, Edgar Winter, and James Montgomery. Holds a weekly residency at Boston&#x27;s Liberty Hotel and plays Jimmy&#x27;s Sunday jazz brunch. Tickets: https://jimmysoncongress.com/event/jimmys-jazz-brunch-lenny-bradford-trio/" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Regional Boston/NH act; members&#x27; sideman credits include Bo Diddley and Edgar Winter</span>
                     <div class="event-series">Jimmy’s Jazz Brunch</div>
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="185633dc" aria-pressed="false" aria-label="Pick Lenny Bradford Trio" title="Pick this show">☆</button>
                         <h3 class="artist-name">Lenny Bradford Trio</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -1646,11 +1710,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-04-ladies-who-brunch-barbara-pierre-meryl-galaid-simone-alyse" data-uid="e-2026-10-04-ladies-who-brunch-barbara-pierre-meryl-galaid-simone-alyse-2b8992ec@jazz-weekly.bitdoktor.github.io" data-date="2026-10-04" data-genre="vocal jazz" data-search="the ladies who brunch (barbara pierre, meryl galaid, simone alyse) the ladies who brunch (barbara pierre, meryl galaid, simone alyse) club cafe boston" data-title="The Ladies Who Brunch (Barbara Pierre, Meryl Galaid, Simone Alyse) at Club Cafe" data-start="20261004T113000" data-end="20261004T133000" data-location="Club Cafe, Boston" data-region="inner" data-details="Boston-area cabaret trio of vocalists Barbara Pierre, Meryl Galaid, and Simone Alyse (Salyse), performing pop, R&amp;B, soul, and musical-theater standards in a recurring brunch cabaret show at Club Café Boston. Tickets: https://jazzboston.org/jazz-calendar?the-ladies-who-brunch-with-barbara-pierre-meryl-galaid-and-simone-alyse-salyse&amp;event_id=428535&amp;fid=1" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-04-ladies-who-brunch-barbara-pierre-meryl-galaid-simone-alyse" data-uid="e-2026-10-04-ladies-who-brunch-barbara-pierre-meryl-galaid-simone-alyse-2b8992ec@jazz-weekly.bitdoktor.github.io" data-pick-id="2b8992ec" data-date="2026-10-04" data-genre="vocal jazz" data-search="the ladies who brunch (barbara pierre, meryl galaid, simone alyse) the ladies who brunch (barbara pierre, meryl galaid, simone alyse) club cafe boston" data-title="The Ladies Who Brunch (Barbara Pierre, Meryl Galaid, Simone Alyse) at Club Cafe" data-start="20261004T113000" data-end="20261004T133000" data-location="Club Cafe, Boston" data-region="inner" data-details="Boston-area cabaret trio of vocalists Barbara Pierre, Meryl Galaid, and Simone Alyse (Salyse), performing pop, R&amp;B, soul, and musical-theater standards in a recurring brunch cabaret show at Club Café Boston. Tickets: https://jazzboston.org/jazz-calendar?the-ladies-who-brunch-with-barbara-pierre-meryl-galaid-and-simone-alyse-salyse&amp;event_id=428535&amp;fid=1" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Regional cabaret trio; regular Club Café Boston show</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="2b8992ec" aria-pressed="false" aria-label="Pick The Ladies Who Brunch (Barbara Pierre, Meryl Galaid, Simone Alyse)" title="Pick this show">☆</button>
                         <h3 class="artist-name">The Ladies Who Brunch (Barbara Pierre, Meryl Galaid, Simone Alyse)</h3>
                         <span class="genre-tag jazz">Jazz</span>
                     </div>
@@ -1671,11 +1736,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-04-john-pizzarelli-presents-dear-mr-bennett-1600" data-uid="e-2026-10-04-john-pizzarelli-presents-dear-mr-bennett-1600-4d81a63c@jazz-weekly.bitdoktor.github.io" data-date="2026-10-04" data-genre="jazz" data-search="john pizzarelli presents &quot;dear mr. bennett&quot; john pizzarelli &quot;dear mr. bennett&quot; regattabar cambridge" data-title="John Pizzarelli at Regattabar" data-start="20261004T160000" data-end="20261004T180000" data-location="1 Bennett St, Cambridge, MA 02138" data-region="inner" data-details="Veteran jazz guitarist and vocalist, son of guitarist Bucky Pizzarelli, with a 2021 Grammy win as co-producer of James Taylor&#x27;s &quot;American Standard&quot; and multiple prior Grammy nominations. Longtime Concord/Telarc recording artist; &quot;Dear Mr. Bennett&quot; is his touring Tony Bennett tribute program. Tickets: https://www.ticketweb.com/event/john-pizzarelli-presents-dear-mr-regattabar-tickets/14957233" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-04-john-pizzarelli-presents-dear-mr-bennett-1600" data-uid="e-2026-10-04-john-pizzarelli-presents-dear-mr-bennett-1600-4d81a63c@jazz-weekly.bitdoktor.github.io" data-pick-id="4d81a63c" data-date="2026-10-04" data-genre="jazz" data-search="john pizzarelli presents &quot;dear mr. bennett&quot; john pizzarelli &quot;dear mr. bennett&quot; regattabar cambridge" data-title="John Pizzarelli at Regattabar" data-start="20261004T160000" data-end="20261004T180000" data-location="1 Bennett St, Cambridge, MA 02138" data-region="inner" data-details="Veteran jazz guitarist and vocalist, son of guitarist Bucky Pizzarelli, with a 2021 Grammy win as co-producer of James Taylor&#x27;s &quot;American Standard&quot; and multiple prior Grammy nominations. Longtime Concord/Telarc recording artist; &quot;Dear Mr. Bennett&quot; is his touring Tony Bennett tribute program. Tickets: https://www.ticketweb.com/event/john-pizzarelli-presents-dear-mr-regattabar-tickets/14957233" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Grammy winner (2021, co-producer) and multiple-time nominee; Concord/Telarc recording artist</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="4d81a63c" aria-pressed="false" aria-label="Pick John Pizzarelli" title="Pick this show">☆</button>
                         <h3 class="artist-name">John Pizzarelli</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -1706,11 +1772,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-04-john-pizzarelli-presents-dear-mr-bennett-1800" data-uid="e-2026-10-04-john-pizzarelli-presents-dear-mr-bennett-1800-80c40960@jazz-weekly.bitdoktor.github.io" data-date="2026-10-04" data-genre="jazz" data-search="john pizzarelli presents &quot;dear mr. bennett&quot; john pizzarelli &quot;dear mr. bennett&quot; regattabar cambridge" data-title="John Pizzarelli at Regattabar" data-start="20261004T180000" data-end="20261004T200000" data-location="1 Bennett St, Cambridge, MA 02138" data-region="inner" data-details="Veteran jazz guitarist and vocalist, son of guitarist Bucky Pizzarelli, with a 2021 Grammy win as co-producer of James Taylor&#x27;s &quot;American Standard&quot; and multiple prior Grammy nominations. Longtime Concord/Telarc recording artist; &quot;Dear Mr. Bennett&quot; is his touring Tony Bennett tribute program. Tickets: https://www.ticketweb.com/event/john-pizzarelli-presents-dear-mr-regattabar-tickets/14957243" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-04-john-pizzarelli-presents-dear-mr-bennett-1800" data-uid="e-2026-10-04-john-pizzarelli-presents-dear-mr-bennett-1800-80c40960@jazz-weekly.bitdoktor.github.io" data-pick-id="80c40960" data-date="2026-10-04" data-genre="jazz" data-search="john pizzarelli presents &quot;dear mr. bennett&quot; john pizzarelli &quot;dear mr. bennett&quot; regattabar cambridge" data-title="John Pizzarelli at Regattabar" data-start="20261004T180000" data-end="20261004T200000" data-location="1 Bennett St, Cambridge, MA 02138" data-region="inner" data-details="Veteran jazz guitarist and vocalist, son of guitarist Bucky Pizzarelli, with a 2021 Grammy win as co-producer of James Taylor&#x27;s &quot;American Standard&quot; and multiple prior Grammy nominations. Longtime Concord/Telarc recording artist; &quot;Dear Mr. Bennett&quot; is his touring Tony Bennett tribute program. Tickets: https://www.ticketweb.com/event/john-pizzarelli-presents-dear-mr-regattabar-tickets/14957243" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Grammy winner (2021, co-producer) and multiple-time nominee; Concord/Telarc recording artist</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="80c40960" aria-pressed="false" aria-label="Pick John Pizzarelli" title="Pick this show">☆</button>
                         <h3 class="artist-name">John Pizzarelli</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -1741,11 +1808,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-04-soul-rebels" data-uid="e-2026-10-04-soul-rebels-c4759193@jazz-weekly.bitdoktor.github.io" data-date="2026-10-04" data-genre="jazz" data-search="the soul rebels the soul rebels jimmy&#x27;s jazz &amp; blues club portsmouth" data-title="The Soul Rebels at Jimmy&#x27;s Jazz &amp; Blues Club" data-start="20261004T193000" data-end="20261004T213000" data-location="135 Congress St, Portsmouth, NH 03801" data-region="outer" data-details="Eight-piece New Orleans brass band, formed in 1991, blending soul, jazz, funk, hip-hop and rock within the traditional brass band framework. They&#x27;ve released albums on Rounder Records and collaborated with Metallica, Nas, Katy Perry, and Robert Glasper, with appearances on NPR Tiny Desk and The Late Show. Tickets: https://jimmysoncongress.com/event/the-soul-rebels/" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-04-soul-rebels" data-uid="e-2026-10-04-soul-rebels-c4759193@jazz-weekly.bitdoktor.github.io" data-pick-id="c4759193" data-date="2026-10-04" data-genre="jazz" data-search="the soul rebels the soul rebels jimmy&#x27;s jazz &amp; blues club portsmouth" data-title="The Soul Rebels at Jimmy&#x27;s Jazz &amp; Blues Club" data-start="20261004T193000" data-end="20261004T213000" data-location="135 Congress St, Portsmouth, NH 03801" data-region="outer" data-details="Eight-piece New Orleans brass band, formed in 1991, blending soul, jazz, funk, hip-hop and rock within the traditional brass band framework. They&#x27;ve released albums on Rounder Records and collaborated with Metallica, Nas, Katy Perry, and Robert Glasper, with appearances on NPR Tiny Desk and The Late Show. Tickets: https://jimmysoncongress.com/event/the-soul-rebels/" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Rounder Records recording artist; NPR Tiny Desk and Late Show with Stephen Colbert appearances</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="c4759193" aria-pressed="false" aria-label="Pick The Soul Rebels" title="Pick this show">☆</button>
                         <h3 class="artist-name">The Soul Rebels</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -1786,11 +1854,12 @@
                 <span class="date-full">October 5, 2026</span>
                 <span class="setlist-bar" title="1 events"><span class="seg-active"></span><span></span><span></span><span></span><span></span><span></span></span>
             </div>
-            <article class="event-card" id="e-2026-10-05-local-artist-series-freight-train-band" data-uid="e-2026-10-05-local-artist-series-freight-train-band-e3ce8730@jazz-weekly.bitdoktor.github.io" data-date="2026-10-05" data-genre="blues" data-search="local artist series: freight train band freight train band local artist series jimmy&#x27;s jazz &amp; blues club portsmouth" data-title="Freight Train Band at Jimmy&#x27;s Jazz &amp; Blues Club" data-start="20261005T190000" data-end="20261005T210000" data-location="135 Congress St, Portsmouth, NH 03801" data-region="outer" data-details="Seven-piece NH Seacoast/southern Maine dance and cover band playing classic rock, pop, and blues; a long-running regional act known for high-energy sets at festivals and clubs across Northern New England. Tickets: https://jimmysoncongress.com/event/local-artist-series-freight-train-band/" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-05-local-artist-series-freight-train-band" data-uid="e-2026-10-05-local-artist-series-freight-train-band-e3ce8730@jazz-weekly.bitdoktor.github.io" data-pick-id="e3ce8730" data-date="2026-10-05" data-genre="blues" data-search="local artist series: freight train band freight train band local artist series jimmy&#x27;s jazz &amp; blues club portsmouth" data-title="Freight Train Band at Jimmy&#x27;s Jazz &amp; Blues Club" data-start="20261005T190000" data-end="20261005T210000" data-location="135 Congress St, Portsmouth, NH 03801" data-region="outer" data-details="Seven-piece NH Seacoast/southern Maine dance and cover band playing classic rock, pop, and blues; a long-running regional act known for high-energy sets at festivals and clubs across Northern New England. Tickets: https://jimmysoncongress.com/event/local-artist-series-freight-train-band/" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Regional NH Seacoast/Maine blues and dance cover band</span>
                     <div class="event-series">Local Artist Series</div>
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="e3ce8730" aria-pressed="false" aria-label="Pick Freight Train Band" title="Pick this show">☆</button>
                         <h3 class="artist-name">Freight Train Band</h3>
                         <span class="genre-tag blues">Blues</span>
                     </div>
@@ -1833,11 +1902,12 @@
                 <span class="date-full">October 7, 2026</span>
                 <span class="setlist-bar" title="1 events"><span class="seg-active"></span><span></span><span></span><span></span><span></span><span></span></span>
             </div>
-            <article class="event-card" id="e-2026-10-07-carolyn-wonderland" data-uid="e-2026-10-07-carolyn-wonderland-924e22b8@jazz-weekly.bitdoktor.github.io" data-date="2026-10-07" data-genre="blues" data-search="carolyn wonderland carolyn wonderland jimmy&#x27;s jazz &amp; blues club portsmouth" data-title="Carolyn Wonderland at Jimmy&#x27;s Jazz &amp; Blues Club" data-start="20261007T193000" data-end="20261007T213000" data-location="135 Congress St, Portsmouth, NH 03801" data-region="outer" data-details="Texas blues guitarist and singer, the first female guitar hero in Alligator Records&#x27; 50-year history. Served as lead guitarist for John Mayall&#x27;s Bluesbreakers (2018-2020) and has earned three Blues Music Award nominations. Tickets: https://jimmysoncongress.com/event/carolyn-wonderland/" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-07-carolyn-wonderland" data-uid="e-2026-10-07-carolyn-wonderland-924e22b8@jazz-weekly.bitdoktor.github.io" data-pick-id="924e22b8" data-date="2026-10-07" data-genre="blues" data-search="carolyn wonderland carolyn wonderland jimmy&#x27;s jazz &amp; blues club portsmouth" data-title="Carolyn Wonderland at Jimmy&#x27;s Jazz &amp; Blues Club" data-start="20261007T193000" data-end="20261007T213000" data-location="135 Congress St, Portsmouth, NH 03801" data-region="outer" data-details="Texas blues guitarist and singer, the first female guitar hero in Alligator Records&#x27; 50-year history. Served as lead guitarist for John Mayall&#x27;s Bluesbreakers (2018-2020) and has earned three Blues Music Award nominations. Tickets: https://jimmysoncongress.com/event/carolyn-wonderland/" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Alligator Records artist; former John Mayall&#x27;s Bluesbreakers guitarist; 3x Blues Music Award nominee</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="924e22b8" aria-pressed="false" aria-label="Pick Carolyn Wonderland" title="Pick this show">☆</button>
                         <h3 class="artist-name">Carolyn Wonderland</h3>
                         <span class="genre-tag blues">Blues</span>
                     </div>
@@ -1878,11 +1948,12 @@
                 <span class="date-full">October 8, 2026</span>
                 <span class="setlist-bar" title="4 events"><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span></span><span></span></span>
             </div>
-            <article class="event-card" id="e-2026-10-08-feldman-geospatial-presents-dan-moretti-brazilia" data-uid="e-2026-10-08-feldman-geospatial-presents-dan-moretti-brazilia-fa133afd@jazz-weekly.bitdoktor.github.io" data-date="2026-10-08" data-genre="latin" data-search="feldman geospatial presents dan moretti &amp; brazilia dan moretti &amp; brazilia feldman geospatial presents long live roxbury boston" data-title="Dan Moretti &amp; Brazilia at Long Live Roxbury" data-start="20261008T180000" data-end="20261008T200000" data-location="Long Live Roxbury, Boston" data-region="inner" data-details="Rhode Island-born saxophonist, composer, and Berklee College of Music Professor Emeritus (29 years on faculty) known for jazz, soul, funk, and Latin/Brazilian fusion. Brazilia, his long-running Afro-Brazilian jazz project, most recently released &quot;Celebrating Wayne Shorter, Live at the Pump House&quot; (2025) with bassist Oscar Stagnaro. Tickets: https://jazzboston.org/jazz-calendar?feldman-geospatial-presents-dan-moretti-brazilia&amp;event_id=431138&amp;fid=1" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-08-feldman-geospatial-presents-dan-moretti-brazilia" data-uid="e-2026-10-08-feldman-geospatial-presents-dan-moretti-brazilia-fa133afd@jazz-weekly.bitdoktor.github.io" data-pick-id="fa133afd" data-date="2026-10-08" data-genre="latin" data-search="feldman geospatial presents dan moretti &amp; brazilia dan moretti &amp; brazilia feldman geospatial presents long live roxbury boston" data-title="Dan Moretti &amp; Brazilia at Long Live Roxbury" data-start="20261008T180000" data-end="20261008T200000" data-location="Long Live Roxbury, Boston" data-region="inner" data-details="Rhode Island-born saxophonist, composer, and Berklee College of Music Professor Emeritus (29 years on faculty) known for jazz, soul, funk, and Latin/Brazilian fusion. Brazilia, his long-running Afro-Brazilian jazz project, most recently released &quot;Celebrating Wayne Shorter, Live at the Pump House&quot; (2025) with bassist Oscar Stagnaro. Tickets: https://jazzboston.org/jazz-calendar?feldman-geospatial-presents-dan-moretti-brazilia&amp;event_id=431138&amp;fid=1" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Berklee Professor Emeritus; Rhode Island Music Hall of Fame inductee</span>
                     <div class="event-series">Feldman Geospatial presents</div>
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="fa133afd" aria-pressed="false" aria-label="Pick Dan Moretti &amp; Brazilia" title="Pick this show">☆</button>
                         <h3 class="artist-name">Dan Moretti &amp; Brazilia</h3>
                         <span class="genre-tag latin">Latin</span>
                     </div>
@@ -1912,11 +1983,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-08-kevin-hays-awakening-quartet-featuring-brian-blade-immanuel-wilkins-and-matt-brewer-1900" data-uid="e-2026-10-08-kevin-hays-awakening-quartet-featuring-brian-blade-immanuel-wilkins-and-matt-brewer-1900-70cebfbe@jazz-weekly.bitdoktor.github.io" data-date="2026-10-08" data-genre="jazz" data-search="kevin hays awakening quartet featuring brian blade, immanuel wilkins and matt brewer kevin hays awakening quartet featuring brian blade, immanuel wilkins and matt brewer regattabar cambridge" data-title="Kevin Hays Awakening Quartet at Regattabar" data-start="20261008T190000" data-end="20261008T210000" data-location="1 Bennett St, Cambridge, MA 02138" data-region="inner" data-details="Pianist Kevin Hays leads an all-star quartet featuring four-time Grammy-winning drummer Brian Blade, Grammy-nominated Blue Note alto saxophonist Immanuel Wilkins, and bassist Matt Brewer, performing at Regattabar in Cambridge. Tickets: https://www.ticketweb.com/event/kevin-hays-awakening-quartet-featuring-regattabar-tickets/14264324" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-08-kevin-hays-awakening-quartet-featuring-brian-blade-immanuel-wilkins-and-matt-brewer-1900" data-uid="e-2026-10-08-kevin-hays-awakening-quartet-featuring-brian-blade-immanuel-wilkins-and-matt-brewer-1900-70cebfbe@jazz-weekly.bitdoktor.github.io" data-pick-id="70cebfbe" data-date="2026-10-08" data-genre="jazz" data-search="kevin hays awakening quartet featuring brian blade, immanuel wilkins and matt brewer kevin hays awakening quartet featuring brian blade, immanuel wilkins and matt brewer regattabar cambridge" data-title="Kevin Hays Awakening Quartet at Regattabar" data-start="20261008T190000" data-end="20261008T210000" data-location="1 Bennett St, Cambridge, MA 02138" data-region="inner" data-details="Pianist Kevin Hays leads an all-star quartet featuring four-time Grammy-winning drummer Brian Blade, Grammy-nominated Blue Note alto saxophonist Immanuel Wilkins, and bassist Matt Brewer, performing at Regattabar in Cambridge. Tickets: https://www.ticketweb.com/event/kevin-hays-awakening-quartet-featuring-regattabar-tickets/14264324" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Brian Blade: 4x Grammy winner · Immanuel Wilkins: Blue Note recording artist, 4x Grammy nominee, DownBeat Critics Poll winner</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="70cebfbe" aria-pressed="false" aria-label="Pick Kevin Hays Awakening Quartet" title="Pick this show">☆</button>
                         <h3 class="artist-name">Kevin Hays Awakening Quartet</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -1947,11 +2019,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-08-strictly-sinatra-with-michael-dutra" data-uid="e-2026-10-08-strictly-sinatra-with-michael-dutra-c60352f1@jazz-weekly.bitdoktor.github.io" data-date="2026-10-08" data-genre="vocal jazz" data-search="strictly sinatra with michael dutra strictly sinatra with michael dutra rockport music rockport" data-title="Strictly Sinatra with Michael Dutra at Rockport Music" data-start="20261008T190000" data-end="20261008T210000" data-location="37 Main St, Rockport, MA 01966" data-region="outer" data-details="Rhode Island-based vocalist who has toured his &quot;Strictly Sinatra&quot; tribute show nationally since 2002, performing with a 9-piece big band ensemble at supper clubs, PACs, and venues from Las Vegas to Boston. Tickets: https://tickets.rockportmusic.org/10855/10856" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-08-strictly-sinatra-with-michael-dutra" data-uid="e-2026-10-08-strictly-sinatra-with-michael-dutra-c60352f1@jazz-weekly.bitdoktor.github.io" data-pick-id="c60352f1" data-date="2026-10-08" data-genre="vocal jazz" data-search="strictly sinatra with michael dutra strictly sinatra with michael dutra rockport music rockport" data-title="Strictly Sinatra with Michael Dutra at Rockport Music" data-start="20261008T190000" data-end="20261008T210000" data-location="37 Main St, Rockport, MA 01966" data-region="outer" data-details="Rhode Island-based vocalist who has toured his &quot;Strictly Sinatra&quot; tribute show nationally since 2002, performing with a 9-piece big band ensemble at supper clubs, PACs, and venues from Las Vegas to Boston. Tickets: https://tickets.rockportmusic.org/10855/10856" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Long-running regional Sinatra tribute act since 2002; not a recording jazz artist</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="c60352f1" aria-pressed="false" aria-label="Pick Strictly Sinatra with Michael Dutra" title="Pick this show">☆</button>
                         <h3 class="artist-name">Strictly Sinatra with Michael Dutra</h3>
                         <span class="genre-tag jazz">Jazz</span>
                     </div>
@@ -1982,11 +2055,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-08-kevin-hays-awakening-quartet-featuring-brian-blade-immanuel-wilkins-and-matt-brewer-2130" data-uid="e-2026-10-08-kevin-hays-awakening-quartet-featuring-brian-blade-immanuel-wilkins-and-matt-brewer-2130-a468a646@jazz-weekly.bitdoktor.github.io" data-date="2026-10-08" data-genre="jazz" data-search="kevin hays awakening quartet featuring brian blade, immanuel wilkins and matt brewer kevin hays awakening quartet featuring brian blade, immanuel wilkins and matt brewer regattabar cambridge" data-title="Kevin Hays Awakening Quartet at Regattabar" data-start="20261008T213000" data-end="20261008T233000" data-location="1 Bennett St, Cambridge, MA 02138" data-region="inner" data-details="Pianist Kevin Hays leads an all-star quartet featuring four-time Grammy-winning drummer Brian Blade, Grammy-nominated Blue Note alto saxophonist Immanuel Wilkins, and bassist Matt Brewer, performing at Regattabar in Cambridge. Tickets: https://www.ticketweb.com/event/kevin-hays-awakening-quartet-featuring-regattabar-tickets/14287634" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-08-kevin-hays-awakening-quartet-featuring-brian-blade-immanuel-wilkins-and-matt-brewer-2130" data-uid="e-2026-10-08-kevin-hays-awakening-quartet-featuring-brian-blade-immanuel-wilkins-and-matt-brewer-2130-a468a646@jazz-weekly.bitdoktor.github.io" data-pick-id="a468a646" data-date="2026-10-08" data-genre="jazz" data-search="kevin hays awakening quartet featuring brian blade, immanuel wilkins and matt brewer kevin hays awakening quartet featuring brian blade, immanuel wilkins and matt brewer regattabar cambridge" data-title="Kevin Hays Awakening Quartet at Regattabar" data-start="20261008T213000" data-end="20261008T233000" data-location="1 Bennett St, Cambridge, MA 02138" data-region="inner" data-details="Pianist Kevin Hays leads an all-star quartet featuring four-time Grammy-winning drummer Brian Blade, Grammy-nominated Blue Note alto saxophonist Immanuel Wilkins, and bassist Matt Brewer, performing at Regattabar in Cambridge. Tickets: https://www.ticketweb.com/event/kevin-hays-awakening-quartet-featuring-regattabar-tickets/14287634" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Brian Blade: 4x Grammy winner · Immanuel Wilkins: Blue Note recording artist, 4x Grammy nominee, DownBeat Critics Poll winner</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="a468a646" aria-pressed="false" aria-label="Pick Kevin Hays Awakening Quartet" title="Pick this show">☆</button>
                         <h3 class="artist-name">Kevin Hays Awakening Quartet</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -2028,11 +2102,12 @@
                 <span class="date-full">October 9, 2026</span>
                 <span class="setlist-bar" title="5 events"><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span></span></span>
             </div>
-            <article class="event-card" id="e-2026-10-09-honk-festival" data-uid="e-2026-10-09-honk-festival-e8e176f0@jazz-weekly.bitdoktor.github.io" data-date="2026-10-09" data-genre="jazz" data-search="honk! festival honk! festival davis square somerville" data-title="HONK! Festival at Davis Square" data-start="20261009T120000" data-end="20261009T140000" data-location="Davis Square, Somerville" data-region="inner" data-details="Free annual festival of activist street/brass bands founded in Somerville, MA in 2006 by members of the Second Line Social Aid and Pleasure Society Brass Band. Unamplified, community-facing performances across Davis Square and beyond; the original event has spawned over 20 sister HONK! festivals worldwide. Tickets: https://jazzboston.org/jazz-calendar?honk-festival-w-35-u-s-bands-on-site-plus-6-international-bands-streaming-in&amp;event_id=431466&amp;fid=1" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-09-honk-festival" data-uid="e-2026-10-09-honk-festival-e8e176f0@jazz-weekly.bitdoktor.github.io" data-pick-id="e8e176f0" data-date="2026-10-09" data-genre="jazz" data-search="honk! festival honk! festival davis square somerville" data-title="HONK! Festival at Davis Square" data-start="20261009T120000" data-end="20261009T140000" data-location="Davis Square, Somerville" data-region="inner" data-details="Free annual festival of activist street/brass bands founded in Somerville, MA in 2006 by members of the Second Line Social Aid and Pleasure Society Brass Band. Unamplified, community-facing performances across Davis Square and beyond; the original event has spawned over 20 sister HONK! festivals worldwide. Tickets: https://jazzboston.org/jazz-calendar?honk-festival-w-35-u-s-bands-on-site-plus-6-international-bands-streaming-in&amp;event_id=431466&amp;fid=1" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Somerville-founded activist street-band festival, now an international network</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="e8e176f0" aria-pressed="false" aria-label="Pick HONK! Festival" title="Pick this show">☆</button>
                         <h3 class="artist-name">HONK! Festival</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -2062,11 +2137,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-09-alison-brown" data-uid="e-2026-10-09-alison-brown-05ef8b93@jazz-weekly.bitdoktor.github.io" data-date="2026-10-09" data-genre="jazz" data-search="alison brown alison brown regattabar cambridge" data-title="Alison Brown at Regattabar" data-start="20261009T190000" data-end="20261009T210000" data-location="1 Bennett St, Cambridge, MA 02138" data-region="inner" data-details="Grammy-winning banjo virtuoso who blends bluegrass with jazz, Latin, and Celtic influences. Co-founder of Compass Records and the only woman inducted into the American Banjo Hall of Fame. Tickets: https://www.ticketweb.com/event/alison-brown-regattabar-tickets/14204234" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-09-alison-brown" data-uid="e-2026-10-09-alison-brown-05ef8b93@jazz-weekly.bitdoktor.github.io" data-pick-id="05ef8b93" data-date="2026-10-09" data-genre="jazz" data-search="alison brown alison brown regattabar cambridge" data-title="Alison Brown at Regattabar" data-start="20261009T190000" data-end="20261009T210000" data-location="1 Bennett St, Cambridge, MA 02138" data-region="inner" data-details="Grammy-winning banjo virtuoso who blends bluegrass with jazz, Latin, and Celtic influences. Co-founder of Compass Records and the only woman inducted into the American Banjo Hall of Fame. Tickets: https://www.ticketweb.com/event/alison-brown-regattabar-tickets/14204234" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Grammy winner; American Banjo Hall of Fame inductee; co-founder of Compass Records</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="05ef8b93" aria-pressed="false" aria-label="Pick Alison Brown" title="Pick this show">☆</button>
                         <h3 class="artist-name">Alison Brown</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -2097,11 +2173,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-09-myanna-and-friends" data-uid="e-2026-10-09-myanna-and-friends-2ce645a2@jazz-weekly.bitdoktor.github.io" data-date="2026-10-09" data-genre="jazz" data-search="myanna and friends myanna and friends scullers jazz club boston" data-title="Myanna and Friends at Scullers Jazz Club" data-start="20261009T190000" data-end="20261009T210000" data-location="400 Soldiers Field Rd, Boston, MA 02134" data-region="inner" data-details="Massachusetts-based saxophonist blending jazz improvisation with funky, soulful grooves. Berklee-trained (studied with Joe Viola) and a multiple-time Boston Music Award winner for Best Jazz Artist, recording since her self-titled 1992 debut. Tickets: https://www.ticketweb.com/event/myanna-and-friends-scullers-jazz-club-tickets/14268684" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-09-myanna-and-friends" data-uid="e-2026-10-09-myanna-and-friends-2ce645a2@jazz-weekly.bitdoktor.github.io" data-pick-id="2ce645a2" data-date="2026-10-09" data-genre="jazz" data-search="myanna and friends myanna and friends scullers jazz club boston" data-title="Myanna and Friends at Scullers Jazz Club" data-start="20261009T190000" data-end="20261009T210000" data-location="400 Soldiers Field Rd, Boston, MA 02134" data-region="inner" data-details="Massachusetts-based saxophonist blending jazz improvisation with funky, soulful grooves. Berklee-trained (studied with Joe Viola) and a multiple-time Boston Music Award winner for Best Jazz Artist, recording since her self-titled 1992 debut. Tickets: https://www.ticketweb.com/event/myanna-and-friends-scullers-jazz-club-tickets/14268684" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Multiple Boston Music Award winner for Best Jazz Artist</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="2ce645a2" aria-pressed="false" aria-label="Pick Myanna and Friends" title="Pick this show">☆</button>
                         <h3 class="artist-name">Myanna and Friends</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -2132,11 +2209,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-09-claudettes-live" data-uid="e-2026-10-09-claudettes-live-bc3c6942@jazz-weekly.bitdoktor.github.io" data-date="2026-10-09" data-genre="blues" data-search="the claudettes live the claudettes the fallout shelter norwood" data-title="The Claudettes at The Fallout Shelter" data-start="20261009T190000" data-end="20261009T210000" data-location="The Fallout Shelter, Norwood" data-region="outer" data-details="Chicago blues/rock/pop group formed in 2010 and led by pianist-songwriter Johnny Iguana, known for a punk-inflected &#x27;garage cabaret&#x27; sound. Recorded for Yellow Dog Records and Forty Below Records. Tickets: https://jazzboston.org/jazz-calendar?the-claudettes-live&amp;event_id=428678&amp;fid=1" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-09-claudettes-live" data-uid="e-2026-10-09-claudettes-live-bc3c6942@jazz-weekly.bitdoktor.github.io" data-pick-id="bc3c6942" data-date="2026-10-09" data-genre="blues" data-search="the claudettes live the claudettes the fallout shelter norwood" data-title="The Claudettes at The Fallout Shelter" data-start="20261009T190000" data-end="20261009T210000" data-location="The Fallout Shelter, Norwood" data-region="outer" data-details="Chicago blues/rock/pop group formed in 2010 and led by pianist-songwriter Johnny Iguana, known for a punk-inflected &#x27;garage cabaret&#x27; sound. Recorded for Yellow Dog Records and Forty Below Records. Tickets: https://jazzboston.org/jazz-calendar?the-claudettes-live&amp;event_id=428678&amp;fid=1" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Chicago blues/rock act; led by pianist Johnny Iguana</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="bc3c6942" aria-pressed="false" aria-label="Pick The Claudettes" title="Pick this show">☆</button>
                         <h3 class="artist-name">The Claudettes</h3>
                         <span class="genre-tag blues">Blues</span>
                     </div>
@@ -2166,11 +2244,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-09-stacey-kent" data-uid="e-2026-10-09-stacey-kent-f87ebeb7@jazz-weekly.bitdoktor.github.io" data-date="2026-10-09" data-genre="vocal jazz" data-search="stacey kent stacey kent rockport music rockport" data-title="Stacey Kent at Rockport Music" data-start="20261009T193000" data-end="20261009T213000" data-location="37 Main St, Rockport, MA 01966" data-region="outer" data-details="American-born, UK-based jazz vocalist whose 2007 Blue Note debut Breakfast on the Morning Tram, featuring lyrics by novelist Kazuo Ishiguro, earned a Grammy nomination for Best Jazz Vocal Album. Album sales in the millions and multilingual recordings have made her a leading figure in contemporary vocal jazz across more than 50 countries. Tickets: https://tickets.rockportmusic.org/10564/10565" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-09-stacey-kent" data-uid="e-2026-10-09-stacey-kent-f87ebeb7@jazz-weekly.bitdoktor.github.io" data-pick-id="f87ebeb7" data-date="2026-10-09" data-genre="vocal jazz" data-search="stacey kent stacey kent rockport music rockport" data-title="Stacey Kent at Rockport Music" data-start="20261009T193000" data-end="20261009T213000" data-location="37 Main St, Rockport, MA 01966" data-region="outer" data-details="American-born, UK-based jazz vocalist whose 2007 Blue Note debut Breakfast on the Morning Tram, featuring lyrics by novelist Kazuo Ishiguro, earned a Grammy nomination for Best Jazz Vocal Album. Album sales in the millions and multilingual recordings have made her a leading figure in contemporary vocal jazz across more than 50 countries. Tickets: https://tickets.rockportmusic.org/10564/10565" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Grammy nominee; Blue Note recording artist; Chevalier de l&#x27;Ordre des Arts et des Lettres</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="f87ebeb7" aria-pressed="false" aria-label="Pick Stacey Kent" title="Pick this show">☆</button>
                         <h3 class="artist-name">Stacey Kent</h3>
                         <span class="genre-tag jazz">Jazz</span>
                     </div>
@@ -2212,11 +2291,12 @@
                 <span class="date-full">October 10, 2026</span>
                 <span class="setlist-bar" title="3 events"><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span></span><span></span><span></span></span>
             </div>
-            <article class="event-card" id="e-2026-10-10-honk-festival" data-uid="e-2026-10-10-honk-festival-9eb72df8@jazz-weekly.bitdoktor.github.io" data-date="2026-10-10" data-genre="jazz" data-search="honk! festival honk! festival davis square somerville" data-title="HONK! Festival at Davis Square" data-start="20261010T120000" data-end="20261010T140000" data-location="Davis Square, Somerville" data-region="inner" data-details="Free annual festival of activist street/brass bands founded in Somerville, MA in 2006 by members of the Second Line Social Aid and Pleasure Society Brass Band. Unamplified, community-facing performances across Davis Square and beyond; the original event has spawned over 20 sister HONK! festivals worldwide. Tickets: https://jazzboston.org/jazz-calendar?honk-festival-w-35-u-s-bands-on-site-plus-6-international-bands-streaming-in&amp;event_id=431466&amp;fid=1" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-10-honk-festival" data-uid="e-2026-10-10-honk-festival-9eb72df8@jazz-weekly.bitdoktor.github.io" data-pick-id="9eb72df8" data-date="2026-10-10" data-genre="jazz" data-search="honk! festival honk! festival davis square somerville" data-title="HONK! Festival at Davis Square" data-start="20261010T120000" data-end="20261010T140000" data-location="Davis Square, Somerville" data-region="inner" data-details="Free annual festival of activist street/brass bands founded in Somerville, MA in 2006 by members of the Second Line Social Aid and Pleasure Society Brass Band. Unamplified, community-facing performances across Davis Square and beyond; the original event has spawned over 20 sister HONK! festivals worldwide. Tickets: https://jazzboston.org/jazz-calendar?honk-festival-w-35-u-s-bands-on-site-plus-6-international-bands-streaming-in&amp;event_id=431466&amp;fid=1" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Somerville-founded activist street-band festival, now an international network</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="9eb72df8" aria-pressed="false" aria-label="Pick HONK! Festival" title="Pick this show">☆</button>
                         <h3 class="artist-name">HONK! Festival</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -2246,11 +2326,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-10-smooth-jazz-saxophonist-patrick-lamb-on-sale-now" data-uid="e-2026-10-10-smooth-jazz-saxophonist-patrick-lamb-on-sale-now-ec221e22@jazz-weekly.bitdoktor.github.io" data-date="2026-10-10" data-genre="jazz" data-search="smooth jazz saxophonist patrick lamb (on sale now) patrick lamb smooth jazz saxophonist scullers jazz club boston" data-title="Patrick Lamb at Scullers Jazz Club" data-start="20261010T190000" data-end="20261010T210000" data-location="400 Soldiers Field Rd, Boston, MA 02134" data-region="inner" data-details="Portland-based smooth jazz saxophonist and vocalist who fronts his own band as both horn player and lead singer. He toured for years with Diane Schuur, Bobby Caldwell, and Gino Vannelli before launching a solo career with five Billboard Smooth Jazz chart singles. Tickets: https://www.ticketweb.com/event/patrick-lamb-scullers-jazz-club-tickets/14958203" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-10-smooth-jazz-saxophonist-patrick-lamb-on-sale-now" data-uid="e-2026-10-10-smooth-jazz-saxophonist-patrick-lamb-on-sale-now-ec221e22@jazz-weekly.bitdoktor.github.io" data-pick-id="ec221e22" data-date="2026-10-10" data-genre="jazz" data-search="smooth jazz saxophonist patrick lamb (on sale now) patrick lamb smooth jazz saxophonist scullers jazz club boston" data-title="Patrick Lamb at Scullers Jazz Club" data-start="20261010T190000" data-end="20261010T210000" data-location="400 Soldiers Field Rd, Boston, MA 02134" data-region="inner" data-details="Portland-based smooth jazz saxophonist and vocalist who fronts his own band as both horn player and lead singer. He toured for years with Diane Schuur, Bobby Caldwell, and Gino Vannelli before launching a solo career with five Billboard Smooth Jazz chart singles. Tickets: https://www.ticketweb.com/event/patrick-lamb-scullers-jazz-club-tickets/14958203" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Oregon Music Hall of Fame inductee; 3x Muddy Award winner; multiple Billboard Smooth Jazz chart singles</span>
                     <div class="event-series">Smooth Jazz Saxophonist</div>
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="ec221e22" aria-pressed="false" aria-label="Pick Patrick Lamb" title="Pick this show">☆</button>
                         <h3 class="artist-name">Patrick Lamb</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -2281,11 +2362,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-10-lizz-wright" data-uid="e-2026-10-10-lizz-wright-287c3b0c@jazz-weekly.bitdoktor.github.io" data-date="2026-10-10" data-genre="vocal jazz" data-search="lizz wright lizz wright berklee performance center boston" data-title="Lizz Wright at Berklee Performance Center" data-start="20261010T200000" data-end="20261010T220000" data-location="136 Massachusetts Ave, Boston, MA 02115" data-region="inner" data-details="Jazz, gospel, and soul vocalist who broke through with her 2003 Verve debut Salt; her 2015 Concord album Freedom &amp; Surrender earned a Grammy nomination for Best Jazz Vocal Album. She now records for her own Blues &amp; Greens Records. Tickets: https://www.etix.com/ticket/p/71533914/" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-10-lizz-wright" data-uid="e-2026-10-10-lizz-wright-287c3b0c@jazz-weekly.bitdoktor.github.io" data-pick-id="287c3b0c" data-date="2026-10-10" data-genre="vocal jazz" data-search="lizz wright lizz wright berklee performance center boston" data-title="Lizz Wright at Berklee Performance Center" data-start="20261010T200000" data-end="20261010T220000" data-location="136 Massachusetts Ave, Boston, MA 02115" data-region="inner" data-details="Jazz, gospel, and soul vocalist who broke through with her 2003 Verve debut Salt; her 2015 Concord album Freedom &amp; Surrender earned a Grammy nomination for Best Jazz Vocal Album. She now records for her own Blues &amp; Greens Records. Tickets: https://www.etix.com/ticket/p/71533914/" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Grammy nominee (Best Jazz Vocal Album, 2016) · Verve/Concord recording artist</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="287c3b0c" aria-pressed="false" aria-label="Pick Lizz Wright" title="Pick this show">☆</button>
                         <h3 class="artist-name">Lizz Wright</h3>
                         <span class="genre-tag jazz">Jazz</span>
                     </div>
@@ -2327,11 +2409,12 @@
                 <span class="date-full">October 11, 2026</span>
                 <span class="setlist-bar" title="3 events"><span class="seg-active"></span><span class="seg-active"></span><span class="seg-active"></span><span></span><span></span><span></span></span>
             </div>
-            <article class="event-card" id="e-2026-10-11-jimmys-jazz-brunch-steve-lacey-trio" data-uid="e-2026-10-11-jimmys-jazz-brunch-steve-lacey-trio-a88aa22d@jazz-weekly.bitdoktor.github.io" data-date="2026-10-11" data-genre="jazz" data-search="jimmy’s jazz brunch: steve lacey trio steve lacey trio jimmy’s jazz brunch jimmy&#x27;s jazz &amp; blues club portsmouth" data-title="Steve Lacey Trio at Jimmy&#x27;s Jazz &amp; Blues Club" data-start="20261011T100000" data-end="20261011T120000" data-location="135 Congress St, Portsmouth, NH 03801" data-region="outer" data-details="Local New Hampshire jazz trio performing Jimmy&#x27;s Jazz &amp; Blues Club&#x27;s Sunday jazz brunch series in Portsmouth, NH. Distinct from the late soprano saxophonist Steve Lacy; no national profile or discography found under this spelling. Tickets: https://jimmysoncongress.com/event/jimmys-jazz-brunch-steve-lacey-trio/" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-11-jimmys-jazz-brunch-steve-lacey-trio" data-uid="e-2026-10-11-jimmys-jazz-brunch-steve-lacey-trio-a88aa22d@jazz-weekly.bitdoktor.github.io" data-pick-id="a88aa22d" data-date="2026-10-11" data-genre="jazz" data-search="jimmy’s jazz brunch: steve lacey trio steve lacey trio jimmy’s jazz brunch jimmy&#x27;s jazz &amp; blues club portsmouth" data-title="Steve Lacey Trio at Jimmy&#x27;s Jazz &amp; Blues Club" data-start="20261011T100000" data-end="20261011T120000" data-location="135 Congress St, Portsmouth, NH 03801" data-region="outer" data-details="Local New Hampshire jazz trio performing Jimmy&#x27;s Jazz &amp; Blues Club&#x27;s Sunday jazz brunch series in Portsmouth, NH. Distinct from the late soprano saxophonist Steve Lacy; no national profile or discography found under this spelling. Tickets: https://jimmysoncongress.com/event/jimmys-jazz-brunch-steve-lacey-trio/" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Local NH jazz-brunch act; no national credentials found; not to be confused with saxophonist Steve Lacy</span>
                     <div class="event-series">Jimmy’s Jazz Brunch</div>
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="a88aa22d" aria-pressed="false" aria-label="Pick Steve Lacey Trio" title="Pick this show">☆</button>
                         <h3 class="artist-name">Steve Lacey Trio</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -2352,11 +2435,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-11-honk-festival" data-uid="e-2026-10-11-honk-festival-30cc2831@jazz-weekly.bitdoktor.github.io" data-date="2026-10-11" data-genre="jazz" data-search="honk! festival honk! festival davis square somerville" data-title="HONK! Festival at Davis Square" data-start="20261011T120000" data-end="20261011T140000" data-location="Davis Square, Somerville" data-region="inner" data-details="Free annual festival of activist street/brass bands founded in Somerville, MA in 2006 by members of the Second Line Social Aid and Pleasure Society Brass Band. Unamplified, community-facing performances across Davis Square and beyond; the original event has spawned over 20 sister HONK! festivals worldwide. Tickets: https://jazzboston.org/jazz-calendar?honk-festival-w-35-u-s-bands-on-site-plus-6-international-bands-streaming-in&amp;event_id=431466&amp;fid=1" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-11-honk-festival" data-uid="e-2026-10-11-honk-festival-30cc2831@jazz-weekly.bitdoktor.github.io" data-pick-id="30cc2831" data-date="2026-10-11" data-genre="jazz" data-search="honk! festival honk! festival davis square somerville" data-title="HONK! Festival at Davis Square" data-start="20261011T120000" data-end="20261011T140000" data-location="Davis Square, Somerville" data-region="inner" data-details="Free annual festival of activist street/brass bands founded in Somerville, MA in 2006 by members of the Second Line Social Aid and Pleasure Society Brass Band. Unamplified, community-facing performances across Davis Square and beyond; the original event has spawned over 20 sister HONK! festivals worldwide. Tickets: https://jazzboston.org/jazz-calendar?honk-festival-w-35-u-s-bands-on-site-plus-6-international-bands-streaming-in&amp;event_id=431466&amp;fid=1" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Somerville-founded activist street-band festival, now an international network</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="30cc2831" aria-pressed="false" aria-label="Pick HONK! Festival" title="Pick this show">☆</button>
                         <h3 class="artist-name">HONK! Festival</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -2386,11 +2470,12 @@
                     </div>
                 </div>
             </article>
-            <article class="event-card" id="e-2026-10-11-tia-fuller-with-opening-act-the-zeb-jewell-alibhai-quartet" data-uid="e-2026-10-11-tia-fuller-with-opening-act-the-zeb-jewell-alibhai-quartet-01934378@jazz-weekly.bitdoktor.github.io" data-date="2026-10-11" data-genre="jazz" data-search="tia fuller with opening act the zeb jewell-alibhai quartet tia fuller with opening act the zeb jewell-alibhai quartet regattabar cambridge" data-title="Tia Fuller at Regattabar" data-start="20261011T180000" data-end="20261011T200000" data-location="1 Bennett St, Cambridge, MA 02138" data-region="inner" data-details="Grammy-nominated saxophonist, composer, and Berklee professor known for her tenure as featured saxophonist in Beyoncé&#x27;s touring band and for her Mack Avenue Records leader albums, including the Grammy-nominated Diamond Cut. Tickets: https://www.ticketweb.com/event/tia-fuller-with-opening-act-regattabar-tickets/14013994" data-tz="America/New_York">
+            <article class="event-card" id="e-2026-10-11-tia-fuller-with-opening-act-the-zeb-jewell-alibhai-quartet" data-uid="e-2026-10-11-tia-fuller-with-opening-act-the-zeb-jewell-alibhai-quartet-01934378@jazz-weekly.bitdoktor.github.io" data-pick-id="01934378" data-date="2026-10-11" data-genre="jazz" data-search="tia fuller with opening act the zeb jewell-alibhai quartet tia fuller with opening act the zeb jewell-alibhai quartet regattabar cambridge" data-title="Tia Fuller at Regattabar" data-start="20261011T180000" data-end="20261011T200000" data-location="1 Bennett St, Cambridge, MA 02138" data-region="inner" data-details="Grammy-nominated saxophonist, composer, and Berklee professor known for her tenure as featured saxophonist in Beyoncé&#x27;s touring band and for her Mack Avenue Records leader albums, including the Grammy-nominated Diamond Cut. Tickets: https://www.ticketweb.com/event/tia-fuller-with-opening-act-regattabar-tickets/14013994" data-tz="America/New_York">
                 <div class="event-content">
                     <span class="event-credential">★ Grammy nominee; former Beyoncé band saxophonist; Mack Avenue recording artist</span>
                     
                     <div class="event-header">
+                        <button type="button" class="pick-toggle" data-pick-toggle="01934378" aria-pressed="false" aria-label="Pick Tia Fuller" title="Pick this show">☆</button>
                         <h3 class="artist-name">Tia Fuller</h3>
                         <span class="genre-tag">Jazz</span>
                     </div>
@@ -2428,7 +2513,7 @@
         </section>
 
         <footer>
-            <p class="footer-generated">Generated 2026-09-28 13:19 UTC via Jazz Weekly · 44 events</p>
+            <p class="footer-generated">Generated 2026-09-28 14:13 UTC via Jazz Weekly · 44 events</p>
             <div class="sources">
                 Sources: <a href="https://www.beehiveboston.com/calendar" target="_blank" rel="noopener">The Beehive</a> · <a href="https://www.berklee.edu/BPC" target="_blank" rel="noopener">Berklee Performance Center</a> · <a href="https://jazzboston.org/jazz-calendar/" target="_blank" rel="noopener">Jazz Boston Calendar</a> · <a href="https://jimmysoncongress.com/" target="_blank" rel="noopener">Jimmy&#x27;s Jazz &amp; Blues Club</a> · <a href="https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814" target="_blank" rel="noopener">Regattabar</a> · <a href="https://tickets.rockportmusic.org/events" target="_blank" rel="noopener">Rockport Music</a> · <a href="https://scullersjazz.com/upcoming-events/" target="_blank" rel="noopener">Scullers Jazz Club</a> · <a href="https://wallyscafe.com/live-music-schedule/" target="_blank" rel="noopener">Wally&#x27;s Cafe</a>
             </div>
@@ -2445,13 +2530,26 @@ var JazzCore = (function () {
   // Every field isVisible reads. Clear filters restores exactly this object,
   // so a filter added here is reset there without further edits.
   function defaultFilters() {
-    return { genre: 'all', search: '', hidePast: false, insideT: false, revealId: '' };
+    return {
+      genre: 'all', search: '', hidePast: false, insideT: false, revealId: '',
+      onlyPicks: []
+    };
   }
 
   function isVisible(item, filters) {
     // The card a link points at (#<card id>) is always shown: top pick,
-    // highlights and shared links are unfiltered, so their target must be too.
+    // highlights and shared links are unfiltered, so their target must be too
+    // — it wins over show-only-picks too.
     if (filters.revealId && item.id === filters.revealId) return true;
+
+    // P4: show-only-picks overrides every other filter while it is on — an
+    // explicit pick outranks a standing preference (e.g. Inside the T), so a
+    // saved filter can't hide a friend's out-of-region pick. An item with no
+    // pickId (a session row; they can't be picked) is never in the set, so
+    // it is hidden. `filters.onlyPicks` holds pick ids, never ''.
+    if (filters.onlyPicks && filters.onlyPicks.length > 0) {
+      return filters.onlyPicks.indexOf(item.pickId) !== -1;
+    }
 
     var itemGenre = lower(item.genre);
     var filterGenre = lower(filters.genre);
@@ -2487,7 +2585,232 @@ var JazzCore = (function () {
     return { shown: shown, dates: dates, empty: items.length > 0 && !any };
   }
 
-  return { isVisible: isVisible, defaultFilters: defaultFilters, summarize: summarize };
+  // -------------------------------------------------------------------
+  // P4: picks via URL. Pure — no DOM.
+  // -------------------------------------------------------------------
+
+  var PICK_ID_RE = /^[0-9a-f]{8}$/;
+
+  // Parses a `#picks=<id>,<id>,...` hash into the ids it names: only ones
+  // matching the 8-lowercase-hex pick-id shape (D8), in first-seen order,
+  // deduplicated BEFORE the 50-id cap so a repeated id never crowds out a
+  // distinct one. Anything else (a different hash, or no `#picks=` prefix
+  // at all) yields [] — the caller treats that as "no incoming picks".
+  function parsePicksHash(hash) {
+    var m = /^#picks=(.*)$/.exec(hash || '');
+    if (!m) return [];
+    var raw = m[1] ? m[1].split(',') : [];
+    var seen = {};
+    var out = [];
+    for (var i = 0; i < raw.length; i++) {
+      var id = raw[i];
+      if (!PICK_ID_RE.test(id) || seen[id]) continue;
+      seen[id] = true;
+      out.push(id);
+      if (out.length >= 50) break;
+    }
+    return out;
+  }
+
+  function buildPicksHash(ids) {
+    return '#picks=' + (ids || []).join(',');
+  }
+
+  // Always rewrites the last path segment to `<issueDate>.html` — the page's
+  // own <meta name="jazz-weekly-issue"> is the source of truth for its date,
+  // not the URL it happens to be viewed at (which may be `latest.html`, and
+  // `latest.html` is overwritten by next week's publish). This is also what
+  // the Copy link button uses, so a link copied today still resolves next
+  // week.
+  function issueUrl(origin, pathname, issueDate) {
+    var slash = (pathname || '').lastIndexOf('/');
+    var dir = slash === -1 ? '' : pathname.slice(0, slash + 1);
+    return origin + dir + issueDate + '.html';
+  }
+
+  function shareUrl(origin, pathname, issueDate, ids) {
+    return issueUrl(origin, pathname, issueDate) + buildPicksHash(ids);
+  }
+
+  // The shared-picks banner's count + wording. Pure so it's node-tested
+  // instead of only checked via textContent (P4 review fix #3): `matched` is
+  // `ids` (in `ids` order) that also appear in `presentIds` (the pick ids on
+  // this page); `missing` is how many of `ids` don't. The headline count is
+  // always ids.length — "you were sent N picks" — with a singular/plural
+  // form for both the headline and the "isn't/aren't in this issue" suffix.
+  function picksBannerSummary(presentIds, ids) {
+    var present = {};
+    (presentIds || []).forEach(function (id) { present[id] = true; });
+    var matched = (ids || []).filter(function (id) { return !!present[id]; });
+    var n = (ids || []).length;
+    var missing = n - matched.length;
+    var text = n + ' pick' + (n === 1 ? '' : 's') + ' shared with you';
+    if (missing > 0) {
+      text += ' · ' + missing + (missing === 1 ? " isn't in this issue" : " aren't in this issue");
+    }
+    return { matched: matched, missing: missing, text: text };
+  }
+
+  // Keep = own picks, followed by the newly-matched shared ids not already
+  // in own (P4 review fix #2/#4): a shared id with no star on the page can
+  // never be un-picked, so only ids present in this issue are ever merged.
+  function mergeKeptPicks(own, matched) {
+    var out = (own || []).slice();
+    var seen = {};
+    out.forEach(function (id) { seen[id] = true; });
+    (matched || []).forEach(function (id) {
+      if (!seen[id]) { seen[id] = true; out.push(id); }
+    });
+    return out;
+  }
+
+  // -------------------------------------------------------------------
+  // ICS text builder — moved from app.js (P4) so it's node-tested. app.js
+  // keeps only the Blob/URL step for both the single-card download and
+  // "Add all to calendar".
+  // -------------------------------------------------------------------
+
+  function pad2(n) { return n < 10 ? '0' + n : '' + n; }
+
+  function icsEscape(s) {
+    return (s || '')
+      .replace(/\\/g, '\\\\')
+      .replace(/;/g, '\\;')
+      .replace(/,/g, '\\,')
+      .replace(/\r\n?|\n/g, '\\n');
+  }
+
+  function tzOffsetMinutes(tz, atUtc) {
+    // Returns offset in minutes EAST of UTC for the given tz at the given instant.
+    try {
+      var dtf = new Intl.DateTimeFormat('en-US', {
+        timeZone: tz, hour12: false, year: 'numeric', month: '2-digit', day: '2-digit',
+        hour: '2-digit', minute: '2-digit', second: '2-digit'
+      });
+      var parts = {};
+      dtf.formatToParts(atUtc).forEach(function (p) { parts[p.type] = p.value; });
+      var asLocal = Date.UTC(+parts.year, +parts.month - 1, +parts.day,
+                             +parts.hour % 24, +parts.minute, +parts.second);
+      return (asLocal - atUtc.getTime()) / 60000;
+    } catch (_e) {
+      return -atUtc.getTimezoneOffset();
+    }
+  }
+
+  function toUtcBasic(local, tz) {
+    // local is "YYYYMMDDTHHMMSS" in `tz`. Convert to UTC basic-form "Z" string.
+    var m = /^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})$/.exec(local || '');
+    if (!m) return local;
+    // Use Intl to compute the UTC offset for the given local wall-clock in tz.
+    var y = +m[1], mo = +m[2], d = +m[3], h = +m[4], mi = +m[5], s = +m[6];
+    // Construct as if UTC, then adjust by tz offset at that instant.
+    var asUtc = Date.UTC(y, mo - 1, d, h, mi, s);
+    var offsetMin = tzOffsetMinutes(tz, new Date(asUtc));
+    var trueInstant = asUtc - offsetMin * 60000;
+    var dt = new Date(trueInstant);
+    return (
+      dt.getUTCFullYear() +
+      pad2(dt.getUTCMonth() + 1) +
+      pad2(dt.getUTCDate()) + 'T' +
+      pad2(dt.getUTCHours()) +
+      pad2(dt.getUTCMinutes()) +
+      pad2(dt.getUTCSeconds()) + 'Z'
+    );
+  }
+
+  // Synchronous SHA-1 — small enough to inline rather than depend on async
+  // Web Crypto (crypto.subtle.digest is async and unavailable outside a
+  // secure context; this stays a pure function callable from node and from
+  // a click handler without deferring navigation).
+  // Reference: RFC 3174. Verified against Python hashlib.sha1 in dev.
+  function sha1Hex(str) {
+    var msg = unescape(encodeURIComponent(str));
+    var bytes = new Array(msg.length);
+    for (var i = 0; i < msg.length; i++) bytes[i] = msg.charCodeAt(i);
+    var bitLen = bytes.length * 8;
+    bytes.push(0x80);
+    while ((bytes.length % 64) !== 56) bytes.push(0);
+    // 64-bit big-endian length (high 32 bits zero — we don't hash multi-GB strings).
+    bytes.push(0, 0, 0, 0);
+    bytes.push((bitLen >>> 24) & 0xff, (bitLen >>> 16) & 0xff, (bitLen >>> 8) & 0xff, bitLen & 0xff);
+
+    var h0 = 0x67452301, h1 = 0xEFCDAB89, h2 = 0x98BADCFE, h3 = 0x10325476, h4 = 0xC3D2E1F0;
+    for (var c = 0; c < bytes.length; c += 64) {
+      var w = new Array(80);
+      for (var k = 0; k < 16; k++) {
+        w[k] = (bytes[c + k * 4] << 24) | (bytes[c + k * 4 + 1] << 16)
+             | (bytes[c + k * 4 + 2] << 8) | bytes[c + k * 4 + 3];
+      }
+      for (var k2 = 16; k2 < 80; k2++) {
+        var v = w[k2 - 3] ^ w[k2 - 8] ^ w[k2 - 14] ^ w[k2 - 16];
+        w[k2] = (v << 1) | (v >>> 31);
+      }
+      var a = h0, b = h1, cc = h2, d = h3, e = h4;
+      for (var t = 0; t < 80; t++) {
+        var f, kc;
+        if (t < 20)      { f = (b & cc) | ((~b) & d);                kc = 0x5A827999; }
+        else if (t < 40) { f = b ^ cc ^ d;                            kc = 0x6ED9EBA1; }
+        else if (t < 60) { f = (b & cc) | (b & d) | (cc & d);         kc = 0x8F1BBCDC; }
+        else             { f = b ^ cc ^ d;                            kc = 0xCA62C1D6; }
+        var tmp = (((a << 5) | (a >>> 27)) + f + e + kc + w[t]) | 0;
+        e = d; d = cc; cc = (b << 30) | (b >>> 2); b = a; a = tmp;
+      }
+      h0 = (h0 + a) | 0; h1 = (h1 + b) | 0; h2 = (h2 + cc) | 0;
+      h3 = (h3 + d) | 0; h4 = (h4 + e) | 0;
+    }
+    function hex(n) { return ('00000000' + (n >>> 0).toString(16)).slice(-8); }
+    return hex(h0) + hex(h1) + hex(h2) + hex(h3) + hex(h4);
+  }
+
+  function computeFallbackUid(id, location) {
+    // Mirror jazz/ics.py:event_uid exactly: sha1(id + "|" + normalized_loc)[:8]
+    // where normalize collapses whitespace + lowercases.
+    var loc = (location || '').replace(/\s+/g, ' ').replace(/^ | $/g, '').toLowerCase();
+    var hash = sha1Hex(id + '|' + loc).slice(0, 8);
+    return id + '-' + hash + '@jazz-weekly.bitdoktor.github.io';
+  }
+
+  // One VCALENDAR, one VEVENT per event. Each `c` carries the same fields as
+  // a card's data-* attributes (title, start, end, location, details, tz,
+  // uid, slug) — see app.js's initCalendarButtons payload. Used both for a
+  // single card's .ics download and for "Add all to calendar".
+  function icsForEvents(events) {
+    var lines = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//jazz-weekly//bitdoktor//EN',
+      'CALSCALE:GREGORIAN',
+      'METHOD:PUBLISH'
+    ];
+    var dtstamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z/, 'Z');
+    (events || []).forEach(function (c) {
+      var uid = c.uid || computeFallbackUid(c.slug, c.location);
+      var dtstart = toUtcBasic(c.start, c.tz || 'America/New_York');
+      var dtend = toUtcBasic(c.end, c.tz || 'America/New_York');
+      lines.push(
+        'BEGIN:VEVENT',
+        'UID:' + uid,
+        'DTSTAMP:' + dtstamp,
+        'DTSTART:' + dtstart,
+        'DTEND:' + dtend,
+        'SUMMARY:' + icsEscape(c.title),
+        'LOCATION:' + icsEscape(c.location),
+        'DESCRIPTION:' + icsEscape(c.details),
+        'END:VEVENT'
+      );
+    });
+    lines.push('END:VCALENDAR');
+    return lines.join('\r\n');
+  }
+
+  return {
+    isVisible: isVisible, defaultFilters: defaultFilters, summarize: summarize,
+    parsePicksHash: parsePicksHash, buildPicksHash: buildPicksHash,
+    issueUrl: issueUrl, shareUrl: shareUrl,
+    picksBannerSummary: picksBannerSummary, mergeKeptPicks: mergeKeptPicks,
+    icsForEvents: icsForEvents, toUtcBasic: toUtcBasic, tzOffsetMinutes: tzOffsetMinutes,
+    icsEscape: icsEscape, computeFallbackUid: computeFallbackUid, sha1Hex: sha1Hex, pad2: pad2
+  };
 })();
 
 </script>
@@ -2569,6 +2892,17 @@ var JazzCore = (function () {
       },
     };
   })();
+
+  // ---------------------------------------------------------------------
+  // 0a. Issue date — the page's own source of truth (P4), read from the
+  //     <meta name="jazz-weekly-issue"> tag the renderer writes. Used to
+  //     rebuild the dated URL for Copy link and Share picks so a link
+  //     copied on latest.html still resolves after next week's publish.
+  // ---------------------------------------------------------------------
+  function getIssueDate() {
+    var meta = document.querySelector('meta[name="jazz-weekly-issue"]');
+    return (meta && meta.getAttribute('content')) || '';
+  }
 
   // ---------------------------------------------------------------------
   // 0b. Theme picker. The inline FOUC script in <head> already applied the
@@ -2770,6 +3104,8 @@ var JazzCore = (function () {
     // predicate (search/genre/Inside-the-T/hide-past), so they count toward
     // "section has something visible" too. They carry no `id`, so `id: ''`
     // — a session row is never the target of a #<card id> reveal link.
+    // pickId (P4): the 8-hex id build_card writes as data-pick-id. A session
+    // row has none — '' never matches a real pick id, so onlyPicks hides it.
     var items = Array.prototype.slice.call(document.querySelectorAll('.event-card, .session-row')).map(function (el) {
       return {
         el: el,
@@ -2779,6 +3115,7 @@ var JazzCore = (function () {
         search: el.getAttribute('data-search') || el.textContent,
         region: el.getAttribute('data-region') || '',
         isPast: el.classList.contains('is-past'),
+        pickId: el.getAttribute('data-pick-id') || '',
       };
     });
 
@@ -2889,16 +3226,232 @@ var JazzCore = (function () {
         if (search) search.value = d.search;
         if (hidePast) hidePast.checked = d.hidePast;
         filters.revealId = d.revealId;
+        filters.onlyPicks = d.onlyPicks;
         if (d.insideT) prefs.set('filter.insideT', '1');
         else prefs.remove('filter.insideT');
         // Drop the #card hash too, so a later click on a link to that same
-        // card changes the hash and fires hashchange again. Last, and guarded:
-        // the reset above must happen even if history is unavailable here.
-        try {
-          if (location.hash) history.replaceState(null, '', location.pathname + location.search);
-        } catch (e) { console.error('clear-filters replaceState', e); }
+        // card changes the hash and fires hashchange again. Last: the reset
+        // above must happen even if history is unavailable here.
+        dropHash();
       });
     }
+
+    // -----------------------------------------------------------------
+    // P4: my picks via URL (star toggle, Share picks, incoming #picks=).
+    // Lives inside initFilters() because it reads/writes `filters` and
+    // calls `apply()` — see JazzCore.isVisible's show-only-picks branch.
+    // Placed before the final syncInsideTChip()/revealHashTarget() pair
+    // (initFilters must end with those two calls).
+    // -----------------------------------------------------------------
+    var issueDate = getIssueDate();
+    var picksKey = 'picks.' + issueDate;
+    var pickToggles = Array.prototype.slice.call(document.querySelectorAll('[data-pick-toggle]'));
+    var shareBtn = document.getElementById('share-picks');
+    var picksBanner = document.getElementById('picks-banner');
+    var picksBannerText = document.getElementById('picks-banner-text');
+    var picksShowOnlyBtn = document.getElementById('picks-show-only');
+    var picksAddAllBtn = document.getElementById('picks-add-all');
+    var picksKeepBtn = document.getElementById('picks-keep');
+    var picksDismissBtn = document.getElementById('picks-dismiss');
+
+    // Ids from an incoming #picks= link, currently shown in the banner.
+    // [] means "no shared state" — see clearSharedState / handleIncomingPicksHash.
+    var sharedIds = [];
+    // The subset of sharedIds that matched a card on THIS page (P4 review
+    // fix #2/#4/#5) — what Keep merges, what Add all downloads, and what
+    // decides whether Show only / Add all are worth showing at all.
+    var sharedMatched = [];
+
+    // In-memory fallback for ownPicks/setOwnPicks (P4 review fix #8): when
+    // storage is blocked, prefs.get(key) always returns null (its catch
+    // path has no fallback arg here), so a star click would otherwise be a
+    // silent no-op. setOwnPicks always updates this copy too, so it's used
+    // both when storage threw and when the key is legitimately still unset
+    // (both read as "no stored value yet" and start at []).
+    var ownPicksFallback = [];
+
+    function ownPicks() {
+      var raw = prefs.get(picksKey);
+      if (raw === null) return ownPicksFallback.slice();
+      try {
+        var arr = JSON.parse(raw);
+        return Array.isArray(arr) ? arr : [];
+      } catch (_e) { return []; }
+    }
+
+    function setOwnPicks(arr) {
+      ownPicksFallback = arr.slice();
+      prefs.set(picksKey, JSON.stringify(arr));
+    }
+
+    // Shared by Clear filters and Dismiss (P4 review fix #10): drop the
+    // #card hash so a later click on a link to that same card changes the
+    // hash and fires hashchange again. Guarded: a throwing history API must
+    // never stop the reset/dismiss that runs before it.
+    function dropHash() {
+      try {
+        if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+      } catch (e) { console.error('dropHash', e); }
+    }
+
+    // Every write re-reads the key first (spec: two open tabs must not clobber
+    // each other) — prefs.onChange, not the caller, applies the result.
+    function togglePick(id) {
+      var arr = ownPicks();
+      var i = arr.indexOf(id);
+      if (i === -1) arr.push(id); else arr.splice(i, 1);
+      setOwnPicks(arr);
+    }
+
+    function syncPickToggle(btn) {
+      var picked = ownPicks().indexOf(btn.getAttribute('data-pick-toggle')) !== -1;
+      btn.setAttribute('aria-pressed', picked ? 'true' : 'false');
+      btn.textContent = picked ? '★' : '☆';
+      btn.classList.toggle('is-picked', picked);
+    }
+
+    function syncAllPickToggles() { pickToggles.forEach(syncPickToggle); }
+
+    function syncShareButton() {
+      if (!shareBtn) return;
+      var n = ownPicks().length;
+      shareBtn.hidden = n < 1;
+      if (n >= 1) shareBtn.textContent = 'Share picks (' + n + ')';
+    }
+
+    pickToggles.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        togglePick(btn.getAttribute('data-pick-toggle'));
+      });
+    });
+
+    // Single source of truth for applying a picks write, same pattern as
+    // filter.insideT above: writers only call prefs.set/setOwnPicks.
+    prefs.onChange(picksKey, function () {
+      syncAllPickToggles();
+      syncShareButton();
+    });
+
+    function shareDone() {
+      if (!shareBtn) return;
+      shareBtn.textContent = 'Link copied!';
+      shareBtn.classList.add('copied');
+      setTimeout(function () {
+        shareBtn.classList.remove('copied');
+        // syncShareButton() re-reads ownPicks() rather than restoring a
+        // label captured before the copy (P4 review fix #9) — a star
+        // toggled during the 1.5s window would otherwise leave a stale
+        // count on screen.
+        syncShareButton();
+      }, 1500);
+    }
+
+    if (shareBtn) {
+      shareBtn.addEventListener('click', function () {
+        var url = JazzCore.shareUrl(location.origin, location.pathname, issueDate, ownPicks());
+        if (navigator.share) {
+          // A cancelled/rejected share must NOT fall back to copying (spec).
+          navigator.share({ url: url }).catch(function () {});
+        } else {
+          copyToClipboard(url, shareDone);
+        }
+      });
+    }
+
+    function applySharedMarks() {
+      items.forEach(function (item) {
+        if (!item.pickId) return;
+        item.el.classList.toggle('is-shared-pick', sharedIds.indexOf(item.pickId) !== -1);
+      });
+    }
+
+    function clearSharedState() {
+      sharedIds = [];
+      sharedMatched = [];
+      filters.onlyPicks = [];
+      applySharedMarks();
+      if (picksBanner) picksBanner.hidden = true;
+      apply();
+    }
+
+    function showSharedBanner(ids) {
+      sharedIds = ids;
+      applySharedMarks();
+      var presentIds = items
+        .filter(function (item) { return !!item.pickId; })
+        .map(function (item) { return item.pickId; });
+      var summary = JazzCore.picksBannerSummary(presentIds, ids);
+      sharedMatched = summary.matched;
+      if (picksBannerText) picksBannerText.textContent = summary.text;
+      if (picksBanner) picksBanner.hidden = false;
+      // Nothing to add to the calendar or filter down to when none of the
+      // shared ids are in this issue (P4 review fix #5).
+      if (picksAddAllBtn) picksAddAllBtn.hidden = summary.matched.length === 0;
+      if (picksShowOnlyBtn) picksShowOnlyBtn.hidden = summary.matched.length === 0;
+      // A second #picks= link arriving while "Show only these" is already on
+      // must re-filter to the NEW ids, not keep showing the first link's set
+      // (P4 review fix #2). With no matches it turns off instead: an empty
+      // page with its Show only button hidden would leave only Dismiss.
+      if (filters.onlyPicks.length > 0) {
+        filters.onlyPicks = summary.matched.length ? ids.slice() : [];
+        apply();
+      }
+    }
+
+    // Only a #picks= hash that yields at least one id touches the shared
+    // state — any other hashchange (date rail, "Jump to show", a highlight
+    // link) must leave it exactly as it was (spec). revealHashTarget, wired
+    // separately above, still runs for those.
+    function handleIncomingPicksHash() {
+      var ids = JazzCore.parsePicksHash(location.hash);
+      if (!ids.length) return;
+      showSharedBanner(ids);
+    }
+    window.addEventListener('hashchange', handleIncomingPicksHash);
+
+    if (picksShowOnlyBtn) {
+      picksShowOnlyBtn.addEventListener('click', function () {
+        filters.onlyPicks = sharedIds.slice();
+        apply();
+      });
+    }
+
+    if (picksAddAllBtn) {
+      picksAddAllBtn.addEventListener('click', function () {
+        var cards = items
+          .filter(function (item) { return item.pickId && sharedMatched.indexOf(item.pickId) !== -1; })
+          .map(function (item) { return cardIcsPayload(item.el); });
+        try {
+          var url = buildIcsBlob(cards);
+          icsBlobUrls.push(url);
+          var a = document.createElement('a');
+          a.href = url;
+          a.download = 'jazz-weekly-picks.ics';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        } catch (e) { console.error('picks-add-all', e); }
+      });
+    }
+
+    if (picksKeepBtn) {
+      picksKeepBtn.addEventListener('click', function () {
+        // Only the ids matched to a card on this page (P4 review fix #4) —
+        // an id with no star anywhere on the page can never be un-picked.
+        setOwnPicks(JazzCore.mergeKeptPicks(ownPicks(), sharedMatched)); // re-read before write
+      });
+    }
+
+    if (picksDismissBtn) {
+      picksDismissBtn.addEventListener('click', function () {
+        clearSharedState();
+        dropHash();
+      });
+    }
+
+    syncAllPickToggles();
+    syncShareButton();
+    handleIncomingPicksHash();
 
     syncInsideTChip();
     revealHashTarget();
@@ -2925,134 +3478,28 @@ var JazzCore = (function () {
     return base + params;
   }
 
-  function buildIcsBlob(c) {
-    // UID — orchestrator-supplied `data-uid` is the single source of truth
-    // shared with the server feed (jazz/ics.py:event_uid). When absent (legacy
-    // pages, or rendering bug), fall back to the *same* sha1-based formula the
-    // server uses, so subscribers don't see duplicates between feed.ics and
-    // per-event downloads.
-    var uid = c.uid || computeFallbackUid(c.slug, c.location);
-    var dtstamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z/, 'Z');
-    var dtstart = toUtcBasic(c.start, c.tz || 'America/New_York');
-    var dtend = toUtcBasic(c.end, c.tz || 'America/New_York');
-    var lines = [
-      'BEGIN:VCALENDAR',
-      'VERSION:2.0',
-      'PRODID:-//jazz-weekly//bitdoktor//EN',
-      'CALSCALE:GREGORIAN',
-      'METHOD:PUBLISH',
-      'BEGIN:VEVENT',
-      'UID:' + uid,
-      'DTSTAMP:' + dtstamp,
-      'DTSTART:' + dtstart,
-      'DTEND:' + dtend,
-      'SUMMARY:' + icsEscape(c.title),
-      'LOCATION:' + icsEscape(c.location),
-      'DESCRIPTION:' + icsEscape(c.details),
-      'END:VEVENT',
-      'END:VCALENDAR'
-    ];
-    // Blob URL — `data:` URL navigation is blocked or flaky in iOS Safari /
-    // Firefox-ETP. Blob is cross-browser-stable and avoids URL length limits.
-    return URL.createObjectURL(new Blob([lines.join('\r\n')], { type: 'text/calendar' }));
+  // ICS text itself is built by JazzCore.icsForEvents (page-core.js, P4) so
+  // it's node-tested; this stays only the Blob/URL step (data: URLs are
+  // blocked or flaky in iOS Safari / Firefox-ETP; Blob is cross-browser-
+  // stable and avoids URL length limits). One builder taking a list (P4
+  // review fix #10) — a single-card download calls it with a 1-item array.
+  function buildIcsBlob(cards) {
+    return URL.createObjectURL(new Blob([JazzCore.icsForEvents(cards)], { type: 'text/calendar' }));
   }
 
-  function computeFallbackUid(id, location) {
-    // Mirror jazz/ics.py:event_uid exactly: sha1(id + "|" + normalized_loc)[:8]
-    // where normalize collapses whitespace + lowercases.
-    var loc = (location || '').replace(/\s+/g, ' ').replace(/^ | $/g, '').toLowerCase();
-    var hash = sha1Hex(id + '|' + loc).slice(0, 8);
-    return id + '-' + hash + '@jazz-weekly.bitdoktor.github.io';
-  }
-
-  // Synchronous SHA-1 — small enough to inline rather than depend on async
-  // Web Crypto in the click handler (which would force navigation deferral).
-  // Reference: RFC 3174. Verified against Python hashlib.sha1 in dev.
-  function sha1Hex(str) {
-    var msg = unescape(encodeURIComponent(str));
-    var bytes = new Array(msg.length);
-    for (var i = 0; i < msg.length; i++) bytes[i] = msg.charCodeAt(i);
-    var bitLen = bytes.length * 8;
-    bytes.push(0x80);
-    while ((bytes.length % 64) !== 56) bytes.push(0);
-    // 64-bit big-endian length (high 32 bits zero — we don't hash multi-GB strings).
-    bytes.push(0, 0, 0, 0);
-    bytes.push((bitLen >>> 24) & 0xff, (bitLen >>> 16) & 0xff, (bitLen >>> 8) & 0xff, bitLen & 0xff);
-
-    var h0 = 0x67452301, h1 = 0xEFCDAB89, h2 = 0x98BADCFE, h3 = 0x10325476, h4 = 0xC3D2E1F0;
-    for (var c = 0; c < bytes.length; c += 64) {
-      var w = new Array(80);
-      for (var k = 0; k < 16; k++) {
-        w[k] = (bytes[c + k * 4] << 24) | (bytes[c + k * 4 + 1] << 16)
-             | (bytes[c + k * 4 + 2] << 8) | bytes[c + k * 4 + 3];
-      }
-      for (var k2 = 16; k2 < 80; k2++) {
-        var v = w[k2 - 3] ^ w[k2 - 8] ^ w[k2 - 14] ^ w[k2 - 16];
-        w[k2] = (v << 1) | (v >>> 31);
-      }
-      var a = h0, b = h1, cc = h2, d = h3, e = h4;
-      for (var t = 0; t < 80; t++) {
-        var f, kc;
-        if (t < 20)      { f = (b & cc) | ((~b) & d);                kc = 0x5A827999; }
-        else if (t < 40) { f = b ^ cc ^ d;                            kc = 0x6ED9EBA1; }
-        else if (t < 60) { f = (b & cc) | (b & d) | (cc & d);         kc = 0x8F1BBCDC; }
-        else             { f = b ^ cc ^ d;                            kc = 0xCA62C1D6; }
-        var tmp = (((a << 5) | (a >>> 27)) + f + e + kc + w[t]) | 0;
-        e = d; d = cc; cc = (b << 30) | (b >>> 2); b = a; a = tmp;
-      }
-      h0 = (h0 + a) | 0; h1 = (h1 + b) | 0; h2 = (h2 + cc) | 0;
-      h3 = (h3 + d) | 0; h4 = (h4 + e) | 0;
-    }
-    function hex(n) { return ('00000000' + (n >>> 0).toString(16)).slice(-8); }
-    return hex(h0) + hex(h1) + hex(h2) + hex(h3) + hex(h4);
-  }
-
-  function toUtcBasic(local, tz) {
-    // local is "YYYYMMDDTHHMMSS" in `tz`. Convert to UTC basic-form "Z" string.
-    var m = /^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})$/.exec(local || '');
-    if (!m) return local;
-    // Use Intl to compute the UTC offset for the given local wall-clock in tz.
-    var y = +m[1], mo = +m[2], d = +m[3], h = +m[4], mi = +m[5], s = +m[6];
-    // Construct as if UTC, then adjust by tz offset at that instant.
-    var asUtc = Date.UTC(y, mo - 1, d, h, mi, s);
-    var offsetMin = tzOffsetMinutes(tz, new Date(asUtc));
-    var trueInstant = asUtc - offsetMin * 60000;
-    var dt = new Date(trueInstant);
-    return (
-      dt.getUTCFullYear() +
-      pad2(dt.getUTCMonth() + 1) +
-      pad2(dt.getUTCDate()) + 'T' +
-      pad2(dt.getUTCHours()) +
-      pad2(dt.getUTCMinutes()) +
-      pad2(dt.getUTCSeconds()) + 'Z'
-    );
-  }
-
-  function tzOffsetMinutes(tz, atUtc) {
-    // Returns offset in minutes EAST of UTC for the given tz at the given instant.
-    try {
-      var dtf = new Intl.DateTimeFormat('en-US', {
-        timeZone: tz, hour12: false, year: 'numeric', month: '2-digit', day: '2-digit',
-        hour: '2-digit', minute: '2-digit', second: '2-digit'
-      });
-      var parts = {};
-      dtf.formatToParts(atUtc).forEach(function (p) { parts[p.type] = p.value; });
-      var asLocal = Date.UTC(+parts.year, +parts.month - 1, +parts.day,
-                             +parts.hour % 24, +parts.minute, +parts.second);
-      return (asLocal - atUtc.getTime()) / 60000;
-    } catch (_e) {
-      return -atUtc.getTimezoneOffset();
-    }
-  }
-
-  function pad2(n) { return n < 10 ? '0' + n : '' + n; }
-
-  function icsEscape(s) {
-    return (s || '')
-      .replace(/\\/g, '\\\\')
-      .replace(/;/g, '\\;')
-      .replace(/,/g, '\\,')
-      .replace(/\r\n?|\n/g, '\\n');
+  // Shared by initCalendarButtons (per-card gcal/.ics) and the picks banner's
+  // "Add all to calendar" (P4): the same fields JazzCore.icsForEvents reads.
+  function cardIcsPayload(card) {
+    return {
+      title: card.getAttribute('data-title') || '',
+      start: card.getAttribute('data-start') || '',
+      end: card.getAttribute('data-end') || '',
+      location: card.getAttribute('data-location') || '',
+      details: card.getAttribute('data-details') || '',
+      tz: card.getAttribute('data-tz') || 'America/New_York',
+      uid: card.getAttribute('data-uid') || '',
+      slug: card.getAttribute('id') || 'event'
+    };
   }
 
   // Track issued blob URLs so we can release them on unload — cumulative leak
@@ -3063,16 +3510,7 @@ var JazzCore = (function () {
     document.querySelectorAll('[data-cal]').forEach(function (btn) {
       var card = btn.closest('.event-card');
       if (!card) return;
-      var payload = {
-        title: card.getAttribute('data-title') || '',
-        start: card.getAttribute('data-start') || '',
-        end: card.getAttribute('data-end') || '',
-        location: card.getAttribute('data-location') || '',
-        details: card.getAttribute('data-details') || '',
-        tz: card.getAttribute('data-tz') || 'America/New_York',
-        uid: card.getAttribute('data-uid') || '',
-        slug: card.getAttribute('id') || 'event'
-      };
+      var payload = cardIcsPayload(card);
       if (btn.getAttribute('data-cal') === 'gcal') {
         btn.setAttribute('href', buildCalendarUrl(payload));
       } else if (btn.getAttribute('data-cal') === 'ics') {
@@ -3082,7 +3520,7 @@ var JazzCore = (function () {
         // these flows because the navigation/copy reads the href before
         // any click event fires.
         try {
-          var url = buildIcsBlob(payload);
+          var url = buildIcsBlob([payload]);
           icsBlobUrls.push(url);
           btn.setAttribute('href', url);
           btn.setAttribute('download', payload.slug + '.ics');
@@ -3106,14 +3544,26 @@ var JazzCore = (function () {
 
   // ---------------------------------------------------------------------
   // 4. Copy-link buttons — write a URL with the event's anchor to clipboard.
+  //    copyToClipboard is also used by Share picks' non-navigator.share
+  //    fallback (P4).
   // ---------------------------------------------------------------------
+  function copyToClipboard(text, cb) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(cb, function () { fallbackCopy(text); cb(); });
+    } else {
+      fallbackCopy(text); cb();
+    }
+  }
+
   function initCopyLink() {
     document.querySelectorAll('[data-copy-link]').forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         var card = btn.closest('.event-card');
         if (!card) return;
-        var url = location.origin + location.pathname + '#' + card.id;
+        // issueUrl() always rewrites to <issueDate>.html (P4), so a link
+        // copied on latest.html still resolves after next week's publish.
+        var url = JazzCore.issueUrl(location.origin, location.pathname, getIssueDate()) + '#' + card.id;
         var done = function () {
           var orig = btn.textContent;
           btn.textContent = 'Copied!';
@@ -3123,11 +3573,7 @@ var JazzCore = (function () {
             btn.classList.remove('copied');
           }, 1500);
         };
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(url).then(done, function () { fallbackCopy(url); done(); });
-        } else {
-          fallbackCopy(url); done();
-        }
+        copyToClipboard(url, done);
       });
     });
   }
@@ -3219,6 +3665,6 @@ var JazzCore = (function () {
 })();
 
 </script>
-    <script type="application/json" id="run-manifest">{"run_date": "2026-09-27", "duration_ms": 48, "total_events": 44, "sources": {"allaboutjazz": {"status": "error", "http_status": 403, "events": 0, "content_type": "no_results"}, "beehive": {"status": "ok", "http_status": 200, "events": 0, "content_type": "generic"}, "berklee": {"status": "ok", "http_status": 200, "events": 3, "content_type": "scheduled"}, "jazzboston": {"status": "ok", "http_status": 200, "events": 21, "content_type": "scheduled"}, "jimmys": {"status": "ok", "http_status": 200, "events": 10, "content_type": "scheduled"}, "regattabar": {"status": "ok", "http_status": 200, "events": 9, "content_type": "scheduled"}, "rockport": {"status": "ok", "http_status": 200, "events": 3, "content_type": "scheduled"}, "scullers": {"status": "ok", "http_status": 200, "events": 5, "content_type": "scheduled"}, "wallys": {"status": "ok", "http_status": 200, "events": 0, "content_type": "generic"}}}</script>
+    <script type="application/json" id="run-manifest">{"run_date": "2026-09-27", "duration_ms": 15, "total_events": 44, "sources": {"allaboutjazz": {"status": "error", "http_status": 403, "events": 0, "content_type": "no_results"}, "beehive": {"status": "ok", "http_status": 200, "events": 0, "content_type": "generic"}, "berklee": {"status": "ok", "http_status": 200, "events": 3, "content_type": "scheduled"}, "jazzboston": {"status": "ok", "http_status": 200, "events": 21, "content_type": "scheduled"}, "jimmys": {"status": "ok", "http_status": 200, "events": 10, "content_type": "scheduled"}, "regattabar": {"status": "ok", "http_status": 200, "events": 9, "content_type": "scheduled"}, "rockport": {"status": "ok", "http_status": 200, "events": 3, "content_type": "scheduled"}, "scullers": {"status": "ok", "http_status": 200, "events": 5, "content_type": "scheduled"}, "wallys": {"status": "ok", "http_status": 200, "events": 0, "content_type": "generic"}}}</script>
 </body>
 </html>
