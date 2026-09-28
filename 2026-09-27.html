@@ -334,13 +334,15 @@
             background: var(--bg-card); border-radius: 12px;
             border: 1px solid var(--border-subtle);
         }
-        .calendar-nav a {
+        .calendar-nav a,
+        .calendar-nav .cal-picks {
             display: flex; flex-direction: column; align-items: center;
             padding: 0.5rem 0.75rem; text-decoration: none;
             border-radius: 8px; transition: all 0.2s ease; min-width: 60px;
             border: 1px solid transparent;
         }
-        .calendar-nav a:hover { background: var(--bg-card-hover); border-color: var(--accent-gold-dim); }
+        .calendar-nav a:hover,
+        .calendar-nav .cal-picks:hover { background: var(--bg-card-hover); border-color: var(--accent-gold-dim); }
         .calendar-nav .cal-day { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; }
         .calendar-nav .cal-date {
             font-family: 'Playfair Display', serif;
@@ -352,6 +354,19 @@
         .calendar-nav a.is-today .cal-day,
         .calendar-nav a.is-today .cal-date { color: var(--bg-dark); }
         .calendar-nav a.is-weekend { border-color: var(--accent-gold-dim); }
+        /* .cal-picks (★ My picks): a <button>, styled like the date chips but
+           driven by app.js's picksMode ('active' <-> filters.onlyPicks), not
+           by data-date. Hidden by default (markup) until own picks >= 1. */
+        .calendar-nav .cal-picks {
+            background: var(--bg-dark); color: inherit; font-family: inherit;
+            font-size: inherit; cursor: pointer;
+        }
+        .calendar-nav .cal-picks[hidden] { display: none; }
+        .calendar-nav .cal-picks.active {
+            background: var(--accent-gold); border-color: var(--accent-gold);
+        }
+        .calendar-nav .cal-picks.active .cal-day,
+        .calendar-nav .cal-picks.active .cal-date { color: var(--bg-dark); }
 
         /* --- Density bar (VU-meter style) per date header --- */
         .setlist-bar {
@@ -693,7 +708,8 @@
                 padding: 0.75rem 1rem; gap: 0.35rem;
                 scroll-snap-type: x mandatory;
             }
-            .calendar-nav a { flex-shrink: 0; scroll-snap-align: start; min-width: 52px; padding: 0.4rem 0.5rem; }
+            .calendar-nav a,
+            .calendar-nav .cal-picks { flex-shrink: 0; scroll-snap-align: start; min-width: 52px; padding: 0.4rem 0.5rem; }
             .calendar-nav .cal-date { font-size: 1rem; }
         }
         @media (max-width: 480px) {
@@ -756,6 +772,7 @@
         </div>
 
         <nav class="calendar-nav" aria-label="Jump to date">
+            <button type="button" class="cal-picks" id="nav-my-picks" aria-pressed="false" hidden><span class="cal-day">★</span><span class="cal-date">Picks</span></button>
             <a href="#sep-27" data-date="2026-09-27"><span class="cal-day">Sun</span><span class="cal-date">27</span></a>
             <a href="#sep-28" data-date="2026-09-28"><span class="cal-day">Mon</span><span class="cal-date">28</span></a>
             <a href="#sep-29" data-date="2026-09-29"><span class="cal-day">Tue</span><span class="cal-date">29</span></a>
@@ -2513,7 +2530,7 @@
         </section>
 
         <footer>
-            <p class="footer-generated">Generated 2026-09-28 14:13 UTC via Jazz Weekly · 44 events</p>
+            <p class="footer-generated">Generated 2026-09-28 15:00 UTC via Jazz Weekly · 44 events</p>
             <div class="sources">
                 Sources: <a href="https://www.beehiveboston.com/calendar" target="_blank" rel="noopener">The Beehive</a> · <a href="https://www.berklee.edu/BPC" target="_blank" rel="noopener">Berklee Performance Center</a> · <a href="https://jazzboston.org/jazz-calendar/" target="_blank" rel="noopener">Jazz Boston Calendar</a> · <a href="https://jimmysoncongress.com/" target="_blank" rel="noopener">Jimmy&#x27;s Jazz &amp; Blues Club</a> · <a href="https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814" target="_blank" rel="noopener">Regattabar</a> · <a href="https://tickets.rockportmusic.org/events" target="_blank" rel="noopener">Rockport Music</a> · <a href="https://scullersjazz.com/upcoming-events/" target="_blank" rel="noopener">Scullers Jazz Club</a> · <a href="https://wallyscafe.com/live-music-schedule/" target="_blank" rel="noopener">Wally&#x27;s Cafe</a>
             </div>
@@ -2526,6 +2543,15 @@ var JazzCore = (function () {
   'use strict';
 
   function lower(s) { return (s || '').toString().toLowerCase(); }
+
+  // Zero-padded 'YYYY-MM-DD' from a Date's LOCAL fields (not toISOString,
+  // which is UTC and marks today's cards is-past after 8 PM EDT). Pure —
+  // node-tested directly; markTemporal (app.js) is the only caller.
+  function localIsoDate(d) {
+    var mo = d.getMonth() + 1;
+    var day = d.getDate();
+    return d.getFullYear() + '-' + (mo < 10 ? '0' + mo : '' + mo) + '-' + (day < 10 ? '0' + day : '' + day);
+  }
 
   // Every field isVisible reads. Clear filters restores exactly this object,
   // so a filter added here is reset there without further edits.
@@ -2662,6 +2688,58 @@ var JazzCore = (function () {
       if (!seen[id]) { seen[id] = true; out.push(id); }
     });
     return out;
+  }
+
+  // -------------------------------------------------------------------
+  // Picks follow-up: the ★ My picks chip in the calendar nav. Pure state
+  // machine for picksMode ('' | 'mine' | 'shared') + filters.onlyPicks so
+  // app.js can route every onlyPicks change through one tested function
+  // instead of assigning it ad hoc at each call site. `own`/`shared` are
+  // always read fresh by the caller (ownPicks() / sharedMatched) — this
+  // function never mutates them.
+  // -------------------------------------------------------------------
+  function nextPicksFilter(mode, action, own, shared) {
+    own = own || [];
+    shared = shared || [];
+    switch (action) {
+      case 'toggleMine':
+        // Off -> on with today's own picks; on -> off. A star toggled while
+        // on is handled by 'ownChanged', not this action.
+        // With no own picks there is nothing to filter to: stay off, so the
+        // chip is never pressed over an unfiltered page.
+        if (mode === 'mine' || !own.length) return { mode: '', onlyPicks: [] };
+        return { mode: 'mine', onlyPicks: own.slice() };
+      case 'showShared':
+        // "Show only these" (or a second incoming #picks= link while it's
+        // already on) filters to the caller's current matched set. With no
+        // matches it turns off, so 'shared' always means an active filter
+        // and a later matching link cannot re-filter the page by itself.
+        if (!shared.length) return { mode: '', onlyPicks: [] };
+        return { mode: 'shared', onlyPicks: shared.slice() };
+      case 'dismiss':
+        // Dismiss must not turn off My picks (spec) — only drops a 'shared'
+        // filter. Re-derives onlyPicks from `own` so a dismiss that happens
+        // to follow a star toggle doesn't show a stale set.
+        if (mode === 'mine') return { mode: 'mine', onlyPicks: own.slice() };
+        return { mode: '', onlyPicks: [] };
+      case 'clear':
+        // Clear filters always turns every picks filter off, mine or shared.
+        return { mode: '', onlyPicks: [] };
+      case 'ownChanged':
+        // A star was toggled (or picks storage changed cross-tab). Only
+        // 'mine' mode reacts: re-filter to the new own set, or turn off if
+        // it's now empty (un-starring the last pick while filtered would
+        // otherwise leave an empty page with no way back).
+        if (mode === 'mine') {
+          return own.length ? { mode: 'mine', onlyPicks: own.slice() } : { mode: '', onlyPicks: [] };
+        }
+        // Same rule as showShared: 'shared' only while there is a filter.
+        if (mode === 'shared' && shared.length) return { mode: 'shared', onlyPicks: shared.slice() };
+        return { mode: '', onlyPicks: [] };
+      default:
+        // Every caller passes a literal action; a typo must fail loudly.
+        throw new Error('nextPicksFilter: unknown action ' + action);
+    }
   }
 
   // -------------------------------------------------------------------
@@ -2805,9 +2883,11 @@ var JazzCore = (function () {
 
   return {
     isVisible: isVisible, defaultFilters: defaultFilters, summarize: summarize,
+    localIsoDate: localIsoDate,
     parsePicksHash: parsePicksHash, buildPicksHash: buildPicksHash,
     issueUrl: issueUrl, shareUrl: shareUrl,
     picksBannerSummary: picksBannerSummary, mergeKeptPicks: mergeKeptPicks,
+    nextPicksFilter: nextPicksFilter,
     icsForEvents: icsForEvents, toUtcBasic: toUtcBasic, tzOffsetMinutes: tzOffsetMinutes,
     icsEscape: icsEscape, computeFallbackUid: computeFallbackUid, sha1Hex: sha1Hex, pad2: pad2
   };
@@ -3054,7 +3134,11 @@ var JazzCore = (function () {
   // ---------------------------------------------------------------------
   function markTemporal() {
     var today = new Date();
-    var todayStr = today.toISOString().slice(0, 10);
+    // JazzCore.localIsoDate (not the Date method that renders in UTC) so
+    // "today"/"this weekend" match the reader's own clock — a UTC-based
+    // render would mark today's shows is-past after 8 PM EDT (UTC runs
+    // 4-5h ahead of US Eastern).
+    var todayStr = JazzCore.localIsoDate(today);
     var dow = today.getDay(); // 0=Sun..6=Sat
     // "This weekend" = any Fri/Sat/Sun within +7 days of today.
     var weekendSet = {};
@@ -3063,7 +3147,7 @@ var JazzCore = (function () {
       d.setDate(today.getDate() + i);
       var dd = d.getDay();
       if (dd === 5 || dd === 6 || dd === 0) {
-        weekendSet[d.toISOString().slice(0, 10)] = true;
+        weekendSet[JazzCore.localIsoDate(d)] = true;
       }
     }
 
@@ -3226,7 +3310,11 @@ var JazzCore = (function () {
         if (search) search.value = d.search;
         if (hidePast) hidePast.checked = d.hidePast;
         filters.revealId = d.revealId;
-        filters.onlyPicks = d.onlyPicks;
+        // onlyPicks (d.onlyPicks) is always [] here — routed through
+        // JazzCore.nextPicksFilter's 'clear' action, same as every other
+        // picksMode transition (see applyPicksTransition below).
+        applyPicksTransition('clear');
+        syncPicksChip();
         if (d.insideT) prefs.set('filter.insideT', '1');
         else prefs.remove('filter.insideT');
         // Drop the #card hash too, so a later click on a link to that same
@@ -3253,6 +3341,14 @@ var JazzCore = (function () {
     var picksAddAllBtn = document.getElementById('picks-add-all');
     var picksKeepBtn = document.getElementById('picks-keep');
     var picksDismissBtn = document.getElementById('picks-dismiss');
+    var picksChip = document.getElementById('nav-my-picks');
+
+    // '' | 'mine' | 'shared' — which picks filter (if any) is currently
+    // driving filters.onlyPicks. See JazzCore.nextPicksFilter for the
+    // transition table; applyPicksTransition below is the ONLY place that
+    // assigns filters.onlyPicks, so every caller (the ★ My picks chip,
+    // Show only, Dismiss, Clear filters, a star toggle) goes through it.
+    var picksMode = '';
 
     // Ids from an incoming #picks= link, currently shown in the banner.
     // [] means "no shared state" — see clearSharedState / handleIncomingPicksHash.
@@ -3319,17 +3415,56 @@ var JazzCore = (function () {
       if (n >= 1) shareBtn.textContent = 'Share picks (' + n + ')';
     }
 
+    // The ONLY place filters.onlyPicks is assigned — every picks-mode
+    // change (chip click, Show only, Dismiss, Clear filters, a star toggle)
+    // calls this instead of writing filters.onlyPicks itself, so the
+    // transition table lives in one tested place (JazzCore.nextPicksFilter).
+    function applyPicksTransition(action) {
+      var result = JazzCore.nextPicksFilter(picksMode, action, ownPicks(), sharedMatched);
+      picksMode = result.mode;
+      filters.onlyPicks = result.onlyPicks;
+    }
+
+    function syncPicksChip() {
+      if (!picksChip) return;
+      var n = ownPicks().length;
+      picksChip.hidden = n < 1;
+      var active = picksMode === 'mine';
+      picksChip.setAttribute('aria-pressed', active ? 'true' : 'false');
+      picksChip.classList.toggle('active', active);
+    }
+
     pickToggles.forEach(function (btn) {
       btn.addEventListener('click', function () {
         togglePick(btn.getAttribute('data-pick-toggle'));
       });
     });
 
+    if (picksChip) {
+      picksChip.addEventListener('click', function () {
+        applyPicksTransition('toggleMine');
+        syncPicksChip();
+        apply();
+        // Turning My picks on scrolls to the first date section the filter
+        // left visible; turning it off keeps the reader's place.
+        if (picksMode === 'mine') {
+          var firstVisible = dateSections.filter(function (sec) { return sec.style.display !== 'none'; })[0];
+          if (firstVisible) firstVisible.scrollIntoView();
+        }
+      });
+    }
+
     // Single source of truth for applying a picks write, same pattern as
     // filter.insideT above: writers only call prefs.set/setOwnPicks.
     prefs.onChange(picksKey, function () {
       syncAllPickToggles();
       syncShareButton();
+      // Re-filter only when My picks is the active filter — un-starring the
+      // last pick while filtered must also turn the chip off (ownChanged).
+      var wasMine = picksMode === 'mine';
+      applyPicksTransition('ownChanged');
+      syncPicksChip();
+      if (wasMine) apply();
     });
 
     function shareDone() {
@@ -3368,7 +3503,10 @@ var JazzCore = (function () {
     function clearSharedState() {
       sharedIds = [];
       sharedMatched = [];
-      filters.onlyPicks = [];
+      // Dismiss must not turn off My picks (only a 'shared' filter drops) —
+      // see JazzCore.nextPicksFilter's 'dismiss' action.
+      applyPicksTransition('dismiss');
+      syncPicksChip();
       applySharedMarks();
       if (picksBanner) picksBanner.hidden = true;
       apply();
@@ -3389,11 +3527,14 @@ var JazzCore = (function () {
       if (picksAddAllBtn) picksAddAllBtn.hidden = summary.matched.length === 0;
       if (picksShowOnlyBtn) picksShowOnlyBtn.hidden = summary.matched.length === 0;
       // A second #picks= link arriving while "Show only these" is already on
-      // must re-filter to the NEW ids, not keep showing the first link's set
-      // (P4 review fix #2). With no matches it turns off instead: an empty
-      // page with its Show only button hidden would leave only Dismiss.
-      if (filters.onlyPicks.length > 0) {
-        filters.onlyPicks = summary.matched.length ? ids.slice() : [];
+      // (picksMode === 'shared') must re-filter to the NEW ids, not keep
+      // showing the first link's set (P4 review fix #2). With no matches
+      // sharedMatched is [], which JazzCore.nextPicksFilter reads as "off" —
+      // an empty page with its Show only button hidden would leave only
+      // Dismiss.
+      if (picksMode === 'shared') {
+        applyPicksTransition('showShared');
+        syncPicksChip();
         apply();
       }
     }
@@ -3411,7 +3552,8 @@ var JazzCore = (function () {
 
     if (picksShowOnlyBtn) {
       picksShowOnlyBtn.addEventListener('click', function () {
-        filters.onlyPicks = sharedIds.slice();
+        applyPicksTransition('showShared');
+        syncPicksChip();
         apply();
       });
     }
@@ -3451,6 +3593,7 @@ var JazzCore = (function () {
 
     syncAllPickToggles();
     syncShareButton();
+    syncPicksChip();
     handleIncomingPicksHash();
 
     syncInsideTChip();
@@ -3665,6 +3808,6 @@ var JazzCore = (function () {
 })();
 
 </script>
-    <script type="application/json" id="run-manifest">{"run_date": "2026-09-27", "duration_ms": 15, "total_events": 44, "sources": {"allaboutjazz": {"status": "error", "http_status": 403, "events": 0, "content_type": "no_results"}, "beehive": {"status": "ok", "http_status": 200, "events": 0, "content_type": "generic"}, "berklee": {"status": "ok", "http_status": 200, "events": 3, "content_type": "scheduled"}, "jazzboston": {"status": "ok", "http_status": 200, "events": 21, "content_type": "scheduled"}, "jimmys": {"status": "ok", "http_status": 200, "events": 10, "content_type": "scheduled"}, "regattabar": {"status": "ok", "http_status": 200, "events": 9, "content_type": "scheduled"}, "rockport": {"status": "ok", "http_status": 200, "events": 3, "content_type": "scheduled"}, "scullers": {"status": "ok", "http_status": 200, "events": 5, "content_type": "scheduled"}, "wallys": {"status": "ok", "http_status": 200, "events": 0, "content_type": "generic"}}}</script>
+    <script type="application/json" id="run-manifest">{"run_date": "2026-09-27", "duration_ms": 16, "total_events": 44, "sources": {"allaboutjazz": {"status": "error", "http_status": 403, "events": 0, "content_type": "no_results"}, "beehive": {"status": "ok", "http_status": 200, "events": 0, "content_type": "generic"}, "berklee": {"status": "ok", "http_status": 200, "events": 3, "content_type": "scheduled"}, "jazzboston": {"status": "ok", "http_status": 200, "events": 21, "content_type": "scheduled"}, "jimmys": {"status": "ok", "http_status": 200, "events": 10, "content_type": "scheduled"}, "regattabar": {"status": "ok", "http_status": 200, "events": 9, "content_type": "scheduled"}, "rockport": {"status": "ok", "http_status": 200, "events": 3, "content_type": "scheduled"}, "scullers": {"status": "ok", "http_status": 200, "events": 5, "content_type": "scheduled"}, "wallys": {"status": "ok", "http_status": 200, "events": 0, "content_type": "generic"}}}</script>
 </body>
 </html>
