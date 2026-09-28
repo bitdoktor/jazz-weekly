@@ -434,6 +434,9 @@
         .dropins a { color: var(--accent-blue); text-decoration: none; }
         .dropins a:hover { text-decoration: underline; }
         .dropins .venue-name { color: var(--accent-purple); font-weight: 600; }
+        /* P3: a venue's standing sessions, listed under its Drop-in Venues row. */
+        .dropin-session { display: inline-block; color: var(--text-secondary); margin-left: 0.4rem; }
+        .dropin-session::before { content: "— "; color: var(--text-muted); }
 
         .date-section { margin-bottom: 2.5rem; scroll-margin-top: 1rem; }
         .date-section.is-today > .date-header { background: var(--today-tint); border-radius: 6px 6px 0 0; padding: 0.5rem 0.75rem 0.5rem; margin-left: -0.75rem; margin-right: -0.75rem; }
@@ -611,6 +614,30 @@
         .search-link.youtube:hover { color: #ff0000; border-color: #ff0000; }
         .search-link.google:hover { color: #4285f4; border-color: #4285f4; }
 
+        /* --- Standing sessions (P3) — compact rows, not .event-cards (D7) --- */
+        .sessions-heading {
+            font-size: 0.75rem; font-weight: 600; color: var(--text-muted);
+            text-transform: uppercase; letter-spacing: 0.08em;
+            margin: 0.75rem 0 0.5rem;
+        }
+        ul.sessions { list-style: none; padding-left: 0; }
+        .session-row {
+            display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;
+            padding: 0.5rem 0.75rem; margin-bottom: 0.4rem;
+            background: var(--inset-card-bg); border: 1px dashed var(--border-subtle);
+            border-radius: 8px; font-size: 0.85rem; color: var(--text-secondary);
+        }
+        .session-row.is-past { opacity: 0.55; }
+        .session-time { color: var(--accent-gold); font-weight: 600; min-width: 4.5em; }
+        .session-name { color: var(--text-primary); font-weight: 600; }
+        .session-blurb { color: var(--text-secondary); }
+        .session-venue { color: var(--text-secondary); }
+        .session-city { color: var(--text-secondary); }
+        .session-cover { color: var(--text-muted); }
+        .session-maps { color: var(--accent-blue); text-decoration: none; margin-left: auto; }
+        .session-maps:hover { text-decoration: underline; }
+        .session-note { color: var(--text-muted); font-size: 0.75rem; font-style: italic; }
+
         footer {
             text-align: center; padding: 2.5rem 0;
             color: var(--text-muted);
@@ -707,6 +734,7 @@
             <a href="#oct-3" data-date="2026-10-03"><span class="cal-day">Sat</span><span class="cal-date">3</span></a>
             <a href="#oct-4" data-date="2026-10-04"><span class="cal-day">Sun</span><span class="cal-date">4</span></a>
             <a href="#oct-5" data-date="2026-10-05"><span class="cal-day">Mon</span><span class="cal-date">5</span></a>
+            <a href="#oct-6" data-date="2026-10-06"><span class="cal-day">Tue</span><span class="cal-date">6</span></a>
             <a href="#oct-7" data-date="2026-10-07"><span class="cal-day">Wed</span><span class="cal-date">7</span></a>
             <a href="#oct-8" data-date="2026-10-08"><span class="cal-day">Thu</span><span class="cal-date">8</span></a>
             <a href="#oct-9" data-date="2026-10-09"><span class="cal-day">Fri</span><span class="cal-date">9</span></a>
@@ -752,8 +780,8 @@
             <h2>Drop-in Venues</h2>
             <p class="tagline">These venues host live music nightly but publish no advance lineup — check their sites directly or just walk in.</p>
             <ul>
-                <li><span class="venue-name">The Beehive</span> · 541 Tremont St, Boston, MA 02116 · Wix platform. Nightly lineup usually not published in advance — surface in Drop-in Venues sidebar rather than dated calendar. <span class="t-pill orange">T Orange · Back Bay · 10 min</span> <a href="https://www.google.com/maps/dir/?api=1&amp;destination=541+Tremont+St+Boston+MA+02116&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a> · <a href="https://www.beehiveboston.com/calendar" target="_blank" rel="noopener">www.beehiveboston.com</a></li>
-<li><span class="venue-name">Wally&#x27;s Cafe</span> · 427 Massachusetts Ave, Boston, MA 02118 · Historic jazz club since 1947. Schedule page often thin — treat as a drop-in venue unless a dated lineup is returned. <span class="t-pill orange">T Orange · Massachusetts Avenue · 2 min</span> <a href="https://www.google.com/maps/dir/?api=1&amp;destination=427+Massachusetts+Ave+Boston+MA+02118&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a> · <a href="https://wallyscafe.com/live-music-schedule/" target="_blank" rel="noopener">wallyscafe.com</a></li>
+                <li><span class="venue-name">The Beehive</span> · 541 Tremont St, Boston, MA 02116 · <span class="t-pill orange">T Orange · Back Bay · 10 min</span> <a href="https://www.google.com/maps/dir/?api=1&amp;destination=541+Tremont+St+Boston+MA+02116&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a> · <a href="https://www.beehiveboston.com/calendar" target="_blank" rel="noopener">www.beehiveboston.com</a><span class="dropin-session">Live music weekend brunch: Saturdays &amp; Sundays · 10 AM · 7% entertainment fee</span><span class="dropin-session">Blues of Sunday: Bruce Bears &amp; Friends: Sundays · 7:30 PM · 7% entertainment fee</span></li>
+<li><span class="venue-name">Wally&#x27;s Cafe</span> · 427 Massachusetts Ave, Boston, MA 02118 · <span class="t-pill orange">T Orange · Massachusetts Avenue · 2 min</span> <a href="https://www.google.com/maps/dir/?api=1&amp;destination=427+Massachusetts+Ave+Boston+MA+02118&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a> · <a href="https://wallyscafe.com/live-music-schedule/" target="_blank" rel="noopener">wallyscafe.com</a><span class="dropin-session">Jam session: Tuesdays, Wednesdays, Thursdays, Fridays &amp; Saturdays · 7 PM</span></li>
             </ul>
         </section>
 
@@ -836,6 +864,10 @@
                     </div>
                 </div>
             </article>
+            <div class="sessions-block">
+            <h3 class="sessions-heading">Standing sessions</h3>
+            <ul class="sessions"><li class="session-row" data-date="2026-09-27" data-region="inner" data-genre="jazz" data-search="live music weekend brunch the beehive a live band plays through brunch, 10 am–2 pm. jazz boston"><span class="session-time">10 AM</span><span class="session-name">Live music weekend brunch</span><span class="session-blurb">A live band plays through brunch, 10 AM–2 PM.</span><span class="session-venue">The Beehive</span><span class="session-city">Boston</span><span class="session-cover">7% entertainment fee</span><span class="t-pill orange">T Orange · Back Bay · 10 min</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=541+Tremont+St+Boston+MA+02116&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a></li><li class="session-row" data-date="2026-09-27" data-region="outer" data-genre="jazz" data-search="sunday live jazz the bluebird bar live jazz over sunday brunch, 11 am–2 pm. jazz west newton"><span class="session-time">11 AM</span><span class="session-name">Sunday live jazz</span><span class="session-blurb">Live jazz over Sunday brunch, 11 AM–2 PM.</span><span class="session-venue">The Bluebird Bar</span><span class="session-city">West Newton</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=1293+Washington+St+West+Newton+MA+02465&amp;travelmode=driving" target="_blank" rel="noopener">Maps →</a></li><li class="session-row" data-date="2026-09-27" data-region="inner" data-genre="blues" data-search="blues of sunday: bruce bears &amp; friends the beehive pianist bruce bears leads the sunday-night blues residency. blues boston"><span class="session-time">7:30 PM</span><span class="session-name">Blues of Sunday: Bruce Bears &amp; Friends</span><span class="session-blurb">Pianist Bruce Bears leads the Sunday-night blues residency.</span><span class="session-venue">The Beehive</span><span class="session-city">Boston</span><span class="session-cover">7% entertainment fee</span><span class="t-pill orange">T Orange · Back Bay · 10 min</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=541+Tremont+St+Boston+MA+02116&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a></li></ul>
+            </div>
         </section>
         <section class="date-section" id="sep-28" data-date="2026-09-28">
             <div class="date-header">
@@ -877,6 +909,10 @@
                     </div>
                 </div>
             </article>
+            <div class="sessions-block">
+            <h3 class="sessions-heading">Standing sessions</h3>
+            <ul class="sessions"><li class="session-row" data-date="2026-09-28" data-region="outer" data-genre="jazz" data-search="monday live jazz the bluebird bar live jazz, 7–9 pm. jazz west newton"><span class="session-time">7 PM</span><span class="session-name">Monday live jazz</span><span class="session-blurb">Live jazz, 7–9 PM.</span><span class="session-venue">The Bluebird Bar</span><span class="session-city">West Newton</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=1293+Washington+St+West+Newton+MA+02465&amp;travelmode=driving" target="_blank" rel="noopener">Maps →</a></li><li class="session-row" data-date="2026-09-28" data-region="inner" data-genre="blues" data-search="the white owls sally o&#x27;brien&#x27;s a no-cover monday blues residency. blues somerville"><span class="session-time">7:30 PM</span><span class="session-name">The White Owls</span><span class="session-blurb">A no-cover Monday blues residency.</span><span class="session-venue">Sally O&#x27;Brien&#x27;s</span><span class="session-city">Somerville</span><span class="session-cover">No cover</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=335+Somerville+Ave+Somerville+MA+02143&amp;travelmode=driving" target="_blank" rel="noopener">Maps →</a></li><li class="session-row" data-date="2026-09-28" data-region="inner" data-genre="jazz" data-search="jerry bergonzi quartet the lilypad saxophonist jerry bergonzi&#x27;s standing monday quartet in inman square. jazz cambridge"><span class="session-time">8:30 PM</span><span class="session-name">Jerry Bergonzi Quartet</span><span class="session-blurb">Saxophonist Jerry Bergonzi&#x27;s standing Monday quartet in Inman Square.</span><span class="session-venue">The Lilypad</span><span class="session-city">Cambridge</span><span class="session-cover">$15, $10 students</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=1353+Cambridge+St+Cambridge+MA+02139&amp;travelmode=driving" target="_blank" rel="noopener">Maps →</a></li></ul>
+            </div>
         </section>
         <section class="date-section" id="sep-29" data-date="2026-09-29">
             <div class="date-header">
@@ -919,6 +955,10 @@
                     </div>
                 </div>
             </article>
+            <div class="sessions-block">
+            <h3 class="sessions-heading">Standing sessions</h3>
+            <ul class="sessions"><li class="session-row" data-date="2026-09-29" data-region="inner" data-genre="jazz" data-search="jam session wally&#x27;s cafe the early-evening jam, 7–9 pm, before the night&#x27;s booked band. jazz boston"><span class="session-time">7 PM</span><span class="session-name">Jam session</span><span class="session-blurb">The early-evening jam, 7–9 PM, before the night&#x27;s booked band.</span><span class="session-venue">Wally&#x27;s Cafe</span><span class="session-city">Boston</span><span class="t-pill orange">T Orange · Massachusetts Avenue · 2 min</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=427+Massachusetts+Ave+Boston+MA+02118&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a></li><li class="session-row" data-date="2026-09-29" data-region="inner" data-genre="jazz" data-search="the django cadre the burren gypsy jazz in the front room. jazz somerville"><span class="session-time">7 PM</span><span class="session-name">The Django Cadre</span><span class="session-blurb">Gypsy jazz in the Front Room.</span><span class="session-venue">The Burren</span><span class="session-city">Somerville</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=247+Elm+St+Somerville+MA+02144&amp;travelmode=driving" target="_blank" rel="noopener">Maps →</a></li><li class="session-row" data-date="2026-09-29" data-region="outer" data-genre="jazz" data-search="tuesday jazz duo the babe steve lacey (guitar) and pat dole (upright bass), 7–9 pm. jazz salem"><span class="session-time">7 PM</span><span class="session-name">Tuesday jazz duo</span><span class="session-blurb">Steve Lacey (guitar) and Pat Dole (upright bass), 7–9 PM.</span><span class="session-venue">The Babe</span><span class="session-city">Salem</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=268+Washington+St+Salem+MA+01970&amp;travelmode=driving" target="_blank" rel="noopener">Maps →</a></li></ul>
+            </div>
         </section>
         <section class="date-section" id="sep-30" data-date="2026-09-30">
             <div class="date-header">
@@ -960,6 +1000,10 @@
                     </div>
                 </div>
             </article>
+            <div class="sessions-block">
+            <h3 class="sessions-heading">Standing sessions</h3>
+            <ul class="sessions"><li class="session-row" data-date="2026-09-30" data-region="inner" data-genre="jazz" data-search="jam session wally&#x27;s cafe the early-evening jam, 7–9 pm, before the night&#x27;s booked band. jazz boston"><span class="session-time">7 PM</span><span class="session-name">Jam session</span><span class="session-blurb">The early-evening jam, 7–9 PM, before the night&#x27;s booked band.</span><span class="session-venue">Wally&#x27;s Cafe</span><span class="session-city">Boston</span><span class="t-pill orange">T Orange · Massachusetts Avenue · 2 min</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=427+Massachusetts+Ave+Boston+MA+02118&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a></li></ul>
+            </div>
         </section>
         <section class="date-section" id="oct-1" data-date="2026-10-01">
             <div class="date-header">
@@ -1174,6 +1218,10 @@
                     </div>
                 </div>
             </article>
+            <div class="sessions-block">
+            <h3 class="sessions-heading">Standing sessions</h3>
+            <ul class="sessions"><li class="session-row" data-date="2026-10-01" data-region="inner" data-genre="jazz" data-search="jam session wally&#x27;s cafe the early-evening jam, 7–9 pm, before the night&#x27;s booked band. jazz boston"><span class="session-time">7 PM</span><span class="session-name">Jam session</span><span class="session-blurb">The early-evening jam, 7–9 PM, before the night&#x27;s booked band.</span><span class="session-venue">Wally&#x27;s Cafe</span><span class="session-city">Boston</span><span class="t-pill orange">T Orange · Massachusetts Avenue · 2 min</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=427+Massachusetts+Ave+Boston+MA+02118&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a></li><li class="session-row" data-date="2026-10-01" data-region="inner" data-genre="jazz" data-search="jazz night aeronaut brewing company a different jazz trio most thursdays in the taproom. jazz somerville"><span class="session-time">7:30 PM</span><span class="session-name">Jazz Night</span><span class="session-blurb">A different jazz trio most Thursdays in the taproom.</span><span class="session-venue">Aeronaut Brewing Company</span><span class="session-city">Somerville</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=14+Tyler+St+Somerville+MA+02143&amp;travelmode=driving" target="_blank" rel="noopener">Maps →</a></li></ul>
+            </div>
         </section>
         <section class="date-section" id="oct-2" data-date="2026-10-02">
             <div class="date-header">
@@ -1319,6 +1367,10 @@
                     </div>
                 </div>
             </article>
+            <div class="sessions-block">
+            <h3 class="sessions-heading">Standing sessions</h3>
+            <ul class="sessions"><li class="session-row" data-date="2026-10-02" data-region="inner" data-genre="jazz" data-search="jam session wally&#x27;s cafe the early-evening jam, 7–9 pm, before the night&#x27;s booked band. jazz boston"><span class="session-time">7 PM</span><span class="session-name">Jam session</span><span class="session-blurb">The early-evening jam, 7–9 PM, before the night&#x27;s booked band.</span><span class="session-venue">Wally&#x27;s Cafe</span><span class="session-city">Boston</span><span class="t-pill orange">T Orange · Massachusetts Avenue · 2 min</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=427+Massachusetts+Ave+Boston+MA+02118&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a></li><li class="session-row" data-date="2026-10-02" data-region="inner" data-genre="jazz" data-search="after-hours jam with andy voelker the mad monkfish the andy voelker trio plays a set, then opens the stage to sitters-in. jazz cambridge"><span class="session-time">10 PM</span><span class="session-name">After-Hours Jam with Andy Voelker</span><span class="session-blurb">The Andy Voelker Trio plays a set, then opens the stage to sitters-in.</span><span class="session-venue">The Mad Monkfish</span><span class="session-city">Cambridge</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=524+Massachusetts+Ave+Cambridge+MA+02139&amp;travelmode=driving" target="_blank" rel="noopener">Maps →</a></li></ul>
+            </div>
         </section>
         <section class="date-section" id="oct-3" data-date="2026-10-03">
             <div class="date-header">
@@ -1558,6 +1610,10 @@
                     </div>
                 </div>
             </article>
+            <div class="sessions-block">
+            <h3 class="sessions-heading">Standing sessions</h3>
+            <ul class="sessions"><li class="session-row" data-date="2026-10-03" data-region="inner" data-genre="jazz" data-search="live music weekend brunch the beehive a live band plays through brunch, 10 am–2 pm. jazz boston"><span class="session-time">10 AM</span><span class="session-name">Live music weekend brunch</span><span class="session-blurb">A live band plays through brunch, 10 AM–2 PM.</span><span class="session-venue">The Beehive</span><span class="session-city">Boston</span><span class="session-cover">7% entertainment fee</span><span class="t-pill orange">T Orange · Back Bay · 10 min</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=541+Tremont+St+Boston+MA+02116&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a></li><li class="session-row" data-date="2026-10-03" data-region="inner" data-genre="jazz" data-search="jam session wally&#x27;s cafe the early-evening jam, 7–9 pm, before the night&#x27;s booked band. jazz boston"><span class="session-time">7 PM</span><span class="session-name">Jam session</span><span class="session-blurb">The early-evening jam, 7–9 PM, before the night&#x27;s booked band.</span><span class="session-venue">Wally&#x27;s Cafe</span><span class="session-city">Boston</span><span class="t-pill orange">T Orange · Massachusetts Avenue · 2 min</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=427+Massachusetts+Ave+Boston+MA+02118&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a></li></ul>
+            </div>
         </section>
         <section class="date-section" id="oct-4" data-date="2026-10-04">
             <div class="date-header">
@@ -1719,6 +1775,10 @@
                     </div>
                 </div>
             </article>
+            <div class="sessions-block">
+            <h3 class="sessions-heading">Standing sessions</h3>
+            <ul class="sessions"><li class="session-row" data-date="2026-10-04" data-region="inner" data-genre="jazz" data-search="live music weekend brunch the beehive a live band plays through brunch, 10 am–2 pm. jazz boston"><span class="session-time">10 AM</span><span class="session-name">Live music weekend brunch</span><span class="session-blurb">A live band plays through brunch, 10 AM–2 PM.</span><span class="session-venue">The Beehive</span><span class="session-city">Boston</span><span class="session-cover">7% entertainment fee</span><span class="t-pill orange">T Orange · Back Bay · 10 min</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=541+Tremont+St+Boston+MA+02116&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a></li><li class="session-row" data-date="2026-10-04" data-region="outer" data-genre="jazz" data-search="sunday live jazz the bluebird bar live jazz over sunday brunch, 11 am–2 pm. jazz west newton"><span class="session-time">11 AM</span><span class="session-name">Sunday live jazz</span><span class="session-blurb">Live jazz over Sunday brunch, 11 AM–2 PM.</span><span class="session-venue">The Bluebird Bar</span><span class="session-city">West Newton</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=1293+Washington+St+West+Newton+MA+02465&amp;travelmode=driving" target="_blank" rel="noopener">Maps →</a></li><li class="session-row" data-date="2026-10-04" data-region="inner" data-genre="blues" data-search="blues of sunday: bruce bears &amp; friends the beehive pianist bruce bears leads the sunday-night blues residency. blues boston"><span class="session-time">7:30 PM</span><span class="session-name">Blues of Sunday: Bruce Bears &amp; Friends</span><span class="session-blurb">Pianist Bruce Bears leads the Sunday-night blues residency.</span><span class="session-venue">The Beehive</span><span class="session-city">Boston</span><span class="session-cover">7% entertainment fee</span><span class="t-pill orange">T Orange · Back Bay · 10 min</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=541+Tremont+St+Boston+MA+02116&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a></li></ul>
+            </div>
         </section>
         <section class="date-section" id="oct-5" data-date="2026-10-05">
             <div class="date-header">
@@ -1751,6 +1811,21 @@
                     </div>
                 </div>
             </article>
+            <div class="sessions-block">
+            <h3 class="sessions-heading">Standing sessions</h3>
+            <ul class="sessions"><li class="session-row" data-date="2026-10-05" data-region="outer" data-genre="jazz" data-search="monday live jazz the bluebird bar live jazz, 7–9 pm. jazz west newton"><span class="session-time">7 PM</span><span class="session-name">Monday live jazz</span><span class="session-blurb">Live jazz, 7–9 PM.</span><span class="session-venue">The Bluebird Bar</span><span class="session-city">West Newton</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=1293+Washington+St+West+Newton+MA+02465&amp;travelmode=driving" target="_blank" rel="noopener">Maps →</a></li><li class="session-row" data-date="2026-10-05" data-region="inner" data-genre="blues" data-search="the white owls sally o&#x27;brien&#x27;s a no-cover monday blues residency. blues somerville"><span class="session-time">7:30 PM</span><span class="session-name">The White Owls</span><span class="session-blurb">A no-cover Monday blues residency.</span><span class="session-venue">Sally O&#x27;Brien&#x27;s</span><span class="session-city">Somerville</span><span class="session-cover">No cover</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=335+Somerville+Ave+Somerville+MA+02143&amp;travelmode=driving" target="_blank" rel="noopener">Maps →</a></li><li class="session-row" data-date="2026-10-05" data-region="inner" data-genre="jazz" data-search="jerry bergonzi quartet the lilypad saxophonist jerry bergonzi&#x27;s standing monday quartet in inman square. jazz cambridge"><span class="session-time">8:30 PM</span><span class="session-name">Jerry Bergonzi Quartet</span><span class="session-blurb">Saxophonist Jerry Bergonzi&#x27;s standing Monday quartet in Inman Square.</span><span class="session-venue">The Lilypad</span><span class="session-city">Cambridge</span><span class="session-cover">$15, $10 students</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=1353+Cambridge+St+Cambridge+MA+02139&amp;travelmode=driving" target="_blank" rel="noopener">Maps →</a></li></ul>
+            </div>
+        </section>
+        <section class="date-section" id="oct-6" data-date="2026-10-06">
+            <div class="date-header">
+                <span class="date-day">Tuesday</span>
+                <span class="date-full">October 6, 2026</span>
+                <span class="setlist-bar" title="0 events"><span></span><span></span><span></span><span></span><span></span><span></span></span>
+            </div>
+            <div class="sessions-block">
+            <h3 class="sessions-heading">Standing sessions</h3>
+            <ul class="sessions"><li class="session-row" data-date="2026-10-06" data-region="inner" data-genre="jazz" data-search="jam session wally&#x27;s cafe the early-evening jam, 7–9 pm, before the night&#x27;s booked band. jazz boston"><span class="session-time">7 PM</span><span class="session-name">Jam session</span><span class="session-blurb">The early-evening jam, 7–9 PM, before the night&#x27;s booked band.</span><span class="session-venue">Wally&#x27;s Cafe</span><span class="session-city">Boston</span><span class="t-pill orange">T Orange · Massachusetts Avenue · 2 min</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=427+Massachusetts+Ave+Boston+MA+02118&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a></li><li class="session-row" data-date="2026-10-06" data-region="inner" data-genre="jazz" data-search="the django cadre the burren gypsy jazz in the front room. jazz somerville"><span class="session-time">7 PM</span><span class="session-name">The Django Cadre</span><span class="session-blurb">Gypsy jazz in the Front Room.</span><span class="session-venue">The Burren</span><span class="session-city">Somerville</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=247+Elm+St+Somerville+MA+02144&amp;travelmode=driving" target="_blank" rel="noopener">Maps →</a></li><li class="session-row" data-date="2026-10-06" data-region="outer" data-genre="jazz" data-search="tuesday jazz duo the babe steve lacey (guitar) and pat dole (upright bass), 7–9 pm. jazz salem"><span class="session-time">7 PM</span><span class="session-name">Tuesday jazz duo</span><span class="session-blurb">Steve Lacey (guitar) and Pat Dole (upright bass), 7–9 PM.</span><span class="session-venue">The Babe</span><span class="session-city">Salem</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=268+Washington+St+Salem+MA+01970&amp;travelmode=driving" target="_blank" rel="noopener">Maps →</a></li></ul>
+            </div>
         </section>
         <section class="date-section" id="oct-7" data-date="2026-10-07">
             <div class="date-header">
@@ -1792,6 +1867,10 @@
                     </div>
                 </div>
             </article>
+            <div class="sessions-block">
+            <h3 class="sessions-heading">Standing sessions</h3>
+            <ul class="sessions"><li class="session-row" data-date="2026-10-07" data-region="inner" data-genre="jazz" data-search="jam session wally&#x27;s cafe the early-evening jam, 7–9 pm, before the night&#x27;s booked band. jazz boston"><span class="session-time">7 PM</span><span class="session-name">Jam session</span><span class="session-blurb">The early-evening jam, 7–9 PM, before the night&#x27;s booked band.</span><span class="session-venue">Wally&#x27;s Cafe</span><span class="session-city">Boston</span><span class="t-pill orange">T Orange · Massachusetts Avenue · 2 min</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=427+Massachusetts+Ave+Boston+MA+02118&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a></li></ul>
+            </div>
         </section>
         <section class="date-section" id="oct-8" data-date="2026-10-08">
             <div class="date-header">
@@ -1938,6 +2017,10 @@
                     </div>
                 </div>
             </article>
+            <div class="sessions-block">
+            <h3 class="sessions-heading">Standing sessions</h3>
+            <ul class="sessions"><li class="session-row" data-date="2026-10-08" data-region="inner" data-genre="jazz" data-search="jam session wally&#x27;s cafe the early-evening jam, 7–9 pm, before the night&#x27;s booked band. jazz boston"><span class="session-time">7 PM</span><span class="session-name">Jam session</span><span class="session-blurb">The early-evening jam, 7–9 PM, before the night&#x27;s booked band.</span><span class="session-venue">Wally&#x27;s Cafe</span><span class="session-city">Boston</span><span class="t-pill orange">T Orange · Massachusetts Avenue · 2 min</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=427+Massachusetts+Ave+Boston+MA+02118&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a></li><li class="session-row" data-date="2026-10-08" data-region="inner" data-genre="jazz" data-search="jazz night aeronaut brewing company a different jazz trio most thursdays in the taproom. jazz somerville"><span class="session-time">7:30 PM</span><span class="session-name">Jazz Night</span><span class="session-blurb">A different jazz trio most Thursdays in the taproom.</span><span class="session-venue">Aeronaut Brewing Company</span><span class="session-city">Somerville</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=14+Tyler+St+Somerville+MA+02143&amp;travelmode=driving" target="_blank" rel="noopener">Maps →</a></li></ul>
+            </div>
         </section>
         <section class="date-section" id="oct-9" data-date="2026-10-09">
             <div class="date-header">
@@ -2118,6 +2201,10 @@
                     </div>
                 </div>
             </article>
+            <div class="sessions-block">
+            <h3 class="sessions-heading">Standing sessions</h3>
+            <ul class="sessions"><li class="session-row" data-date="2026-10-09" data-region="inner" data-genre="jazz" data-search="jam session wally&#x27;s cafe the early-evening jam, 7–9 pm, before the night&#x27;s booked band. jazz boston"><span class="session-time">7 PM</span><span class="session-name">Jam session</span><span class="session-blurb">The early-evening jam, 7–9 PM, before the night&#x27;s booked band.</span><span class="session-venue">Wally&#x27;s Cafe</span><span class="session-city">Boston</span><span class="t-pill orange">T Orange · Massachusetts Avenue · 2 min</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=427+Massachusetts+Ave+Boston+MA+02118&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a></li><li class="session-row" data-date="2026-10-09" data-region="inner" data-genre="jazz" data-search="after-hours jam with andy voelker the mad monkfish the andy voelker trio plays a set, then opens the stage to sitters-in. jazz cambridge"><span class="session-time">10 PM</span><span class="session-name">After-Hours Jam with Andy Voelker</span><span class="session-blurb">The Andy Voelker Trio plays a set, then opens the stage to sitters-in.</span><span class="session-venue">The Mad Monkfish</span><span class="session-city">Cambridge</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=524+Massachusetts+Ave+Cambridge+MA+02139&amp;travelmode=driving" target="_blank" rel="noopener">Maps →</a></li></ul>
+            </div>
         </section>
         <section class="date-section" id="oct-10" data-date="2026-10-10">
             <div class="date-header">
@@ -2229,6 +2316,10 @@
                     </div>
                 </div>
             </article>
+            <div class="sessions-block">
+            <h3 class="sessions-heading">Standing sessions</h3>
+            <ul class="sessions"><li class="session-row" data-date="2026-10-10" data-region="inner" data-genre="jazz" data-search="live music weekend brunch the beehive a live band plays through brunch, 10 am–2 pm. jazz boston"><span class="session-time">10 AM</span><span class="session-name">Live music weekend brunch</span><span class="session-blurb">A live band plays through brunch, 10 AM–2 PM.</span><span class="session-venue">The Beehive</span><span class="session-city">Boston</span><span class="session-cover">7% entertainment fee</span><span class="t-pill orange">T Orange · Back Bay · 10 min</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=541+Tremont+St+Boston+MA+02116&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a></li><li class="session-row" data-date="2026-10-10" data-region="inner" data-genre="jazz" data-search="jam session wally&#x27;s cafe the early-evening jam, 7–9 pm, before the night&#x27;s booked band. jazz boston"><span class="session-time">7 PM</span><span class="session-name">Jam session</span><span class="session-blurb">The early-evening jam, 7–9 PM, before the night&#x27;s booked band.</span><span class="session-venue">Wally&#x27;s Cafe</span><span class="session-city">Boston</span><span class="t-pill orange">T Orange · Massachusetts Avenue · 2 min</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=427+Massachusetts+Ave+Boston+MA+02118&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a></li></ul>
+            </div>
         </section>
         <section class="date-section" id="oct-11" data-date="2026-10-11">
             <div class="date-header">
@@ -2330,10 +2421,14 @@
                     </div>
                 </div>
             </article>
+            <div class="sessions-block">
+            <h3 class="sessions-heading">Standing sessions</h3>
+            <ul class="sessions"><li class="session-row" data-date="2026-10-11" data-region="inner" data-genre="jazz" data-search="live music weekend brunch the beehive a live band plays through brunch, 10 am–2 pm. jazz boston"><span class="session-time">10 AM</span><span class="session-name">Live music weekend brunch</span><span class="session-blurb">A live band plays through brunch, 10 AM–2 PM.</span><span class="session-venue">The Beehive</span><span class="session-city">Boston</span><span class="session-cover">7% entertainment fee</span><span class="t-pill orange">T Orange · Back Bay · 10 min</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=541+Tremont+St+Boston+MA+02116&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a></li><li class="session-row" data-date="2026-10-11" data-region="outer" data-genre="jazz" data-search="sunday live jazz the bluebird bar live jazz over sunday brunch, 11 am–2 pm. jazz west newton"><span class="session-time">11 AM</span><span class="session-name">Sunday live jazz</span><span class="session-blurb">Live jazz over Sunday brunch, 11 AM–2 PM.</span><span class="session-venue">The Bluebird Bar</span><span class="session-city">West Newton</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=1293+Washington+St+West+Newton+MA+02465&amp;travelmode=driving" target="_blank" rel="noopener">Maps →</a></li><li class="session-row" data-date="2026-10-11" data-region="inner" data-genre="blues" data-search="blues of sunday: bruce bears &amp; friends the beehive pianist bruce bears leads the sunday-night blues residency. blues boston"><span class="session-time">7:30 PM</span><span class="session-name">Blues of Sunday: Bruce Bears &amp; Friends</span><span class="session-blurb">Pianist Bruce Bears leads the Sunday-night blues residency.</span><span class="session-venue">The Beehive</span><span class="session-city">Boston</span><span class="session-cover">7% entertainment fee</span><span class="t-pill orange">T Orange · Back Bay · 10 min</span><a class="session-maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=541+Tremont+St+Boston+MA+02116&amp;travelmode=transit" target="_blank" rel="noopener">Maps →</a></li></ul>
+            </div>
         </section>
 
         <footer>
-            <p class="footer-generated">Generated 2026-09-28 11:06 UTC via Jazz Weekly · 44 events</p>
+            <p class="footer-generated">Generated 2026-09-28 13:19 UTC via Jazz Weekly · 44 events</p>
             <div class="sources">
                 Sources: <a href="https://www.beehiveboston.com/calendar" target="_blank" rel="noopener">The Beehive</a> · <a href="https://www.berklee.edu/BPC" target="_blank" rel="noopener">Berklee Performance Center</a> · <a href="https://jazzboston.org/jazz-calendar/" target="_blank" rel="noopener">Jazz Boston Calendar</a> · <a href="https://jimmysoncongress.com/" target="_blank" rel="noopener">Jimmy&#x27;s Jazz &amp; Blues Club</a> · <a href="https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814" target="_blank" rel="noopener">Regattabar</a> · <a href="https://tickets.rockportmusic.org/events" target="_blank" rel="noopener">Rockport Music</a> · <a href="https://scullersjazz.com/upcoming-events/" target="_blank" rel="noopener">Scullers Jazz Club</a> · <a href="https://wallyscafe.com/live-music-schedule/" target="_blank" rel="noopener">Wally&#x27;s Cafe</a>
             </div>
@@ -2668,9 +2763,14 @@ var JazzCore = (function () {
     var emptyState = document.getElementById('filter-empty');
     var clearBtn = document.getElementById('clear-filters');
     var dateSections = Array.prototype.slice.call(document.querySelectorAll('.date-section'));
+    var sessionsBlocks = Array.prototype.slice.call(document.querySelectorAll('.sessions-block'));
     var calNav = document.querySelectorAll('.calendar-nav a');
 
-    var items = Array.prototype.slice.call(document.querySelectorAll('.event-card')).map(function (el) {
+    // .session-row (P3): standing-session <li>s are items for the same
+    // predicate (search/genre/Inside-the-T/hide-past), so they count toward
+    // "section has something visible" too. They carry no `id`, so `id: ''`
+    // — a session row is never the target of a #<card id> reveal link.
+    var items = Array.prototype.slice.call(document.querySelectorAll('.event-card, .session-row')).map(function (el) {
       return {
         el: el,
         id: el.id,
@@ -2711,6 +2811,17 @@ var JazzCore = (function () {
       var v = JazzCore.summarize(items, filters);
       items.forEach(function (item, i) {
         item.el.style.display = v.shown[i] ? '' : 'none';
+      });
+
+      // A sessions-block (the "Standing sessions" heading + its <ul>) hides
+      // as a unit when every .session-row inside it is hidden — an empty
+      // heading with no rows under it reads as a bug, not a filter result.
+      sessionsBlocks.forEach(function (block) {
+        var anyShown = Array.prototype.some.call(
+          block.querySelectorAll('.session-row'),
+          function (row) { return row.style.display !== 'none'; }
+        );
+        block.style.display = anyShown ? '' : 'none';
       });
 
       // Hide empty date-sections and collapse their nav chips.
@@ -3108,6 +3219,6 @@ var JazzCore = (function () {
 })();
 
 </script>
-    <script type="application/json" id="run-manifest">{"run_date": "2026-09-27", "duration_ms": 17, "total_events": 44, "sources": {"allaboutjazz": {"status": "error", "http_status": 403, "events": 0, "content_type": "no_results"}, "beehive": {"status": "ok", "http_status": 200, "events": 0, "content_type": "generic"}, "berklee": {"status": "ok", "http_status": 200, "events": 3, "content_type": "scheduled"}, "jazzboston": {"status": "ok", "http_status": 200, "events": 21, "content_type": "scheduled"}, "jimmys": {"status": "ok", "http_status": 200, "events": 10, "content_type": "scheduled"}, "regattabar": {"status": "ok", "http_status": 200, "events": 9, "content_type": "scheduled"}, "rockport": {"status": "ok", "http_status": 200, "events": 3, "content_type": "scheduled"}, "scullers": {"status": "ok", "http_status": 200, "events": 5, "content_type": "scheduled"}, "wallys": {"status": "ok", "http_status": 200, "events": 0, "content_type": "generic"}}}</script>
+    <script type="application/json" id="run-manifest">{"run_date": "2026-09-27", "duration_ms": 48, "total_events": 44, "sources": {"allaboutjazz": {"status": "error", "http_status": 403, "events": 0, "content_type": "no_results"}, "beehive": {"status": "ok", "http_status": 200, "events": 0, "content_type": "generic"}, "berklee": {"status": "ok", "http_status": 200, "events": 3, "content_type": "scheduled"}, "jazzboston": {"status": "ok", "http_status": 200, "events": 21, "content_type": "scheduled"}, "jimmys": {"status": "ok", "http_status": 200, "events": 10, "content_type": "scheduled"}, "regattabar": {"status": "ok", "http_status": 200, "events": 9, "content_type": "scheduled"}, "rockport": {"status": "ok", "http_status": 200, "events": 3, "content_type": "scheduled"}, "scullers": {"status": "ok", "http_status": 200, "events": 5, "content_type": "scheduled"}, "wallys": {"status": "ok", "http_status": 200, "events": 0, "content_type": "generic"}}}</script>
 </body>
 </html>
