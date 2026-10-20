@@ -6,925 +6,22 @@ METHOD:PUBLISH
 X-WR-CALNAME:Boston Jazz Weekly
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
-UID:e-2026-09-28-local-artist-series-darrell-nulisch-band-7aac2d56@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20260928T230000Z
-DTEND:20260929T010000Z
-SUMMARY:Darrell Nulisch Band at Jimmy's Jazz & Blues Club
-LOCATION:135 Congress St\, Portsmouth\, NH 03801
-DESCRIPTION:Blues and soul singer/harmonica player Darrell Nulisch\, a foun
- ding member of Anson Funderburgh's Rockets and longtime Ronnie Earl & the 
- Broadcasters collaborator who later toured and recorded with James Cotton\
- ; a two-time Grammy nominee recording for Severn Records. Tickets: https:/
- /jimmysoncongress.com/event/local-artist-series-darrell-nulisch-band/
-CATEGORIES:blues
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-09-29-jean-luc-ponty-legacy-concert-374e00d4@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20260930T000000Z
-DTEND:20260930T020000Z
-SUMMARY:Jean-Luc Ponty Legacy Concert at Berklee Performance Center
-LOCATION:136 Massachusetts Ave\, Boston\, MA 02115
-DESCRIPTION:Pioneering French jazz-violin virtuoso and jazz-fusion trailbla
- zer (Frank Zappa and Mahavishnu Orchestra collaborator) with a 1980 Grammy
-  nomination and a run of top-ten albums on Atlantic/Warner Bros. This Berk
- lee Performance Center event is a legacy tribute marking his 84th birthday
- \, performed by Berklee faculty\, alumni\, and students plus special guest
-  violinist Mads Tolling\, not a Ponty solo date. Tickets: https://www.etix
- .com/ticket/p/49498736/
-CATEGORIES:fusion
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-09-30-monophonics-with-special-guest-taylor-williams-bbb6880d@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20260930T233000Z
-DTEND:20261001T013000Z
-SUMMARY:Monophonics at Jimmy's Jazz & Blues Club
-LOCATION:135 Congress St\, Portsmouth\, NH 03801
-DESCRIPTION:San Francisco Bay Area psychedelic soul-funk sextet led by voca
- list/keyboardist Kelly Finnigan\, active since 2007. Recording artist for 
- Colemine Records\, home to fellow retro-soul acts Durand Jones & The Indic
- ations and Delvon Lamarr Organ Trio. Tickets: https://jimmysoncongress.com
- /event/monophonics/
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-01-claudio-ragazzi-triptico-4d060750@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261001T220000Z
-DTEND:20261002T000000Z
-SUMMARY:Claudio Ragazzi & Triptico at Long Live Roxbury
-LOCATION:Long Live Roxbury\, Boston
-DESCRIPTION:Grammy- and Emmy-winning guitarist and film composer\, Berklee 
- College of Music faculty member who has shared stages with Gary Burton\, B
- ranford Marsalis and Paquito D'Rivera\; leads Tríptico\, an acoustic Lati
- n jazz trio with guitarist Georgie Rodriguez and vocalist/percussionist Ma
- nolo Mairena. Tickets: https://jazzboston.org/jazz-calendar?feldman-geospa
- tial-presents-claudio-ragazzi-triptico&event_id=430789&fid=1
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-01-theo-croker-0de927a7@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261001T230000Z
-DTEND:20261002T010000Z
-SUMMARY:Theo Croker at Regattabar
-LOCATION:1 Bennett St\, Cambridge\, MA 02138
-DESCRIPTION:Grammy-nominated jazz trumpeter\, composer\, and producer (gran
- dson of Doc Cheatham) whose genre-defying\, Afrofuturist albums have featu
- red Wyclef Jean\, Gary Bartz\, and Dee Dee Bridgewater. Released via Sony 
- Masterworks/OKeh and DDB Records. Tickets: https://www.ticketweb.com/event
- /theo-croker-regattabar-tickets/14922773
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-01-anna-webber-s-shimmer-wince-ea61e3e2@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261001T233000Z
-DTEND:20261002T013000Z
-SUMMARY:Anna Webber's Shimmer Wince at Peabody Hall at All Saints Church
-LOCATION:Peabody Hall at All Saints Church\, Boston
-DESCRIPTION:Avant-garde jazz quintet led by saxophonist/flutist/composer An
- na Webber\, a 2018 Guggenheim Fellow whose recordings appear on Pi Recordi
- ngs. Shimmer Wince features Adam O'Farrill\, Mariel Roberts\, and Elias St
- emeseder. Tickets: https://jazzboston.org/jazz-calendar?anna-webber-s-shim
- mer-wince&event_id=431309&fid=1
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-01-james-montgomery-band-554b09ed@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261001T233000Z
-DTEND:20261002T013000Z
-SUMMARY:James Montgomery Band at Jimmy's Jazz & Blues Club
-LOCATION:135 Congress St\, Portsmouth\, NH 03801
-DESCRIPTION:Detroit-born\, Boston-based blues harmonica player and bandlead
- er who formed the James Montgomery Band in 1970 while at Boston University
- . Signed to Capricorn Records ("First Time Out"\, 1973) and later Island R
- ecords (self-titled\, 1976\, produced by Allen Toussaint)\; has toured wit
- h the Blues Brothers\, Johnny Winter\, and Commander Cody. Tickets: https:
- //jimmysoncongress.com/event/james-montgomery-band/
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-01-mononeon-micro-southern-soul-99726050@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261001T233000Z
-DTEND:20261002T013000Z
-SUMMARY:MonoNeon: Micro-Southern Soul at Berklee Performance Center
-LOCATION:136 Massachusetts Ave\, Boston\, MA 02115
-DESCRIPTION:Memphis bassist\, producer\, and composer Dywane Thomas Jr. (Mo
- noNeon)\, known for microtonal\, left-handed upside-down bass technique bl
- ending funk\, soul\, and jazz. He won a 2021 Grammy Award (Album of the Ye
- ar\, as a contributing musician on Nas's "King's Disease") and has further
-  Grammy nominations for work with Jacob Collier\, Cory Henry\, and Eric Ga
- les\, plus past collaborations with Prince\, Ne-Yo\, and Mavis Staples. Ti
- ckets: https://www.etix.com/ticket/p/75817235/
-CATEGORIES:funk
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-01-ruthie-foster-0d28a1aa@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261001T233000Z
-DTEND:20261002T013000Z
-SUMMARY:Ruthie Foster at Rockport Music
-LOCATION:37 Main St\, Rockport\, MA 01966
-DESCRIPTION:Texas-based blues\, gospel\, and soul singer-songwriter with a 
- voice compared to Aretha Franklin and Ella Fitzgerald. Grammy winner and r
- epeat Blues Music Award champion drawing on gospel\, blues\, folk\, and ja
- zz traditions. Tickets: https://tickets.rockportmusic.org/events
-CATEGORIES:blues
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-02-eli-paperboy-reed-ebb72a6f@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261002T230000Z
-DTEND:20261003T010000Z
-SUMMARY:Eli Paperboy Reed at Regattabar
-LOCATION:1 Bennett St\, Cambridge\, MA 02138
-DESCRIPTION:Boston-born soul-blues revivalist blending gritty Southern funk
-  with Chicago blues. Recorded for Capitol Records and Warner Bros. Records
-  before a long run with Yep Roc Records. Tickets: https://www.ticketweb.co
- m/event/eli-paperboy-reed-regattabar-tickets/14215844
-CATEGORIES:blues
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-02-selwyn-birchwood-band-live-6c9398c3@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261002T230000Z
-DTEND:20261003T010000Z
-SUMMARY:Selwyn Birchwood Band at The Fallout Shelter
-LOCATION:The Fallout Shelter\, Norwood
-DESCRIPTION:Tampa-based blues guitarist and vocalist signed to Alligator Re
- cords\, known for his self-styled "Electric Swamp Funkin' Blues" mixing de
- ep blues\, psychedelic rock\, funk\, and Southern soul. His 2014 Alligator
-  debut\, Don't Call No Ambulance\, won the Blues Music Award for Best New 
- Artist Debut. Tickets: https://jazzboston.org/jazz-calendar?selwyn-birchwo
- od-band-live&event_id=428666&fid=1
-CATEGORIES:blues
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-02-yoko-miwa-trio-with-special-guest-mikayla-shirley-ad4e480c@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261002T230000Z
-DTEND:20261003T010000Z
-SUMMARY:Yoko Miwa Trio at Scullers Jazz Club
-LOCATION:400 Soldiers Field Rd\, Boston\, MA 02134
-DESCRIPTION:Boston-based\, Kobe-born jazz pianist and Berklee faculty membe
- r leading her trio since the early 2000s\, with albums on independent labe
- ls\; named Boston Music Awards Jazz Artist of the Year in 2019. Tickets: h
- ttps://www.ticketweb.com/event/yoko-miwa-trio-featuring-mikayla-scullers-j
- azz-club-tickets/14232084
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-02-ruthie-foster-1253a515@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261002T233000Z
-DTEND:20261003T013000Z
-SUMMARY:Ruthie Foster at Jimmy's Jazz & Blues Club
-LOCATION:135 Congress St\, Portsmouth\, NH 03801
-DESCRIPTION:Texas-based blues\, gospel\, and soul singer-songwriter with a 
- voice compared to Aretha Franklin and Ella Fitzgerald. Grammy winner and r
- epeat Blues Music Award champion drawing on gospel\, blues\, folk\, and ja
- zz traditions. Tickets: https://jimmysoncongress.com/event/ruthie-foster/
-CATEGORIES:blues
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-03-jonathan-gramling-friends-051bfebe@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261003T190000Z
-DTEND:20261003T210000Z
-SUMMARY:Jonathan Gramling & Friends at Twelfth Batist Church
-LOCATION:Twelfth Batist Church\, Boston
-DESCRIPTION:Philadelphia-born\, Boston-based soul/gospel/reggae vocalist\; 
- co-founder of the Afropolitan band Soulfège and a featured soloist with M
- ystic Chorale. Has collaborated with Grammy-winning dancehall artist Bount
- y Killer but holds no personal major-label or award credentials. Tickets: 
- https://jazzboston.org/jazz-calendar?jonathan-gramling-friends&event_id=42
- 7167&fid=1
-CATEGORIES:vocal jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-03-michael-mayo-fad6936f@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261003T230000Z
-DTEND:20261004T010000Z
-SUMMARY:Michael Mayo at Regattabar
-LOCATION:1 Bennett St\, Cambridge\, MA 02138
-DESCRIPTION:Los Angeles-born jazz vocalist and composer\, New England Conse
- rvatory graduate and Thelonious Monk Institute alum\, whose sophomore albu
- m 'Fly' (2024) earned two 2026 Grammy nominations. Has toured with Herbie 
- Hancock\, Jacob Collier\, and Josh Groban. Tickets: https://www.ticketweb.
- com/event/michael-mayo-regattabar-tickets/14171014
-CATEGORIES:vocal jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-03-peter-white-1900-7b635b19@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261003T230000Z
-DTEND:20261004T010000Z
-SUMMARY:Peter White at Scullers Jazz Club
-LOCATION:400 Soldiers Field Rd\, Boston\, MA 02134
-DESCRIPTION:British-born smooth-jazz guitarist regarded as the genre's gold
- -standard six-string voice\, with a string of Top Ten Billboard Jazz Album
- s since the late 1990s. Began as a member of Al Stewart's band before laun
- ching a prolific solo career. Tickets: https://www.ticketweb.com/search?q=
- PETER+WHITE+SCULLERS
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-03-makanda-project-featuring-ricky-ford-db37062d@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261003T230000Z
-DTEND:20261004T010000Z
-SUMMARY:The Makanda Project at Twelfth Baptist Church
-LOCATION:Twelfth Baptist Church\, Boston
-DESCRIPTION:Boston-based 13-piece jazz ensemble\, formed in 2005 by pianist
-  John Kordalewski\, dedicated to performing the roughly 350 unrecorded com
- positions of the late Boston jazz composer Makanda Ken McIntyre. Tickets: 
- https://jazzboston.org/jazz-calendar?the-makanda-project-featuring-ricky-f
- ord&event_id=431484&fid=1
-CATEGORIES:big band
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-03-rangemasters-live-bc147b9f@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261003T230000Z
-DTEND:20261004T010000Z
-SUMMARY:The Rangemasters at The Fallout Shelter
-LOCATION:The Fallout Shelter\, Norwood
-DESCRIPTION:Boston-area electric rhythm-and-blues quartet of veteran sessio
- n and touring musicians (Cliff Goodwin\, Mike Lynch\, Jeremy Moses Curtis\
- , Duncan Arsenault) known for raw\, in-the-moment live shows with no backi
- ng tracks. Tickets: https://jazzboston.org/jazz-calendar?the-rangemasters-
- live&event_id=428675&fid=1
-CATEGORIES:blues
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-03-fat-city-band-4bde0647@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261004T000000Z
-DTEND:20261004T020000Z
-SUMMARY:The Fat City Band at Spire Center for the Performing Arts
-LOCATION:Spire Center for the Performing Arts\, Plymouth
-DESCRIPTION:Boston-based seven-piece jump blues\, swing\, and New Orleans-f
- lavored soul/funk band founded by harmonica player Paul Redmond\, active f
- or nearly 50 years. Longtime Hatch Shell 4th of July fixture and former 23
- -year host of one of Boston's premier New Year's Eve celebrations\; has sh
- ared stages with B.B. King and Ray Charles. Tickets: https://jazzboston.or
- g/jazz-calendar?the-fat-city-band&event_id=425244&fid=1
-CATEGORIES:funk
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-03-peter-white-2100-48cb8fd7@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261004T010000Z
-DTEND:20261004T030000Z
-SUMMARY:Peter White at Scullers Jazz Club
-LOCATION:400 Soldiers Field Rd\, Boston\, MA 02134
-DESCRIPTION:British-born smooth-jazz guitarist regarded as the genre's gold
- -standard six-string voice\, with a string of Top Ten Billboard Jazz Album
- s since the late 1990s. Began as a member of Al Stewart's band before laun
- ching a prolific solo career. Tickets: https://www.ticketweb.com/search?q=
- PETER+WHITE+SCULLERS
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-04-jimmys-jazz-brunch-lenny-bradford-trio-185633dc@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261004T140000Z
-DTEND:20261004T160000Z
-SUMMARY:Lenny Bradford Trio at Jimmy's Jazz & Blues Club
-LOCATION:135 Congress St\, Portsmouth\, NH 03801
-DESCRIPTION:Boston-area soulful-swing/blues trio led by Berklee-trained bas
- sist Lenny "LB" Bradford of Manchester\, NH\, whose members' sideman credi
- ts include Bo Diddley\, Commander Cody\, Joe Louis Walker\, Edgar Winter\,
-  and James Montgomery. Holds a weekly residency at Boston's Liberty Hotel 
- and plays Jimmy's Sunday jazz brunch. Tickets: https://jimmysoncongress.co
- m/event/jimmys-jazz-brunch-lenny-bradford-trio/
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-04-john-pizzarelli-presents-dear-mr-bennett-1600-4d81a63c@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261004T200000Z
-DTEND:20261004T220000Z
-SUMMARY:John Pizzarelli at Regattabar
-LOCATION:1 Bennett St\, Cambridge\, MA 02138
-DESCRIPTION:Veteran jazz guitarist and vocalist\, son of guitarist Bucky Pi
- zzarelli\, with a 2021 Grammy win as co-producer of James Taylor's "Americ
- an Standard" and multiple prior Grammy nominations. Longtime Concord/Telar
- c recording artist\; "Dear Mr. Bennett" is his touring Tony Bennett tribut
- e program. Tickets: https://www.ticketweb.com/event/john-pizzarelli-presen
- ts-dear-mr-regattabar-tickets/14957233
-CATEGORIES:vocal jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-04-john-pizzarelli-presents-dear-mr-bennett-1800-80c40960@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261004T220000Z
-DTEND:20261005T000000Z
-SUMMARY:John Pizzarelli at Regattabar
-LOCATION:1 Bennett St\, Cambridge\, MA 02138
-DESCRIPTION:Veteran jazz guitarist and vocalist\, son of guitarist Bucky Pi
- zzarelli\, with a 2021 Grammy win as co-producer of James Taylor's "Americ
- an Standard" and multiple prior Grammy nominations. Longtime Concord/Telar
- c recording artist\; "Dear Mr. Bennett" is his touring Tony Bennett tribut
- e program. Tickets: https://www.ticketweb.com/event/john-pizzarelli-presen
- ts-dear-mr-regattabar-tickets/14957243
-CATEGORIES:vocal jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-04-soul-rebels-c4759193@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261004T233000Z
-DTEND:20261005T013000Z
-SUMMARY:The Soul Rebels at Jimmy's Jazz & Blues Club
-LOCATION:135 Congress St\, Portsmouth\, NH 03801
-DESCRIPTION:Eight-piece New Orleans brass band\, formed in 1991\, blending 
- soul\, jazz\, funk\, hip-hop and rock within the traditional brass band fr
- amework. They've released albums on Rounder Records and collaborated with 
- Metallica\, Nas\, Katy Perry\, and Robert Glasper\, with appearances on NP
- R Tiny Desk and The Late Show. Tickets: https://jimmysoncongress.com/event
- /the-soul-rebels/
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-05-local-artist-series-freight-train-band-e3ce8730@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261005T230000Z
-DTEND:20261006T010000Z
-SUMMARY:Freight Train Band at Jimmy's Jazz & Blues Club
-LOCATION:135 Congress St\, Portsmouth\, NH 03801
-DESCRIPTION:Seven-piece NH Seacoast/southern Maine dance and cover band pla
- ying classic rock\, pop\, and blues\; a long-running regional act known fo
- r high-energy sets at festivals and clubs across Northern New England. Tic
- kets: https://jimmysoncongress.com/event/local-artist-series-freight-train
- -band/
-CATEGORIES:blues
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-07-carolyn-wonderland-924e22b8@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261007T233000Z
-DTEND:20261008T013000Z
-SUMMARY:Carolyn Wonderland at Jimmy's Jazz & Blues Club
-LOCATION:135 Congress St\, Portsmouth\, NH 03801
-DESCRIPTION:Texas blues guitarist and singer\, the first female guitar hero
-  in Alligator Records' 50-year history. Served as lead guitarist for John 
- Mayall's Bluesbreakers (2018-2020) and has earned three Blues Music Award 
- nominations. Tickets: https://jimmysoncongress.com/event/carolyn-wonderlan
- d/
-CATEGORIES:blues
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-07-confluencia-mariachi-tropical-big-band-ca62bb66@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261008T000000Z
-DTEND:20261008T020000Z
-SUMMARY:Confluencia: Mariachi Tropical Big Band at Berklee Performance Cent
- er
-LOCATION:136 Massachusetts Ave\, Boston\, MA 02115
-DESCRIPTION:Confluencia: Mariachi Tropical Big Band is a Latin/mariachi big
- -band ensemble\; no independent biography\, press coverage\, or discograph
- y was found in this research pass\, suggesting a locally or regionally act
- ive group. Tickets: https://www.etix.com/ticket/p/45429886/
-CATEGORIES:latin
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-08-dan-moretti-brazilia-7f24a4a9@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261008T220000Z
-DTEND:20261009T000000Z
-SUMMARY:Dan Moretti & Brazilia at Long Live Roxbury
-LOCATION:Long Live Roxbury\, Boston
-DESCRIPTION:Boston-area saxophonist\, composer\, and longtime Berklee Colle
- ge of Music affiliate who leads the Latin-jazz ensemble Brazilia\; recent 
- release 'Brazilia Live' charted on regional jazz radio. Holds regional hon
- ors including a Rhode Island Governor's Award and a Berklee Curriculum Awa
- rd. Tickets: https://jazzboston.org/jazz-calendar?feldman-geospatial-prese
- nts-dan-moretti-brazilia&event_id=431138&fid=1
-CATEGORIES:latin
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-08-kevin-hays-awakening-quartet-featuring-brian-blade-immanuel-wilkins-and-matt-brewer-1900-70cebfbe@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261008T230000Z
-DTEND:20261009T010000Z
-SUMMARY:Kevin Hays Awakening Quartet at Regattabar
-LOCATION:1 Bennett St\, Cambridge\, MA 02138
-DESCRIPTION:Pianist Kevin Hays leads an all-star quartet featuring four-tim
- e Grammy-winning drummer Brian Blade\, Grammy-nominated Blue Note alto sax
- ophonist Immanuel Wilkins\, and bassist Matt Brewer\, performing at Regatt
- abar in Cambridge. Tickets: https://www.ticketweb.com/event/kevin-hays-awa
- kening-quartet-featuring-regattabar-tickets/14264324
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-08-strictly-sinatra-with-michael-dutra-c60352f1@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261008T230000Z
-DTEND:20261009T010000Z
-SUMMARY:Strictly Sinatra with Michael Dutra at Rockport Music
-LOCATION:37 Main St\, Rockport\, MA 01966
-DESCRIPTION:Rhode Island-based vocalist who has toured his "Strictly Sinatr
- a" tribute show nationally since 2002\, performing with a 9-piece big band
-  ensemble at supper clubs\, PACs\, and venues from Las Vegas to Boston. Ti
- ckets: https://tickets.rockportmusic.org/events
-CATEGORIES:vocal jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-08-kevin-hays-awakening-quartet-featuring-brian-blade-immanuel-wilkins-and-matt-brewer-2130-a468a646@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261009T013000Z
-DTEND:20261009T033000Z
-SUMMARY:Kevin Hays Awakening Quartet at Regattabar
-LOCATION:1 Bennett St\, Cambridge\, MA 02138
-DESCRIPTION:Pianist Kevin Hays leads an all-star quartet featuring four-tim
- e Grammy-winning drummer Brian Blade\, Grammy-nominated Blue Note alto sax
- ophonist Immanuel Wilkins\, and bassist Matt Brewer\, performing at Regatt
- abar in Cambridge. Tickets: https://www.ticketweb.com/event/kevin-hays-awa
- kening-quartet-featuring-regattabar-tickets/14287634
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-09-alison-brown-05ef8b93@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261009T230000Z
-DTEND:20261010T010000Z
-SUMMARY:Alison Brown at Regattabar
-LOCATION:1 Bennett St\, Cambridge\, MA 02138
-DESCRIPTION:Grammy-winning banjo virtuoso who blends bluegrass with jazz\, 
- Latin\, and Celtic influences. Co-founder of Compass Records and the only 
- woman inducted into the American Banjo Hall of Fame. Tickets: https://www.
- ticketweb.com/event/alison-brown-regattabar-tickets/14204234
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-09-myanna-and-friends-2ce645a2@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261009T230000Z
-DTEND:20261010T010000Z
-SUMMARY:Myanna and Friends at Scullers Jazz Club
-LOCATION:400 Soldiers Field Rd\, Boston\, MA 02134
-DESCRIPTION:Massachusetts-based saxophonist blending jazz improvisation wit
- h funky\, soulful grooves. Berklee-trained (studied with Joe Viola) and a 
- multiple-time Boston Music Award winner for Best Jazz Artist\, recording s
- ince her self-titled 1992 debut. Tickets: https://www.ticketweb.com/event/
- myanna-and-friends-scullers-jazz-club-tickets/14268684
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-09-claudettes-live-bc3c6942@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261009T230000Z
-DTEND:20261010T010000Z
-SUMMARY:The Claudettes at The Fallout Shelter
-LOCATION:The Fallout Shelter\, Norwood
-DESCRIPTION:Chicago blues/rock/pop group formed in 2010 and led by pianist-
- songwriter Johnny Iguana\, known for a punk-inflected 'garage cabaret' sou
- nd. Recorded for Yellow Dog Records and Forty Below Records. Tickets: http
- s://jazzboston.org/jazz-calendar?the-claudettes-live&event_id=428678&fid=1
-CATEGORIES:blues
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-09-wish-benefit-tour-2026-with-oteil-burbridge-lamp-1646cf62@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261009T230000Z
-DTEND:20261010T010000Z
-SUMMARY:Wish Benefit Tour 2026 with Oteil Burbridge & LaMP at Somerville Th
- eater
-LOCATION:Somerville Theater\, Somerville
-DESCRIPTION:Benefit tour headlined by bassist Oteil Burbridge\, longtime Al
- lman Brothers Band member (1997-2014) and founding member of Dead & Compan
- y\, with support from instrumental jam/funk trio LaMP. Burbridge received 
- a Grammy Lifetime Achievement Award with the Allman Brothers Band in 2012 
- and two prior Grammy nominations. Tickets: https://jazzboston.org/jazz-cal
- endar?wish-benefit-tour-2026-with-oteil-burbridge-lamp&event_id=429830&fid
- =1
-CATEGORIES:fusion
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-09-stacey-kent-f87ebeb7@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261009T233000Z
-DTEND:20261010T013000Z
-SUMMARY:Stacey Kent at Rockport Music
-LOCATION:37 Main St\, Rockport\, MA 01966
-DESCRIPTION:American-born\, UK-based jazz vocalist whose 2007 Blue Note deb
- ut Breakfast on the Morning Tram\, featuring lyrics by novelist Kazuo Ishi
- guro\, earned a Grammy nomination for Best Jazz Vocal Album. Album sales i
- n the millions and multilingual recordings have made her a leading figure 
- in contemporary vocal jazz across more than 50 countries. Tickets: https:/
- /tickets.rockportmusic.org/events
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-09-soggy-po-boys-w-special-guests-the-a-beez-1588158f@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261010T000000Z
-DTEND:20261010T020000Z
-SUMMARY:Soggy Po Boys w/ Special Guests The A-Beez at Lizard Lounge
-LOCATION:Lizard Lounge\, Cambridge
-DESCRIPTION:Eight-piece New England ensemble formed in 2012\, originally fo
- r a Fat Tuesday celebration\, playing New Orleans-style jazz\, brass-band\
- , funk\, and soul. Now a regional touring act across the Northeast\, prais
- ed by London Jazz News for its accessible take on New Orleans jazz\; speci
- al guests The A-Beez have no independent bio coverage found. Tickets: http
- s://jazzboston.org/jazz-calendar?soggy-po-boys-w-special-guests-the-a-beez
- &event_id=429833&fid=1
-CATEGORIES:funk
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-10-smooth-jazz-saxophonist-patrick-lamb-on-sale-now-ec221e22@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261010T230000Z
-DTEND:20261011T010000Z
-SUMMARY:Patrick Lamb at Scullers Jazz Club
-LOCATION:400 Soldiers Field Rd\, Boston\, MA 02134
-DESCRIPTION:Portland-based smooth jazz saxophonist and vocalist who fronts 
- his own band as both horn player and lead singer. He toured for years with
-  Diane Schuur\, Bobby Caldwell\, and Gino Vannelli before launching a solo
-  career with five Billboard Smooth Jazz chart singles. Tickets: https://ww
- w.ticketweb.com/event/patrick-lamb-scullers-jazz-club-tickets/14958203
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-10-rob-flax-s-boom-chick-trio-b609fc81@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261010T233000Z
-DTEND:20261011T013000Z
-SUMMARY:Rob Flax's Boom Chick Trio at Old Sloop Presents
-LOCATION:Old Sloop Presents\, Rockport
-DESCRIPTION:Rob Flax is a Boston-area multi-instrumentalist\, composer\, an
- d educator (New England Conservatory\, M.M. in Contemporary Improvisation)
-  who plays acoustic and electric violin\; has performed with Trans-Siberia
- n Orchestra and Jacob Collier. The Boom Chick Trio is his own working grou
- p\; no independently verifiable awards or major-label credential were foun
- d. Tickets: https://jazzboston.org/jazz-calendar?rob-flax-s-boom-chick-tri
- o&event_id=431793&fid=1
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-10-lizz-wright-287c3b0c@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261011T000000Z
-DTEND:20261011T020000Z
-SUMMARY:Lizz Wright at Berklee Performance Center
-LOCATION:136 Massachusetts Ave\, Boston\, MA 02115
-DESCRIPTION:Jazz\, gospel\, and soul vocalist who broke through with her 20
- 03 Verve debut Salt\; her 2015 Concord album Freedom & Surrender earned a 
- Grammy nomination for Best Jazz Vocal Album. She now records for her own B
- lues & Greens Records. Tickets: https://www.etix.com/ticket/p/71533914/
-CATEGORIES:vocal jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-11-jimmys-jazz-brunch-steve-lacey-trio-a88aa22d@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261011T140000Z
-DTEND:20261011T160000Z
-SUMMARY:Steve Lacey Trio at Jimmy's Jazz & Blues Club
-LOCATION:135 Congress St\, Portsmouth\, NH 03801
-DESCRIPTION:Local New Hampshire jazz trio performing Jimmy's Jazz & Blues C
- lub's Sunday jazz brunch series in Portsmouth\, NH. Distinct from the late
-  soprano saxophonist Steve Lacy\; no national profile or discography found
-  under this spelling. Tickets: https://jimmysoncongress.com/event/jimmys-j
- azz-brunch-steve-lacey-trio/
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-11-david-eure-alexei-tsiganov-5e785978@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261011T200000Z
-DTEND:20261011T220000Z
-SUMMARY:David Eure & Alexei Tsiganov at Eustis Estate
-LOCATION:Eustis Estate\, Milton
-DESCRIPTION:A duo billing with no substantive biographical coverage found i
- n available sources\; appears to be a local/regional act. Tickets: https:/
- /jazzboston.org/jazz-calendar?concert-in-the-mansion-david-eure-alexei-tsi
- ganov&event_id=431783&fid=1
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-11-tia-fuller-with-opening-act-the-zeb-jewell-alibhai-quartet-01934378@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261011T220000Z
-DTEND:20261012T000000Z
-SUMMARY:Tia Fuller at Regattabar
-LOCATION:1 Bennett St\, Cambridge\, MA 02138
-DESCRIPTION:Grammy-nominated saxophonist\, composer\, and Berklee professor
-  known for her tenure as featured saxophonist in Beyoncé's touring band a
- nd for her Mack Avenue Records leader albums\, including the Grammy-nomina
- ted Diamond Cut. Tickets: https://www.ticketweb.com/event/tia-fuller-with-
- opening-act-regattabar-tickets/14013994
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-11-jazz-sunday-contemporary-jam-with-calvin-lemuel-71df6a8c@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261011T230000Z
-DTEND:20261012T010000Z
-SUMMARY:Jazz Sunday: Contemporary Jam with Calvin Lemuel at The Square Root
-LOCATION:The Square Root\, Roslindale
-DESCRIPTION:Calvin Lemuel appears to be a jazz musician hosting a contempor
- ary jam session as part of a recurring local Jazz Sunday series\; no indep
- endent biography\, discography\, or press coverage was found in this resea
- rch pass. Tickets: https://jazzboston.org/jazz-calendar?jazz-sunday-contem
- porary-jam-with-calvin-lemuel&event_id=431997&fid=1
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-12-local-artist-series-new-legacy-swing-band-a6354b66@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261012T230000Z
-DTEND:20261013T010000Z
-SUMMARY:New Legacy Swing Band at Jimmy's Jazz & Blues Club
-LOCATION:135 Congress St\, Portsmouth\, NH 03801
-DESCRIPTION:No substantive biographical or press information was found for 
- this act\; it appears to be a local swing/big-band ensemble performing in 
- a venue's local-artist series. Tickets: https://jimmysoncongress.com/event
- /local-artist-series-new-legacy-swing-band/
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-14-alune-wade-b790ba7a@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261014T233000Z
-DTEND:20261015T013000Z
-SUMMARY:Alune Wade at Crystal Ballroom at Somerville Theater
-LOCATION:Crystal Ballroom at Somerville Theater\, Somerville
-DESCRIPTION:Senegalese electric bassist\, vocalist\, and composer active on
-  the international jazz/world-fusion circuit\, known for work with Marcus 
- Miller's Afrodeezia band and collaborations with artists including Kavita 
- Shah and Harold López-Nussa. No Grammy\, NEA\, or major-label-as-leader c
- redential was confirmed in available sources. Tickets: https://jazzboston.
- org/jazz-calendar?alune-wade&event_id=425699&fid=1
-CATEGORIES:fusion
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-14-bywater-call-bf7da85d@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261014T233000Z
-DTEND:20261015T013000Z
-SUMMARY:Bywater Call at Jimmy's Jazz & Blues Club
-LOCATION:135 Congress St\, Portsmouth\, NH 03801
-DESCRIPTION:Seven-piece Southern soul and blues-rock band from Toronto\, Ca
- nada\, fronted by vocalist Meghan Parnell. Released on Gypsy Soul Records 
- and shortlisted for the 2026 UK Blues Award (International Blues Artist of
-  the Year)\, following a 2025 nomination in the same category. Tickets: ht
- tps://jimmysoncongress.com/event/bywater-call/
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-14-earfull-at-the-regattabar-a4b59815@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261014T233000Z
-DTEND:20261015T013000Z
-SUMMARY:Earfull at the Regattabar at Regattabar
-LOCATION:1 Bennett St\, Cambridge\, MA 02138
-DESCRIPTION:No independent biographical information could be found for this
-  act\; appears to be a group billed as "Earfull" performing at the Regatta
- bar in Cambridge. Tickets: https://www.ticketweb.com/event/earfull-at-the-
- regattabar-regattabar-tickets/14316564
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-15-fringe-with-jim-hobbs-7a490856@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261015T220000Z
-DTEND:20261016T000000Z
-SUMMARY:The Fringe with Jim Hobbs at Long Live Roxbury
-LOCATION:Long Live Roxbury\, Boston
-DESCRIPTION:The Fringe is a Boston free-jazz trio founded in 1972 (regular 
- lineup: saxophonist George Garzone\, bassist John Lockwood\, and drummer B
- ob Gullotti\, later Francisco Mela)\, one of the longest continuously perf
- orming groups in jazz. This billing features Boston avant-garde saxophonis
- t Jim Hobbs in the horn chair\; no independent record of this specific pai
- ring's credentials was found. Tickets: https://jazzboston.org/jazz-calenda
- r?feldman-geospatial-presents-the-fringe-with-jim-hobbs&event_id=431142&fi
- d=1
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-15-vanessa-collier-5fb7af2f@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261015T230000Z
-DTEND:20261016T010000Z
-SUMMARY:Vanessa Collier at Regattabar
-LOCATION:1 Bennett St\, Cambridge\, MA 02138
-DESCRIPTION:Berklee-trained blues\, funk\, and soul saxophonist and vocalis
- t recording for Ruf Records\; a four-time Blues Music Award winner (Horn P
- layer of the Year 2019\, 2020\, 2024\; Contemporary Blues Female Artist of
-  the Year 2022) with 12 total BMA nominations. Tickets: https://www.ticket
- web.com/event/vanessa-collier-regattabar-tickets/14925033
-CATEGORIES:blues
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-15-ron-blake-celebrating-5-years-of-jimmys-7cef60f9@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261015T233000Z
-DTEND:20261016T013000Z
-SUMMARY:Ron Blake – Celebrating 5 Years of Jimmy’s at Jimmy's Jazz & Bl
- ues Club
-LOCATION:135 Congress St\, Portsmouth\, NH 03801
-DESCRIPTION:Saxophonist Ron Blake\, born 1965 in the US Virgin Islands\, is
-  a Juilliard jazz studies professor who spent five years in Roy Hargrove's
-  quintet and seven with Art Farmer\, later joining the Saturday Night Live
-  Band and the Grammy-winning Christian McBride Big Band\; he has recorded 
- for Mack Avenue\, Verve\, and Concord. Tickets: https://jimmysoncongress.c
- om/event/ron-blake-celebrating-5-years-of-jimmys/
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-16-gengis-don-fd4b8a3a@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261016T230000Z
-DTEND:20261017T010000Z
-SUMMARY:Gengis Don at Scullers Jazz Club
-LOCATION:400 Soldiers Field Rd\, Boston\, MA 02134
-DESCRIPTION:No biographical information\, discography\, or press coverage c
- ould be found for this act\; likely a local/regional band or musician. Tic
- kets: https://www.ticketweb.com/event/gengis-don-scullers-jazz-club-ticket
- s/14289244
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-16-listen-to-this-acb95271@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261016T230000Z
-DTEND:20261017T010000Z
-SUMMARY:Listen to This at Regattabar
-LOCATION:Regattabar\, Cambridge
-DESCRIPTION:No independent biographical information could be found for a gr
- oup or act performing under the name "Listen to This." Tickets: https://ja
- zzboston.org/jazz-calendar?listen-to-this&event_id=428544&fid=1
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-16-listen-to-this-celebrating-100-years-of-miles-davis-386bcbf9@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261016T233000Z
-DTEND:20261017T013000Z
-SUMMARY:Listen To This: Celebrating 100 Years of Miles Davis at Regattabar
-LOCATION:1 Bennett St\, Cambridge\, MA 02138
-DESCRIPTION:A Miles Davis centennial tribute program (Davis was born May 26
- \, 1926)\, apparently performed by a local house band or ensemble rather t
- han a single named touring artist\; no specific performer roster or indepe
- ndent coverage was found in this research pass. Tickets: https://www.ticke
- tweb.com/event/listen-to-this-celebrating-100-regattabar-tickets/15008593
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-16-dustbowl-revival-59f7b037@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261016T233000Z
-DTEND:20261017T013000Z
-SUMMARY:The Dustbowl Revival at Jimmy's Jazz & Blues Club
-LOCATION:135 Congress St\, Portsmouth\, NH 03801
-DESCRIPTION:Eight-piece Americana/soul band from Venice\, California blendi
- ng New Orleans funk\, pre-war blues and roots music\, nationally touring s
- ince the late 2000s\; recorded on independent label Signature Sounds with 
- production from Grammy-winning producer Ted Hutt. Tickets: https://jimmyso
- ncongress.com/event/the-dustbowl-revival/
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-17-ann-hampton-callaway-here-s-to-life-9efe8f3d@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261017T230000Z
-DTEND:20261018T010000Z
-SUMMARY:Ann Hampton Callaway - Here's To Life at Scullers Jazz Club
-LOCATION:400 Soldiers Field Rd\, Boston\, MA 02134
-DESCRIPTION:Tony Award-nominated singer\, pianist and songwriter\, best kno
- wn as a leading interpreter of the Great American Songbook and for co-writ
- ing/singing the theme song of TV's The Nanny\; performing her cabaret show
-  Here's To Life. Tickets: https://www.ticketweb.com/event/ann-hampton-call
- away-scullers-jazz-club-tickets/14919183
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-17-pierre-hurel-trio-a2254efa@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261017T230000Z
-DTEND:20261018T010000Z
-SUMMARY:The Pierre Hurel Trio at Regattabar
-LOCATION:1 Bennett St\, Cambridge\, MA 02138
-DESCRIPTION:Paris-born\, Boston-based jazz pianist with several decades on 
- the local scene\, regularly performing at the Regattabar\, Scullers\, and 
- Ryles\; his trio made the Boston Globe's 10 Best Shows shortlist in 2003. 
- Currently a professor at the Boston Conservatory at Berklee\, with eight a
- lbums released\; no national awards found. Tickets: https://www.ticketweb.
- com/event/the-pierre-hurel-trio-regattabar-tickets/14925013
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-17-caroline-davis-solo-69a3fd1e@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261018T000000Z
-DTEND:20261018T020000Z
-SUMMARY:Caroline Davis\, Solo at School of the Museum of Fine Arts\, Boston
-LOCATION:School of the Museum of Fine Arts\, Boston\, Boston
-DESCRIPTION:Jazz saxophonist\, flutist\, composer\, and educator with a Ph.
- D. in Music Cognition from Northwestern University\; topped DownBeat's 201
- 8 Critics Poll Rising Star Alto Saxophone category. Records for labels inc
- luding Sunnyside\, New Amsterdam\, Intakt\, and Ears & Eyes. Tickets: http
- s://jazzboston.org/jazz-calendar?caroline-davis-solo&event_id=431764&fid=1
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-18-jimmys-jazz-brunch-paul-heckel-trio-010cd48c@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261018T140000Z
-DTEND:20261018T160000Z
-SUMMARY:Paul Heckel Trio at Jimmy's Jazz & Blues Club
-LOCATION:135 Congress St\, Portsmouth\, NH 03801
-DESCRIPTION:Local jazz piano trio performing a regular brunch residency\; n
- o substantive biographical coverage found in available sources. Tickets: h
- ttps://jimmysoncongress.com/event/jimmys-jazz-brunch-paul-heckel-trio/
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-18-fernando-brandao-quartet-f586aae0@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261018T190000Z
-DTEND:20261018T210000Z
-SUMMARY:Fernando Brandão Quartet at First Parish In Wayland
-LOCATION:First Parish In Wayland\, Wayland
-DESCRIPTION:Brazilian-born flutist\, saxophonist\, and composer specializin
- g in Brazilian and Afro-Cuban jazz\; a Berklee College of Music professor 
- who has released five albums as leader\, producer\, or co-producer on labe
- ls including Chesky Records\, and performed at the Cambridge Jazz Festival
-  and Berklee Beantown Jazz Festival. Tickets: https://jazzboston.org/jazz-
- calendar?fernando-brandao-quartet&event_id=431385&fid=1
-CATEGORIES:latin
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-18-make-them-hear-you-with-adam-blackstone-539e97d6@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261018T220000Z
-DTEND:20261019T000000Z
-SUMMARY:Make Them Hear You With Adam Blackstone at Berklee Performance Cent
- er
-LOCATION:136 Massachusetts Ave\, Boston\, MA 02115
-DESCRIPTION:Grammy-winning and Emmy-winning bassist\, songwriter and produc
- er who has served as music director for Justin Timberlake\, Rihanna\, Jane
- t Jackson and multiple Super Bowl Halftime Shows\; won a 2025 Grammy as pr
- oducer for Hell's Kitchen on Broadway and received a 2022 Grammy nominatio
- n for 'Round Midnight' featuring Jazmine Sullivan. Tickets: https://www.et
- ix.com/ticket/p/70987508/hamiltongarrett-music-arts-presents-make-them-hea
- r-you-with-adam-blackstone-boston-berklee-performance-center
-CATEGORIES:soul
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-18-jazz-sunday-cindy-scott-brian-seeger-faith-haloulakou-quartet-presents-new-skin-1f6b9f5a@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261018T230000Z
-DTEND:20261019T010000Z
-SUMMARY:Jazz Sunday: Cindy Scott & Brian Seeger / Faith Haloulakou Quartet 
- presents "New Skin" at The Square Root
-LOCATION:The Square Root\, Roslindale
-DESCRIPTION:No independent biographical information could be found for voca
- list Cindy Scott\, guitarist Brian Seeger\, or bandleader Faith Haloulakou
- \; this appears to be a local double-bill jazz series entry with the Faith
-  Haloulakou Quartet presenting a project called "New Skin." Tickets: https
- ://jazzboston.org/jazz-calendar?jazz-sunday-cindy-scott-brian-seeger-faith
- -haloulakou-quartet-presents-new-skin&event_id=432002&fid=1
-CATEGORIES:jazz
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-19-local-artist-series-rockingham-groove-d0427879@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
-DTSTART:20261019T230000Z
-DTEND:20261020T010000Z
-SUMMARY:Rockingham Groove at Jimmy's Jazz & Blues Club
-LOCATION:135 Congress St\, Portsmouth\, NH 03801
-DESCRIPTION:No biographical information\, discography\, or press coverage c
- ould be found for Rockingham Groove\; billed explicitly as part of a local
-  artist series. Tickets: https://jimmysoncongress.com/event/local-artist-s
- eries-rockingham-groove/
-CATEGORIES:blues
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-10-20-italian-songbook-with-scanzonati-voices-of-the-mediterranean-76f2774c@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
+UID:e-2026-10-20-italian-songbook-with-scanzonati-stefano-marchese-and-andrea-pejrolo-ec2e264c@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
 DTSTART:20261021T000000Z
 DTEND:20261021T020000Z
-SUMMARY:Italian Songbook with Scanzonati: Voices of the Mediterranean at Be
- rklee Performance Center
+SUMMARY:Italian Songbook with Scanzonati: Stefano Marchese and Andrea Pejro
+ lo at Berklee Performance Center
 LOCATION:136 Massachusetts Ave\, Boston\, MA 02115
-DESCRIPTION:Scanzonati is a decade-running Boston project led by Berklee fa
- culty Stefano Marchese and Andrea Pejrolo that reinterprets the Italian so
- ngbook (Gino Paoli\, Pino Daniele\, Domenico Modugno) through jazz\, impro
- visation and Mediterranean sounds\; this performance is joined by the Berk
- lee World Strings under Grammy-winning cellist Eugene Friesen. Tickets: ht
- tps://www.etix.com/ticket/p/32226140/
+DESCRIPTION:Scanzonati is a decade-running project led by Berklee faculty v
+ ocalist Stefano Marchese and bassist-arranger Andrea Pejrolo that reimagin
+ es Italian and Mediterranean songwriting through contemporary jazz harmony
+  and improvisation. Tickets: https://www.berklee.edu/BPC
 CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-21-jerron-paxton-and-dennis-lichtman-0174ea37@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
+DTSTAMP:20261020T150257Z
 DTSTART:20261021T230000Z
 DTEND:20261022T010000Z
 SUMMARY:Jerron Paxton and Dennis Lichtman at Rockport Music
@@ -939,8 +36,21 @@ DESCRIPTION:Acoustic blues/old-time duo pairing multi-instrumentalist Jerro
 CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
+UID:e-2026-10-21-trace-zacur-sextet-live-a5948b8e@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261021T230000Z
+DTEND:20261022T010000Z
+SUMMARY:Trace Zacur Sextet at The Mad Monkfish
+LOCATION:The Mad Monkfish\, Cambridge
+DESCRIPTION:Boston-area jazz-funk sextet led by saxophonist and 2020 Berkle
+ e graduate Trace Zacur\, playing original fusion-leaning jazz with deep gr
+ ooves at local clubs like the Mad Monkfish. Tickets: https://jazzboston.or
+ g/jazz-calendar?trace-zacur-sextet-live&event_id=433340&fid=1
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
 UID:e-2026-10-21-danilo-perez-trio-panamonk-featuring-ben-street-adam-cruz-d09877a2@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
+DTSTAMP:20261020T150257Z
 DTSTART:20261021T233000Z
 DTEND:20261022T013000Z
 SUMMARY:Danilo Pérez Trio: Panamonk at Jimmy's Jazz & Blues Club
@@ -954,7 +64,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-21-christian-mcbride-and-ursa-major-6fdca125@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
+DTSTAMP:20261020T150257Z
 DTSTART:20261022T000000Z
 DTEND:20261022T020000Z
 SUMMARY:Christian McBride and Ursa Major at Berklee Performance Center
@@ -962,12 +72,41 @@ LOCATION:136 Massachusetts Ave\, Boston\, MA 02115
 DESCRIPTION:Christian McBride is an eleven-time Grammy-winning bassist\, ba
  ndleader\, and composer\, active since 1989 and artistic director of the N
  ewport Jazz Festival since 2016\; Ursa Major is his current backing ensemb
- le for this appearance. Tickets: https://www.etix.com/ticket/p/82699934/
+ le for this appearance. Tickets: https://www.berklee.edu/BPC
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-22-jazz-square-celebration-featuring-gregory-groover-jr-41ae50cc@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261022T223000Z
+DTEND:20261023T003000Z
+SUMMARY:Jazz Square Celebration at Union Church
+LOCATION:Union Church\, Boston
+DESCRIPTION:Headlined by saxophonist Gregory Groover Jr.\, a Boston-bred\, 
+ Berklee Global Jazz Institute-trained bandleader who made his Criss Cross 
+ Jazz Records debut with 'Loveabye' (2024) and has performed with Esperanza
+  Spalding\, Terri Lyne Carrington\, and Danilo Perez. Tickets: https://jaz
+ zboston.org/jazz-calendar?jazz-square-celebration-featuring-gregory-groove
+ r-jr&event_id=432592&fid=1
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-22-ian-buss-quartet-a672fc85@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261022T230000Z
+DTEND:20261023T010000Z
+SUMMARY:Ian Buss Quartet at The Mad Monkfish
+LOCATION:The Mad Monkfish\, Cambridge
+DESCRIPTION:Led by saxophonist/composer Ian Buss\, a New England Conservato
+ ry graduate student performing original music and fresh takes on jazz/blue
+ s standards\; the quartet has appeared across the US\, Canada\, and Mexico
+ . Tickets: https://jazzboston.org/jazz-calendar?ian-buss-quartet&event_id=
+ 432684&fid=1
 CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-22-mehmet-ali-sanlkol-quintet-c1794ede@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
+DTSTAMP:20261020T150257Z
 DTSTART:20261022T233000Z
 DTEND:20261023T013000Z
 SUMMARY:Mehmet Ali Sanlıkol Quintet at Regattabar
@@ -976,13 +115,12 @@ DESCRIPTION:Turkish-American composer\, pianist\, and Berklee-trained jazz
  musician\; founder of the Dünya musicians' collective and leader of Mehme
  t Ali Sanlıkol & Whatsnext?\, blending Turkish traditions with jazz. Rece
  ived Grammy nominations with the string ensemble A Far Cry in 2014 and 202
- 3. Tickets: https://www.ticketweb.com/event/mehmet-ali-sanlkol-quintet-reg
- attabar-tickets/14297854
-CATEGORIES:fusion
+ 3. Tickets: https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814
+CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-22-guitar-night-jazz-and-blues-student-showcase-a5b34c92@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
+DTSTAMP:20261020T150257Z
 DTSTART:20261023T000000Z
 DTEND:20261023T020000Z
 SUMMARY:Guitar Night: Jazz and Blues Student Showcase at Berklee Performanc
@@ -990,12 +128,26 @@ SUMMARY:Guitar Night: Jazz and Blues Student Showcase at Berklee Performanc
 LOCATION:136 Massachusetts Ave\, Boston\, MA 02115
 DESCRIPTION:A student showcase event featuring guitar students rather than 
  a single touring act\; no individual performer bios available. Tickets: ht
- tps://www.etix.com/ticket/p/30924177/
+ tps://www.berklee.edu/BPC
 CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
+UID:e-2026-10-22-jorge-perez-albela-s-new-earth-band-547d3371@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261023T021500Z
+DTEND:20261023T041500Z
+SUMMARY:Jorge Perez-Albela's New Earth Band at The Lilypad
+LOCATION:The Lilypad\, Cambridge
+DESCRIPTION:Lima-born\, Boston-based drummer/percussionist and Afro-Peruvia
+ n jazz specialist\; a Berklee Global Jazz Institute graduate (summa cum la
+ ude) who has worked as a sideman to Grammy winners Maria Schneider and Dan
+ ilo Pérez. Tickets: https://jazzboston.org/jazz-calendar?jorge-perez-albe
+ la-s-new-earth-band&event_id=433577&fid=1
+CATEGORIES:latin
+END:VEVENT
+BEGIN:VEVENT
 UID:e-2026-10-23-brian-simpson-0b8b916c@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
+DTSTAMP:20261020T150257Z
 DTSTART:20261023T230000Z
 DTEND:20261024T010000Z
 SUMMARY:Brian Simpson at Scullers Jazz Club
@@ -1009,23 +161,24 @@ DESCRIPTION:Contemporary/smooth jazz pianist and Shanachie Records recordin
 CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
-UID:e-2026-10-23-joe-block-quintet-there-is-always-hope-album-release-show-1e9167a7@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
+UID:e-2026-10-23-joe-block-quintet-there-is-always-hope-album-release-show-291d41b7@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
 DTSTART:20261023T230000Z
 DTEND:20261024T010000Z
-SUMMARY:Joe Block Quintet: There Is Always Hope album release show at Regat
- tabar
-LOCATION:1 Bennett St\, Cambridge\, MA 02138
+SUMMARY:Joe Block Quintet: There Is Always Hope (Album Release Show) at Reg
+ attabar
+LOCATION:Regattabar\, Cambridge
 DESCRIPTION:Philadelphia-born pianist and composer\, formerly of Kurt Rosen
  winkel's Riptet and a performer with Wynton Marsalis and the Jazz at Linco
  ln Center Orchestra\; celebrates his bandleader album There Is Always Hope
-  (Blue Engine Records) with his quintet. Tickets: https://www.ticketweb.co
- m/event/joe-block-quintet-there-is-regattabar-tickets/14302804
+  (Blue Engine Records) with his quintet. Tickets: https://jazzboston.org/j
+ azz-calendar?joe-block-quintet-there-is-always-hope-album-release-show&eve
+ nt_id=430670&fid=1
 CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-23-coco-montoya-aaf3bbb7@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
+DTSTAMP:20261020T150257Z
 DTSTART:20261023T233000Z
 DTEND:20261024T013000Z
 SUMMARY:Coco Montoya at Jimmy's Jazz & Blues Club
@@ -1037,8 +190,38 @@ DESCRIPTION:Blues guitarist who apprenticed under Albert Collins and spent
 CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
+UID:e-2026-10-23-jazz-sanctuary-featuring-jason-palmer-and-kevin-harris-76f4cef5@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261024T000000Z
+DTEND:20261024T020000Z
+SUMMARY:Jazz Sanctuary at United Parish in Brookline
+LOCATION:United Parish in Brookline\, Brookline
+DESCRIPTION:Headlined by trumpeter Jason Palmer (Berklee/NEC jazz faculty\,
+  Chamber Music America New Jazz Works grantee\, 20-year Wally's Cafe resid
+ ency) and pianist Kevin Harris (Berklee faculty\, NEC-trained\, recording 
+ artist on Patient Harvest and The Butterfly Chronicles). Tickets: https://
+ jazzboston.org/jazz-calendar?jazz-sanctuary-featuring-jason-palmer-and-kev
+ in-harris&event_id=432253&fid=1
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-24-ladies-who-lunch-men-s-edition-with-john-abernathy-brian-de-lorenzo-and-robert-saoud-e87da80d@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261024T153000Z
+DTEND:20261024T173000Z
+SUMMARY:The Ladies Who Lunch - Men's Edition with John Abernathy\, Brian De
+  Lorenzo and Robert Saoud at Club Cafe
+LOCATION:Club Cafe\, Boston
+DESCRIPTION:A cabaret revue presented by Josephine's Cabaret at Club Cafe i
+ n Boston\; no jazz or blues musical credentials were found for the named p
+ erformers. Tickets: https://jazzboston.org/jazz-calendar?the-ladies-who-lu
+ nch-men-s-edition-with-john-abernathy-brian-de-lorenzo-and-robert-saoud&ev
+ ent_id=429824&fid=1
+CATEGORIES:vocal jazz
+END:VEVENT
+BEGIN:VEVENT
 UID:e-2026-10-24-dafnis-prieto-si-o-si-quartet-4d0d9f8b@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
+DTSTAMP:20261020T150257Z
 DTSTART:20261024T230000Z
 DTEND:20261025T010000Z
 SUMMARY:Dafnis Prieto Sí o Sí Quartet at Regattabar
@@ -1048,12 +231,12 @@ DESCRIPTION:Led by Cuban-born drummer/composer Dafnis Prieto\, a MacArthur
  018) with multiple additional Grammy and Latin Grammy nominations. Active 
  on the jazz and Afro-Cuban scene since the early 1990s and on faculty at t
  he University of Miami's Frost School of Music. Tickets: https://www.ticke
- tweb.com/event/dafnis-prieto-s-o-s-regattabar-tickets/14870793
+ tweb.com/venue/regattabar-cambridge-ma/748814
 CATEGORIES:latin
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-24-jazz-sunday-john-dalton-s-spheres-of-influence-peter-perfido-dominique-humbert-0e57f8ee@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
+DTSTAMP:20261020T150257Z
 DTSTART:20261024T230000Z
 DTEND:20261025T010000Z
 SUMMARY:Jazz Sunday: John Dalton's Spheres of Influence / Peter Perfido & D
@@ -1069,7 +252,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-24-tim-ray-trio-feat-edmar-colon-tickets-on-sale-now-64029434@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
+DTSTAMP:20261020T150257Z
 DTSTART:20261024T230000Z
 DTEND:20261025T010000Z
 SUMMARY:Tim Ray Trio feat Edmar Colon - Tickets on Sale Now at Scullers Jaz
@@ -1086,7 +269,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-24-love-dogs-live-97bba99b@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
+DTSTAMP:20261020T150257Z
 DTSTART:20261024T230000Z
 DTEND:20261025T010000Z
 SUMMARY:The Love Dogs at The Fallout Shelter
@@ -1100,7 +283,7 @@ CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-24-aardvark-jazz-orchestra-celebrating-america250-41479d09@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
+DTSTAMP:20261020T150257Z
 DTSTART:20261024T233000Z
 DTEND:20261025T013000Z
 SUMMARY:Aardvark Jazz Orchestra: Celebrating America250 at Church of the Co
@@ -1116,7 +299,7 @@ CATEGORIES:big band
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-24-anthony-geraci-w-special-guest-barrence-whitfield-1ad235bb@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
+DTSTAMP:20261020T150257Z
 DTSTART:20261025T000000Z
 DTEND:20261025T020000Z
 SUMMARY:Anthony Geraci w/ Special Guest Barrence Whitfield at Spire Center 
@@ -1133,7 +316,7 @@ CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-25-jimmys-jazz-brunch-brad-myrick-band-c49bf259@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
+DTSTAMP:20261020T150257Z
 DTSTART:20261025T140000Z
 DTEND:20261025T160000Z
 SUMMARY:Brad Myrick Band at Jimmy's Jazz & Blues Club
@@ -1145,8 +328,53 @@ DESCRIPTION:No biographical information\, discography\, or press coverage c
 CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
+UID:e-2026-10-25-eulipiajazz-outisphere-ensemble-670508a0@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261025T180000Z
+DTEND:20261025T200000Z
+SUMMARY:EulipiaJazz Outisphere Ensemble at Mystic Open Studio
+LOCATION:Mystic Open Studio\, Arlington
+DESCRIPTION:Arlington\, MA-based improvised-music ensemble under the Eulipi
+ aJazz production banner\, which produces jazz/improvised performances feat
+ uring players such as Scott Samenfeld (bass)\, Eric Dahlman (trumpet)\, Er
+ ik Van Dam (saxes)\, Todd Brunel (clarinet/bass clarinet)\, and Eric Rosen
+ thal (drums). Tickets: https://jazzboston.org/jazz-calendar?eulipiajazz-ou
+ tisphere-ensemble-at-mystic-open-studio&event_id=433223&fid=1
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-25-qarts-gallery-jazz-series-man-on-land-featuring-lihi-haruvi-10f0c1c8@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261025T200000Z
+DTEND:20261025T220000Z
+SUMMARY:QArts Gallery Jazz Series - Man on Land at QArts Gallery
+LOCATION:QArts Gallery\, Quincy
+DESCRIPTION:Man On Land is a Boston jazz trio (pianist Brian Friedland\, ba
+ ssist Greg Loughman\, drummer Austin McMahon) expanded on their 2025 album
+  Echo the Hills by saxophonist Lihi Haruvi\, an internationally touring im
+ proviser and Berklee Global Jazz Institute faculty member. Tickets: https:
+ //jazzboston.org/jazz-calendar?qarts-gallery-jazz-series-man-on-land-featu
+ ring-lihi-haruvi&event_id=432480&fid=1
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-25-boston-blues-challenge-972c49a9@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261025T220000Z
+DTEND:20261026T000000Z
+SUMMARY:The Boston Blues Challenge at The Fallout Shelter
+LOCATION:The Fallout Shelter\, Norwood
+DESCRIPTION:Annual competition run by the Boston Blues Society where local/
+ regional blues acts compete for the right to represent the society at the 
+ Blues Foundation's International Blues Challenge in Memphis. A local showc
+ ase of emerging acts rather than an established headliner. Tickets: https:
+ //jazzboston.org/jazz-calendar?the-boston-blues-challenge&event_id=432320&
+ fid=1
+CATEGORIES:blues
+END:VEVENT
+BEGIN:VEVENT
 UID:e-2026-10-25-an-evening-with-acoustic-alchemy-2a9a35cc@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
+DTSTAMP:20261020T150257Z
 DTSTART:20261025T233000Z
 DTEND:20261026T013000Z
 SUMMARY:An Evening With Acoustic Alchemy at Jimmy's Jazz & Blues Club
@@ -1160,7 +388,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-26-local-artist-series-jumbo-circus-peanuts-halloween-party-8dd0272c@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
+DTSTAMP:20261020T150257Z
 DTSTART:20261026T230000Z
 DTEND:20261027T010000Z
 SUMMARY:Jumbo Circus Peanuts Halloween Party at Jimmy's Jazz & Blues Club
@@ -1172,8 +400,23 @@ DESCRIPTION:Billed explicitly as part of a venue's Local Artist Series\; no
 CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
+UID:e-2026-10-27-an-evening-with-angela-bacari-family-ea5c6e95@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261027T223000Z
+DTEND:20261028T003000Z
+SUMMARY:An Evening with Angela Bacari & Family at Club Cafe
+LOCATION:Club Cafe\, Boston
+DESCRIPTION:Veteran cabaret and jazz-standards vocalist with a decades-long
+  career including 1970s-80s TV appearances (Dinah Shore Show\, Merv Griffi
+ n Show) and an RCA recording\; now performs with family members\, includin
+ g daughter Lisa Ferraro\, in New York\, Newport RI\, and Boston-area rooms
+ . Tickets: https://jazzboston.org/jazz-calendar?an-evening-with-angela-bac
+ ari-family&event_id=429116&fid=1
+CATEGORIES:vocal jazz
+END:VEVENT
+BEGIN:VEVENT
 UID:e-2026-10-28-five-masters-of-jazz-f6e09f89@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20260928T152834Z
+DTSTAMP:20261020T150257Z
 DTSTART:20261028T233000Z
 DTEND:20261029T013000Z
 SUMMARY:Five Masters of Jazz at Jimmy's Jazz & Blues Club
@@ -1183,5 +426,881 @@ DESCRIPTION:No independently verifiable information found for a specific to
  med show billing. Treated as an unverified local act pending further data.
   Tickets: https://jimmysoncongress.com/event/five-masters-of-jazz/
 CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-29-gillian-margo-geoffrey-keezer-9f36afea@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261029T170000Z
+DTEND:20261029T190000Z
+SUMMARY:Gillian Margo & Geoffrey Keezer at Regattabar
+LOCATION:Regattabar\, Cambridge
+DESCRIPTION:Jazz vocalist Gillian Margot and Grammy-winning pianist Geoffre
+ y Keezer\, a touring duo and recording partnership (their duets album Gill
+ ian Margot & Geoffrey Keezer\, MarKeez Records\, 2025). Tickets: https://j
+ azzboston.org/jazz-calendar?gillian-margo-geoffrey-keezer&event_id=415961&
+ fid=1
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-29-gillian-margot-geoffrey-keezer-b313312e@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261029T230000Z
+DTEND:20261030T010000Z
+SUMMARY:Gillian Margot & Geoffrey Keezer at Regattabar
+LOCATION:1 Bennett St\, Cambridge\, MA 02138
+DESCRIPTION:Jazz vocalist Gillian Margot and Grammy-winning pianist Geoffre
+ y Keezer\, a touring duo and recording partnership (their duets album Gill
+ ian Margot & Geoffrey Keezer\, MarKeez Records\, 2025). Tickets: https://w
+ ww.ticketweb.com/venue/regattabar-cambridge-ma/748814
+CATEGORIES:vocal jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-29-mathis-picard-5e6877bc@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261029T233000Z
+DTEND:20261030T013000Z
+SUMMARY:Mathis Picard at Jimmy's Jazz & Blues Club
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:Mathis Picard is a French-Malagasy jazz pianist\, composer\, an
+ d bandleader\, Juilliard-trained under Kenny Barron and a Montreux Jazz Pi
+ ano Competition finalist\, who blends stride piano with classical and elec
+ tronic textures and has collaborated with Ron Carter\, Wynton Marsalis\, a
+ nd Cyrille Aimée. Tickets: https://jimmysoncongress.com/event/mathis-pica
+ rd/
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-30-ella-hunt-performing-blindspot-0f66015d@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261030T230000Z
+DTEND:20261031T010000Z
+SUMMARY:Ella Hunt performing Blindspot at Regattabar
+LOCATION:1 Bennett St\, Cambridge\, MA 02138
+DESCRIPTION:British singer-songwriter and actress (Saturday Night\, Dickins
+ on) performing songs from her debut LP Blindspot\; an indie-pop/folk vocal
+ ist\, not a jazz or blues artist. Tickets: https://www.ticketweb.com/venue
+ /regattabar-cambridge-ma/748814
+CATEGORIES:vocal jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-30-santi-debriano-cb58792f@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261030T230000Z
+DTEND:20261031T010000Z
+SUMMARY:Santi Debriano at Scullers Jazz Club
+LOCATION:400 Soldiers Field Rd\, Boston\, MA 02134
+DESCRIPTION:Panama-born\, Brooklyn-raised jazz bassist and composer with ov
+ er 130 recordings as sideman and leader\, having worked with Archie Shepp\
+ , Pharoah Sanders\, Don Pullen\, Kirk Lightsey and Louis Hayes. Tickets: h
+ ttps://www.ticketweb.com/event/santi-debriano-scullers-jazz-club-tickets/1
+ 5045103
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-30-ally-venable-32ba12f4@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261030T233000Z
+DTEND:20261031T013000Z
+SUMMARY:Ally Venable at Jimmy's Jazz & Blues Club
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:Texas-born blues-rock guitarist\, singer\, and songwriter signe
+ d to Ruf Records\, known for a Stevie Ray Vaughan-influenced style and a 2
+ 023 Grammy-producer-helmed album (Tom Hambridge) featuring Buddy Guy and J
+ oe Bonamassa. Tickets: https://jimmysoncongress.com/event/ally-venable/
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-30-jazz-at-methuen-doug-leaffer-jazz-quartet-b0159855@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261030T233000Z
+DTEND:20261031T013000Z
+SUMMARY:Jazz at Methuen: Doug Leaffer Jazz Quartet at Methuen Memorial Musi
+ c Hall
+LOCATION:Methuen Memorial Music Hall\, Methuen
+DESCRIPTION:Led by saxophonist Doug Leaffer\, a North Andover\, MA-based mu
+ sician with decades of experience across jazz\, blues\, gospel\, and R&B w
+ ho has played East Coast clubs from Miami to Montreal and internationally 
+ in Taiwan\, Korea\, and Germany. Tickets: https://www.tix.com/ticket-sales
+ /mmmh/7203
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-30-michael-feinstein-in-my-celebration-f41b5808@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261031T000000Z
+DTEND:20261031T020000Z
+SUMMARY:Michael Feinstein in My Celebration at Emerson Colonial Theatre
+LOCATION:Emerson Colonial Theatre\, Boston
+DESCRIPTION:Michael Feinstein is a five-time Grammy-nominated vocalist and 
+ pianist known as "The Ambassador of the Great American Songbook\," a longt
+ ime Concord Records recording artist and founder of the Great American Son
+ gbook Initiative devoted to preserving the genre. Tickets: https://us.atgt
+ ickets.com/events/michael-feinstein/emerson-colonial-theatre/
+CATEGORIES:vocal jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-31-pianist-benny-green-a51f84a1@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261031T230000Z
+DTEND:20261101T010000Z
+SUMMARY:Benny Green at Scullers Jazz Club
+LOCATION:400 Soldiers Field Rd\, Boston\, MA 02134
+DESCRIPTION:Benny Green is an acclaimed hard-bop pianist and former Art Bla
+ key Jazz Messenger who recorded seven leader albums for Blue Note Records 
+ in the 1990s and has worked extensively with Ray Brown\, Betty Carter\, an
+ d Oscar Peterson. Tickets: https://www.ticketweb.com/event/benny-green-scu
+ llers-jazz-club-tickets/14262494?pl=scullers
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-31-rock-and-soul-halloween-show-featuring-debo-ray-and-kemp-harris-7318fec4@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261101T000000Z
+DTEND:20261101T020000Z
+SUMMARY:The Rock and Soul Halloween Show at Boston Harbor Distillery
+LOCATION:Boston Harbor Distillery\, Boston
+DESCRIPTION:A Halloween bill pairing Grammy-nominated Boston/NY vocalist De
+ bo Ray with veteran blues-soul-folk singer-songwriter Kemp Harris\, who ha
+ s shared stages with Taj Mahal and Koko Taylor. Tickets: https://tickets.2
+ 4hourmusic.com/eventperformances.asp?evt=1899
+CATEGORIES:soul
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-01-jimmys-jazz-brunch-jim-dozet-trio-37930233@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261101T150000Z
+DTEND:20261101T170000Z
+SUMMARY:Jim Dozet Trio at Jimmy's Jazz & Blues Club
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:Jim Dozet is a Seacoast New Hampshire jazz guitarist with a jaz
+ z guitar performance degree from the University of New Hampshire\, leading
+  his own trio across jazz\, funk and blues repertoire. Tickets: https://ji
+ mmysoncongress.com/event/jimmys-jazz-brunch-jim-dozet-trio/
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-01-demystifying-jazz-masterclass-581dfbf0@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261101T190000Z
+DTEND:20261101T210000Z
+SUMMARY:Demystifying Jazz Masterclass at Vokes Theater
+LOCATION:Vokes Theater\, Wayland
+DESCRIPTION:Free educational masterclass presented by Arts Wayland\, openin
+ g its 2026-2027 season\, introducing jazz fundamentals to a general audien
+ ce at Wayland High School Auditorium. An educational program rather than a
+  performance by a named headline artist. Tickets: https://jazzboston.org/j
+ azz-calendar/
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-01-ciara-moser-the-rose-of-battle-6e322738@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261102T000000Z
+DTEND:20261102T020000Z
+SUMMARY:Ciara Moser -- The Rose of Battle at Regattabar
+LOCATION:1 Bennett St\, Cambridge\, MA 02138
+DESCRIPTION:Irish-Austrian bassist and composer\, Berklee-trained and now B
+ oston-based\, who blends Irish folk storytelling with modern jazz on her p
+ roject The Rose of Battle\, inspired by Yeats and Kavanagh. Named DownBeat
+  Rising Star Electric Bassist (2025) and a 2024 Next Jazz Legacy Fellow. T
+ ickets: https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814
+CATEGORIES:vocal jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-01-huntertones-67245a52@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261102T003000Z
+DTEND:20261102T023000Z
+SUMMARY:Huntertones at Jimmy's Jazz & Blues Club
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:Horn-driven instrumental band formed at Ohio State University i
+ n 2010 (originally the Dan White Sextet)\, now Brooklyn-based\, blending j
+ azz\, funk\, soul and gospel\; members back Kurt Elling & Charlie Hunter's
+  SuperBlue and appear in The Late Show with Stephen Colbert's house band. 
+ Tickets: https://jimmysoncongress.com/event/huntertones/
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-02-jazzreach-s-metta-quintet-c6664ef4@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261103T000000Z
+DTEND:20261103T020000Z
+SUMMARY:JazzReach's Metta Quintet at Rockport Music
+LOCATION:37 Main St\, Rockport\, MA 01966
+DESCRIPTION:The resident touring ensemble of JazzReach\, a NYC-based nonpro
+ fit (est. 1994) dedicated to jazz education and performance\; the quintet 
+ has introduced nearly a million students across 200 communities to jazz an
+ d has released acclaimed albums including Going to Meet the Man\, inspired
+  by James Baldwin's writing. Tickets: https://tickets.rockportmusic.org/ev
+ ents
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-02-local-artist-series-the-tonymack-band-335cfe47@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261103T000000Z
+DTEND:20261103T020000Z
+SUMMARY:The Tonymack Band at Jimmy's Jazz & Blues Club
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:The Tonymack Band is a seven-piece classic rock and R&B act\, n
+ ot a jazz or blues group\, that has toured the NH/ME/MA Seacoast since 201
+ 2 behind guitarist Tony Blockis and vocalist/harmonica player Paul Mackey.
+  They perform regularly at Jimmy's Jazz and Blues Club in Portsmouth\, NH.
+  Tickets: https://jimmysoncongress.com/event/local-artist-series-the-tonym
+ ack-band/
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-04-spyro-gyra-9af9baeb@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261105T003000Z
+DTEND:20261105T023000Z
+SUMMARY:Spyro Gyra at Jimmy's Jazz & Blues Club
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:Long-running American jazz fusion band formed in Buffalo in the
+  mid-1970s\; holds the record for most Grammy nominations without a win (s
+ ix) and recorded for the major jazz labels MCA and GRP across three decade
+ s. Tickets: https://jimmysoncongress.com/event/spyro-gyra/
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-05-feldman-geospatial-presents-the-felipe-salles-quartet-3280c7e6@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261105T230000Z
+DTEND:20261106T010000Z
+SUMMARY:The Felipe Salles Quartet at Long Live Roxbury
+LOCATION:Long Live Roxbury\, Boston
+DESCRIPTION:Brazilian-born saxophonist/composer Felipe Salles\, UMass Amher
+ st jazz studies professor and 2018 Guggenheim Fellow\, leading his working
+  quartet\; nine albums as a leader and multiple DownBeat best-of-year sele
+ ctions. Tickets: https://jazzboston.org/jazz-calendar/
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-05-jake-la-botz-live-5cfa9045@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261106T000000Z
+DTEND:20261106T020000Z
+SUMMARY:Jake La Botz at The Fallout Shelter
+LOCATION:The Fallout Shelter\, Norwood
+DESCRIPTION:American blues singer-songwriter and actor from Chicago who lea
+ rned blues directly from prewar-era bluesmen Honeyboy Edwards and Homesick
+  James\; has released albums since 1999 and toured internationally\, along
+ side film/TV acting credits (Animal Factory\, Gilmore Girls). Tickets: htt
+ ps://www.extendedplaysessions.com/
+CATEGORIES:blues
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-05-joe-alterman-trio-e40c8b87@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261106T000000Z
+DTEND:20261106T020000Z
+SUMMARY:Joe Alterman Trio at Regattabar
+LOCATION:1 Bennett St\, Cambridge\, MA 02138
+DESCRIPTION:Atlanta-born\, NYU-trained jazz pianist known for groove-heavy\
+ , blues-infused playing\; mentored by Les McCann and Ramsey Lewis\, and a 
+ regular collaborator with tenor saxophonist Houston Person. Headlines at B
+ lue Note\, Birdland\, Kennedy Center and Lincoln Center. Tickets: https://
+ www.ticketweb.com/venue/regattabar-cambridge-ma/748814
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-05-greg-piccolo-and-heavy-juice-4c2c8f2e@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261106T003000Z
+DTEND:20261106T023000Z
+SUMMARY:Greg Piccolo and Heavy Juice at Jimmy's Jazz & Blues Club
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:Tenor saxophonist and vocalist Greg Piccolo\, who fronted Roomf
+ ul of Blues for 25 years before forming Heavy Juice in 1994\; a multiple B
+ lues Music Award nominee and New England Music Hall of Fame inductee. Tick
+ ets: https://jimmysoncongress.com/event/greg-piccolo/
+CATEGORIES:blues
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-05-marcus-gilmore-journey-to-the-new-b3c8a430@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261106T003000Z
+DTEND:20261106T023000Z
+SUMMARY:Marcus Gilmore: Journey to the New at Berklee Performance Center
+LOCATION:136 Massachusetts Ave\, Boston\, MA 02115
+DESCRIPTION:Marcus Gilmore is a Grammy-winning jazz drummer\, grandson of R
+ oy Haynes\, celebrated for shaping modern jazz drumming through long assoc
+ iations with Chick Corea\, Vijay Iyer\, Steve Coleman\, and Gonzalo Rubalc
+ aba. "Journey to the New" is tied to his recent live performances at Nublu
+  in New York. Tickets: https://www.berklee.edu/BPC
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-06-elan-trotman-25-years-in-music-1900-56d77359@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261107T000000Z
+DTEND:20261107T020000Z
+SUMMARY:Elan Trotman - 25 Years In Music at Scullers Jazz Club
+LOCATION:400 Soldiers Field Rd\, Boston\, MA 02134
+DESCRIPTION:Barbados-born\, Berklee-trained saxophonist and smooth-jazz rec
+ ording artist\; multiple-time Jazz Artist of the Year at the Barbados Musi
+ c Awards and New England Urban Music Awards\, and producer/host of the ann
+ ual Barbados Jazz Excursion. Tickets: https://www.ticketweb.com/search?q=e
+ lan+scullers
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-06-zahili-zamora-afro-cuban-jazz-quartet-1acfda5a@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261107T000000Z
+DTEND:20261107T020000Z
+SUMMARY:The Zahili Zamora Afro-Cuban Jazz Quartet at Regattabar
+LOCATION:1 Bennett St\, Cambridge\, MA 02138
+DESCRIPTION:Cuban-born\, Boston-based pianist\, vocalist and composer Zahil
+ i Gonzalez Zamora\, a Berklee summa cum laude graduate who has headlined t
+ he Monterey Jazz Festival and leads her Afro-Cuban jazz ensemble MIXCLA. T
+ ickets: https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814
+CATEGORIES:latin
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-06-weight-band-featuring-members-of-the-band-levon-helm-band-f3996e27@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261107T003000Z
+DTEND:20261107T023000Z
+SUMMARY:The Weight Band at Jimmy's Jazz & Blues Club
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:Americana/roots band formed in 2013 by Jim Weider (The Band's g
+ uitarist\, 1985-2000) to continue The Band's legacy\; members Weider and B
+ rian Mitchell both played in Levon Helm's touring band on the Grammy-winni
+ ng album Electric Dirt. Tickets: https://jimmysoncongress.com/event/the-we
+ ight-band/
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-06-dennis-brennan-band-live-2d595496@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261107T020000Z
+DTEND:20261107T040000Z
+SUMMARY:Dennis Brennan Band at Regent Theatre
+LOCATION:Regent Theatre\, Arlington
+DESCRIPTION:Longtime Boston-area roots-rock/blues singer and harmonica play
+ er\, performing since forming his band in 1992\; crosses between rock\, so
+ ul\, blues and country\, with songs placed in films including Copland. A 2
+ x NEMO Award winner for Outstanding Roots Rock Band. Tickets: https://rege
+ nttheatre.com/events/dennis-brennan/
+CATEGORIES:blues
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-06-elan-trotman-25-years-in-music-2100-730710fd@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261107T020000Z
+DTEND:20261107T040000Z
+SUMMARY:Elan Trotman - 25 Years In Music at Scullers Jazz Club
+LOCATION:400 Soldiers Field Rd\, Boston\, MA 02134
+DESCRIPTION:Barbados-born\, Berklee-trained saxophonist and smooth-jazz rec
+ ording artist\; multiple-time Jazz Artist of the Year at the Barbados Musi
+ c Awards and New England Urban Music Awards\, and producer/host of the ann
+ ual Barbados Jazz Excursion. Tickets: https://www.ticketweb.com/search?q=e
+ lan+scullers
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-07-donal-fox-bearing-witness-to-humanity-b0ef4d8f@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261108T000000Z
+DTEND:20261108T020000Z
+SUMMARY:Donal Fox: Bearing Witness to Humanity at Regattabar
+LOCATION:1 Bennett St\, Cambridge\, MA 02138
+DESCRIPTION:Boston-based composer-pianist blending jazz improvisation with 
+ classical forms (Bach\, Scarlatti\, Piazzolla\, Monk)\; a Guggenheim Fello
+ w and the first African-American composer-in-residence with the St. Louis 
+ Symphony\, he has recorded for Evidence and New World Records. Tickets: ht
+ tps://www.ticketweb.com/venue/regattabar-cambridge-ma/748814
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-07-steven-feifke-friends-10th-album-celebration-1900-fc2d26d2@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261108T000000Z
+DTEND:20261108T020000Z
+SUMMARY:Steven Feifke & Friends - 10Th Album Celebration at Scullers Jazz C
+ lub
+LOCATION:400 Soldiers Field Rd\, Boston\, MA 02134
+DESCRIPTION:Grammy-winning pianist/composer Steven Feifke\, the youngest-ev
+ er winner of Best Large Jazz Ensemble Album (2023\, for Generation Gap Jaz
+ z Orchestra)\, celebrates his 10th album release at Scullers Jazz Club. Ti
+ ckets: https://www.ticketweb.com/search?q=steven+feifke+scullers
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-07-walter-parks-and-the-unlawful-assembly-live-c2e96efa@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261108T000000Z
+DTEND:20261108T020000Z
+SUMMARY:Walter Parks and The Unlawful Assembly at The Fallout Shelter
+LOCATION:The Fallout Shelter\, Norwood
+DESCRIPTION:Veteran guitarist Walter Parks\, a 10-year sideman to Woodstock
+  legend Richie Havens\, leads The Unlawful Assembly in reinterpretations o
+ f historic American spirituals\, hymns and work songs through blues and go
+ spel. Tickets: https://www.extendedplaysessions.com/
+CATEGORIES:blues
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-07-steven-feifke-friends-10th-album-celebration-2100-10797baa@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261108T020000Z
+DTEND:20261108T040000Z
+SUMMARY:Steven Feifke & Friends - 10Th Album Celebration at Scullers Jazz C
+ lub
+LOCATION:400 Soldiers Field Rd\, Boston\, MA 02134
+DESCRIPTION:Grammy-winning pianist/composer Steven Feifke\, the youngest-ev
+ er winner of Best Large Jazz Ensemble Album (2023\, for Generation Gap Jaz
+ z Orchestra)\, celebrates his 10th album release at Scullers Jazz Club. Ti
+ ckets: https://www.ticketweb.com/search?q=steven+feifke+scullers
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-08-jimmys-jazz-brunch-honey-bees-trio-60b56978@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261108T150000Z
+DTEND:20261108T170000Z
+SUMMARY:Honey Bees Trio at Jimmy's Jazz & Blues Club
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:The Honey Bees Jazz Trio is the resident ensemble for Jimmy's J
+ azz & Blues Club's Sunday jazz brunch\, playing swing-era and standards re
+ pertoire. Tickets: https://jimmysoncongress.com/event/jimmys-jazz-brunch-h
+ oney-bees-trio/
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-08-qarts-gallery-jazz-series-ron-reid-liberty-quartet-179d3a57@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261108T210000Z
+DTEND:20261108T230000Z
+SUMMARY:QArts Gallery Jazz Series - Ron Reid Liberty Quartet at QArts Galle
+ ry
+LOCATION:QArts Gallery\, Quincy
+DESCRIPTION:Headlined by bassist/steel pannist Ron Reid\, a Trinidad-born B
+ erklee associate professor whose Liberty Quintet blends calypso and steelp
+ an with jazz\; he has performed with Randy Weston\, Carmen Lundy and the C
+ aribbean Jazz Project. Tickets: https://events.humanitix.com/qarts-gallery
+ -jazz-concert-series-ron-reid/tickets?hxchl=hex-pfl
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-09-troy-roberts-quartet-9fb06bbd@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261110T003000Z
+DTEND:20261110T023000Z
+SUMMARY:Troy Roberts Quartet at Arrow Street Arts
+LOCATION:Arrow Street Arts\, Cambridge
+DESCRIPTION:Three-time Grammy-nominated Australian-born\, NYC-based saxopho
+ nist and composer with sixteen releases as a leader\, who has toured and r
+ ecorded with Joey DeFrancesco\, Kurt Elling and Christian McBride. Tickets
+ : https://tickets.nejazzcollab.org/e/troy-roberts-quartet-nejc-arrow-stree
+ t-jazz?utm_source=artsboston&utm_medium=calendar
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-09-jazz-composers-alliance-orchestra-in-concert-6c912481@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261110T010000Z
+DTEND:20261110T030000Z
+SUMMARY:Jazz Composers Alliance Orchestra in Concert at Berklee Performance
+  Center
+LOCATION:136 Massachusetts Ave\, Boston\, MA 02115
+DESCRIPTION:Boston's 21-piece Jazz Composers Alliance Orchestra\, founded i
+ n 1985 and entering its 40th season\, performs new works by resident compo
+ sers David Harris\, Darrell Katz\, Bob Pilkington\, and Mimi Rabson\, and 
+ has collaborated with guest composers including Julius Hemphill\, Oliver L
+ ake\, Maria Schneider\, and Dave Holland. Tickets: https://www.berklee.edu
+ /BPC
+CATEGORIES:big band
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-10-jorge-perez-albela-trio-with-kenny-werner-and-john-lockwood-632ae30d@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261111T031500Z
+DTEND:20261111T051500Z
+SUMMARY:The Jorge Perez-Albela Trio with Kenny Werner and John Lockwood at 
+ The Lilypad
+LOCATION:The Lilypad\, Cambridge
+DESCRIPTION:Trio led by Boston drummer Jorge Perez-Albela with pianist Kenn
+ y Werner\, a Grammy-nominated composer and author of Effortless Mastery\, 
+ and veteran Boston bassist John Lockwood (Gary Burton\, Dizzy Gillespie\, 
+ Stan Getz\, Pat Metheny). Tickets: https://jazzboston.org/jazz-calendar/
+CATEGORIES:latin
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-11-dave-limina-s-wednesdave-blues-iii-38788aed@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261112T000000Z
+DTEND:20261112T020000Z
+SUMMARY:Dave Limina's Wednesdave Blues III at The Fallout Shelter
+LOCATION:The Fallout Shelter\, Norwood
+DESCRIPTION:Weekly residency led by Dave Limina\, Berklee College of Music 
+ Piano Department chair and Hammond B3 organist\, a 20-year member of Ronni
+ e Earl and the Broadcasters and author of the Berklee Press method book Ha
+ mmond Organ Complete. Tickets: https://www.extendedplaysessions.com/
+CATEGORIES:blues
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-11-maryna-krut-cc1fea4c@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261112T003000Z
+DTEND:20261112T023000Z
+SUMMARY:Maryna Krut at The Platform Kendall
+LOCATION:The Platform Kendall\, Cambridge
+DESCRIPTION:Maryna Krut is a Ukrainian singer and bandura virtuoso who blen
+ ds folk\, pop\, and jazz influences. A Ukrainian X Factor/The Voice alum a
+ nd 2020 Eurovision national-final finalist for Ukraine\, she now tours int
+ ernationally\, including KEXP\, Lotus World Music & Arts Festival\, and Re
+ eperbahn Festival dates. Tickets: https://www.theplatformkendall.org/produ
+ ctions/maryna-krut-fy27/
+CATEGORIES:vocal jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-11-toronzo-cannon-f894f0bc@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261112T003000Z
+DTEND:20261112T023000Z
+SUMMARY:Toronzo Cannon at Jimmy's Jazz & Blues Club
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:Chicago electric blues guitarist\, singer and songwriter signed
+  to Alligator Records\, known for blistering guitar work and socially poin
+ ted original songwriting\; a ten-time Blues Music Award nominee. Tickets: 
+ https://jimmysoncongress.com/event/toronzo-cannon/
+CATEGORIES:blues
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-12-patti-austin-1800-05dc5bc8@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261112T230000Z
+DTEND:20261113T010000Z
+SUMMARY:Patti Austin at Jimmy's Jazz & Blues Club
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:Patti Austin is a Grammy-winning jazz and R&B vocalist celebrat
+ ed for her 1982 hit "Baby\, Come to Me" and decades of collaboration with 
+ Quincy Jones\, who won Best Jazz Vocal Album for Avant Gershwin in 2008. T
+ ickets: https://jimmysoncongress.com/event/patti-austin/
+CATEGORIES:soul
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-12-sheila-jordan-you-are-our-sunshine-306ec60c@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261113T000000Z
+DTEND:20261113T020000Z
+SUMMARY:Sheila Jordan: You Are Our Sunshine at The Mad Monkfish
+LOCATION:The Mad Monkfish\, Cambridge
+DESCRIPTION:A tribute concert at The Mad Monkfish honoring NEA Jazz Master 
+ Sheila Jordan (1928-2025)\, the pioneering scat vocalist and first female 
+ singer signed to Blue Note Records\; performed by musicians\, fans and fri
+ ends rather than Jordan herself\, who died in August 2025. Tickets: https:
+ //www.eventbrite.com/e/sheila-jordan-you-are-our-sunshine-tickets-19990035
+ 92557
+CATEGORIES:vocal jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-12-tierney-sutton-and-tamir-hendelman-duo-fb81172c@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261113T000000Z
+DTEND:20261113T020000Z
+SUMMARY:Tierney Sutton and Tamir Hendelman Duo at Regattabar
+LOCATION:1 Bennett St\, Cambridge\, MA 02138
+DESCRIPTION:Nine-time Grammy-nominated jazz vocalist Tierney Sutton perform
+ s in duo with acclaimed pianist Tamir Hendelman\, a longtime member of the
+  Clayton-Hamilton Jazz Orchestra and recording collaborator with Diana Kra
+ ll and Natalie Cole. Tickets: https://www.ticketweb.com/venue/regattabar-c
+ ambridge-ma/748814
+CATEGORIES:vocal jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-12-spire-lobby-series-presents-laszlo-gardony-quartet-on-the-mainstage-5668882b@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261113T003000Z
+DTEND:20261113T023000Z
+SUMMARY:Spire Lobby Series Presents: Laszlo Gardony Quartet on the Mainstag
+ e! at Spire Center for the Performing Arts
+LOCATION:Spire Center for the Performing Arts\, Plymouth
+DESCRIPTION:Hungarian-American jazz pianist Laszlo Gardony\, a Berklee pian
+ o professor since 1987 and winner of the Great American Jazz Piano Competi
+ tion\, leads his quartet\; he has released 14 albums\, most on Sunnyside R
+ ecords. Tickets: https://spirecenter.org/
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-12-patti-austin-2030-a09f2a3c@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261113T013000Z
+DTEND:20261113T033000Z
+SUMMARY:Patti Austin at Jimmy's Jazz & Blues Club
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:Patti Austin is a Grammy-winning jazz and R&B vocalist celebrat
+ ed for her 1982 hit "Baby\, Come to Me" and decades of collaboration with 
+ Quincy Jones\, who won Best Jazz Vocal Album for Avant Gershwin in 2008. T
+ ickets: https://jimmysoncongress.com/event/patti-austin-2/
+CATEGORIES:soul
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-13-bill-charlap-trio-with-david-wong-and-dennis-mackrel-1900-2831c163@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261114T000000Z
+DTEND:20261114T020000Z
+SUMMARY:Bill Charlap Trio with David Wong and Dennis Mackrel at Regattabar
+LOCATION:1 Bennett St\, Cambridge\, MA 02138
+DESCRIPTION:Grammy-winning jazz pianist Bill Charlap\, leader of one of jaz
+ z's leading piano trios\, here appearing with bassist David Wong and drumm
+ er Dennis Mackrel in place of his regular rhythm section\; a Blue Note Rec
+ ords artist known for refined Great American Songbook interpretations. Tic
+ kets: https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-13-guitarist-charlie-ballantine-3f863ad1@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261114T000000Z
+DTEND:20261114T020000Z
+SUMMARY:Charlie Ballantine at Scullers Jazz Club
+LOCATION:400 Soldiers Field Rd\, Boston\, MA 02134
+DESCRIPTION:Indianapolis-based jazz guitarist who studied under David Baker
+  at Indiana University's Jacobs School of Music\; blends jazz\, rock\, and
+  folk influences and has released ten albums\, including the acclaimed 'Li
+ fe Is Brief: The Music of Bob Dylan.' Tickets: https://www.ticketweb.com/e
+ vent/charlie-ballantine-trio-scullers-jazz-club-tickets/14370724
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-13-bill-charlap-trio-with-david-wong-and-dennis-mackrel-2130-49b2a5dd@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261114T023000Z
+DTEND:20261114T043000Z
+SUMMARY:Bill Charlap Trio with David Wong and Dennis Mackrel at Regattabar
+LOCATION:1 Bennett St\, Cambridge\, MA 02138
+DESCRIPTION:Grammy-winning jazz pianist Bill Charlap\, leader of one of jaz
+ z's leading piano trios\, here appearing with bassist David Wong and drumm
+ er Dennis Mackrel in place of his regular rhythm section\; a Blue Note Rec
+ ords artist known for refined Great American Songbook interpretations. Tic
+ kets: https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-14-2026-rivers-rsc-jazz-festival-568f7d4e@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261114T230000Z
+DTEND:20261115T010000Z
+SUMMARY:2026 Rivers & RSC Jazz Festival at The Rivers School
+LOCATION:The Rivers School\, Weston
+DESCRIPTION:Annual jazz festival at The Rivers School Conservatory (RSC) in
+  Weston\, MA\, featuring student ensembles -- the Middle School Big Band\,
+  Rivers Big Band\, and Select Combos -- alongside RSC faculty-led groups a
+ nd a featured guest artist. No 2026 lineup or named headliner was confirme
+ d\; this is a school/community showcase\, not a professional touring act. 
+ Tickets: https://host.nxt.blackbaud.com/registration-form/?formId=2f83cc42
+ -4f45-4f50-8a8a-086439dda021&envId=p-hnxddq7xlkuqGK-xtB-jOw&zone=usa
+CATEGORIES:latin
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-14-bill-charlap-trio-with-david-wong-and-dennis-mackrel-28b9394a@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261115T000000Z
+DTEND:20261115T020000Z
+SUMMARY:Bill Charlap Trio with David Wong and Dennis Mackrel at Regattabar
+LOCATION:1 Bennett St\, Cambridge\, MA 02138
+DESCRIPTION:Grammy-winning jazz pianist Bill Charlap\, leader of one of jaz
+ z's leading piano trios\, here appearing with bassist David Wong and drumm
+ er Dennis Mackrel in place of his regular rhythm section\; a Blue Note Rec
+ ords artist known for refined Great American Songbook interpretations. Tic
+ kets: https://www.ticketweb.com/venue/regattabar-cambridge-ma/748814
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-14-shawnn-monteiro-2939f724@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261115T000000Z
+DTEND:20261115T020000Z
+SUMMARY:Shawnn Monteiro at Scullers Jazz Club
+LOCATION:400 Soldiers Field Rd\, Boston\, MA 02134
+DESCRIPTION:Jazz vocalist and daughter of Ellington bassist Jimmy Woode\, d
+ iscovered by Mongo Santamaria\; she has shared stages with Clark Terry\, L
+ ionel Hampton and Count Basie alumni across a three-decade recording caree
+ r. Tickets: https://www.ticketweb.com/event/shawnn-monteiro-scullers-jazz-
+ club-tickets/14293894?pl=scullers
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-14-plymouth-taskforce-to-end-homelessness-fundraiser-ft-the-yellowhouse-blues-band-6b4d9d4d@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261115T010000Z
+DTEND:20261115T030000Z
+SUMMARY:Plymouth Taskforce to End Homelessness - Fundraiser ft. The YellowH
+ ouse Blues Band at Spire Center for the Performing Arts
+LOCATION:Spire Center for the Performing Arts\, Plymouth
+DESCRIPTION:A Plymouth Taskforce to End Homelessness benefit headlined by t
+ he YellowHouse Blues Band\, a nine-piece Seacoast NH/ME blues and blues-ro
+ ck act with horns that has raised over $160\,000 for area nonprofits and r
+ egularly headlines Jimmy's Jazz and Blues Club. Tickets: https://spirecent
+ er.org/
+CATEGORIES:blues
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-15-jimmys-jazz-brunch-brad-myrick-band-33f07c0d@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261115T150000Z
+DTEND:20261115T170000Z
+SUMMARY:Brad Myrick Band at Jimmy's Jazz & Blues Club
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:No biographical information\, discography\, or press coverage c
+ ould be found for the Brad Myrick Band\; appears to be a local act perform
+ ing in Jimmy's regular jazz brunch series. Tickets: https://jimmysoncongre
+ ss.com/event/jimmys-jazz-brunch-brad-myrick-band-2/
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-15-new-york-voices-the-grand-finale-77229375@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261115T200000Z
+DTEND:20261115T220000Z
+SUMMARY:New York Voices: The Grand Finale at Scituate Performing Arts Cente
+ r
+LOCATION:Scituate Performing Arts Center\, Scituate
+DESCRIPTION:New York Voices is a Grammy-winning vocal jazz quartet formed i
+ n 1987 and signed to GRP Records\, acclaimed for close vocal-harmony work 
+ including their Grammy-winning collaboration with the Count Basie Orchestr
+ a. Tickets: https://sscmusic.org/new-york-voices
+CATEGORIES:vocal jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-15-chris-nifong-project-91a76bfc@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261115T200000Z
+DTEND:20261115T220000Z
+SUMMARY:The Chris Nifong Project at First Parish In Wayland
+LOCATION:First Parish In Wayland\, Wayland
+DESCRIPTION:Boston-area jazz/rock fusion project led by guitarist-composer 
+ Chris Nifong\, who holds degrees in guitar performance and music education
+  from Boston Conservatory and runs Mystic Farm Records\, a small independe
+ nt label and studio in Holden\, MA. Tickets: https://jazzboston.org/jazz-c
+ alendar/
+CATEGORIES:fusion
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-15-laszlo-gardony-sextet-with-don-braden-stan-strickland-temidayo-balogun-avery-sharpe-yoron-israel-cebea85d@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261115T230000Z
+DTEND:20261116T010000Z
+SUMMARY:Laszlo Gardony Sextet with Don Braden\, Stan Strickland\, Temidayo 
+ Balogun\, Avery Sharpe\, Yoron Israel at Regattabar
+LOCATION:1 Bennett St\, Cambridge\, MA 02138
+DESCRIPTION:Hungarian-born pianist Laszlo Gardony\, Berklee Professor of Pi
+ ano since 1987 and a Sunnyside Records recording artist\, leads a sextet o
+ f veteran Boston jazz musicians including bassist Avery Sharpe (McCoy Tyne
+ r's group\, 1980–2003) and saxophonist/flutist Don Braden (Wynton Marsal
+ is\, Betty Carter). Tickets: https://www.ticketweb.com/venue/regattabar-ca
+ mbridge-ma/748814
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-15-jazz-sunday-brian-friedland-birthday-jam-35441a0b@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261116T000000Z
+DTEND:20261116T020000Z
+SUMMARY:Jazz Sunday: Brian Friedland Birthday Jam at The Square Root
+LOCATION:The Square Root\, Roslindale
+DESCRIPTION:Led by Boston-based pianist/composer Brian Friedland\, an NEC-t
+ rained bandleader known for his 'Household Items' project setting product 
+ packaging text to sophisticated jazz\, and for leading several ensembles i
+ ncluding a big band and a John Williams-themed funk-jazz group. Tickets: h
+ ttps://jazzboston.org/jazz-calendar/
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-15-terri-lyne-carrington-social-science-570237d2@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261116T003000Z
+DTEND:20261116T023000Z
+SUMMARY:Terri Lyne Carrington + Social Science at Jimmy's Jazz & Blues Club
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:NEA Jazz Master and multiple Grammy-winning drummer\, composer 
+ and educator\, leading her genre-blending ensemble Social Science (with Ma
+ tthew Stevens and Aaron Parks) through jazz\, R&B and socially engaged imp
+ rovisation. Tickets: https://jimmysoncongress.com/event/terri-lyne-carring
+ ton/
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-16-local-artist-series-johnny-hoy-and-the-bluefish-0064c667@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261117T000000Z
+DTEND:20261117T020000Z
+SUMMARY:Johnny Hoy and the Bluefish at Jimmy's Jazz & Blues Club
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:Martha's Vineyard blues institution formed in 1991\, led by har
+ monica player and vocalist Johnny Hoy\; recorded three albums for Tone Coo
+ l Records and profiled by DownBeat for their devotion to classic blues. Ti
+ ckets: https://jimmysoncongress.com/event/local-artist-series-johnny-hoy-a
+ nd-the-bluefish/
+CATEGORIES:blues
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-18-earfull-at-the-regattabar-a6509661@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261119T003000Z
+DTEND:20261119T023000Z
+SUMMARY:Earfull at the Regattabar at Regattabar
+LOCATION:1 Bennett St\, Cambridge\, MA 02138
+DESCRIPTION:No independent biographical information could be found for this
+  act\; appears to be a group billed as "Earfull" performing at the Regatta
+ bar in Cambridge. Tickets: https://www.ticketweb.com/venue/regattabar-camb
+ ridge-ma/748814
+CATEGORIES:jazz
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-18-john-nemeth-0279dfd1@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261119T003000Z
+DTEND:20261119T023000Z
+SUMMARY:John Nemeth at Jimmy's Jazz & Blues Club
+LOCATION:135 Congress St\, Portsmouth\, NH 03801
+DESCRIPTION:Idaho-born blues singer and harmonica player leading The Blue D
+ reamers\; a multiple Blues Music Award winner known for soul blues and tra
+ ditional blues recordings. Tickets: https://jimmysoncongress.com/event/joh
+ n-nemeth/
+CATEGORIES:blues
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-19-feldman-geospatial-presents-fwd-fiuczynski-wirth-and-dennard-00402af8@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261119T230000Z
+DTEND:20261120T010000Z
+SUMMARY:FWD: Fiuczynski\, Wirth and Dennard at Long Live Roxbury
+LOCATION:Long Live Roxbury\, Boston
+DESCRIPTION:A jazz-fusion trio led by guitarist David "Fuze" Fiuczynski (Sc
+ reaming Headless Torsos\, 2011 Guggenheim Fellow) and drummer Kenwood Denn
+ ard (Grammy winner\; Miles Davis\, Herbie Hancock\, Dizzy Gillespie)\, wit
+ h bassist Wes Wirth. Tickets: https://jazzboston.org/jazz-calendar/
+CATEGORIES:fusion
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-19-john-scofield-s-electrospective-featuring-oteil-burbridge-larry-goldings-adam-deitch-7f7f7203@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261120T000000Z
+DTEND:20261120T020000Z
+SUMMARY:John Scofield's Electrospective at Somerville Theatre
+LOCATION:Somerville Theatre\, Somerville
+DESCRIPTION:Headlined by John Scofield\, a three-time Grammy-winning jazz g
+ uitarist who toured with Miles Davis and Gary Burton\; this electric proje
+ ct unites him with bassist Oteil Burbridge (Allman Brothers/Dead & Company
+ )\, organist Larry Goldings and drummer Adam Deitch. Tickets: https://www.
+ globalartslive.org/content/event_page/10407
+CATEGORIES:fusion
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-19-seth-walker-live-23ba6ac1@jazz-weekly.bitdoktor.github.io
+DTSTAMP:20261020T150257Z
+DTSTART:20261120T000000Z
+DTEND:20261120T020000Z
+SUMMARY:Seth Walker at The Fallout Shelter
+LOCATION:The Fallout Shelter\, Norwood
+DESCRIPTION:North Carolina-born\, Austin-based blues/roots singer-guitarist
+  whose albums (Leap of Faith\, Gotta Get Back) have charted on Billboard's
+  Top Blues Albums chart\; records for the independent Royal Potato Family 
+ label. Tickets: https://www.extendedplaysessions.com/
+CATEGORIES:blues
 END:VEVENT
 END:VCALENDAR
