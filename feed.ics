@@ -7,7 +7,7 @@ X-WR-CALNAME:Boston Jazz Weekly
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
 UID:e-2026-10-20-italian-songbook-with-scanzonati-stefano-marchese-and-andrea-pejrolo-ec2e264c@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261021T000000Z
 DTEND:20261021T020000Z
 SUMMARY:Italian Songbook with Scanzonati: Stefano Marchese and Andrea Pejro
@@ -21,7 +21,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-21-jerron-paxton-and-dennis-lichtman-0174ea37@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261021T230000Z
 DTEND:20261022T010000Z
 SUMMARY:Jerron Paxton and Dennis Lichtman at Rockport Music
@@ -37,7 +37,7 @@ CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-21-trace-zacur-sextet-live-a5948b8e@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261021T230000Z
 DTEND:20261022T010000Z
 SUMMARY:Trace Zacur Sextet at The Mad Monkfish
@@ -50,7 +50,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-21-danilo-perez-trio-panamonk-featuring-ben-street-adam-cruz-d09877a2@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261021T233000Z
 DTEND:20261022T013000Z
 SUMMARY:Danilo Pérez Trio: Panamonk at Jimmy's Jazz & Blues Club
@@ -64,7 +64,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-21-christian-mcbride-and-ursa-major-6fdca125@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261022T000000Z
 DTEND:20261022T020000Z
 SUMMARY:Christian McBride and Ursa Major at Berklee Performance Center
@@ -77,7 +77,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-22-jazz-square-celebration-featuring-gregory-groover-jr-41ae50cc@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261022T223000Z
 DTEND:20261023T003000Z
 SUMMARY:Jazz Square Celebration at Union Church
@@ -92,7 +92,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-22-ian-buss-quartet-a672fc85@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261022T230000Z
 DTEND:20261023T010000Z
 SUMMARY:Ian Buss Quartet at The Mad Monkfish
@@ -106,7 +106,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-22-mehmet-ali-sanlkol-quintet-c1794ede@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261022T233000Z
 DTEND:20261023T013000Z
 SUMMARY:Mehmet Ali Sanlıkol Quintet at Regattabar
@@ -120,7 +120,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-22-guitar-night-jazz-and-blues-student-showcase-a5b34c92@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261023T000000Z
 DTEND:20261023T020000Z
 SUMMARY:Guitar Night: Jazz and Blues Student Showcase at Berklee Performanc
@@ -133,7 +133,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-22-jorge-perez-albela-s-new-earth-band-547d3371@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261023T021500Z
 DTEND:20261023T041500Z
 SUMMARY:Jorge Perez-Albela's New Earth Band at The Lilypad
@@ -147,7 +147,7 @@ CATEGORIES:latin
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-23-brian-simpson-0b8b916c@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261023T230000Z
 DTEND:20261024T010000Z
 SUMMARY:Brian Simpson at Scullers Jazz Club
@@ -162,7 +162,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-23-joe-block-quintet-there-is-always-hope-album-release-show-291d41b7@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261023T230000Z
 DTEND:20261024T010000Z
 SUMMARY:Joe Block Quintet: There Is Always Hope (Album Release Show) at Reg
@@ -178,7 +178,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-23-coco-montoya-aaf3bbb7@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261023T233000Z
 DTEND:20261024T013000Z
 SUMMARY:Coco Montoya at Jimmy's Jazz & Blues Club
@@ -191,7 +191,7 @@ CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-23-jazz-sanctuary-featuring-jason-palmer-and-kevin-harris-76f4cef5@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261024T000000Z
 DTEND:20261024T020000Z
 SUMMARY:Jazz Sanctuary at United Parish in Brookline
@@ -206,7 +206,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-24-ladies-who-lunch-men-s-edition-with-john-abernathy-brian-de-lorenzo-and-robert-saoud-e87da80d@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261024T153000Z
 DTEND:20261024T173000Z
 SUMMARY:The Ladies Who Lunch - Men's Edition with John Abernathy\, Brian De
@@ -221,7 +221,7 @@ CATEGORIES:vocal jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-24-dafnis-prieto-si-o-si-quartet-4d0d9f8b@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261024T230000Z
 DTEND:20261025T010000Z
 SUMMARY:Dafnis Prieto Sí o Sí Quartet at Regattabar
@@ -236,7 +236,7 @@ CATEGORIES:latin
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-24-jazz-sunday-john-dalton-s-spheres-of-influence-peter-perfido-dominique-humbert-0e57f8ee@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261024T230000Z
 DTEND:20261025T010000Z
 SUMMARY:Jazz Sunday: John Dalton's Spheres of Influence / Peter Perfido & D
@@ -252,7 +252,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-24-tim-ray-trio-feat-edmar-colon-tickets-on-sale-now-64029434@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261024T230000Z
 DTEND:20261025T010000Z
 SUMMARY:Tim Ray Trio feat Edmar Colon - Tickets on Sale Now at Scullers Jaz
@@ -269,7 +269,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-24-love-dogs-live-97bba99b@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261024T230000Z
 DTEND:20261025T010000Z
 SUMMARY:The Love Dogs at The Fallout Shelter
@@ -283,7 +283,7 @@ CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-24-aardvark-jazz-orchestra-celebrating-america250-41479d09@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261024T233000Z
 DTEND:20261025T013000Z
 SUMMARY:Aardvark Jazz Orchestra: Celebrating America250 at Church of the Co
@@ -299,7 +299,7 @@ CATEGORIES:big band
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-24-anthony-geraci-w-special-guest-barrence-whitfield-1ad235bb@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261025T000000Z
 DTEND:20261025T020000Z
 SUMMARY:Anthony Geraci w/ Special Guest Barrence Whitfield at Spire Center 
@@ -316,7 +316,7 @@ CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-25-jimmys-jazz-brunch-brad-myrick-band-c49bf259@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261025T140000Z
 DTEND:20261025T160000Z
 SUMMARY:Brad Myrick Band at Jimmy's Jazz & Blues Club
@@ -329,7 +329,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-25-eulipiajazz-outisphere-ensemble-670508a0@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261025T180000Z
 DTEND:20261025T200000Z
 SUMMARY:EulipiaJazz Outisphere Ensemble at Mystic Open Studio
@@ -344,7 +344,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-25-qarts-gallery-jazz-series-man-on-land-featuring-lihi-haruvi-10f0c1c8@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261025T200000Z
 DTEND:20261025T220000Z
 SUMMARY:QArts Gallery Jazz Series - Man on Land at QArts Gallery
@@ -359,7 +359,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-25-boston-blues-challenge-972c49a9@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261025T220000Z
 DTEND:20261026T000000Z
 SUMMARY:The Boston Blues Challenge at The Fallout Shelter
@@ -374,7 +374,7 @@ CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-25-an-evening-with-acoustic-alchemy-2a9a35cc@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261025T233000Z
 DTEND:20261026T013000Z
 SUMMARY:An Evening With Acoustic Alchemy at Jimmy's Jazz & Blues Club
@@ -388,7 +388,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-26-local-artist-series-jumbo-circus-peanuts-halloween-party-8dd0272c@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261026T230000Z
 DTEND:20261027T010000Z
 SUMMARY:Jumbo Circus Peanuts Halloween Party at Jimmy's Jazz & Blues Club
@@ -401,7 +401,7 @@ CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-27-an-evening-with-angela-bacari-family-ea5c6e95@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261027T223000Z
 DTEND:20261028T003000Z
 SUMMARY:An Evening with Angela Bacari & Family at Club Cafe
@@ -416,7 +416,7 @@ CATEGORIES:vocal jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-28-five-masters-of-jazz-f6e09f89@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261028T233000Z
 DTEND:20261029T013000Z
 SUMMARY:Five Masters of Jazz at Jimmy's Jazz & Blues Club
@@ -429,7 +429,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-29-gillian-margo-geoffrey-keezer-9f36afea@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261029T170000Z
 DTEND:20261029T190000Z
 SUMMARY:Gillian Margo & Geoffrey Keezer at Regattabar
@@ -443,7 +443,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-29-gillian-margot-geoffrey-keezer-b313312e@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261029T230000Z
 DTEND:20261030T010000Z
 SUMMARY:Gillian Margot & Geoffrey Keezer at Regattabar
@@ -456,7 +456,7 @@ CATEGORIES:vocal jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-29-mathis-picard-5e6877bc@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261029T233000Z
 DTEND:20261030T013000Z
 SUMMARY:Mathis Picard at Jimmy's Jazz & Blues Club
@@ -471,7 +471,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-30-ella-hunt-performing-blindspot-0f66015d@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261030T230000Z
 DTEND:20261031T010000Z
 SUMMARY:Ella Hunt performing Blindspot at Regattabar
@@ -484,7 +484,7 @@ CATEGORIES:vocal jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-30-santi-debriano-cb58792f@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261030T230000Z
 DTEND:20261031T010000Z
 SUMMARY:Santi Debriano at Scullers Jazz Club
@@ -498,7 +498,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-30-ally-venable-32ba12f4@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261030T233000Z
 DTEND:20261031T013000Z
 SUMMARY:Ally Venable at Jimmy's Jazz & Blues Club
@@ -511,7 +511,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-30-jazz-at-methuen-doug-leaffer-jazz-quartet-b0159855@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261030T233000Z
 DTEND:20261031T013000Z
 SUMMARY:Jazz at Methuen: Doug Leaffer Jazz Quartet at Methuen Memorial Musi
@@ -526,7 +526,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-30-michael-feinstein-in-my-celebration-f41b5808@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261031T000000Z
 DTEND:20261031T020000Z
 SUMMARY:Michael Feinstein in My Celebration at Emerson Colonial Theatre
@@ -540,7 +540,7 @@ CATEGORIES:vocal jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-31-pianist-benny-green-a51f84a1@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261031T230000Z
 DTEND:20261101T010000Z
 SUMMARY:Benny Green at Scullers Jazz Club
@@ -554,7 +554,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-31-rock-and-soul-halloween-show-featuring-debo-ray-and-kemp-harris-7318fec4@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261101T000000Z
 DTEND:20261101T020000Z
 SUMMARY:The Rock and Soul Halloween Show at Boston Harbor Distillery
@@ -567,7 +567,7 @@ CATEGORIES:soul
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-01-jimmys-jazz-brunch-jim-dozet-trio-37930233@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261101T150000Z
 DTEND:20261101T170000Z
 SUMMARY:Jim Dozet Trio at Jimmy's Jazz & Blues Club
@@ -580,7 +580,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-01-demystifying-jazz-masterclass-581dfbf0@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261101T190000Z
 DTEND:20261101T210000Z
 SUMMARY:Demystifying Jazz Masterclass at Vokes Theater
@@ -594,7 +594,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-01-ciara-moser-the-rose-of-battle-6e322738@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261102T000000Z
 DTEND:20261102T020000Z
 SUMMARY:Ciara Moser -- The Rose of Battle at Regattabar
@@ -608,7 +608,7 @@ CATEGORIES:vocal jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-01-huntertones-67245a52@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261102T003000Z
 DTEND:20261102T023000Z
 SUMMARY:Huntertones at Jimmy's Jazz & Blues Club
@@ -622,7 +622,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-02-jazzreach-s-metta-quintet-c6664ef4@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261103T000000Z
 DTEND:20261103T020000Z
 SUMMARY:JazzReach's Metta Quintet at Rockport Music
@@ -637,7 +637,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-02-local-artist-series-the-tonymack-band-335cfe47@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261103T000000Z
 DTEND:20261103T020000Z
 SUMMARY:The Tonymack Band at Jimmy's Jazz & Blues Club
@@ -652,7 +652,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-04-spyro-gyra-9af9baeb@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261105T003000Z
 DTEND:20261105T023000Z
 SUMMARY:Spyro Gyra at Jimmy's Jazz & Blues Club
@@ -665,7 +665,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-05-feldman-geospatial-presents-the-felipe-salles-quartet-3280c7e6@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261105T230000Z
 DTEND:20261106T010000Z
 SUMMARY:The Felipe Salles Quartet at Long Live Roxbury
@@ -678,7 +678,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-05-jake-la-botz-live-5cfa9045@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261106T000000Z
 DTEND:20261106T020000Z
 SUMMARY:Jake La Botz at The Fallout Shelter
@@ -692,7 +692,7 @@ CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-05-joe-alterman-trio-e40c8b87@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261106T000000Z
 DTEND:20261106T020000Z
 SUMMARY:Joe Alterman Trio at Regattabar
@@ -706,7 +706,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-05-greg-piccolo-and-heavy-juice-4c2c8f2e@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261106T003000Z
 DTEND:20261106T023000Z
 SUMMARY:Greg Piccolo and Heavy Juice at Jimmy's Jazz & Blues Club
@@ -719,7 +719,7 @@ CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-05-marcus-gilmore-journey-to-the-new-b3c8a430@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261106T003000Z
 DTEND:20261106T023000Z
 SUMMARY:Marcus Gilmore: Journey to the New at Berklee Performance Center
@@ -733,7 +733,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-06-elan-trotman-25-years-in-music-1900-56d77359@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261107T000000Z
 DTEND:20261107T020000Z
 SUMMARY:Elan Trotman - 25 Years In Music at Scullers Jazz Club
@@ -747,7 +747,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-06-zahili-zamora-afro-cuban-jazz-quartet-1acfda5a@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261107T000000Z
 DTEND:20261107T020000Z
 SUMMARY:The Zahili Zamora Afro-Cuban Jazz Quartet at Regattabar
@@ -760,7 +760,7 @@ CATEGORIES:latin
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-06-weight-band-featuring-members-of-the-band-levon-helm-band-f3996e27@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261107T003000Z
 DTEND:20261107T023000Z
 SUMMARY:The Weight Band at Jimmy's Jazz & Blues Club
@@ -774,7 +774,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-06-dennis-brennan-band-live-2d595496@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261107T020000Z
 DTEND:20261107T040000Z
 SUMMARY:Dennis Brennan Band at Regent Theatre
@@ -788,7 +788,7 @@ CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-06-elan-trotman-25-years-in-music-2100-730710fd@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261107T020000Z
 DTEND:20261107T040000Z
 SUMMARY:Elan Trotman - 25 Years In Music at Scullers Jazz Club
@@ -802,7 +802,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-07-donal-fox-bearing-witness-to-humanity-b0ef4d8f@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261108T000000Z
 DTEND:20261108T020000Z
 SUMMARY:Donal Fox: Bearing Witness to Humanity at Regattabar
@@ -816,7 +816,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-07-steven-feifke-friends-10th-album-celebration-1900-fc2d26d2@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261108T000000Z
 DTEND:20261108T020000Z
 SUMMARY:Steven Feifke & Friends - 10Th Album Celebration at Scullers Jazz C
@@ -830,7 +830,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-07-walter-parks-and-the-unlawful-assembly-live-c2e96efa@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261108T000000Z
 DTEND:20261108T020000Z
 SUMMARY:Walter Parks and The Unlawful Assembly at The Fallout Shelter
@@ -843,7 +843,7 @@ CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-07-steven-feifke-friends-10th-album-celebration-2100-10797baa@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261108T020000Z
 DTEND:20261108T040000Z
 SUMMARY:Steven Feifke & Friends - 10Th Album Celebration at Scullers Jazz C
@@ -857,7 +857,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-08-jimmys-jazz-brunch-honey-bees-trio-60b56978@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261108T150000Z
 DTEND:20261108T170000Z
 SUMMARY:Honey Bees Trio at Jimmy's Jazz & Blues Club
@@ -870,7 +870,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-08-qarts-gallery-jazz-series-ron-reid-liberty-quartet-179d3a57@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261108T210000Z
 DTEND:20261108T230000Z
 SUMMARY:QArts Gallery Jazz Series - Ron Reid Liberty Quartet at QArts Galle
@@ -885,7 +885,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-09-troy-roberts-quartet-9fb06bbd@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261110T003000Z
 DTEND:20261110T023000Z
 SUMMARY:Troy Roberts Quartet at Arrow Street Arts
@@ -899,7 +899,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-09-jazz-composers-alliance-orchestra-in-concert-6c912481@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261110T010000Z
 DTEND:20261110T030000Z
 SUMMARY:Jazz Composers Alliance Orchestra in Concert at Berklee Performance
@@ -915,7 +915,7 @@ CATEGORIES:big band
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-10-jorge-perez-albela-trio-with-kenny-werner-and-john-lockwood-632ae30d@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261111T031500Z
 DTEND:20261111T051500Z
 SUMMARY:The Jorge Perez-Albela Trio with Kenny Werner and John Lockwood at 
@@ -929,7 +929,7 @@ CATEGORIES:latin
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-11-dave-limina-s-wednesdave-blues-iii-38788aed@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261112T000000Z
 DTEND:20261112T020000Z
 SUMMARY:Dave Limina's Wednesdave Blues III at The Fallout Shelter
@@ -942,7 +942,7 @@ CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-11-maryna-krut-cc1fea4c@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261112T003000Z
 DTEND:20261112T023000Z
 SUMMARY:Maryna Krut at The Platform Kendall
@@ -957,7 +957,7 @@ CATEGORIES:vocal jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-11-toronzo-cannon-f894f0bc@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261112T003000Z
 DTEND:20261112T023000Z
 SUMMARY:Toronzo Cannon at Jimmy's Jazz & Blues Club
@@ -970,7 +970,7 @@ CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-12-patti-austin-1800-05dc5bc8@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261112T230000Z
 DTEND:20261113T010000Z
 SUMMARY:Patti Austin at Jimmy's Jazz & Blues Club
@@ -983,7 +983,7 @@ CATEGORIES:soul
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-12-sheila-jordan-you-are-our-sunshine-306ec60c@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261113T000000Z
 DTEND:20261113T020000Z
 SUMMARY:Sheila Jordan: You Are Our Sunshine at The Mad Monkfish
@@ -998,7 +998,7 @@ CATEGORIES:vocal jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-12-tierney-sutton-and-tamir-hendelman-duo-fb81172c@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261113T000000Z
 DTEND:20261113T020000Z
 SUMMARY:Tierney Sutton and Tamir Hendelman Duo at Regattabar
@@ -1012,7 +1012,7 @@ CATEGORIES:vocal jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-12-spire-lobby-series-presents-laszlo-gardony-quartet-on-the-mainstage-5668882b@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261113T003000Z
 DTEND:20261113T023000Z
 SUMMARY:Spire Lobby Series Presents: Laszlo Gardony Quartet on the Mainstag
@@ -1026,7 +1026,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-12-patti-austin-2030-a09f2a3c@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261113T013000Z
 DTEND:20261113T033000Z
 SUMMARY:Patti Austin at Jimmy's Jazz & Blues Club
@@ -1039,7 +1039,7 @@ CATEGORIES:soul
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-13-bill-charlap-trio-with-david-wong-and-dennis-mackrel-1900-2831c163@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261114T000000Z
 DTEND:20261114T020000Z
 SUMMARY:Bill Charlap Trio with David Wong and Dennis Mackrel at Regattabar
@@ -1053,7 +1053,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-13-guitarist-charlie-ballantine-3f863ad1@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261114T000000Z
 DTEND:20261114T020000Z
 SUMMARY:Charlie Ballantine at Scullers Jazz Club
@@ -1067,7 +1067,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-13-bill-charlap-trio-with-david-wong-and-dennis-mackrel-2130-49b2a5dd@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261114T023000Z
 DTEND:20261114T043000Z
 SUMMARY:Bill Charlap Trio with David Wong and Dennis Mackrel at Regattabar
@@ -1081,7 +1081,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-14-2026-rivers-rsc-jazz-festival-568f7d4e@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261114T230000Z
 DTEND:20261115T010000Z
 SUMMARY:2026 Rivers & RSC Jazz Festival at The Rivers School
@@ -1097,7 +1097,7 @@ CATEGORIES:latin
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-14-bill-charlap-trio-with-david-wong-and-dennis-mackrel-28b9394a@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261115T000000Z
 DTEND:20261115T020000Z
 SUMMARY:Bill Charlap Trio with David Wong and Dennis Mackrel at Regattabar
@@ -1111,7 +1111,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-14-shawnn-monteiro-2939f724@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261115T000000Z
 DTEND:20261115T020000Z
 SUMMARY:Shawnn Monteiro at Scullers Jazz Club
@@ -1125,7 +1125,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-14-plymouth-taskforce-to-end-homelessness-fundraiser-ft-the-yellowhouse-blues-band-6b4d9d4d@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261115T010000Z
 DTEND:20261115T030000Z
 SUMMARY:Plymouth Taskforce to End Homelessness - Fundraiser ft. The YellowH
@@ -1140,7 +1140,7 @@ CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-15-jimmys-jazz-brunch-brad-myrick-band-33f07c0d@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261115T150000Z
 DTEND:20261115T170000Z
 SUMMARY:Brad Myrick Band at Jimmy's Jazz & Blues Club
@@ -1153,7 +1153,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-15-new-york-voices-the-grand-finale-77229375@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261115T200000Z
 DTEND:20261115T220000Z
 SUMMARY:New York Voices: The Grand Finale at Scituate Performing Arts Cente
@@ -1167,7 +1167,7 @@ CATEGORIES:vocal jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-15-chris-nifong-project-91a76bfc@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261115T200000Z
 DTEND:20261115T220000Z
 SUMMARY:The Chris Nifong Project at First Parish In Wayland
@@ -1181,7 +1181,7 @@ CATEGORIES:fusion
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-15-laszlo-gardony-sextet-with-don-braden-stan-strickland-temidayo-balogun-avery-sharpe-yoron-israel-cebea85d@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261115T230000Z
 DTEND:20261116T010000Z
 SUMMARY:Laszlo Gardony Sextet with Don Braden\, Stan Strickland\, Temidayo 
@@ -1197,7 +1197,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-15-jazz-sunday-brian-friedland-birthday-jam-35441a0b@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261116T000000Z
 DTEND:20261116T020000Z
 SUMMARY:Jazz Sunday: Brian Friedland Birthday Jam at The Square Root
@@ -1211,7 +1211,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-15-terri-lyne-carrington-social-science-570237d2@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261116T003000Z
 DTEND:20261116T023000Z
 SUMMARY:Terri Lyne Carrington + Social Science at Jimmy's Jazz & Blues Club
@@ -1225,7 +1225,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-16-local-artist-series-johnny-hoy-and-the-bluefish-0064c667@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261117T000000Z
 DTEND:20261117T020000Z
 SUMMARY:Johnny Hoy and the Bluefish at Jimmy's Jazz & Blues Club
@@ -1239,7 +1239,7 @@ CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-18-earfull-at-the-regattabar-a6509661@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261119T003000Z
 DTEND:20261119T023000Z
 SUMMARY:Earfull at the Regattabar at Regattabar
@@ -1252,7 +1252,7 @@ CATEGORIES:jazz
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-18-john-nemeth-0279dfd1@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261119T003000Z
 DTEND:20261119T023000Z
 SUMMARY:John Nemeth at Jimmy's Jazz & Blues Club
@@ -1265,7 +1265,7 @@ CATEGORIES:blues
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-19-feldman-geospatial-presents-fwd-fiuczynski-wirth-and-dennard-00402af8@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261119T230000Z
 DTEND:20261120T010000Z
 SUMMARY:FWD: Fiuczynski\, Wirth and Dennard at Long Live Roxbury
@@ -1278,7 +1278,7 @@ CATEGORIES:fusion
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-19-john-scofield-s-electrospective-featuring-oteil-burbridge-larry-goldings-adam-deitch-7f7f7203@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261120T000000Z
 DTEND:20261120T020000Z
 SUMMARY:John Scofield's Electrospective at Somerville Theatre
@@ -1292,7 +1292,7 @@ CATEGORIES:fusion
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-11-19-seth-walker-live-23ba6ac1@jazz-weekly.bitdoktor.github.io
-DTSTAMP:20261020T150257Z
+DTSTAMP:20261020T174341Z
 DTSTART:20261120T000000Z
 DTEND:20261120T020000Z
 SUMMARY:Seth Walker at The Fallout Shelter
